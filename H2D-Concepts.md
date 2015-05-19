@@ -1,4 +1,4 @@
-Before discussing H2d in-depth, let's introduce a few concepts that we will use throughout the documentation:
+Before discussing H2D in-depth, let's introduce a few concepts that we will use throughout the documentation:
 
 
 
