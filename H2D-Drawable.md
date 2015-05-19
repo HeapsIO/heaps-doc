@@ -1,6 +1,6 @@
-H2D classes that can display something on screen usually extend the h2d.Drawable class.
+H2D classes that can display something on screen usually extend the `h2d.Drawable` class.
 
-Each Drawable (including h2d.Bitmap) has then several properties that can be manipulated:
+Each Drawable (including `h2d.Bitmap`) has then several properties that can be manipulated:
 
 * `alpha` : this will change the amount of transparency your drawable is displayed with. For instance a value of 0.5 will display a Tile with 50% opacity.
 * `color` : color is the color multiplier of the drawable. You can access its individual channels with (r,g,b,a) components. It is initialy set to white (all components are set to 1.). Setting for instance the (r,g,b) components to 0.5 will make the tile appear more dark.
@@ -12,6 +12,6 @@ Each Drawable (including h2d.Bitmap) has then several properties that can be man
  + `Multiply` : the sprite color is multiplied by the background color
  + `Erase` : the sprite color is substracted to the background color
 * `filter` : when a sprite is scaled (upscaled or downscaled), by default Heaps will use the nearest pixel in the Tile to display it. This will create a nice pixelated effect for some games, but might not looks good on your game. You can try to set the filter value to true, which will enable bilinear filtering on the sprite, making it looks less sharp and more smooth/blurry.
-* `shaders` : each Drawable can have shaders added to modify their display. Shaders will be introduced later in this manual.
+* `shaders` : each `Drawable` can have shaders added to modify their display. Shaders will be introduced later in this manual.
 
-Drawable instances have other properties which can be discovered by visiting the h2d.Drawable API section.
+`Drawable` instances have other properties which can be discovered by visiting the `h2d.Drawable` API section.
