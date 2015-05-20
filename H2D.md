@@ -6,8 +6,8 @@ Heap's 2D API (H2D) defines a collection of classes for 2D graphics. The followi
 * [H2D Animation](https://github.com/ncannasse/heaps/wiki/H2D-Animation)
 * [Displaying Text](https://github.com/ncannasse/heaps/wiki/Displaying-Text)
 * [Optimizing Bitmap Usage](https://github.com/ncannasse/heaps/wiki/Optimizing-Bitmap-Usage)
-* [H2D Events and Interactivity]()
-* H2D Layers
-* Filters
-* Scene size and zoom
-* Resource Management
+* [H2D Events and Interactivity](https://github.com/ncannasse/heaps/wiki/H2D-Events-and-Interactivity)
+* [H2D Layers](https://github.com/ncannasse/heaps/wiki/H2D-Layers)
+* [Filters](https://github.com/ncannasse/heaps/wiki/Filters)
+* [Scene Size and Zoom](https://github.com/ncannasse/heaps/wiki/Scene-Size-and-Zoom)
+* [Resource Management](https://github.com/ncannasse/heaps/wiki/Resource-Management)
