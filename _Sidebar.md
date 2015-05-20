@@ -6,9 +6,14 @@
  + [H2D Drawable](https://github.com/ncannasse/heaps/wiki/H2D-Drawable)
  + [H2D Animation](https://github.com/ncannasse/heaps/wiki/H2D-Animation)
  + [Displaying Text](https://github.com/ncannasse/heaps/wiki/Displaying-Text)
-* H3D
-* Shaders
-* Sound
-* Tools
-* Misc
+ + [Optimizing Bitmap Usage](https://github.com/ncannasse/heaps/wiki/Optimizing-Bitmap-Usage)
+   * [Via TileGroup](https://github.com/ncannasse/heaps/wiki/Via-TileGroup)
+   * [Via SpriteBatch](https://github.com/ncannase/heaps/wiki/Via-SpriteBatch)
+ + [H2D Events and Interactivity](https://github.com/ncannasse/heaps/wiki/H2D-Events-and-Interactivity)
+ + [H2D Layers](https://github.com/ncannasse/heaps/wiki/H2D-Layers)
+* [H3D](https://github.com/ncannasse/heaps/wiki/H3D)
+* [Shaders](https://github.com/ncannasse/heaps/wiki/Shaders)
+* [Sound](https://github.com/ncannasse/heaps/wiki/Sound)
+* [Tools](https://github.com/ncannasse/heaps/wiki/Tools)
+* [Misc](https://github.com/ncannasse/heaps/wiki/Misc)
 
