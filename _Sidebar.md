@@ -1,4 +1,4 @@
-* [Introduction](https://github.com/ncannasse/heaps/wiki)
+* [Home](https://github.com/ncannasse/heaps/wiki)
 * [Getting Started](https://github.com/ncannasse/heaps/wiki/Getting-Started)
 * [H2D](https://github.com/ncannasse/heaps/wiki/H2D)
  + [H2D Concepts](https://github.com/ncannasse/heaps/wiki/H2D-Concepts)
