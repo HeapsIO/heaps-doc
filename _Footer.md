@@ -1,2 +1,1 @@
-|Home|Getting Started|
-|:--:|:-------------:|
+-> Home <-
