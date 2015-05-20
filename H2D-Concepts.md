@@ -3,7 +3,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 
 
 **In-Memory Bitmap**
->_A Bitmap (represented by hxd.Bitmap type) is a picture stored in local memory which you can modify and access its individual pixels. In Heaps, before being displayed, a Bitmap needs to be turned into a Texture_  
+>_A Bitmap (represented by [h2d.Bitmap](https://github.com/ncannasse/heaps/blob/master/h2d/Bitmap.hx)) is a picture stored in local memory which you can modify and access its individual pixels. In Heaps, before being displayed, a Bitmap needs to be turned into a Texture_  
 
 &nbsp;
 &nbsp;
@@ -13,7 +13,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 &nbsp;
 
 **Texture**
->_A Texture (represented by h3d.mat.Texture type) whose per-pixel data is located in GPU memory. You can no longer access its pixels or modify it in an efficient way. But it can be used to display 3D models or 2D pictures._
+>_A Texture (represented by [h3d.mat.Texture]()) whose per-pixel data is located in GPU memory. You can no longer access its pixels or modify it in an efficient way. But it can be used to display 3D models or 2D pictures._
 
 &nbsp;
 &nbsp;
@@ -23,7 +23,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 &nbsp;
 
 **Tile**
->_A Tile (represented by h2d.Tile) is a sub part of a Texture. For instance a 256x256 Texture might contain several graphics, such as different the frames of an animated sprite. A Tile will be a part of this texture, it has a (x,y) position and a (width,height) size in pixels. It can also have a pivot position (dx,dy)._
+>_A Tile (represented by [h2d.Tile]()) is a sub part of a Texture. For instance a 256x256 Texture might contain several graphics, such as different the frames of an animated sprite. A Tile will be a part of this texture, it has a (x,y) position and a (width,height) size in pixels. It can also have a pivot position (dx,dy)._
 
 &nbsp;
 &nbsp;
@@ -43,7 +43,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 &nbsp;
 
 **Sprite**
->_A Sprite (represented by h2d.Sprite) is the base class of all of H2D displayable objects. A Sprite has a position (x,y), a scale (scaleX,scaleY), a rotation. It can contain other Sprites which will inherit its transformations, creating a scene tree_
+>_A Sprite (represented by [h2d.Sprite]()) is the base class of all of H2D displayable objects. A Sprite has a position (x,y), a scale (scaleX,scaleY), a rotation. It can contain other Sprites which will inherit its transformations, creating a scene tree_
 
 &nbsp;
 &nbsp;
@@ -53,7 +53,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 &nbsp;
 
 **Scene**
->_The Scene (represented by h2d.Scene) is a special Sprite which is at the root of the scene tree. In hxd.App is it accessible with the s2d variable. You will need to add your Sprites to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys._
+>_The Scene (represented by [h2d.Scene]()) is a special Sprite which is at the root of the scene tree. In hxd.App is it accessible with the s2d variable. You will need to add your Sprites to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys._
 
 &nbsp;
 &nbsp;
@@ -63,7 +63,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 &nbsp;
 
 **Bitmap Sprite**
->_A Bitmap sprite (represented by h2d.Bitmap) is a Sprite that allows you to display an unique Tile at the sprite position, such as in the previous example._
+>_A Bitmap sprite (represented by [h2d.Bitmap]()) is a Sprite that allows you to display an unique Tile at the sprite position, such as in the previous example._
 
 &nbsp;
 &nbsp;
