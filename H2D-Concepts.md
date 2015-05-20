@@ -73,7 +73,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 &nbsp;
 
 Now that the basic concepts have been introduced, let's get back to our previous example, this time with comments:
-
+```haxe
     class Main extends hxd.App {
         var bmp : h2d.Bitmap;
         override function initialize() {
@@ -95,8 +95,9 @@ Now that the basic concepts have been introduced, let's get back to our previous
             new Main();
         }
     }
-
+```
 We can easily make the Bitmap rotate around its center by changing the tile pivot, by adding the following lines:
-
+```haxe
     bmp.tile.dx = -50;
     bmp.tile.dy = -50;
+```
