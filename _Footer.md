@@ -1,4 +1,4 @@
-Home | Getting Started | H2D | H3D | Shaders | Sound | Tools | Misc
+[Home] | [Getting Started] | [H2D] | [H3D] | [Shaders] | [Sound] | [Tools] | [Misc]
 
 [Home]:https://github.com/ncannasse/heaps/wiki/
 [Getting Started]:https://github.com/ncannasse/heaps/wiki/Getting-Started
