@@ -3,7 +3,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 
 
 **In-Memory Bitmap**
->_A Bitmap (represented by hxd.Bitmap type) is a picture stored in local memory which you can modify and access its individual pixels. In Heaps, before being displayed, a Bitmap need to be turned into a Texture_  
+>_A Bitmap (represented by hxd.Bitmap type) is a picture stored in local memory which you can modify and access its individual pixels. In Heaps, before being displayed, a Bitmap needs to be turned into a Texture_  
 
 &nbsp;
 &nbsp;
