@@ -1,7 +1,7 @@
-* Introduction
-* Getting Started
+* [Introduction](https://github.com/ncannasse/heaps/wiki)
+* [Getting Started](https://github.com/ncannasse/heaps/wiki/Getting-Started)
 * Part 1: H2D
- + H2D Concepts
+ + [H2D Concepts](https://github.com/ncannasse/heaps/wiki/H2D-Concepts)
  + Sprite Properties
  + H2D Drawable
  + H2D Animation
