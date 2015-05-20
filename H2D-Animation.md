@@ -1,6 +1,6 @@
 Creating an animated sprite in H2D is quite easy.
 
-Instead of using `h2d.Bitmap` to display a single Tile, you can use `h2d.Anim` to display a list of tiles that will automatically be played:
+Instead of using [`h2d.Bitmap`] to display a single Tile, you can use [`h2d.Anim`] to display a list of tiles that will automatically be played:
 ```haxe
     // creates three tiles with different color
     var t1 = h2d.Tile.fromColor(0xFF0000, 30, 30);
@@ -10,7 +10,7 @@ Instead of using `h2d.Bitmap` to display a single Tile, you can use `h2d.Anim` t
     // creates an animation for these tiles
     var anim = new h2d.Anim([t1,t2,t3],s2d);
 ```
-The following properties and methods can be accessed on h2d.Anim:
+The following properties and methods can be accessed on [h2d.Anim] :
 
 * `speed` : changes the playback speed of the animation, in frames per seconds.
 * `loop` : tells if the animation will loop after it reaches the last frame.
@@ -20,4 +20,7 @@ The following properties and methods can be accessed on h2d.Anim:
                     trace("END!");
                 }
 ```	
-`Anim` instances have other properties which can be discovered by visiting the `h2d.Anim` API section.
+`Anim` instances have other properties which can be discovered by reviewing the [`h2d.Anim`] class.
+
+[`h2d.Bitmap`]:https://github.com/ncannasse/heaps/blob/master/h2d/Bitmap.hx
+[`h2d.Anim`]:https://github.com/ncannasse/heaps/blob/master/h2d/Anim.hx
