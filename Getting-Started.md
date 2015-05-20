@@ -32,4 +32,4 @@ To ensure the program compiles include the Heaps library by adding `-lib heaps` 
 
 You should now be able to compile and display the example. It should show you a rotating red square.
 
-Several examples for both 2D and 3D are available in the heaps samples directory.
+Several examples for both 2D and 3D are available in the heaps [samples directory](https://github.com/ncannasse/heaps/tree/master/samples).
