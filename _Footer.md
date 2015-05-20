@@ -1,1 +1,2 @@
-content
+|Home|Getting Started|
+|:--:|:-------------:|
