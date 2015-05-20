@@ -5,7 +5,7 @@ In order to get started with Heaps you'll need to do the following:
 * setup your IDE in order to build Haxe content, as documented [here](http://haxe.org/doc/ide)
 
 You should then be ready to run your first example:
-
+```haxe
     class Main extends hxd.App {
         var bmp : h2d.Bitmap;
         
@@ -24,7 +24,7 @@ You should then be ready to run your first example:
             new Main();
         }
     }
-
+```
 To ensure the program compiles include the Heaps library by adding `-lib heaps` to your compilation parameters.
 
 * If you compile for Javascript, you will also have to create an index.html that includes your .js haxe output
