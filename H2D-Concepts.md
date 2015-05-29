@@ -76,7 +76,7 @@ Now that the basic concepts have been introduced, let's get back to our previous
 ```haxe
     class Main extends hxd.App {
         var bmp : h2d.Bitmap;
-        override function initialize() {
+        override function init() {
             // allocate a Texture with red color and creates a 100x100 Tile from it
             var tile = h2d.Tile.fromColor(0xFF0000, 100, 100);
             // create a Bitmap sprite, which will display the tile
