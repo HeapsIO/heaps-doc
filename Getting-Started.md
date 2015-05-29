@@ -28,7 +28,7 @@ You should then be ready to run your first example:
 ```
 To ensure the program compiles include the Heaps library by adding `-lib heaps` to your compilation parameters.
 
-* If you compile for Javascript, you will also have to create an index.html that includes your .js haxe output
+* If you compile for Javascript, you will also have to create an index.html that includes your .js haxe output. Also put a `<canvas id="webgl"></canvas>` in body of the HTML-file.
 * If you compile for Flash, make sure to specify the Flash version to be at least 11.8 (with -swf-version 11.8) which is required for Heaps
 
 You should now be able to compile and display the example. It should show you a rotating red square.
