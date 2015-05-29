@@ -10,7 +10,7 @@ You should then be ready to run your first example:
     class Main extends hxd.App {
         var bmp : h2d.Bitmap;
         
-        override function initialize() {
+        override function init() {
             var tile = h2d.Tile.fromColor(0xFF0000, 100, 100);
             bmp = new h2d.Bitmap(tile, s2d);
             bmp.x = s2d.width * 0.5;
