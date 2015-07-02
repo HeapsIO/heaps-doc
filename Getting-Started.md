@@ -1,6 +1,6 @@
 In order to get started with Heaps you'll need to do the following:
 
-* install Haxe 3.1+, available on http://haxe.org
+* install Haxe 3.2+, available on http://haxe.org
 * install Heaps by running `haxelib install heaps` 
  + or alternatively `haxelib git heaps https://github.com/ncannasse/heaps.git` for the bleeding edge version 
 * setup your IDE in order to build Haxe content, as documented [here](http://haxe.org/documentation/introduction/editors-and-ides.html)
