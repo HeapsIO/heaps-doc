@@ -2,9 +2,9 @@
 
 The Heaps API is comprised of several top level packages, namely:
 
-- [`h2d`](https://github.com/ncannasse/heaps/tree/master/h2d) used for 2D display (for 2D games and user interfaces)
-- [`h3d`](https://github.com/ncannasse/heaps/tree/master/h3d) used for rendering 3D models
-- [`hxd`](https://github.com/ncannasse/heaps/tree/master/hxd) contains cross platform classes such as Bitmaps, and a complete resource loading and management framework
-- [`hxsl`](https://github.com/ncannasse/heaps/tree/master/hxsl) is the Heaps Shader Language implementation
+- [`h2d`](https://github.com/ncannasse/heaps/wiki/H2D) used for 2D display (for 2D games and user interfaces)
+- [`h3d`](https://github.com/ncannasse/heaps/wiki/H3D) used for rendering 3D models
+- [`hxd`](https://github.com/ncannasse/heaps/wiki/HXD) contains cross platform classes such as Bitmaps, and a complete resource loading and management framework
+- [`hxsl`](https://github.com/ncannasse/heaps/wiki/Shaders) is the Heaps Shader Language implementation
 
 Using the menu on the right to access to the desired section of the documentation.
