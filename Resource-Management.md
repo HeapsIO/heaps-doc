@@ -10,14 +10,14 @@ var tile = hxd.Res.myDirectory.myBitmap.toTile();
 
 Please note that this is strictly typed: hxd.Res will look into the `res` directory of your project (or the directory specified by `-D resourcePath=...` haxe compilation parameter). It will then list all directories and files, and depending on the file extension, it will provide you access to the following resources:
 
- * `png,jpg,jpeg,gif`: (hxd.res.Image)[https://github.com/ncannasse/heaps/blob/master/hxd/res/Image.hx]
- * `wav,mp3,ogg` : (hxd.res.Sound)[https://github.com/ncannasse/heaps/blob/master/hxd/res/Sound.hx]
- * `fbx,hmd`: (hxd.res.Model)[https://github.com/ncannasse/heaps/blob/master/hxd/res/Model.hx] 
- * `fnt` (+png): (hxd.res.BitmapFont)[https://github.com/ncannasse/heaps/blob/master/hxd/res/BitmapFont.hx] 
- * `ttf`: (hxd.res.Font)[https://github.com/ncannasse/heaps/blob/master/hxd/res/Font.hx] 
- * `tmx`: (hxd.res.TiledMap)[https://github.com/ncannasse/heaps/blob/master/hxd/res/TiledMap.hx] 
- * `atlas`: (hxd.res.Atlas)[https://github.com/ncannasse/heaps/blob/master/hxd/res/Atlas.hx] 
- * other: (hxd.res.Resource)[https://github.com/ncannasse/heaps/blob/master/hxd/res/Resource.hx] (still allows you to ready binary data)
+ * `png,jpg,jpeg,gif`: [hxd.res.Image](https://github.com/ncannasse/heaps/blob/master/hxd/res/Image.hx)
+ * `wav,mp3,ogg` : [hxd.res.Sound](https://github.com/ncannasse/heaps/blob/master/hxd/res/Sound.hx)
+ * `fbx,hmd`: [hxd.res.Model](https://github.com/ncannasse/heaps/blob/master/hxd/res/Model.hx)
+ * `fnt` (+png): [hxd.res.BitmapFont](https://github.com/ncannasse/heaps/blob/master/hxd/res/BitmapFont.hx)
+ * `ttf`: [hxd.res.Font](https://github.com/ncannasse/heaps/blob/master/hxd/res/Font.hx)
+ * `tmx`: [hxd.res.TiledMap](https://github.com/ncannasse/heaps/blob/master/hxd/res/TiledMap.hx)
+ * `atlas`: [hxd.res.Atlas](https://github.com/ncannasse/heaps/blob/master/hxd/res/Atlas.hx)
+ * other: [hxd.res.Resource](https://github.com/ncannasse/heaps/blob/master/hxd/res/Resource.hx) (still allows you to ready binary data)
 
 
 ## Resources loader
