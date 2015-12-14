@@ -44,7 +44,7 @@ You can resolve a resource from it path in the resource file system by using the
 hxd.Res.loader.load("path/to/myResource.png")
 ```
 
-This will return a [hxd.res.Any]https://github.com/ncannasse/heaps/blob/master/hxd/res/Any.hx) which have various methods to transform it to other resources.
+This will return a [hxd.res.Any](https://github.com/ncannasse/heaps/blob/master/hxd/res/Any.hx) which have various methods to transform it to other resources.
 
 ## File Systems
 
