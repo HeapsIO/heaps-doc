@@ -36,6 +36,16 @@ hxd.Res.loader = new hxd.res.Loader(hxd.fs.EmbedFileSystem.create());
 
 A loader will cache the resources instances after they have been fetched from the underlying file system. There are several ways to store your resources.
 
+### Dynamic resource resolution
+
+You can resolve a resource from it path in the resource file system by using the following command:
+
+```haxe
+hxd.Res.loader.load("path/to/myResource.png")
+```
+
+This will return a [hxd.res.Any]https://github.com/ncannasse/heaps/blob/master/hxd/res/Any.hx) which have various methods to transform it to other resources.
+
 ## File Systems
 
 Resources files are accessed through a virtual file system which implements the [FileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fs/FileSystem.hx) interface. 
@@ -69,6 +79,5 @@ override function loadAssets(done) {
 ```
 
 This will be called before `init()`, and while loading `update()` and `onResize` will not be called.
-
 
 
