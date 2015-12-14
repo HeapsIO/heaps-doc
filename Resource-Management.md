@@ -49,3 +49,26 @@ You can initialize the resource loader and filesystem by yourself, or use one of
  * `hxd.Res.initEmbed()` for EmbedFileSystem - this will also trigger the embedding of all files present in your resource directory into your code
  * `hxd.Res.initLocal()` for LocalFileSystem
  * `hxd.Res.initPak()` for PAK FileSystem - this will load res.pak, res1.pak, res2.pak, etc. from the local filesystem - until no file is found.
+
+## Building PAK
+
+You can build a `pak` file for all your ressources by running the following command from your project directory:
+
+```
+haxelib run heaps pak
+```
+
+## PAK Loader
+
+If you want to load your PAK file(s) with a progress bar showing, you can override the `loadAssets` method of your `hxd.App` class with the following code:
+
+```haxe
+override function loadAssets(done) {
+    new hxd.fmt.pak.Loader(s2d, done);
+}
+```
+
+This will be called before `init()`, and while loading `update()` and `onResize` will not be called.
+
+
+
