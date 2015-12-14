@@ -46,6 +46,11 @@ hxd.Res.loader.load("path/to/myResource.png")
 
 This will return a [hxd.res.Any](https://github.com/ncannasse/heaps/blob/master/hxd/res/Any.hx) which have various methods to transform it to other resources.
 
+### Runtime resource loading
+
+You can also perform you own runtime loading of resources, by using for example `hxd.net.BinaryLoader`.
+Once you have the bytes for your resource, you can use `hxd.res.Any.fromBytes` to transform it into a proper resource.
+
 ## File Systems
 
 Resources files are accessed through a virtual file system which implements the [FileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fs/FileSystem.hx) interface. 
