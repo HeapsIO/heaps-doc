@@ -24,6 +24,7 @@
  + [Custom Renderer](https://github.com/ncannasse/heaps/wiki/Custom-Renderer)
 * [HXD](https://github.com/ncannasse/heaps/wiki/HXD)
  + [Resource Management](https://github.com/ncannasse/heaps/wiki/Resource-Management)
+ + [Keyboard](https://github.com/ncannasse/heaps/wiki/Keyboard)
 * [Shaders](https://github.com/ncannasse/heaps/wiki/Shaders)
  + [HXSL Introduction](https://github.com/ncannasse/heaps/wiki/HXSL-Introduction)
  + [Comparison with GLSL](https://github.com/ncannasse/heaps/wiki/Comparison-with-GLSL)
