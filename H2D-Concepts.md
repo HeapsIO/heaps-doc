@@ -53,7 +53,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 &nbsp;
 
 **Scene**
->_The Scene (represented by [h2d.Scene](https://github.com/ncannasse/heaps/blob/master/h2d/Scene.hx)) is a special Sprite which is at the root of the scene tree. In hxd.App is it accessible with the s2d variable. You will need to add your Sprites to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys._
+>_The Scene (represented by [h2d.Scene](https://github.com/ncannasse/heaps/blob/master/h2d/Scene.hx)) is a special Sprite which is at the root of the scene tree. In hxd.App it is accessible with the s2d variable. You will need to add your Sprites to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys._
 
 &nbsp;
 &nbsp;
