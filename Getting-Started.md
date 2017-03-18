@@ -1,8 +1,8 @@
 In order to get started with Heaps you'll need to do the following:
 
-* install Haxe 3.2+, available on http://haxe.org
-* install Heaps by running `haxelib git heaps https://github.com/ncannasse/heaps.git` for the bleeding edge version 
-* setup your IDE in order to build Haxe content, as documented [here](http://haxe.org/documentation/introduction/editors-and-ides.html)
+* Install Haxe 3.2+, available on https://haxe.org.
+* Install Heaps by running `haxelib install heaps` or `haxelib git heaps https://github.com/HeapsIO/heaps.git` for the latest bleeding edge version.
+* Setup your IDE in order to build Haxe content, as documented [here](http://haxe.org/documentation/introduction/editors-and-ides.html).
 
 You should then be ready to run your first example:
 ```haxe
@@ -35,4 +35,4 @@ To ensure the program compiles include the Heaps library by adding `-lib heaps` 
 
 You should now be able to compile and display the example. It should show you a rotating red square.
 
-Several examples for both 2D and 3D are available in the heaps [samples directory](https://github.com/ncannasse/heaps/tree/master/samples).
+Several examples for both 2D and 3D are available in the heaps [samples directory](https://github.com/HeapsIO/heaps/tree/master/samples).
