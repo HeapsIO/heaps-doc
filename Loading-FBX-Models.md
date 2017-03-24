@@ -28,12 +28,17 @@ In order to add a FBX/HMD model to your scene, you need first to load it with th
 ```haxe
 // lib is an hxd.fmt.hmd.Library
 var lib = hxd.Res.myModel.toHMD();
-// create the model instance : the loadTexture is a custom function responsible for loading the model texture
+
+// create the model instance : the loadTexture is a custom 
+// function responsible for loading the model texture
 var obj = lib.makeObject(loadTexture);
+
 // add to the scene
 s3d.addChild(obj);
+
 // load the animation
 var anim = lib.loadAnimation();
+
 // play it on the object
 obj.playAnimation(anim);
 ```
