@@ -1,45 +1,45 @@
-* [Home](https://github.com/ncannasse/heaps/wiki)
-* [Getting Started](https://github.com/ncannasse/heaps/wiki/Getting-Started)
-* [H2D](https://github.com/ncannasse/heaps/wiki/H2D)
-  * [H2D Concepts](https://github.com/ncannasse/heaps/wiki/H2D-Concepts)
-  * [Sprite Properties](https://github.com/ncannasse/heaps/wiki/Sprite-Properties)
-  * [H2D Drawable](https://github.com/ncannasse/heaps/wiki/H2D-Drawable)
-  * [H2D Animation](https://github.com/ncannasse/heaps/wiki/H2D-Animation)
-  * [Displaying Text](https://github.com/ncannasse/heaps/wiki/Displaying-Text)
-  * [Optimizing Bitmap Usage](https://github.com/ncannasse/heaps/wiki/Optimizing-Bitmap-Usage)
-    * [Via TileGroup](https://github.com/ncannasse/heaps/wiki/Via-TileGroup)
-    * [Via SpriteBatch](https://github.com/ncannasse/heaps/wiki/Via-SpriteBatch)
-  * [H2D Events and Interactivity](https://github.com/ncannasse/heaps/wiki/H2D-Events-and-Interactivity)
-  * [H2D Layers](https://github.com/ncannasse/heaps/wiki/H2D-Layers)
-  * [Filters](https://github.com/ncannasse/heaps/wiki/Filters)
-  * [Scene Size and Zoom](https://github.com/ncannasse/heaps/wiki/Scene-Size-and-Zoom)
-* [H3D](https://github.com/ncannasse/heaps/wiki/H3D)
-  * [Scene and Camera](https://github.com/ncannasse/heaps/wiki/Scene-and-Camera)
-  * [Loading FBX Models](https://github.com/ncannasse/heaps/wiki/Loading-FBX-Models)
-  * [Using UMD Models](https://github.com/ncannasse/heaps/wiki/Using-UMD-Models)
-  * [Mesh Material](https://github.com/ncannasse/heaps/wiki/Mesh-Material)
-  * [Lights](https://github.com/ncannasse/heaps/wiki/Lights)
-  * [Shadows](https://github.com/ncannasse/heaps/wiki/Shadows)
-  * [Multipass Explained](https://github.com/ncannasse/heaps/wiki/Multipass-Explained)
-  * [Custom Renderer](https://github.com/ncannasse/heaps/wiki/Custom-Renderer)
-* [HXD](https://github.com/ncannasse/heaps/wiki/HXD)
-  * [Resource Management](https://github.com/ncannasse/heaps/wiki/Resource-Management)
-* [Input](https://github.com/ncannasse/heaps/wiki/Input)
-  * [Keyboard](https://github.com/ncannasse/heaps/wiki/Keyboard)
-* [Shaders](https://github.com/ncannasse/heaps/wiki/Shaders)
-  * [HXSL Introduction](https://github.com/ncannasse/heaps/wiki/HXSL-Introduction)
-  * [Comparison with GLSL](https://github.com/ncannasse/heaps/wiki/Comparison-with-GLSL)
-  * [Writing Custom Shaders](https://github.com/ncannasse/heaps/wiki/Writing-Custom-Shaders)
-  * [Runtime Shader Linking](https://github.com/ncannasse/heaps/wiki/Runtime-Shader-Linking)
-* [Sound](https://github.com/ncannasse/heaps/wiki/Sound)
-* [Tools](https://github.com/ncannasse/heaps/wiki/Tools)
-  * [Model Viewer](https://github.com/ncannasse/heaps/wiki/Model-Viewer)
-  * [Particles Editor](https://github.com/ncannasse/heaps/wiki/Particles-Editor)
-  * [Castle DB](https://github.com/ncannasse/heaps/wiki/Castle-DB)
-* [Misc](https://github.com/ncannasse/heaps/wiki/Misc)
-  * [Gamepad Support](https://github.com/ncannasse/heaps/wiki/Gamepad-Support)
-  * [2D and 3D Collision Library](https://github.com/ncannasse/heaps/wiki/2D-and-3D-Collision-Library)
-  * [Additional 3D Effects](https://github.com/ncannasse/heaps/wiki/Additional-3D-Effects)
-    * [Fog](https://github.com/ncannasse/heaps/wiki/Fog)
-    * [FXAA](https://github.com/ncannasse/heaps/wiki/FXAA)
-    * [Scalable Ambient Occlusion](https://github.com/ncannasse/heaps/wiki/Scalable-Ambient-Occlusion)
+* [Home](https://github.com/HeapsIO/heaps/wiki)
+* [[Getting Started]]
+* [[H2D]]
+  * [[H2D Concepts]]
+  * [[Sprite Properties]]
+  * [[H2D Drawable]]
+  * [[H2D Animation]]
+  * [[Displaying Text]]
+  * [[Optimizing Bitmap Usage]]
+    * [[Via TileGroup]]
+    * [[Via SpriteBatch]]
+  * [[H2D Events and Interactivity]]
+  * [[H2D Layers]]
+  * [[Filters]]
+  * [[Scene Size and Zoom]]
+* [[H3D]]
+  * [[Scene and Camera]]
+  * [[Loading FBX Models]]
+  * [[Using UMD Models]]
+  * [[Mesh Material]]
+  * [[Lights]]
+  * [[Shadows]]
+  * [[Multipass Explained]]
+  * [[Custom Renderer]]
+* [[HXD]]
+  * [[Resource Management]]
+* [[Input]]
+  * [[Keyboard]]
+* [[Shaders]]
+  * [[HXSL Introduction]]
+  * [[Comparison with GLSL]]
+  * [[Writing Custom Shaders]]
+  * [[Runtime Shader Linking]]
+* [[Sound]]
+* [[Tools]]
+  * [[Model Viewer]]
+  * [[Particles Editor]]
+  * [[Castle DB]]
+* [[Misc]]
+  * [[Gamepad Support]]
+  * [[2D and 3D Collision Library]]
+  * [[Additional 3D Effects]]
+    * [[Fog]]
+    * [[FXAA]]
+    * [[Scalable Ambient Occlusion]]
