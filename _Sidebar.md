@@ -12,6 +12,7 @@
 * [[Input]]
   * [[Keyboard]]
 * [[Shaders]]
+  * [[HXSL Introduction]]
 * [[Sound]]
 * [[Tools]]
   * [[Castle DB]]
