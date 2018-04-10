@@ -1,6 +1,6 @@
 **Heaps** is a cross platform graphics engine designed for high performance games. It's designed to leverage modern GPUs that are commonly available on both desktop and mobile devices. 
 
-The framework currently supported are:
+Heaps is currently working on:
 - HTML5 (requires WebGL)
 - Mobile (iOS, tvOS and Android)
 - Desktop with OpenGL (Win/Linux/OSX) or DirectX (Windows only)
