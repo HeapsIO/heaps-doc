@@ -2,7 +2,7 @@
 
 The framework currently supported are:
 - HTML5 (requires WebGL)
-- native Mobile (iOS, tvOS and Android)
+- Mobile (iOS, tvOS and Android)
 - Desktop with OpenGL (Win/Linux/OSX) or DirectX (Windows only)
 - Consoles (Nintendo Switch, Sony PS4, XBox One - requires being a registered developer)
 - Flash Stage3D
