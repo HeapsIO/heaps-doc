@@ -1,1 +1,1 @@
-TODO: describe each platform & how to target it (linked from heaps.io website)
+<p class="lead">With Haxe, you can easily build cross-platform tools targeting all the mainstream platforms natively. </p>

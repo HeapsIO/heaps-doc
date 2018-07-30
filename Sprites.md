@@ -1,3 +1,5 @@
+# Sprites
+
 The following properties and methods can be accessed on any Sprite:
 
 * `x` and `y` : the position in pixels relative to the parent Sprite (or in the Scene)
@@ -9,6 +11,4 @@ The following properties and methods can be accessed on any Sprite:
 * `addChild()` : adds the specified sprite to the children list
 * `for( s in sprite ) {...}` : iterates over all the current children
 
-Sprite instances have other properties and methods which can be discovered by visiting the [`h2d.Sprite`] API section.
-
-[`h2d.Sprite`]:https://github.com/ncannasse/heaps/blob/master/h2d/Sprite.hx
+Sprite instances have other properties and methods which can be discovered by visiting the [`h2d.Sprite`](https://github.com/ncannasse/heaps/blob/master/h2d/Sprite.hx) API section.

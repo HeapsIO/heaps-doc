@@ -1,3 +1,5 @@
+# Resource management
+
 Heaps provides a complete asset/resource management framework that can be customized with your own asset packaging system.
 
 ## Getting Started
@@ -56,11 +58,13 @@ Once you have the bytes for your resource, you can use `hxd.res.Any.fromBytes` t
 Resources files are accessed through a virtual file system which implements the [FileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fs/FileSystem.hx) interface. 
 
 Heaps provides already several file systems, such as:
+
  * [EmbedFileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fs/EmbedFileSystem.hx) will gives access to the resources which are embedded with your code (using haxe `-resource` compilation flag). On platforms such as JavaScript, this allows you to have both your code and assets stored in a single file.
  * [LocalFileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fs/LocalFileSystem.hx) which gives access to a local file system directory where your resources are stored. This require hard drive access so it is not available in the browser for example.
  * [hxd.fmt.pak.FileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fmt/pak/FileSystem.hx) will read a `.pak` file which contains all resources packaged into a single binary. The PAK file can be loaded at runtime and several PAK files can be used, the latest loaded being able to override the resources declared in previously loaded PAK files.  
 
 You can initialize the resource loader and filesystem by yourself, or use one of the following shortcuts:
+
  * `hxd.Res.initEmbed()` for EmbedFileSystem - this will also trigger the embedding of all files present in your resource directory into your code
  * `hxd.Res.initLocal()` for LocalFileSystem
  * `hxd.Res.initPak()` for PAK FileSystem - this will load res.pak, res1.pak, res2.pak, etc. from the local filesystem - until no file is found.

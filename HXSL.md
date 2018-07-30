@@ -1,5 +1,12 @@
-HXSL stands for "Haxe Shader Language".
+# Hxsl
+
+## HXSL stands for "Haxe Shader Language"
+
 It's a shader language that follows entirely the OpenGL shader language ([GLSL](https://en.wikipedia.org/wiki/OpenGL_Shading_Language)) specification, but which uses Haxe syntax, allowing you to write directly your shader in your Haxe source code.
+
+Vertex shaders are used for transforming and projecting each geometry point into 2D space and set up "variables" that will be interpolated on a per-pixel basis. This can be used by the pixel shader.
+
+Fragment shaders are used for blending different textures and colors into a single pixel color that will be written to screen.
 
 Example:
 
@@ -24,6 +31,7 @@ class MyShader extends hxsl.Shader {
 ```
 
 This shader defines:
+
 * an `input` variable (tagged with `@input` metadata) which lists the vertex properties that will be accessible in the shader (_vertex attributes_ in GLSL)
 * several `@param` variables which are per-shader-instance values that will be set for all vertexes (_uniforms_ in GLSL)
 * several variables which can be read/written in shader, here we use `output` as a name to store each shader stage result and `transformedNormal` as the value of the vertex normal in absolute world space.
@@ -73,13 +81,10 @@ The final resulting shader will then be compiled to the target platform native s
 
 # Shader examples
 
-There are several shader examples available in the [h3d.shader](https://github.com/HeapsIO/heaps/tree/master/h3d/shader) package.
+There are several shader examples available in the [h3d.shader](api/h3d/shader) package.
 
 These shaders mostly uses definitions present in either:
-* [Base2d](https://github.com/HeapsIO/heaps/blob/master/h3d/shader/Base2d.hx) for all 2D display
-* [BaseMesh](https://github.com/HeapsIO/heaps/blob/master/h3d/shader/BaseMesh.hx) for all 3D display
-* [ScreenShader](https://github.com/HeapsIO/heaps/blob/master/h3d/shader/ScreenShader.hx) for fullscreen effect / post-process
 
-
-
- 
+* [Base2d](api/h3d/shader/Base2d.hx) for all 2D display
+* [BaseMesh](api/h3d/shader/BaseMesh.hx) for all 3D display
+* [ScreenShader](api/h3d/shader/ScreenShader.hx) for fullscreen effect / post-process

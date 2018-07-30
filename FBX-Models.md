@@ -1,3 +1,5 @@
+# FBX Models
+
 FBX Models can be exported from various 3D editors and loaded into Heaps.
 
 Heaps uses its own internal 3D format called HMD which is faster to load and process. By default, the Heaps resource manager will automatically convert any FBX it loads into the corresponding HMD and cache the result. See [this section](https://github.com/ncannasse/heaps/wiki/Resource-Management).
@@ -28,17 +30,12 @@ In order to add a FBX/HMD model to your scene, you need first to load it with th
 ```haxe
 // lib is an hxd.fmt.hmd.Library
 var lib = hxd.Res.myModel.toHMD();
-
-// create the model instance : the loadTexture is a custom 
-// function responsible for loading the model texture
+// create the model instance : the loadTexture is a custom function responsible for loading the model texture
 var obj = lib.makeObject(loadTexture);
-
 // add to the scene
 s3d.addChild(obj);
-
 // load the animation
 var anim = lib.loadAnimation();
-
 // play it on the object
 obj.playAnimation(anim);
 ```
