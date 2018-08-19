@@ -18,9 +18,7 @@ class Main extends hxd.App {
 	}
 	
 	static function main() {
-                Browser.window.addEventListener("DOMContentLoaded", function() {
-                    new Main();
-                }, false);
+		new Main();
 	}
 }
 ```
