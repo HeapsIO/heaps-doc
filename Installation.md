@@ -1,8 +1,11 @@
 # Installation
 
-In order to get started with Heaps you'll need to do the following:
+In order to get up and running Heaps you'll need to make a decision about how you would like to run and debug your project. Currently these options are as follows:
+* JavaScript
+* HashLink
+* Flash
 
-## Heaps for JavaScript
+First things first, you're going to need to download the latest version of Haxe. If you plan on testing with HashLink, however, you will need to download the [Latest Haxe 4 Preview](https://haxe.org/download/list/) from the website.
 
 **1. Download and setup Haxe:**
 
@@ -20,11 +23,12 @@ haxelib install heaps
 
 ---
 
-## Heaps and HashLink VM
+## Additional steps for Heaps and HashLink VM
  
 In addition to use Heaps.io with [HashLink](http://hashlink.haxe.org) (also known as HL), you need to install: 
 
  * [HashLink](https://github.com/HaxeFoundation/hashlink/releases) Virtual Machine
+   * On OSX, you will have to follow the instructions laid out [here](https://github.com/HaxeFoundation/hashlink#building-on-linuxosx) to get set up with Hashlink, as the process is a little different.
  * [Latest Haxe 4 preview](https://haxe.org/download/list/) 
  * Install Haxelib [hldx](https://lib.haxe.org/p/hldx) for DirectX support
  * Install Haxelib [hlopenal](https://lib.haxe.org/p/hlopenal) for OpenAL support
