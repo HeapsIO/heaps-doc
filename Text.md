@@ -6,6 +6,9 @@ It's also possible to get the size of the text with textWidth/textHeight.
 ### Use text in Heaps
 
 ```haxe
+// Initialize the Resources loader
+hxd.Res.initEmbed();
+
 var tf = new h2d.Text(hxd.Res.fonts.myFontName.toFont());
 tf.text = "Hello World\nHeaps is great!";
 tf.textAlign = Center;
