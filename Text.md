@@ -18,7 +18,11 @@ For each font family you need a different font file, but you can tint them with 
 
 ## Font creation
 
+If you want to use custom fonts, other than the Default one, you need to create a `.fnt` file and put it into your `res` directory.
+
 ### Convert font to bitmap font using BMfont tool
+  
+> Download BMFont here: <http://www.angelcode.com/products/bmfont/>
 
 In the BMFont-tool, use these settings:
 
@@ -33,8 +37,6 @@ In the BMFont-tool, use these settings:
   * Texture: Png
 * _File_ → _Save bitmap font as.._ 
   * Put in your Heaps project under `./res/fonts/myFontName.fnt` 
-  
-> Download BMFont here: <http://www.angelcode.com/products/bmfont/>
 
 ### Convert font to bitmap font using Littera
 
@@ -59,3 +61,13 @@ In [Littera](http://www.kvazars.com/littera/), use these settings:
 If you add some 'padding' (not 'spacing') in the export options, you can decorate the outputted .png-file in your image-editing software with some colors/effects/gradients. You can bake this inside your bitmap.
 
 Want gradients? Its not simple to add them with image-editing software if cells are uneven. Use the "equalize the cell heights" in the export options. Then all chars have the same height and is a bit easier to add the gradients. Of course, the texture will be a bit bigger in that case, since there is a bit more whitespace.
+
+## Using the Font
+
+Once the font is ready, you can use it for your Text:
+* initialize the [Resource manager](https://github.com/HeapsIO/heaps/wiki/Resource-Management)
+* have a `.fnt` and the corresponding `.png` file in your `res` folder
+* load it using `hxd.Res.fonts.myFont.toFont()`
+* create an `h2d.Text` using this font
+
+
