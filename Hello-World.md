@@ -10,11 +10,11 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 ```
 -lib heaps
 -js hello.js
--main Hello
+-main Main
 -debug
 ```
 
-This will tell that we are using the library Heaps, that we will compile to JavaScript `hello.js` output, and that our main class should be `Hello.hx` file.
+This will tell that we are using the library Heaps, that we will compile to JavaScript `hello.js` output, and that our main class should be `Main.hx` file.
 
 The `-debug` file allows generation of source maps in order to be able to debug your JS application.
 
@@ -24,10 +24,10 @@ At this point, you can open the `helloHeaps` folder with VSCode by launching VSC
 
 ## Create Hello World example
 
-Create a new `Hello.hx` in the directory and put the following content
+Create a new `Main.hx` in the directory and put the following content
 
 ```haxe
-class Hello extends hxd.App {
+class Main extends hxd.App {
 	override function init() {
 		var tf = new h2d.Text(hxd.res.DefaultFont.get(), s2d);
 		tf.text = "Hello World !";
