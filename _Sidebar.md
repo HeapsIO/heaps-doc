@@ -1,9 +1,7 @@
 * [Home](https://github.com/HeapsIO/heaps/wiki)
 * [[Getting Started]]
   * [[Installation]]
-  * [[Example application]]
-  * [[Debugging]]
-  * [[Other Editors]]
+  * [[Hello World]]
 * [[H2D]]
   * [[H2D Introduction]]
   * [[Animation]]
