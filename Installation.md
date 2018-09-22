@@ -45,3 +45,8 @@ In addition to use Heaps.io with [HashLink](http://hashlink.haxe.org) (also know
    * Install Haxelib [hlsdl](https://lib.haxe.org/p/hlsdl) for SDL/GL support
 
 Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm)
+
+Once everything is setup, you should be able to run `hl` command from your terminal:
+
+![image](https://user-images.githubusercontent.com/1022912/45916745-4ef11280-be6b-11e8-8d9a-9405508ff014.png)
+
