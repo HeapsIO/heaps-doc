@@ -21,8 +21,6 @@ haxelib install heaps
 
 *Having troubles installing Heaps with Haxe 3.4 or higher?* Install the latest git version of Heaps:  `haxelib git heaps https://github.com/ncannasse/heaps.git`
 
----
-
 ## Additional steps for Heaps and HashLink VM
  
 In addition to use Heaps.io with [HashLink](http://hashlink.haxe.org) (also known as HL), you need to install: 
@@ -33,8 +31,6 @@ In addition to use Heaps.io with [HashLink](http://hashlink.haxe.org) (also know
  * Install Haxelib [hldx](https://lib.haxe.org/p/hldx) for DirectX support
  * Install Haxelib [hlopenal](https://lib.haxe.org/p/hlopenal) for OpenAL support
  * Install Haxelib [hlsdl](https://lib.haxe.org/p/hlsdl) for SDL/GL support
-
----
 
 Once you've downloaded the HashLink binary you'll want to add it to your system PATH.
 
