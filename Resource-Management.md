@@ -74,7 +74,8 @@ You can initialize the resource loader and filesystem by yourself, or use one of
 You can build a `pak` file for all your ressources by running the following command from your project directory:
 
 ```
-haxe -hl hxd.fmt.pak.Build.hl -lib heaps -main hxd.fmt.pak.Build && hl hxd.fmt.pak.Build.hl
+haxe -hl hxd.fmt.pak.Build.hl -lib heaps -main hxd.fmt.pak.Build
+hl hxd.fmt.pak.Build.hl
 ```
 
 Options can be found in sources [here](https://github.com/HeapsIO/heaps/blob/master/hxd/fmt/pak/Build.hx#L182)
