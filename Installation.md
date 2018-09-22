@@ -1,9 +1,6 @@
 # Installation
 
-In order to get up and running Heaps you'll need to make a decision about how you would like to run and debug your project. Currently these options are as follows:
-* JavaScript
-* HashLink
-* Flash
+In order to get up and running Heaps you'll need to make a decision about how you would like to run and debug your project.
 
 First things first, you're going to need to download the latest version of Haxe. If you plan on testing with HashLink, however, you will need to download the [Latest Haxe 4 Preview](https://haxe.org/download/list/) from the website.
 
@@ -16,10 +13,6 @@ First things first, you're going to need to download the latest version of Haxe.
 ```
 haxelib install heaps
 ```
-
-<small>Thats it! You can use Heaps now!</small>
-
-*Having troubles installing Heaps with Haxe 3.4 or higher?* Install the latest git version of Heaps:  `haxelib git heaps https://github.com/ncannasse/heaps.git`
 
 ## Additional steps for Heaps and HashLink VM
  
