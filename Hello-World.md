@@ -107,6 +107,29 @@ You can put breakpoints into your Heaps application by clicking in the margin to
 
 ![image](https://user-images.githubusercontent.com/1022912/45916676-6bd91600-be6a-11e8-99a1-b15567ee4ec7.png)
 
+## Compile-and-Run
+
+If you want to make sure that compilation is done every time you press `F5`, you can edit your `.vscode/launch.json` file by adding a `preLanchTask` such as the following example:
+
+```json
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "chrome",
+			"request": "launch",
+			"name": "Launch Chrome against localhost",
+			"url": "file://${workspaceFolder}/index.html",
+			"webRoot": "${workspaceFolder}",
+			"preLaunchTask": {
+				"type" : "haxe",
+				"args" : "active configuration"
+			}
+		}
+	]
+}
+```
+
 Now is the time to do more!
 
 Use the menu to explore Heaps features and APIs.
