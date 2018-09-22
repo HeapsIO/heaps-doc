@@ -16,7 +16,7 @@ If you plan on testing with HashLink, however, you will need to download the [La
 haxelib install heaps
 ```
 
-## Installing Visual Studio Code
+## Installing Visual Studio Code + Haxe support
 
 The recommended editor for creating Heaps applications is Visual Studio Code:
 
