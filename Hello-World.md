@@ -74,7 +74,7 @@ In order to Run with Chrome, you need **Chrome Debugger** VSCode extension. Open
 One installed, press `F5` or do `Debug > Start Debugging`.
 This should give you the choice to Debug with Chrome. If not, restart VSCode so the extension is activated.
 
-If you click on Chrome, it will open you a `.vscode/launch.json` similar to the `tasks.json` we had earlier for compiling.
+If you click on `Chrome` label, it will open you a `.vscode/launch.json` similar to the `tasks.json` we had earlier for compiling.
 
 ```json
 {
