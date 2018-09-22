@@ -2,6 +2,7 @@
 * [[Getting Started]]
   * [[Installation]]
   * [[Hello World]]
+  * [[Hello HashLink]]
 * [[H2D]]
   * [[H2D Introduction]]
   * [[Animation]]
