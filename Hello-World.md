@@ -97,7 +97,19 @@ You can either setup a web server on `localhost:8080` to display the content, or
     "url": "file://${workspaceFolder}/index.html",
 ```
 
+Now Run again (through the menu or `F5`) and the browser should open and display `Hello World`
 
+![image](https://user-images.githubusercontent.com/1022912/45916668-43511c00-be6a-11e8-8e2c-0d280dedebef.png)
+
+## Debugging
+
+You can put breakpoints into your Heaps application by clicking in the margin to left to the line number in your source code. You can then start again the problem and see it break at the desired position.
+
+![image](https://user-images.githubusercontent.com/1022912/45916676-6bd91600-be6a-11e8-99a1-b15567ee4ec7.png)
+
+Now is the time to do more!
+
+Use the menu to explore Heaps features and APIs.
 
 
 
