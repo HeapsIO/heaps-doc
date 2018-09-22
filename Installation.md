@@ -27,7 +27,7 @@ In addition to use Heaps.io with [HashLink](http://hashlink.haxe.org) (also know
 
  * [HashLink](https://github.com/HaxeFoundation/hashlink/releases) Virtual Machine
    * On OSX, you will have to follow the instructions laid out [here](https://github.com/HaxeFoundation/hashlink#building-on-linuxosx) to get set up with Hashlink, as the process is a little different.
- * [Latest Haxe 4 preview](https://haxe.org/download/list/)
+ * Instead of Haxe 3.4 you need latest [Haxe 4 preview](https://haxe.org/download/list/)
  * Some additional libraries should be installed with `haxelib install <lib>` command 
    * Install Haxelib [hldx](https://lib.haxe.org/p/hldx) for DirectX support
    * Install Haxelib [hlopenal](https://lib.haxe.org/p/hlopenal) for OpenAL support
