@@ -12,14 +12,14 @@ var tile = hxd.Res.myDirectory.myBitmap.toTile();
 
 Please note that this is strictly typed: hxd.Res will look into the `res` directory of your project (or the directory specified by `-D resourcesPath=...` haxe compilation parameter). It will then list all directories and files, and depending on the file extension, it will provide you access to the following resources:
 
- * `png,jpg,jpeg,gif`: [hxd.res.Image](https://github.com/ncannasse/heaps/blob/master/hxd/res/Image.hx)
- * `wav,mp3,ogg` : [hxd.res.Sound](https://github.com/ncannasse/heaps/blob/master/hxd/res/Sound.hx)
- * `fbx,hmd`: [hxd.res.Model](https://github.com/ncannasse/heaps/blob/master/hxd/res/Model.hx)
- * `fnt` (+png): [hxd.res.BitmapFont](https://github.com/ncannasse/heaps/blob/master/hxd/res/BitmapFont.hx)
- * `ttf`: [hxd.res.Font](https://github.com/ncannasse/heaps/blob/master/hxd/res/Font.hx)
- * `tmx`: [hxd.res.TiledMap](https://github.com/ncannasse/heaps/blob/master/hxd/res/TiledMap.hx)
- * `atlas`: [hxd.res.Atlas](https://github.com/ncannasse/heaps/blob/master/hxd/res/Atlas.hx)
- * other: [hxd.res.Resource](https://github.com/ncannasse/heaps/blob/master/hxd/res/Resource.hx) (still allows you to ready binary data)
+ * `png,jpg,jpeg,gif`: [hxd.res.Image](https://heaps.io/api/hxd/res/Image.html)
+ * `wav,mp3,ogg` : [hxd.res.Sound](https://heaps.io/api/hxd/res/Sound.html)
+ * `fbx,hmd`: [hxd.res.Model](https://heaps.io/api/hxd/res/Model.html)
+ * `fnt` (+png): [hxd.res.BitmapFont](https://heaps.io/api/hxd/res/BitmapFont.html)
+ * `ttf`: [hxd.res.Font](https://heaps.io/api/hxd/res/Font.html)
+ * `tmx`: [hxd.res.TiledMap](https://heaps.io/api/hxd/res/TiledMap.html)
+ * `atlas`: [hxd.res.Atlas](https://heaps.io/api/hxd/res/Atlas.html)
+ * other: [hxd.res.Resource](https://heaps.io/api/hxd/res/Resource.html) (still allows you to ready binary data)
 
 
 ## Resources loader
@@ -46,7 +46,7 @@ You can resolve a resource from it path in the resource file system by using the
 hxd.Res.loader.load("path/to/myResource.png")
 ```
 
-This will return a [hxd.res.Any](https://github.com/ncannasse/heaps/blob/master/hxd/res/Any.hx) which have various methods to transform it to other resources.
+This will return a [hxd.res.Any](https://heaps.io/api/hxd/res/Any.html) which have various methods to transform it to other resources.
 
 ### Runtime resource loading
 
@@ -55,13 +55,13 @@ Once you have the bytes for your resource, you can use `hxd.res.Any.fromBytes` t
 
 ## File Systems
 
-Resources files are accessed through a virtual file system which implements the [FileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fs/FileSystem.hx) interface. 
+Resources files are accessed through a virtual file system which implements the [FileSystem](https://heaps.io/api/hxd/fs/FileSystem.html) interface. 
 
 Heaps provides already several file systems, such as:
 
- * [EmbedFileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fs/EmbedFileSystem.hx) will gives access to the resources which are embedded with your code (using haxe `-resource` compilation flag). On platforms such as JavaScript, this allows you to have both your code and assets stored in a single file.
- * [LocalFileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fs/LocalFileSystem.hx) which gives access to a local file system directory where your resources are stored. This require hard drive access so it is not available in the browser for example.
- * [hxd.fmt.pak.FileSystem](https://github.com/ncannasse/heaps/blob/master/hxd/fmt/pak/FileSystem.hx) will read a `.pak` file which contains all resources packaged into a single binary. The PAK file can be loaded at runtime and several PAK files can be used, the latest loaded being able to override the resources declared in previously loaded PAK files.  
+ * [EmbedFileSystem](https://heaps.io/api/hxd/fs/EmbedFileSystem.html) will gives access to the resources which are embedded with your code (using haxe `-resource` compilation flag). On platforms such as JavaScript, this allows you to have both your code and assets stored in a single file.
+ * [LocalFileSystem](https://heaps.io/api/hxd/fs/LocalFileSystem.html) which gives access to a local file system directory where your resources are stored. This require hard drive access so it is not available in the browser for example.
+ * [hxd.fmt.pak.FileSystem](https://heaps.io/api/hxd/fmt/pak/FileSystem.html) will read a `.pak` file which contains all resources packaged into a single binary. The PAK file can be loaded at runtime and several PAK files can be used, the latest loaded being able to override the resources declared in previously loaded PAK files.  
 
 You can initialize the resource loader and filesystem by yourself, or use one of the following shortcuts:
 
