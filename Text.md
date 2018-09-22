@@ -1,15 +1,12 @@
 # Displaying text
 
-`h2d.Text` can be used to draw text using bitmap fonts. It allows you to set textColor, maxWidth, textAlign, letterSpacing and lineSpacing.
-It's also possible to get the size of the text with textWidth/textHeight.
+[h2d.Text](https://heaps.io/api/h2d/Text.html) can be used to draw text using precomputed bitmap fonts.
 
 ### Use text in Heaps
 
 ```haxe
-// Initialize the Resources loader
-hxd.Res.initEmbed();
-
-var tf = new h2d.Text(hxd.Res.fonts.myFontName.toFont());
+var font : h2d.Font = hxd.res.DefaultFont.get();
+var tf = new h2d.Text(font);
 tf.text = "Hello World\nHeaps is great!";
 tf.textAlign = Center;
 
@@ -62,7 +59,3 @@ In [Littera](http://www.kvazars.com/littera/), use these settings:
 If you add some 'padding' (not 'spacing') in the export options, you can decorate the outputted .png-file in your image-editing software with some colors/effects/gradients. You can bake this inside your bitmap.
 
 Want gradients? Its not simple to add them with image-editing software if cells are uneven. Use the "equalize the cell heights" in the export options. Then all chars have the same height and is a bit easier to add the gradients. Of course, the texture will be a bit bigger in that case, since there is a bit more whitespace.
-
-#### In need of a dummy font? 
-
-You can start with a basic font provided here: <https://github.com/HeapsIO/heaps/tree/master/samples/res>
