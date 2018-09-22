@@ -2,7 +2,7 @@
 
 Creating an animated sprite in H2D is relative easy.
 
-Instead of using [`h2d.Bitmap`](https://github.com/ncannasse/heaps/blob/master/h2d/Bitmap.hx) to display a single Tile, you can use [`h2d.Anim`](https://github.com/ncannasse/heaps/blob/master/h2d/Anim.hx) to display a list of tiles that will automatically be played:
+Instead of using [`h2d.Bitmap`](https://heaps.io/api/h2d/Bitmap.html) to display a single Tile, you can use [`h2d.Anim`](https://heaps.io/api/h2d/Anim.html) to display a list of tiles that will automatically be played:
 
 ```haxe
 // creates three tiles with different color
