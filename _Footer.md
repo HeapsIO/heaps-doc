@@ -9,5 +9,4 @@
 [Tools]:https://github.com/ncannasse/heaps/wiki/Tools
 [Misc]:https://github.com/ncannasse/heaps/wiki/Misc
 
-### Want to contribute to this Wiki?
-[Fork it and send a pull request.](https://github.com/HeapsIO/heaps-doc)
+[Contribute to this wiki.](https://github.com/HeapsIO/heaps-doc)
