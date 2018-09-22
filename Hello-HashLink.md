@@ -14,7 +14,7 @@ But instead of `-js hello.js`, instead use `-hl hello.hl`, your HXML file should
 -lib heaps
 -lib hlsdl
 -hl hello.hl
--main Hello
+-main Main
 ```
 
 _(Note: unlike JavaScript, you can debug in HL without compiling with `-debug`)_
@@ -23,7 +23,7 @@ The `-lib hlsdl` tells Heaps to compile with SDL/OpenGL support. If you are on W
 
 ## Compile Output
 
-Follow instructions on (https://github.com/HeapsIO/heaps/wiki/Hello-World) regarding compilation, and use the same `Hello.hx` source file.
+Follow instructions on (https://github.com/HeapsIO/heaps/wiki/Hello-World) regarding compilation, and use the same `Main.hx` source file.
 If everything works fine you should get a `hello.hl` file compiled and ready to run.
 
 ![image](https://user-images.githubusercontent.com/1022912/45916898-81037400-be6d-11e8-8d57-0e13778c4064.png)
