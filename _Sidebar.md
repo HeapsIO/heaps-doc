@@ -1,5 +1,4 @@
 * [Home](https://github.com/HeapsIO/heaps/wiki)
-* [[Getting Started]]
 * [[Introduction]]
   * [[Installation]]
   * [[Example application]]
