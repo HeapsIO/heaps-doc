@@ -20,7 +20,7 @@ The `-debug` file allows generation of source maps in order to be able to debug 
 
 ## Open with VSCode
 
-At this point, you can open the `helloHeaps` folder with VSCode by launching VSCode and doing `File > Open Folder`
+At this point, you can open the `helloHeaps` folder with VSCode by launching VSCode and navigating the main menu `File > Open Folder`
 
 ## Create Hello World example
 
