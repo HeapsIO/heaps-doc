@@ -11,9 +11,9 @@ var customGraphics = new h2d.Graphics(s2d);
 //specify a color we want to draw with
 customGraphics.beginFill(0xEA8220);
 //Draw a rectangle at 10,10 that is 300 pixels wide and 200 pixels tall
-customGraphics.drawRect(10, 10, 300, 300);
+customGraphics.drawRect(10, 10, 300, 200);
 //End our fill
-customGraphics.endFil();
+customGraphics.endFill();
 ```
 
 The above code will produce the following
