@@ -63,7 +63,7 @@ You can listen to resize events by adding `addResizeEvent` listener to the [`hxd
 ```haxe
 function onResize() {
 	var stage = hxd.Stage.getInstance();
-	trace("Resized to ${stage.width}px * ${stage.height}px');
+	trace('Resized to ${stage.width}px * ${stage.height}px');
 }
 hxd.Stage.getInstance().addResizeEvent(onResize);
 ```
