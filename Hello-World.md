@@ -14,7 +14,7 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 -debug
 ```
 
-This will tell that we are using the library Heaps, that we will compile to JavaScript `hello.js` output, and that our main class should be `Main.hx` file.
+This will tell the compiler that we are using the library Heaps, that we will compile to JavaScript `hello.js` output, and that our main class should be `Main.hx` file.
 
 The `-debug` file allows generation of source maps in order to be able to debug your JS application.
 
@@ -33,7 +33,7 @@ class Main extends hxd.App {
 		tf.text = "Hello World !";
 	}
 	static function main() {
-		new Hello();
+		new Main();
 	}
 }
 ```
@@ -109,7 +109,7 @@ You can put breakpoints into your Heaps application by clicking in the margin to
 
 ## Compile-and-Run
 
-If you want to make sure that compilation is done every time you press `F5`, you can edit your `.vscode/launch.json` file by adding a `preLanchTask` such as the following example:
+If you want to make sure that compilation is done every time you press `F5`, you can edit your `.vscode/launch.json` file by adding a `preLaunchTask` such as the following example:
 
 ```json
 {
