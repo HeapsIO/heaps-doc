@@ -33,7 +33,7 @@ class Main extends hxd.App {
 		tf.text = "Hello World !";
 	}
 	static function main() {
-		new Hello();
+		new Main();
 	}
 }
 ```
@@ -109,7 +109,7 @@ You can put breakpoints into your Heaps application by clicking in the margin to
 
 ## Compile-and-Run
 
-If you want to make sure that compilation is done every time you press `F5`, you can edit your `.vscode/launch.json` file by adding a `preLanchTask` such as the following example:
+If you want to make sure that compilation is done every time you press `F5`, you can edit your `.vscode/launch.json` file by adding a `preLaunchTask` such as the following example:
 
 ```json
 {

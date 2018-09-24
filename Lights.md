@@ -32,7 +32,7 @@ Directional lights are lights that affect every object with a light enabled mate
 
 The following is an example of how to create a directional light
 
-```
+```haxe
 //Create the directional light by giving it a Vector indicating the direction in which it illuminates and a reference to our 3d scene
 var directionalLight = new h3d.scene.DirLight(new h3d.Vector(0.2, 0.3, -1), s3d);
 //Set the color on the directional light

@@ -2,7 +2,7 @@
 
 Materials are the cornerstone of viewing content in 3d. Your scene can have many objects with geometry but if no materials are applied you will not see anything in your viewport. 
 
-Materials get applied to Meshes.  By default materials area specific color (white) but this can be customized in a variety of ways.
+Materials get applied to Meshes. By default materials are of a specific color (white) but this can be customized in a variety of ways.
 
 ```haxe
 // creates a cube to act as our geometry

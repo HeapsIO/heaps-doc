@@ -2,7 +2,7 @@
 
 Heaps supports rendering particles on the GPU. This allows for an extremely high amount of particles to be rendered on screen with very little performance impact.
 
-Stting up your GPU particles involves first creating a particle system.
+Setting up your GPU particles involves first creating a particle system.
 
 ```haxe
 //Create a particle system and pass it our 3d scene

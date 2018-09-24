@@ -40,7 +40,7 @@ class SineDeformShader extends hxsl.Shader {
 #### Base 2D values 
 
 For 2D shaders, the following parameters are available in the custom shader. 
-When in doubt, can look these up in `h3d.shader.Base2d` (which you have to import).
+When in doubt, you can look these up in `h3d.shader.Base2d` (which you have to import).
 
 ```haxe
 var spritePosition : Vec4;
