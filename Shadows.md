@@ -49,7 +49,7 @@ s3d.camera.pos.set(12, 12, 6);
 new h3d.scene.CameraController(s3d).loadFromCamera();
 ```
 
-![Shadow Example](img/h3d/shadows.jpg)
+![Shadow Example](http://heaps.io/img/h3d/shadows.jpg)
 
 # Blurring Shadows
 
