@@ -1,4 +1,4 @@
-* [Home](https://github.com/HeapsIO/heaps/wiki)
+* [[Home]]
 * [[Getting Started]]
   * [[Installation]]
   * [[Hello World]]
