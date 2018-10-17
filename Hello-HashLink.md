@@ -1,12 +1,12 @@
 [HashLink](https://hashlink.haxe.org/) is a virtual machine for Haxe. It can be used to build native desktop applications as well mobile platforms (Android / iOS) and consoles.
 
-This tutorial requires you to have completed already the [Installation](https://github.com/HeapsIO/heaps/wiki/Installation), including the HashLink specific parts.
+This tutorial requires you to have completed already the [[Installation]], including the HashLink specific parts.
 
-Please also read (https://github.com/HeapsIO/heaps/wiki/Hello-World) as we follow the same steps but with some changes.
+Please also read [[Hello World]] as we follow the same steps but with some changes.
 
 ## Setup compilation options
 
-Create a new folder `helloHL` and a `compile.hxml` file similar to what is done in [Hello World](https://github.com/HeapsIO/heaps/wiki/Hello-World) example.
+Create a new folder `helloHL` and a `compile.hxml` file similar to what is done in [[Hello World]] example.
 
 But instead of `-js hello.js`, instead use `-hl hello.hl`, your HXML file should then look like this:
 
@@ -23,7 +23,7 @@ The `-lib hlsdl` tells Heaps to compile with SDL/OpenGL support. If you are on W
 
 ## Compile Output
 
-Follow instructions on (https://github.com/HeapsIO/heaps/wiki/Hello-World) regarding compilation, and use the same `Main.hx` source file.
+Follow instructions on [[Hello World]] regarding compilation, and use the same `Main.hx` source file.
 If everything works fine you should get a `hello.hl` file compiled and ready to run.
 
 ![image](https://user-images.githubusercontent.com/1022912/45916898-81037400-be6d-11e8-8d57-0e13778c4064.png)
