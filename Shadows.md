@@ -2,7 +2,7 @@
 
 Heaps has support for real-time shadows.  Objects can both cast and receive shadows.  This is set at a material level.  In order to for shadows to work properly normals need to be calculated for your geometry.
 
-In the following example you can see a simple scene with a couple of spheres and a floor.  The spheres both cast and receive shadows while the floor only receives them.  For shadows to render correctly your scene will need at least 1 [light](/documentation/h3d/lights.html).
+In the following example you can see a simple scene with a couple of spheres and a floor.  The spheres both cast and receive shadows while the floor only receives them.  For shadows to render correctly your scene will need at least 1 [light](http://github.com/heapsio/heaps/wiki/Lights).
 
 ```haxe
 //Create a floor plane where we can view our cast shadows
@@ -49,7 +49,7 @@ s3d.camera.pos.set(12, 12, 6);
 new h3d.scene.CameraController(s3d).loadFromCamera();
 ```
 
-![Shadow Example](img/h3d/shadows.jpg)
+![Shadow Example](http://heaps.io/img/h3d/shadows.jpg)
 
 # Blurring Shadows
 
@@ -64,7 +64,7 @@ shadow.blur.passes = 3;
 ```
 
 An example with shadow.blur.passes = 1;
-![Shadow blurring set to 1](img/h3d/shadows_blur_1.jpg)
+![Shadow blurring set to 1](http://heaps.io/img/h3d/shadows_blur_1.jpg)
 
 An example with shadow.blur.passes = 10;
-![Shadow blurring set to 10](img/h3d/shadows_blur_10.jpg)
+![Shadow blurring set to 10](http://heaps.io/img/h3d/shadows_blur_10.jpg)
