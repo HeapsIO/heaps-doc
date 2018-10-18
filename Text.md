@@ -18,7 +18,14 @@ For each font family you need a different font file, but you can tint them with 
 
 ## Font creation
 
-If you want to use custom fonts, other than the Default one, you need to create a `.fnt` file and put it into your `res` directory.
+If you want to use custom fonts, other than the Default one, you need to create a `.fnt` file and put it into your `res` directory.  
+Heaps automatically converts all supported `.fnt` files to its own `.bfnt` format to speed up font loading.
+
+### Supported formats
+
+* All 3 BMFont formats: XML, Text and Binary.  
+  _Note: Multiple images per font are not supported._
+* [FontBuilder](https://github.com/andryblack/fontbuilder): Divo (discouraged to use, as it is less advanced than BMFont)
 
 ### Convert font to bitmap font using BMfont tool
   
@@ -33,7 +40,7 @@ In the BMFont-tool, use these settings:
 * _File_ → _Export settings_
   * Bit depth: 32
   * Preset: black text with alpha
-  * Font descriptor: Text
+  * Font descriptor: Any
   * Texture: Png
 * _File_ → _Save bitmap font as.._ 
   * Put in your Heaps project under `./res/fonts/myFontName.fnt` 
@@ -52,9 +59,11 @@ In [Littera](http://www.kvazars.com/littera/), use these settings:
     * Background color
     * ...
 * Export settings in the header
+  * Format: Either `XML (.fnt)` or `Text (.fnt)`
   * Default values are fine for Heaps
   * Press _Export_ start the downloading process.
   * Unzip the file an put it's content in your Heaps project under `./res/fonts/` 
+* If you renamed the files, don't forget to update reference to font texture in `pages` section of `.fnt` file.
   
 ### Be creative with bitmapfonts
 
@@ -67,6 +76,8 @@ Want gradients? Its not simple to add them with image-editing software if cells 
 Once the font is ready, you can use it for your Text:
 * initialize the [Resource manager](https://github.com/HeapsIO/heaps/wiki/Resource-Management)
 * have a `.fnt` and the corresponding `.png` file in your `res` folder
+  * For Divo, `.png` file should have exactly the same name as `.fnt`
+  * For BMFont, Heaps will try to find texture referenced in `.fnt` first, and then, if unsuccessful, fallback to same behavior as Divo.
 * load it using `hxd.Res.fonts.myFont.toFont()`
 * create an `h2d.Text` using this font
 
