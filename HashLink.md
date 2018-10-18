@@ -16,7 +16,7 @@ For SDL
 
 ## Compile for HashLink: 
 
-To copmile for HashLink use the following example.
+To compile for HashLink use the following example.
 
 
 ```hxml
