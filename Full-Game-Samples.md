@@ -17,3 +17,13 @@ A top view 2D action game, not tile based
 - [View sources](https://github.com/ncannasse/ld37)
 
 ![image](https://user-images.githubusercontent.com/1022912/47556470-abce6580-d90e-11e8-8555-77e3ab99f30c.png)
+
+### Jungle Hair
+
+A 2D pixel platformer
+
+- [Play it here](http://ncannasse.fr/file/ld32)
+- [View sources](https://github.com/ncannasse/ld32)
+
+![image](https://user-images.githubusercontent.com/1022912/47557372-ca356080-d910-11e8-80a1-f3a692e48fd0.png)
+
