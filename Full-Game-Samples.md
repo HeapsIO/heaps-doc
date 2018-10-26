@@ -27,3 +27,11 @@ A 2D pixel platformer
 
 ![image](https://user-images.githubusercontent.com/1022912/47557372-ca356080-d910-11e8-80a1-f3a692e48fd0.png)
 
+### Princess Kingdom
+
+A strategy game (using mouse UI) with some platformer involved
+
+- [Play it here](http://ncannasse.fr/file/ld28)
+- [View sources](https://github.com/ncannasse/ld28)
+
+![image](https://user-images.githubusercontent.com/1022912/47560681-32884000-d919-11e8-9d6e-47011896927a.png)
