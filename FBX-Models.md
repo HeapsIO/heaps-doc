@@ -8,7 +8,7 @@ Heaps uses its own internal 3D format called HMD which is faster to load and pro
 
 In order to export a FBX model that can be load to HMD, please make sure to:
 
- * export to FBX 2010 in text format (FBX version 7.x), the FBX binary format is not supported
+ * export to FBX 2010 (FBX version 7.x), both FBX binary and text format are supported
  * export using Z-up axis
  * export using BakeAnimation, this will make sure your animation is exactly the same it was created
 
