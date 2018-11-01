@@ -38,8 +38,8 @@ class MyFilterShader extends h3d.shader.ScreenShader {
 		@param var red : Float;
 		
 		function fragment() {
-			output.color = texture.get(input.uv);
-			output.color.r = red; // change red channel
+			pixelColor = texture.get(input.uv);
+			pixelColor.r = red; // change red channel
 		}
 	}
 }
