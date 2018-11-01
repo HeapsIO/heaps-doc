@@ -26,7 +26,7 @@ The recommended editor for creating Heaps applications is Visual Studio Code:
 
 **2. Install Haxe Extension Pack:**
 
-Click on the **Extension** panel (fourth icon on the right side bar of VSCode), search `haxe` and install **Haxe Extension Pack** that will contain everything you need for Haxe support.
+Click on the **Extension** panel (fourth icon on the left side bar of VSCode), search `haxe` and install **Haxe Extension Pack** that will contain everything you need for Haxe support.
 
 ![](https://user-images.githubusercontent.com/1022912/45916335-6547a000-be64-11e8-8d4e-799dffea475f.png)
 
