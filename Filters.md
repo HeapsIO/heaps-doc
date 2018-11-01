@@ -10,7 +10,7 @@ mySprite.filter = new Glow();
 ## Build-in filters
 
 Heaps provides several filters like Ambient, Bloom, Blur, ColorMatrix, Displacement, DropShadow, Glob, Mask. 
-They can be found in the `h2d.filter` package.
+They can be found in the [h2d.filter](https://heaps.io/api/h2d/filter/index.html) package.
 
 ## Creating custom screen shader filters
 
