@@ -58,10 +58,18 @@ In order to run our example, we need to embed it into a web page.
 Create a file named `index.html` with the following content:
 
 ```html
+<!DOCTYPE>
 <html>
-<head><meta charset="utf-8"/><title>Hello Heaps</title></head>
-<body style="margin:0;padding:0;background-color:black">
-	<canvas id="webgl" style="width:100%;height:100%"></canvas>
+<head>
+	<meta charset="utf-8"/>
+	<title>Hello Heaps</title>
+	<style>
+		body { margin:0;padding:0;background-color:black; }
+		canvas#webgl { width:100%;height:100%; } 
+	</style>
+</head>
+<body>
+	<canvas id="webgl"></canvas>
 	<script type="text/javascript" src="hello.js"></script>
 </body>
 </html>

@@ -34,9 +34,11 @@ Let's create a simple shader that changes the red channel based on a parameter:
 ```haxe
 class MyFilterShader extends h3d.shader.ScreenShader {
 	static var SRC = {
+		@param var texture : Sampler2D;
 		@param var red : Float;
 		
 		function fragment() {
+			output.color = texture.get(input.uv);
 			output.color.r = red; // change red channel
 		}
 	}
