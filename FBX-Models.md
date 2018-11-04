@@ -11,6 +11,7 @@ In order to export a FBX model that can be load to HMD, please make sure to:
  * export to FBX 2010 (FBX version 7.x), both FBX binary and text format are supported.
  * export using `Z`-up and `-Y`-forward axis.
  * export using BakeAnimation, this will make sure your animation is exactly the same it was created.
+ * note for 3ds Max and Maya: Use Game Exporter instead of standrad Export.
 
 # Restrictions
 
@@ -22,7 +23,44 @@ Some restriction apply to the structure of your models when using FBX export:
 
 # Load and display
 
-In order to add a FBX/HMD model to your scene, you need first to load it with the Resource manager this way:
+In order to add a FBX/HMD model to your scene, you need first to load it with the Resource manager. There are two primary ways of doing so.
+
+## Using `h3d.prim.ModelCache`
+
+Most robust way is to use `ModelCache` class:
+
+```haxe
+// Create a model cache
+var cache = new h3d.prim.ModelCache();
+// Add a model library to cache.
+// This is optional, because `loadModel` and `loadAnimation` add it to cache automatically.
+// Returns hxd.fmt.hmd.Library
+cache.loadLibrary(hxd.Res.myModel);
+// Create a model instance. Compared to manual model creation, ModelCache loads textures automatically.
+var obj = cache.loadModel(hxd.Res.myModel);
+// Load an animation.
+var anim = cache.loadAnimation(hxd.Res.myModel);
+// play it on the object
+obj.playAnimation(anim);
+
+// Clear the cache instance. Note that cache will dispose all cached model textures as well.
+cache.dispose();
+```
+
+Another thing to note is that how texture loading resolves texture paths. First it tries to load from directly provided `texturePath`, then, if it fails - relative to passed model. E.g. in case of folder structure like that:
+
+```
+texture.png
+models/myModel.fbx
+models/texture.png
+```
+
+It will resolve to top-level `texture.png` instead of `models/texture.png` when loading `hxd.Res.models.myModel` if model requests path as `texture.png`.
+
+
+## Manual loading
+
+Alternatively it is possible to load models directly from Library:
 
 ```haxe
 // lib is an hxd.fmt.hmd.Library
@@ -40,35 +78,3 @@ obj.playAnimation(anim);
 Please note that the HMD library and animations are not cached. If you want to be able to create many instances of the same object in your scene, make sure to cache the values so they can be reused.
 
 A complete example is available in the `samples/skin` directory.
-
-## Using `h3d.prim.ModelCache`
-
-It also possible to load and cache models and animation via `ModelCache` class:
-
-```haxe
-// Create a model cache
-var cache = new h3d.prim.ModelCache();
-// Add a model library to cache.
-// This is optional, because `loadModel` and `loadAnimation` add it to cache automatically.
-// Returns hxd.fmt.hmd.Library
-cache.loadLibrary(hxd.Res.myModel);
-// Create a model instance. Compared to manual model creation, ModelCache loads textures automatically.
-var obj = cache.loadModel(hxd.Res.myModel);
-// Load an animation.
-var anim = cache.loadAnimation(hxd.Res.myModel);
-
-// Clear the cache instance. Note that cache will dispose all cached model textures as well.
-cache.dispose();
-```
-
-This method is more user-friendly and handles library and animations caching internally.
-
-Another thing to note is that how texture loading resolves texture paths. First it tries to load from directly provided `texturePath`, then, if it fails - relative to passed model. E.g. in case of folder structure like that:
-
-```
-texture.png
-models/myModel.fbx
-models/texture.png
-```
-
-It will resolve to top-level `texture.png` instead of `models/texture.png` when loading `hxd.Res.models.myModel` if model requests path as `texture.png`.
