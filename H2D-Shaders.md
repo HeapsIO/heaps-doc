@@ -31,7 +31,7 @@ class SineDeformShader extends hxsl.Shader {
 		
 		function fragment() {
 			calculatedUV.y += sin(calculatedUV.y * frequency + time * speed) * amplitude; // wave deform
-			pixelColor = texture2D(texture, calculatedUV);
+			pixelColor = texture.get(calculatedUV);
 		}
 	}
 }
