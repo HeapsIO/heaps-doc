@@ -32,7 +32,6 @@
   * [[Sound]]
 * [[Shaders]]
   * [[HXSL]]
-* [[Sound]]
 * [[Target platforms]]
   * [[Flash]]
   * [[HashLink]]
