@@ -9,7 +9,7 @@ Before discussing H2D in-depth, let's introduce a few concepts that we will use 
 A **Texture** (represented by [h3d.mat.Texture](https://heaps.io/api/h3d/mat/Texture.html)) whose per-pixel data is located in GPU memory. You can no longer access its pixels or modify it in an efficient way. But it can be used to display 3D models or 2D pictures.
 
 ### Tile
-A **Tile** (represented by [h2d.Tile](https://heaps.io/api/h2d/Tile.html)) is a sub part of a Texture. For instance a 256x256 Texture might contain several graphics, such as different the frames of an animated sprite. A Tile will be a part of this texture, it has a (x,y) position and a (width,height) size in pixels. It can also have a pivot position (dx,dy)._
+A **Tile** (represented by [h2d.Tile](https://heaps.io/api/h2d/Tile.html)) is a sub part of a Texture. For instance a 256x256 Texture might contain several graphics, such as the different frames of an animated sprite. A Tile will be a part of this texture, it has a (x,y) position and a (width,height) size in pixels. It can also have a pivot position (dx,dy)._
 
 ### Tile Pivot
 By default a tile **pivot** is to the upper left corner of the part of the texture it represents. The pivot can be moved by modifying the (dx,dy) values of the Tile. For instance by setting the pivot to (-tile.width,-tile.height), it will now be at the bottom right of the Tile. Changing the pivot affects the way bitmaps are displayed and the way local transformations (such as rotations) are performed.
