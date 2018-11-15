@@ -16,7 +16,7 @@ class Main extends hxd.App {
 		super.init();
 		
 		// parse Tiled json file
-		var mapData:TiledMapData = haxe.Json.parse(Res.tiles_json.entry.getText());
+		var mapData:TiledMapData = haxe.Json.parse(hxd.Res.tiles_json.entry.getText());
 		
 		// get tile image (tiles.png) from resources
 		var tileImage  = hxd.Res.tiles_png.toTile();
