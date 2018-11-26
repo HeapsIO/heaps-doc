@@ -85,6 +85,6 @@ There are several shader examples available in the [h3d.shader](api/h3d/shader) 
 
 These shaders mostly uses definitions present in either:
 
-* [Base2d](api/h3d/shader/Base2d.hx) for all 2D display
-* [BaseMesh](api/h3d/shader/BaseMesh.hx) for all 3D display
-* [ScreenShader](api/h3d/shader/ScreenShader.hx) for fullscreen effect / post-process
+* [Base2d](api/h3d/shader/Base2d.html) for all 2D display
+* [BaseMesh](api/h3d/shader/BaseMesh.html) for all 3D display
+* [ScreenShader](api/h3d/shader/ScreenShader.html) for fullscreen effect / post-process
