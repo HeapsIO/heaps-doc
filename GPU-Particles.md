@@ -18,7 +18,7 @@ var particleGroup = new h3d.parts.GpuParticles.GpuPartGroup(particles);
 
 When you are ready to see your particle group on screen you just need to add it to the system.
 ```haxe
-particles.add(particleGroup);
+particles.addGroup(particleGroup);
 ```
 
 ## Customizing Particles
