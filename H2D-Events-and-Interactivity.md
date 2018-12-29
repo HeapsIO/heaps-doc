@@ -38,7 +38,7 @@ Don't forget to remove the event using removeEventTarget when disposing your obj
 Keyboard events can be observerd using the global event, check if the `event.kind` is `EKeyDown` or `EKeyUp`.
 
 ```haxe
-function onEvent(event) {
+function onEvent(event : hxd.Event) {
 	switch(event.kind) {
 		case EKeyDown: trace('DOWN keyCode: ${event.keyCode}, charCode: ${event.charCode}');
 		case EKeyUp: trace('UP keyCode: ${event.keyCode}, charCode: ${event.charCode}');
