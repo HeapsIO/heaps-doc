@@ -12,7 +12,7 @@ var cube = new h3d.prim.Cube();
 cube.translate( -0.5, -0.5, -0.5);
 
 //Create a mesh out of our geometry - it has a default material applied.
-var mesh = new Mesh(prim, s3d);
+var mesh = new Mesh(cube, s3d);
 
 //Set the material color to Haxe orange
 mesh.material.color.setColor(0xEA8220);
