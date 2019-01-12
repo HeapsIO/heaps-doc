@@ -1,4 +1,4 @@
-**Heaps** is a cross platform graphics engine designed for high performance games. It's designed to leverage modern GPUs that are commonly available on both desktop and mobile devices. 
+**Heaps** is a cross platform graphics engine designed for high performance games by leveraging modern GPUs that are commonly available on both desktop and mobile devices. 
 
 Heaps is currently working on:
 - HTML5 (requires WebGL1, WebGL2 is supported as well)
@@ -14,4 +14,4 @@ The Heaps API is comprised of several top level packages, namely:
 - [`hxd`](https://github.com/ncannasse/heaps/wiki/HXD) contains cross platform classes such as Bitmaps, and a complete resource loading and management framework
 - [`hxsl`](https://github.com/ncannasse/heaps/wiki/Shaders) is the Heaps Shader Language implementation
 
-Use the menu on the right to navigate through the documentation.
+Use the menu on the left to navigate through the documentation.
