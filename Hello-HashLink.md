@@ -30,7 +30,7 @@ If everything works fine you should get a `hello.hl` file compiled and ready to 
 
 ## Run and Debug
 
-Press F5 or do `Debug > Start Debugging`. This should give you the choice to Debug with `HashLink`. If not, make sure to install `HashLink Debugger` extension.
+Select in menu `Debug > Add Configuration`. This should give you the choice to Debug with `HashLink`. If not, make sure to install `HashLink Debugger` extension.
 
 If you click on `HashLink` label, it will open you a `.vscode/launch.json`. Change its content to the following:
 
@@ -53,7 +53,9 @@ If you click on `HashLink` label, it will open you a `.vscode/launch.json`. Chan
 }
 ```
 
-Now `Run` again using `F5` and it should open a native window showing `Hello World`:
+Note in particular that you need to set the correct `hxml` file that contains your compilation parameters.
+
+Now `Run` using `F5` and it should open a native window showing `Hello World`:
 
 ![image](https://user-images.githubusercontent.com/1022912/45916979-06d3ef00-be6f-11e8-9d5c-bc24023a7a66.png)
 
