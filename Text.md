@@ -19,7 +19,8 @@ For each font family you need a different font file, but you can tint them with 
 ## Font creation
 
 If you want to use custom fonts, other than the Default one, you need to create a `.fnt` file and put it into your `res` directory.  
-Heaps automatically converts all supported `.fnt` files to its own `.bfnt` format to speed up font loading.
+Heaps automatically converts all supported `.fnt` files to its own `.bfnt` format to speed up font loading.  
+Alternatively it is possible to use Signed Distance Field to generate scalable fonts. See Hiero section for details.
 
 ### Supported formats
 
@@ -39,7 +40,7 @@ In the BMFont-tool, use these settings:
  * Render from TrueType outline _(if you want smooth fonts)_
 * _File_ → _Export settings_
   * Bit depth: 32
-  * Preset: black text with alpha
+  * Preset: white text with alpha (black or outline w/ alpha will do as well, but black isn't tintable)
   * Font descriptor: Any
   * Texture: Png
 * _File_ → _Save bitmap font as.._ 
@@ -64,7 +65,15 @@ In [Littera](http://www.kvazars.com/littera/), use these settings:
   * Press _Export_ start the downloading process.
   * Unzip the file an put it's content in your Heaps project under `./res/fonts/` 
 * If you renamed the files, don't forget to update reference to font texture in `pages` section of `.fnt` file.
-  
+
+### Using libgdx Hiero
+
+[Hiero](https://libgdx.badlogicgames.com/tools.html) can be utilized to generate fonts with extra filters as well as SDF fonts. 
+
+* Refer to this instruction to generate SDF fonts: [Distance Field Fonts](/libgdx/libgdx/wiki/Distance-field-fonts)
+* Refer to this page for general instruction on Hiero usage: [Hiero](/libgdx/libgdx/wiki/Hiero)
+
+
 ### Be creative with bitmapfonts
 
 If you add some 'padding' (not 'spacing') in the export options, you can decorate the outputted .png-file in your image-editing software with some colors/effects/gradients. You can bake this inside your bitmap.
@@ -81,4 +90,11 @@ Once the font is ready, you can use it for your Text:
 * load it using `hxd.Res.fonts.myFont.toFont()`
 * create an `h2d.Text` using this font
 
+For SDF fonts you need to load fonts slightly differently.
 
+* Instead of `toFont()` use `toSdfFont(size, channel, alphaCutoff, smoothing)`
+  * `size` will represent desired font size.
+  * `channel` tells from which texture channel SDF shader should take the information.
+  * `alphaCutoff` will set the border of a glyph, with `0.5` being default value.
+  * `smoothing` controls the amount of antialiasing applied to glyph borders. 
+* Set `Text.smoothing` to `true`, otherwise SDF won't render properly.
