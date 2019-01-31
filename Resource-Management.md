@@ -46,7 +46,7 @@ You can resolve a resource from it path in the resource file system by using the
 hxd.Res.loader.load("path/to/myResource.png")
 ```
 
-This will return a [hxd.res.Any](https://heaps.io/api/hxd/res/Any.html) which have various methods to transform it to other resources.
+This will return a [hxd.res.Any](https://heaps.io/api/hxd/res/Any.html) which has various methods to transform it to other resources.
 
 ### Runtime resource loading
 
@@ -57,7 +57,7 @@ Once you have the bytes for your resource, you can use `hxd.res.Any.fromBytes` t
 
 Resources files are accessed through a virtual file system which implements the [FileSystem](https://heaps.io/api/hxd/fs/FileSystem.html) interface. 
 
-Heaps provides already several file systems, such as:
+Heaps already provides several file systems, such as:
 
  * [EmbedFileSystem](https://heaps.io/api/hxd/fs/EmbedFileSystem.html) will gives access to the resources which are embedded with your code (using haxe `-resource` compilation flag). On platforms such as JavaScript, this allows you to have both your code and assets stored in a single file.
  * [LocalFileSystem](https://heaps.io/api/hxd/fs/LocalFileSystem.html) which gives access to a local file system directory where your resources are stored. This require hard drive access so it is not available in the browser for example.
@@ -71,7 +71,7 @@ You can initialize the resource loader and filesystem by yourself, or use one of
 
 ## Building PAK
 
-You can build a `pak` file for all your ressources by running the following command from your project directory:
+You can build a `pak` file for all your resources by running the following command from your project directory:
 
 ```
 haxe -hl hxd.fmt.pak.Build.hl -lib heaps -main hxd.fmt.pak.Build
@@ -82,7 +82,7 @@ Options can be found in sources [here](https://github.com/HeapsIO/heaps/blob/mas
 
 ## PAK Loader
 
-If you want to load your PAK file(s) with a progress bar showing, you can override the `loadAssets` method of your `hxd.App` class with the following code:
+If you want to display a progress bar while loading your PAK file(s), you can override the `loadAssets` method of your `hxd.App` class with the following code:
 
 ```haxe
 override function loadAssets(done) {
