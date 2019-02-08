@@ -1,6 +1,8 @@
 DomKit is a library that can be used together with Heaps to create complex UI and integrate custom 2D components into it.
 
-You should get install it first using: `haxelib git domkit https://github.com/ncannasse/domkit.git`
+You should get install it first using:
+
+`haxelib git domkit https://github.com/HeapsIO/domkit.git`
 
 You can then add it to your project libraries with `-lib domkit` (together with `-lib heaps`)
 
