@@ -6,7 +6,26 @@ You can see compile and run the corresponding [Heaps Sample](https://github.com/
 
 # Using Heaps Components
 
-_Work in progress_
+In order to use Domkit to create a heaps components, you simply need to implements `h2d.domkit.Object` as the following sample shows:
+
+```haxe
+class SampleView extends h2d.Flow implements h2d.domkit.Object {
+
+    static var SRC = 
+        <flow vertical> 
+            Hello World! 
+            <bitmap src={tile}/>
+        </flow>
+
+    public function new(tile,?parent) {
+        super(parent);
+    }
+}
+
+...
+
+new SampleView(h2d.Tile.fromColor(0xFF,32,32),s2d);
+```
 
 # Defining custom Components
 
