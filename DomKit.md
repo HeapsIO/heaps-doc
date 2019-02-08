@@ -88,7 +88,6 @@ In order to define custom components, you need to:
 
 Here's a small example:
 ```haxe
-
 // MyComp.hx
 
 enum CustomStyle {
