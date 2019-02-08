@@ -72,7 +72,7 @@ domkit.Macros.checkCSS("res/style.css");
 Or my adding to your Haxe compilation parameters :
 
 ``` 
---macro domkit.Macros.checkCSS('res/style.css');
+--macro domkit.Macros.checkCSS('res/style.css')
 ```
 
 Please note that since each CSS property can be used by different components in different ways, and since you can't always tell by CSS rules on which component type the property will be applied, we only check that the property is valid and the CSS accepted for one of the components that defines it.
