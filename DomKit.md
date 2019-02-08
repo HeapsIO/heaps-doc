@@ -152,7 +152,7 @@ You can use any identifier that is allowed in the current CSS parser. The defaul
 You can extend this parser with your own custom parser to support additional CSS parsing rules.
 Here's an example:
 
-```
+```haxe
 class MyParser extends h2d.domkit.BaseComponents.CustomParser {
     public function parseIntValues( value : domkit.CssValue ) : Array<Int> {
         return switch( value ) {
