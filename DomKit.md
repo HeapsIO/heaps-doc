@@ -244,7 +244,7 @@ This is the complete documentation for allowed CSS attributes for native Heaps c
 
 ## object
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Object.html))
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Object.html)
 
 ```
 x : 0.5
@@ -332,7 +332,7 @@ Gives minimal width/height to the object wrt flow calculus.
 
 ## drawable
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Drawable.html))
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Drawable.html)
 
 ```
 color : #ff0000
@@ -353,7 +353,7 @@ Enables tile wrapping
 
 ## bitmap
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Bitmap.html))
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Bitmap.html)
 
 ```
 src : url("my/tile.png")
@@ -363,7 +363,7 @@ Load the tile or creates one with the specific color and size
 
 ## text
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Text.html))
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Text.html)
 
 ```
 text : "some text"
@@ -410,7 +410,7 @@ Changes text color
 
 ## flow
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Flow.html))
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Flow.html)
 
 ```
 width : auto
