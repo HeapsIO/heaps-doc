@@ -161,6 +161,67 @@ And it means you can now use values this way in attributes or CSS:
 <my values="1,2,3"/>
 ```
 
+# Domkit Markup Reference
+
+Domkit markup allows the following syntaxes.
+
+```jsx
+<node attr="value"/>
+```
+A component with a CSS attribute value. Please note that the value has to be valid CSS and is parsed then interpreted based on the components custom parsing rules in order to be translated to the actual runtime value for the corresponding node property.
+
+```jsx
+<node attr={expr}/>
+```
+Set the attribute based on an Haxe code expression. Unlike previous syntax, here the expression must directly evaluates to the property runtime value, without going through CSS interpretation.
+
+```jsx
+<node attr/>
+```
+A shortcut for `attr="true"`. Allows to easily set boolean attributes
+
+```jsx
+<node id="identifier"/>
+```
+Creates a field on the current class and set it to the component value upon initialization.
+
+```jsx
+<node id="group[]"/>
+```
+Creates an Array of components on the current class and push the component value into it upon initialization.
+
+```jsx
+<node(value1,value2,value3)/>
+```
+Allows to pass constructor arguments to your custom component. ATM only Haxe values are allowed to be passed, DomKit does not allow passing CSS values to constructor arguments.
+
+```jsx
+<flow>
+${ for( t in tiles ) <bitmap src={t} id="btns[]"/> }
+</flow>
+```
+When using `${..}` syntax, you can inject any Haxe code into the markup language, allowing you to add if/for/method calls/etc.
+
+```jsx
+Some Text
+```
+This is the equivalent of `<text text={"Some Text"}/>`, so you can apply CSS to the `text` components created this way.
+
+```jsx
+<node>$component</node>
+```
+When just a Haxe variable identifier is injected into the document content, we assume it contains another component value to be inserted there.
+
+
+```jsx
+@something
+
+@call(value)
+
+@custom.path(value1,value2,value3)
+```
+These are markup macros that can be processed in a custom manner by setting `domkit.Macros.processMacro` in an init macro. It allows you to process identifier path and arguments (Haxe expressions) to return some markup syntax that will be then processed.
+ 
 # Heaps CSS reference
 
 This is the complete documentation for allowed CSS attributes for native Heaps components.
