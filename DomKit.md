@@ -39,7 +39,8 @@ You can then apply CSS at runtime to your document by using the following code:
 
 ```haxe
 var style = new h2d.domkit.Style();
-style.load(hxd.Res.style); // resource referencing  res/style.css (see Heaps Resources documentation)
+// resource referencing  res/style.css (see Heaps Resources documentation)
+style.load(hxd.Res.style); 
 style.applyTo(view);
 ```
 
