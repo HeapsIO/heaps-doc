@@ -167,7 +167,7 @@ class MyParser extends h2d.domkit.BaseComponents.CustomParser {
 
 And then in your component you need to specify which custom parser to use:
 
-```
+```haxe
 @:uiComp("my") @:parser(MyParser)
 class MyComp extends h2d.Flow implements h2d.domkit.Object {
    ...
