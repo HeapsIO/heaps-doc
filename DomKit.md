@@ -235,6 +235,19 @@ This is the equivalent of `<text text={"Some Text"}/>`, so you can apply CSS to 
 ```
 When just a Haxe variable identifier is injected into the document content, we assume it contains another component value to be inserted there.
 
+```jsx
+<some>
+// commented <a/></a>
+</some>
+```
+A single line comment within body
+
+```jsx
+<some>
+<a> /* commented <a/></a> */ </a>
+</some>
+```
+A multiline / delimited comment within body
 
 ```jsx
 @something
