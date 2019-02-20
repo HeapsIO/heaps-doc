@@ -18,7 +18,7 @@ class SampleView extends h2d.Flow implements h2d.domkit.Object {
     static var SRC = 
         <flow class="box" vertical> 
             Hello World! 
-            <bitmap src={tile} id="mybmp"/>
+            <bitmap src={tile} public id="mybmp"/>
         </flow>
 
     public function new(tile,?parent) {
@@ -201,7 +201,12 @@ A shortcut for `attr="true"`. Allows to easily set boolean attributes
 ```jsx
 <node id="identifier"/>
 ```
-Creates a field on the current class and set it to the component value upon initialization.
+Creates a field on the current class and set it to the component value upon initialization. By default the field is private.
+
+```jsx
+<node public id="identifier"/>
+```
+Same as above, expect the field is public.
 
 ```jsx
 <node id="group[]"/>
@@ -230,6 +235,19 @@ This is the equivalent of `<text text={"Some Text"}/>`, so you can apply CSS to 
 ```
 When just a Haxe variable identifier is injected into the document content, we assume it contains another component value to be inserted there.
 
+```jsx
+<some>
+// commented <a/></a>
+</some>
+```
+A single line comment within body
+
+```jsx
+<some>
+<a> /* commented <a/></a> */ </a>
+</some>
+```
+A multiline / delimited comment within body
 
 ```jsx
 @something
