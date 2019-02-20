@@ -8,7 +8,7 @@ In order to get up and running Heaps you'll need to make a decision about how yo
 
 <a href="https://haxe.org/download"><img src="https://cloud.githubusercontent.com/assets/576184/3142589/5e2c41a0-e9c9-11e3-9608-75ec07df40e7.png" align="left" height="30"/></a> &nbsp;&nbsp;&nbsp; <a href="https://haxe.org/download/">Haxe 3.4.2+</a>
 
-If you plan on testing with HashLink, however, you will need to download the [Latest Haxe 4 Release Candidate](https://haxe.org/download/list/) from the website. If you are on windows and you use [scoop](https://scoop.sh/), write in the command-line `scoop install haxe-dev`
+If you plan on testing with HashLink, however, you will need to download the [Latest Haxe 4 Release Candidate](https://haxe.org/download/list/) from the website.
 
 **2. Download and setup Heaps by running:**
 
@@ -37,7 +37,6 @@ Restart VSCode once installation is complete (you can click the `Reload` label t
 In addition to use Heaps.io with [HashLink](http://hashlink.haxe.org) (also known as HL), you need to install: 
 
  * [HashLink](https://github.com/HaxeFoundation/hashlink/releases) Virtual Machine
-   * On windows, if you use [scoop](https://scoop.sh/) you can write in the command-line `scoop install hashlink`
    * On OSX, you will have to follow the instructions laid out [here](https://github.com/HaxeFoundation/hashlink#building-on-linuxosx) to get set up with Hashlink, as the process is a little different.
  * Instead of Haxe 3.4 you need latest [Haxe 4 Release Candidate](https://haxe.org/download/list/)
  * Some additional libraries should be installed with `haxelib install <lib>` command 
@@ -45,7 +44,7 @@ In addition to use Heaps.io with [HashLink](http://hashlink.haxe.org) (also know
    * Install Haxelib [hlopenal](https://lib.haxe.org/p/hlopenal) for OpenAL support
    * Install Haxelib [hlsdl](https://lib.haxe.org/p/hlsdl) for SDL/GL support
 
-Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm). If you used [scoop](https://scoop.sh/) to install hashlink no need to add it to system path, it will be done for you.
+Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm). 
 
 Once everything is setup, you should be able to run `hl` command from your terminal:
 
