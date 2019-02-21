@@ -19,7 +19,7 @@ By default a tile **pivot** is to the upper left corner of the part of the textu
 An **Object** (represented by [h2d.Object](https://heaps.io/api/h2d/Object.html)) is the base class of all of 2D objects. An object has a position (x,y), a scale (scaleX,scaleY), a rotation. It can contain other objects which will inherit its transformations, creating a scene tree.
 
 ### Scene
-The **Scene** (represented by [h2d.Scene](https://heaps.io/api/h2d/Scene.html)) is a special object which is at the root of the scene tree. In [hxd.App](https://heaps.io/api/hxd/App.html) is it accessible using the `s2d` variable. You will need to add your objects to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys.
+The **Scene** (represented by [h2d.Scene](https://heaps.io/api/h2d/Scene.html)) is a special object which is at the root of the scene tree. In [hxd.App](https://heaps.io/api/hxd/App.html) it is accessible by using the `s2d` variable. You will need to add your objects to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys.
 
 ### Bitmap
 A **Bitmap** (represented by [h2d.Bitmap](https://heaps.io/api/h2d/Bitmap.html)) is a 2D object that allows you to display an unique Tile at the sprite position.
