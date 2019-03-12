@@ -62,7 +62,7 @@ At this point your scene should just have a Sky Sphere with nothing else in it b
 ```haxe
 //Create a point light - note that it's from the PBR package.
 var light = new h3d.scene.pbr.PointLight(s3d);
-light.setPos(30, 10, 40);
+light.setPosition(30, 10, 40);
 light.range = 100; 
 //Changing the power of the light will affect the look for your PBR materials.
 light.power = 2;
