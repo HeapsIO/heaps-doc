@@ -14,10 +14,10 @@ renderTarget.depthBuffer = new DepthBuffer( engine.width, engine.height );
 To render our scene, we can use `pushTarget` and `popTarget`. As a note, if you need to render multiple scenes, you'll want to create a `Scene` for each one.
 
 ```haxe
-engine.pushTarget( renderTarget );
+engine.pushTarget(renderTarget);
 
-engine.clear( 0, 1 ); // Clears the render target texture and depth buffer
-s3d.render( e );
+engine.clear(0, 1); // Clears the render target texture and depth buffer
+s3d.render(e);
 
 engine.popTarget();
 ```
@@ -27,7 +27,7 @@ engine.popTarget();
 To display a render texture result in a 2d context, you can simply create a bitmap out of the render texture. This will update automatically, as the bitmap will continue to reference the underlying texture.
 
 ```haxe
-var renderTargetBitmap = new Bitmap( Tile.fromTexture( renderTarget ), s2d );
+var renderTargetBitmap = new Bitmap(Tile.fromTexture(renderTarget), s2d);
 ```
 
 #### Displaying a render texture in 3d
@@ -35,10 +35,9 @@ var renderTargetBitmap = new Bitmap( Tile.fromTexture( renderTarget ), s2d );
 This example will require a second scene. One which we'll render to a texture, and another which we will display it in.
 
 ```haxe
-override function init() 
-{
-	renderTarget = new Texture( engine.width, engine.height, [ Target ] );
-	renderTarget.depthBuffer = new DepthBuffer( engine.width, engine.height );
+override function init() {
+	renderTarget = new Texture(engine.width,engine.height, [ Target ]);
+	renderTarget.depthBuffer = new DepthBuffer(engine.width, engine.height);
 
 	s3dTarget = new h3d.scene.Scene();
 
@@ -48,17 +47,16 @@ override function init()
 	obj1 = new h3d.scene.Mesh(prim, mat, s3d);
 
 	// The object we're going to capture in our Render Target
-	obj2 = cache.loadModel( hxd.Res.mdl.test2 );
+	obj2 = cache.loadModel(hxd.Res.mdl.test2);
 	
-	s3dTarget.addChild( obj2 );
+	s3dTarget.addChild(obj2);
 }
 
-override function render(e:h3d.Engine) 
-{
+override function render(e:h3d.Engine) {
 	// Render the target first
-	engine.pushTarget( renderTarget );
+	engine.pushTarget(renderTarget);
 
-	engine.clear(0,1);
+	engine.clear(0, 1);
 	s3dTarget.render(e);
 	
 	engine.popTarget();
