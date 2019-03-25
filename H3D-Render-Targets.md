@@ -1,6 +1,6 @@
 # Render Targets
 
-Render targets can be used to capture a scene to a `Texture` which can be used later. 
+Render targets can be used to capture a scene to a `Texture` which can be used later.
 
 Render targets for 3d scenes require both a texture to write to, and a depth buffer. Additionally, you must pass the `Target` flag to the texture during creation.
 
@@ -11,7 +11,7 @@ renderTarget.depthBuffer = new DepthBuffer( engine.width, engine.height );
 
 ## Rendering a scene to texture
 
-To render our scene, we can use `pushTarget` and `popTarget`. As a note, if you need to render multiple scenes, you'll want to create a `Scene` for each one.
+To render our scene, we can use `pushTarget` and `popTarget` to change what surface we render to. `pushTarget` will push a new render target on to the render stack. `popTarget` will remove the topmost target. This allows you to nest render operations as needed. You can also use `pushTargets` if you wish to render to multiple textures.
 
 ```haxe
 engine.pushTarget(renderTarget);
@@ -24,7 +24,7 @@ engine.popTarget();
 
 #### Displaying a render texture in 2d
 
-To display a render texture result in a 2d context, you can simply create a bitmap out of the render texture. This will update automatically, as the bitmap will continue to reference the underlying texture.
+To display a render texture result in a 2d context, you can simply create a `Tile` out of the render texture. This will update automatically, as the bitmap will continue to reference the underlying texture. It can then be used as a `Bitmap` or in any other place `Tile`s are used.
 
 ```haxe
 var renderTargetBitmap = new Bitmap(Tile.fromTexture(renderTarget), s2d);
