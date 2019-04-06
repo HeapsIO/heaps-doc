@@ -1,4 +1,3 @@
-# Render Targets
 
 Render targets can be used to capture a scene to a `Texture` which can be used later.
 
