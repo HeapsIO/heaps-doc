@@ -27,7 +27,7 @@
   * [[Scenes]]
   * [[Shadows]]
   * [[World Batching]]
-  * [[H3D Render Targets]]
+  * [[Render Target]]
 * [[HXD]]
   * [[Resource Management]]
   * [[Sound]]
