@@ -94,8 +94,6 @@ This will be called before `init()`, and while loading `update()` and `onResize`
 
 ## Live update
 
-> Note: This section is a draft to provide at least some documentation.
-
 Heaps supports a live update system which can be enabled by compiling application with `-debug` flag or manually setting `hxd.res.Resource.LIVE_UPDATE` to `true`. Additionally, this is supported only when using `LocalFileSystem` (see above).  
 Currently there are only two resource types that have built-in live update: `Image` and `Sound`.
 
@@ -117,8 +115,6 @@ Things to be aware of:
 * When using `watch` to resouces with built-in support - it will break the built-in live update of said resource.
 
 ## Target-specific quirks
-
-> Note: This section is a draft to provide at least some documentation.
 
 Some targets do not support specific file formats and file-systems, but some can alleviated.
 
