@@ -92,4 +92,35 @@ override function loadAssets(done) {
 
 This will be called before `init()`, and while loading `update()` and `onResize` will not be called.
 
+## Live update
 
+> Note: This section is a draft to provide at least some documentation.
+
+Heaps supports a live update system which can be enabled by compiling application with `-debug` flag or manually setting `hxd.res.Resource.LIVE_UPDATE` to `true`. Additionally, this is supported only when using `LocalFileSystem` (see above).  
+Currently there are only two resource types that have built-in live update: `Image` and `Sound`.
+
+It is possible to attach custom callbacks for resource updates, which can be done via `hxd.res.Resource.watch` method, see sample code snippet:
+```haxe
+function reloadParameters() {
+  Game.monsterStats = Json.parse(hxd.Res.monster_stats.entry.getText());
+  Game.refreshMonsterStats();
+}
+reloadParameters();
+// `reloadParameters` will be called whenever `monster_stats` resource changes.
+hxd.Res.monster_stats.watch(reloadParameters);
+
+// When app no longer need to watch the resource, callback can be removed by passing `null` callback.
+hxd.Res.monster_stats.watch(null);
+```
+Things to be aware of:
+* Only one callback can be present for a resource and new one will override old one.
+* When using `watch` to resouces with built-in support - it will break the built-in live update of said resource.
+
+## Target-specific quirks
+
+> Note: This section is a draft to provide at least some documentation.
+
+Some targets do not support specific file formats and file-systems, but some can alleviated.
+
+* On JS target, `ogg` is not supported. Can be enabled by using [stb_ogg_sound](https://lib.haxe.org/p/stb_ogg_sound/) library. Keep in mind that ogg decoder will not use browser capabilities.
+* On HL target, `mp3` is not added to `hxd.Res` listings because it is not recommended format due to its design (not very suitable for music loops), but it can be loaded manually as well as force-enabled in `Res` by adding `heaps_enable_hl_mp3` compilation flag.
