@@ -1,6 +1,6 @@
 # World Batching
 
-Because modern 3D scenes can often get large, certain optimizations need to be made to keep your application running at an acceptable framerate. Once of these optimizations involves batching. Heaps offers a way to batch meshes into a single object that will reduce the amount of draw calls and keep your frame rate high.
+Because modern 3D scenes can often get large, certain optimizations need to be made to keep your application running at an acceptable framerate. One of these optimizations involves batching. Heaps offers a way to batch meshes into a single object that will reduce the amount of draw calls and keep your frame rate high.
 
 To get started you first need to create a world object.
 ```haxe
@@ -13,7 +13,7 @@ var worldSize = 256;
 var world = new h3d.scene.World(numberOfChunks, worldSize, s3d);
 ```
 
-Now we need to add objects to our world. Objects need to be loaded directly via the world object so certain batching optimizations can take place. You then reuses these obejcts when you want to disperse them through your world.
+Now we need to add objects to our world. Objects need to be loaded directly via the world object so certain batching optimizations can take place. You then reuse these objects when you want to disperse them through your world.
 
 ```haxe
 //Loud our resources from the world
