@@ -13,7 +13,7 @@ var worldSize = 256;
 var world = new h3d.scene.World(numberOfChunks, worldSize, s3d);
 ```
 
-Now we need to add objects to our world. Objects need to be loaded directly via the world object so certain batching optimizations can take place. You then reuse these obejcts when you want to disperse them through your world.
+Now we need to add objects to our world. Objects need to be loaded directly via the world object so certain batching optimizations can take place. You then reuse these objects when you want to disperse them through your world.
 
 ```haxe
 //Loud our resources from the world
