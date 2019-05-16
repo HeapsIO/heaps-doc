@@ -30,6 +30,7 @@
   * [[Render Target]]
 * [[HXD]]
   * [[Resource Management]]
+  * [[Resource Baking]]
   * [[Sound]]
 * [[Shaders]]
   * [[HXSL]]
