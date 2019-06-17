@@ -12,6 +12,7 @@ In order to export a FBX model that can be load to HMD, please make sure to:
  * export using `Z`-up and `-Y`-forward axis.
  * export using BakeAnimation, this will make sure your animation is exactly the same it was created.
  * note for 3ds Max and Maya: Use Game Exporter instead of standard Export.
+ * note for Blender 2.8: to avoid armature scaling, use FBX Units Scale in "Apply Scaling" when exporting to FBX. To prevent animation jitters also reduce Simplify to 0 under Animation tab.
 
 # Restrictions
 
