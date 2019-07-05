@@ -30,7 +30,7 @@ Click on the **Extension** panel (fourth icon on the left side bar of VSCode), s
 
 ![](https://user-images.githubusercontent.com/1022912/45916335-6547a000-be64-11e8-8d4e-799dffea475f.png)
 
-Restart VSCode once installation is complete (you can click the `Reload` label that should be showing)
+If your VSCode is up to date (after v1.31), you're good to go. Otherwise, restart VSCode once installation is complete (you can click the `Reload` label that should be showing)
 
 ## Additional steps for Heaps and HashLink VM
  
