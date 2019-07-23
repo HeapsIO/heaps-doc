@@ -449,15 +449,24 @@ background : transparent
 Flow background with optional borderWidth/Height
 
 ```
+background : tile("my/resource",5)
+background-tile-pos: 3
+background : tile("my/resource",5,8)
+background-tile-pos: 3 7
+```
+Flow background with split tile (vertical and optional horizontal frames) and separate attribute for setting the sub tile
+
+```
 debug : true
 ```
 Display debug lines
 
 ```
-vertical : true
-horizontal : false
+layout : vertical
+layout : horizontal
+layout : stack
 ```
-Sets the flow in either display mode
+Sets the flow in either layout display mode
 
 ```
 multline : true
