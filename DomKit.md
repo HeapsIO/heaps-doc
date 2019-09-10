@@ -43,7 +43,7 @@ You can then apply CSS at runtime to your document by using the following code:
 var style = new h2d.domkit.Style();
 // resource referencing res/style.css (see Heaps Resources documentation)
 style.load(hxd.Res.style); 
-style.applyTo(view);
+style.addObject(view);
 ```
 
 Here's an example CSS that can apply to previous view:
@@ -78,6 +78,17 @@ Or my adding to your Haxe compilation parameters :
 ```
 
 Please note that since each CSS property can be used by different components in different ways, and since you can't always tell by CSS rules on which component type the property will be applied, we only check that the property is valid and the CSS accepted for one of the components that defines it.
+
+# Accessing the DOM
+
+When compiled with `-lib domkit`, each `h2d.Object` will have an extra `dom : domkit.Properties` field that can be used for changing the state of the object wrt CSS :
+
+```haxe
+mybmp.dom.addClass("myclass");
+mybmp.dom.hover = true;
+```
+
+More code can be found in the Heaps Domkit sample.
 
 # Defining custom Components
 
