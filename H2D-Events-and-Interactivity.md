@@ -23,13 +23,13 @@ interaction.onClick = function(event : hxd.Event) {
 
 ## Global events
 
-You can listen to global events (keyboard, touch, mouse, window) by adding event listener to the [`hxd.Stage`](api/hxd/Stage.html) instance.
+You can listen to global events (keyboard, touch, mouse, window) by adding event listener to the [`hxd.Window`](api/hxd/Window.html) instance.
 
 ```haxe
 function onEvent(event : hxd.Event) {
 	trace(event.toString());
 }
-hxd.Stage.getInstance().addEventTarget(onEvent);
+hxd.Window.getInstance().addEventTarget(onEvent);
 ```
 Don't forget to remove the event using removeEventTarget when disposing your objects.
 
@@ -45,7 +45,7 @@ function onEvent(event : hxd.Event) {
 		case _:
 	}
 }
-hxd.Stage.getInstance().addEventTarget(onEvent);
+hxd.Window.getInstance().addEventTarget(onEvent);
 ```
 
 You can use the static functions `hxd.Key.isPressed`, `hxd.Key.isDown` and `hxd.Key.isReleased`.
@@ -58,14 +58,14 @@ if (Key.isPressed(Key.SPACE)) {
 
 ## Resize events
 
-You can listen to resize events by adding `addResizeEvent` listener to the [`hxd.Stage`](api/hxd/Stage.html) instance.
+You can listen to resize events by adding `addResizeEvent` listener to the [`hxd.Window`](api/hxd/Window.html) instance.
 
 ```haxe
 function onResize() {
-	var stage = hxd.Stage.getInstance();
+	var stage = hxd.Window.getInstance();
 	trace('Resized to ${stage.width}px * ${stage.height}px');
 }
-hxd.Stage.getInstance().addResizeEvent(onResize);
+hxd.Window.getInstance().addResizeEvent(onResize);
 ```
 Don't forget to remove the event using removeEventTarget when disposing your objects.
 
