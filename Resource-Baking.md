@@ -75,17 +75,17 @@ Although Heaps already provide (some converts)[https://github.com/HeapsIO/heaps/
 Here's an example:
 
 ```haxe
-class MyConvert extends hxd.fs.Convert {
+class MyCustomConvert extends hxd.fs.Convert {
     function new() {
         super("foo","bar"); // converts .foo files to .bar
     }
-    override function run() {
+    override function convert() {
         // make a simple copy
         var bytes = sys.io.File.getBytes(srcPath);
-        sys.io.File.saveBytes(outPath, bytes); 
+        sys.io.File.saveBytes(dstPath, bytes); 
     }
     // register the convert so it can be found
-    static var _ = hxd.fs.Convert.register(new MyConvert());
+    static var _ = hxd.fs.Convert.register(new MyCustomConvert());
 }
 ```
 
