@@ -6,6 +6,8 @@ All of these games - 2D and 3D - have been made using a complete stack of librar
 
 Since I often get asked about how we are making games, I thought it would be nice to share details on all the elements of Shiro's technology stack. It works great for us, so maybe it could be useful for some other companies out there.
 
+![image](https://user-images.githubusercontent.com/1022912/78460040-d1dc6580-76bd-11ea-88fb-b05342ded727.png)
+
 **Haxe/Heaps Community**
 
 In case you have any question or want to discuss parts of what I'm presenting here, you can get in touch with the Haxe/Heaps Community:
