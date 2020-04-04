@@ -192,6 +192,32 @@ Full [sources](https://github.com/haxeFoundation/hscript) are available, and you
 
 # HxBit
 
+[HxBit](https://github.com/HeapsIO/hxbit) is a serialization and network synchronization library.
+It allows you to tag your classes properties that needs to be serialized (for saves) and/or transmitted over network when changed (for multiplayer games).
 
+A complete documentation is available [here](https://github.com/HeapsIO/hxbit)
 
+**MPMan**
 
+MPMan is built on top of HxBit for the network part, and contains additional utility classes.
+It's the only closed source library as part of the framework, as it contains some confidential information regarding our multiplayer infrastructure.
+
+It covers the following:
+- player authentication across platforms
+- multiplayer lobby system, rankings, game server instances query
+- platform multiplayer invitations
+- achievements
+- DLCs detection and shop popups
+- storage (cross platform user saves handling)
+
+# Final Words
+
+That's about it (for now). I hope this gave a better understanding on how we make games at Shiro, and hopefully you would be interested in trying out some - if not all - of the tools presented here.
+
+I wrote and maintain much of these myself, with help from other Shiro developers and community contributions, in particular for HIDE and Heaps, thanks to them! I think it's important to have good tools to do great work, and each tool presented here has been proven useful over several projects. I'm quite satisfied with what we came up over the years so I thought it was about time to show the whole picture.
+
+I also believe in collaboration, and making things open source helps even if no contribution is made back because it forces me to deal with important questions, such as writing a minimum of documentation or making things as smooth as possible. 
+
+All of this technology stack has been used in real projects and are still used for developing ongoing yet-unannounced games at Shiro. They are quite stable with no big issues, but of course you might eventually find bugs for your particular usage. Since I deal with many different projects I might sometimes be slow to answer over Pull Requests or Issues reported, but you always have the whole sources to improves things when you need it. One of things I personally dislike the most is when there's a bug and I have no way to understand/fix it.
+
+Enjoy and don't forget that while good tools help making good games, they are not the games themselves. 
