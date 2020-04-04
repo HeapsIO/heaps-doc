@@ -69,6 +69,8 @@ You can learn more about Haxe on it's [website](https://haxe.org)
 
 ## Game Engine : Heaps.io
 
+![image](https://heaps.io/img/h3d/pbr_1.jpg)
+
 [Heaps.io](https://heaps.io) is the game engine that powers our games at Shiro. It covers the following:
 - 2D rendering
 - 3D rendering
@@ -76,6 +78,38 @@ You can learn more about Haxe on it's [website](https://haxe.org)
 - Controls (keyboard, mouse, gamepad)
 - Resource management 
 
-It's been built to separate the low level platform implementation features from the mid level graphics logics/data. Heaps.io supports the following plaforms:
+It's been built to separate the low level platform implementation features from the mid level graphics logics/data. This architecture allows us to integrate new renderers or platforms by just porting a few classes given that the native libraries are been made available in HashLink. Heaps.io supports the following plaforms/renderer:
+- HashLink with DirectX11
+- HashLink with OpenGL/SDL2
+- HashLink/C with NVN (Nintendo Switch SDK native graphics api)
+- HashLink/C with GNM (PS4 SDK native graphics api)
+- HashLink/C for XBoxOne SDK
+- Javascript with WebGL2
+*HashLink/C here means that we can only use the Hashlink C output, not the JIT VM
 
+Heaps.io has been designed to be very lightweight and highly customizable. It provides a 2D/3D scene graph and each Object in the scene can be extended to enrich the behavior. The renderer and lighting system can also be entirely replaced, allowing to write a very game-specific rendering pipeline.
+
+Both 2D and 3D are entirely GPU accelerated, and based on GPU shaders. Heaps comes with its own integrated shader language [HxSL](https://heaps.io/documentation/hxsl.html). HxSL is very powerful as instead of writing a single big shader, you will write little individual shader effects that gets assembled and optimized together at runtime.
+
+Heaps.io also abstracts [Resources Management](https://heaps.io/documentation/resource-management.html) and [Baking](https://heaps.io/documentation/resource-baking.html) that allows to deal with all the packaging of raw resources coming from Photoshop, Maya, Blender, etc.
+
+You can learn more about Heaps.io using dedicated website, or browsing its [Documentation](https://heaps.io/documentation/home.html).
+
+![image](https://user-images.githubusercontent.com/1022912/78455515-258b8680-769f-11ea-8a3c-ae4f16fe3a72.png)
+
+# DomKit UI Toolkit
+
+![image](https://user-images.githubusercontent.com/1022912/78458574-af911a80-76b2-11ea-80cf-8196c4a73f53.png)
+
+[DomKit](https://heaps.io/documentation/domkit.html) is our framework for writing UI components. It's our most recent addition to the technology stack so is still evolving.
+
+It allows you to declare your UI in terms of XHTML directly in your code, which allows direct strictly typed data binding with your gameplay logic, then enables styling using CSS just like web development. 
+
+The semantics of the CSS partly follows HTML5 standard but the layout model is specific to Heaps.io, and is more suitable for games UI/UX.
+
+You can also declare your own components and even add extra properties and code that tells how the CSS values should be evaluated to map to your properties data.
+
+Additionally, DomKit library itself is fully standalone so can be used for any UI framework, although Heaps.io benefits from a direct integration.
+
+You can read more about DomKit using the [documentation](https://heaps.io/documentation/domkit.html). 
 
