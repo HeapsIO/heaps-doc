@@ -49,3 +49,33 @@ Because of the VM nature, it's always necessary to have a good set of low level 
 
 ## Programming Language Layer
 
+Now that we have dealt with the native layer (in green), we're moving up the technology stack to the programming language layer.
+
+For all games code and tools development we are using [Haxe](https://haxe.org) programming language. Haxe offers the best mix of strictly typed object oriented, with bits of functional programming, and super-powerful [macro system](https://haxe.org/manual/macro.html) which is used extensively by several of the high level libraries we will present.
+
+Of course as the main designer of Haxe language I'm a bit biased, but it's important to know that every developer at Shiro really enjoy developing with Haxe on a daily basis, and it's a critical tool for our daily productivity. Also, we have recruited developers with various programming backgrounds (C++, C#, Javascript, Python, Java, etc.) and they all have been able to quickly adapt to Haxe and write efficient code.
+
+Haxe is a cross platform programming language, which can output code for many different targets. We are using mostly two targets at Shiro:
+- the Hashlink target for our games
+- the JavaScript target for our tools _(more on that as part of the tools section below)_
+
+Some popular independent games were also made using Haxe (but not the HashLink or the whole tech stack I'm presenting here), such as: **Papers Please**, **Brawlhalla**, **Dicey Dungeons**, etc.
+
+Haxe is maintained as an independent open source project, thanks to the [Haxe Foundation](https://haxe.org/foundation/), which gets funding by several big companies which are using Haxe for developing various cross platform applications, games but not only.
+
+You can learn more about Haxe on it's [website](https://haxe.org)
+
+![image](https://user-images.githubusercontent.com/1022912/78455515-258b8680-769f-11ea-8a3c-ae4f16fe3a72.png)
+
+## Game Engine : Heaps.io
+
+[Heaps.io](https://heaps.io) is the game engine that powers our games at Shiro. It covers the following:
+- 2D rendering
+- 3D rendering
+- Sound handling
+- Controls (keyboard, mouse, gamepad)
+- Resource management 
+
+It's been built to separate the low level platform implementation features from the mid level graphics logics/data. Heaps.io supports the following plaforms:
+
+
