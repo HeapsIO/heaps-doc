@@ -35,7 +35,6 @@
 * [[Shaders]]
   * [[HXSL]]
 * [[Target platforms]]
-  * [[Flash]]
   * [[HashLink]]
   * [[HTML5]]
 * [[Tools]]
