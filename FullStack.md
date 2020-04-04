@@ -6,6 +6,13 @@ All of these games - 2D and 3D - have been made using a complete stack of librar
 
 Since I often get asked about how we are making games, I thought it would be nice to share details on all the elements of Shiro's technology stack. It works great for us, so maybe it could be useful for some other companies out there.
 
+**Haxe/Heaps Community**
+
+In case you have any question or want to discuss parts of what I'm presenting here, you can get in touch with the Haxe/Heaps Community:
+- Using [Discord](https://discord.gg/sWCGm33) **#heaps** channel
+- With the [Haxe Forum](https://community.haxe.org/) for Haxe language questions
+- With the [Heaps Forum](https://community.heaps.io/) for Heaps specific questions
+
 ![image](https://user-images.githubusercontent.com/1022912/78455515-258b8680-769f-11ea-8a3c-ae4f16fe3a72.png)
 
 ## Native Layer
@@ -97,11 +104,40 @@ You can learn more about Heaps.io using dedicated website, or browsing its [Docu
 
 ![image](https://user-images.githubusercontent.com/1022912/78455515-258b8680-769f-11ea-8a3c-ae4f16fe3a72.png)
 
+# HIDE Editor
+
+![image](https://user-images.githubusercontent.com/1022912/78458863-e5cf9980-76b4-11ea-8663-ea38fa8f7f48.png)
+
+[HIDE](https://github.com/HeapsIO/hide) (Heaps IDE) is a standalone application that allows to create viewers and editors for 2D/3D content.
+
+HIDE is an HTML5 application running Heaps.io engine in WebGL2 mode, so you can very quickly develop user interface using Haxe and HTML/CSS.
+
+At the moment HIDE supports:
+- Resources tree explorer
+- 2D texture viewer 
+- 3D FBX model viewer and material editor
+- 2D and 3D timeline-based effects editor
+- 2D and 3D particles editor
+- 3D level editor (screenshot above showing a Darksburg level)
+- Prefabs editor
+- Scripting editor (using hscript)
+- Shader graph nodal editor [wip]
+
+HIDE is data-oriented, based on a Prefab model (`hrt.prefab.Prefab` class) that holds the editor data and can create instances of the given effect/level/etc. on demand, but also allows the data to be inspected/consumed by game engine in order to do pretty much what you want with it.
+
+The Prefab model being extensible, and HIDE having the ability to loading plugins, you can create your own custom components and editor into HIDE for your game.
+
+[HIDE source code](https://github.com/HeapsIO/hide) separates between the package `hide` that contains IDE code and the `hrt` package that contains classes that can be used as part of the game runtime.
+
+At the moment HIDE usage is sadly not much documented, this is something I want to work at some point.
+
+![image](https://user-images.githubusercontent.com/1022912/78455515-258b8680-769f-11ea-8a3c-ae4f16fe3a72.png)
+
 # DomKit UI Toolkit
 
 ![image](https://user-images.githubusercontent.com/1022912/78458574-af911a80-76b2-11ea-80cf-8196c4a73f53.png)
 
-[DomKit](https://heaps.io/documentation/domkit.html) is our framework for writing UI components. It's our most recent addition to the technology stack so is still evolving.
+[DomKit](https://heaps.io/documentation/domkit.html) is our framework for writing User Interface components. It's our most recent addition to the technology stack so is still evolving.
 
 It allows you to declare your UI in terms of XHTML directly in your code, which allows direct strictly typed data binding with your gameplay logic, then enables styling using CSS just like web development. 
 
@@ -112,4 +148,50 @@ You can also declare your own components and even add extra properties and code 
 Additionally, DomKit library itself is fully standalone so can be used for any UI framework, although Heaps.io benefits from a direct integration.
 
 You can read more about DomKit using the [documentation](https://heaps.io/documentation/domkit.html). 
+
+![image](https://user-images.githubusercontent.com/1022912/78455515-258b8680-769f-11ea-8a3c-ae4f16fe3a72.png)
+
+# Castle DB
+
+![image](https://user-images.githubusercontent.com/1022912/78459235-e3227380-76b7-11ea-88f8-07713a4f9d96.png)
+
+Castle DB is one of the most important productivity tools we are using at Shiro. It's static structured database aimed at game designers in order to input all the gameplay data the game will consume, such as lists of items, places, npcs, tech trees, skills, etc.
+
+Using the Castle DB IDE, you can create and modify at will the different data structures, and then input the data very easily. Think about it like a very powerful game dedicated spreadsheet editor.
+
+Also, using Haxe macros, you can directly get into your Haxe code with a single file all the data structures that were declared in your CDB file, as well as enums for all unique identifiers for the different types of items/levels/etc. that are part of your database.
+
+```haxe
+// Data.hx
+private typedef Init = haxe.macro.MacroType<[cdb.Module.build("data.cdb")]>;
+```
+
+The CDB structure and data are stored as a single multi line JSON text file allowing for multi user collaboration using code control systems (merge/diff/conflicts resolution etc.)
+
+Castle DB used to be a standalone editor (you can download an old version of it on the [dedicated website](http://castledb.org/)) but has now been integrated into HIDE, which allows us to use CDB data input for some of the prefabs into level editors, etc.
+
+You can read more about Castle DB on its [castledb.org](http://castledb.org/)
+
+![image](https://user-images.githubusercontent.com/1022912/78455515-258b8680-769f-11ea-8a3c-ae4f16fe3a72.png)
+
+# HScript
+
+![image](https://user-images.githubusercontent.com/1022912/78459612-7eb4e380-76ba-11ea-820b-32ce1ecad0e0.png)
+
+[HScript](https://github.com/haxeFoundation/hscript) is a small script parser and interpreter based on Haxe syntax. It's always useful to have some parts of the code that can scripted by game designers.
+
+One of the nices things about HScript is that you can change the script between parsing and running it, allowing to make some tweaks to match your needs. For example the [Async](https://github.com/HaxeFoundation/hscript/blob/master/hscript/Async.hx) class transforms the script into asynchronous code (continuation passing style).
+
+More recently, I have added the ability to type-check the scripts in a similar way the Haxe Compiler is doing. This allows HIDE HScript integration to be able to edit scripts with code completion and live type checking, ensuring less errors and more productivity by game designers, see [notes here](https://github.com/HeapsIO/hide/wiki/HScript-Notes)
+
+HScript is also integrated within CDB/Hide, so one can have per-item scripts etc.
+
+Full [sources](https://github.com/haxeFoundation/hscript) are available, and you can install the library with `haxelib install hscript`
+
+![image](https://user-images.githubusercontent.com/1022912/78455515-258b8680-769f-11ea-8a3c-ae4f16fe3a72.png)
+
+# HxBit
+
+
+
 
