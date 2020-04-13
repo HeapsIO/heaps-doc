@@ -21,7 +21,7 @@ class SampleView extends h2d.Flow implements h2d.domkit.Object {
             <bitmap src={tile} public id="mybmp"/>
         </sample-view>
 
-    public function new(tile,?parent) {
+    public function new(tile:h2d.Tile,?parent) {
         super(parent);
         initComponent();
     }
