@@ -16,10 +16,10 @@ In order to use Domkit to create a heaps components, you simply need to implemen
 class SampleView extends h2d.Flow implements h2d.domkit.Object {
 
     static var SRC = 
-        <flow class="box" vertical> 
+        <sample-view layout="vertical"> 
             Hello World! 
             <bitmap src={tile} public id="mybmp"/>
-        </flow>
+        </sample-view>
 
     public function new(tile,?parent) {
         super(parent);
@@ -90,12 +90,24 @@ mybmp.dom.hover = true;
 
 More code can be found in the Heaps Domkit sample.
 
+# Domkit Inspector
+
+You can inspect your components by enabling the domkit inspector. This is done using
+
+```haxe
+style.allowInspect = true;
+```
+
+You can then using middle mouse button click anytime to enable/disable domkit inspector. Move your mouse over any component to see its name, id, classes and properties. You can use the mouse wheel to browse the component hierarchy.
+
+![image](https://haxe.org/img/blog/2020-04-06-shirogames-stack/domkit.png)
+
 # Defining custom Components
 
 In order to define custom components, you need to:
-* add `@:uiComp("name")` metadata
 * implements `h2d.domkit.Object` (if not already inherited from your superclass)
 * add `@:p` for each property you wish to expose to domkit markup/CSS
+* you can add `@:uiComp("name")` metadata in order to customize the component name
 
 Here's a small example:
 ```haxe
