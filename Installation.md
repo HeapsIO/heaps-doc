@@ -15,6 +15,10 @@ If you plan on testing with HashLink, however, you will need to download the [La
 ```
 haxelib install heaps
 ```
+Or alternatively use github repo for more up-to-date version:
+```
+haxelib git heaps https://github.com/HeapsIO/heaps.git
+```
 
 ## Installing Visual Studio Code + Haxe support
 
