@@ -1,6 +1,6 @@
 # Sound
 
-Heaps provides sound management. Heaps supports 3 different formats (WAV, MP3, OGG).  The availability of the formats depend on the platform. You can determine which formats are supported using the following example:
+Heaps provides sound management. Heaps supports 3 different formats (WAV, MP3, OGG).  The availability of the formats depend on the platform (see [Resource manager](https://github.com/HeapsIO/heaps/wiki/Resource-Management#target-specific-quirks) page for details). You can determine which formats are supported using the following example:
 
 ```haxe
 if(hxd.res.Sound.supportedFormat(Mp3)){
