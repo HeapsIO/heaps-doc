@@ -128,7 +128,7 @@ Once the font is ready, you can use it for your Text:
   * For Divo, `.png` file should have exactly the same name as `.fnt`
   * For BMFont, Heaps will try to find texture referenced in `.fnt` first, and then, if unsuccessful, fallback to same behavior as Divo.
 * load it using `hxd.Res.fonts.myFont.toFont()`
-* create an `h2d.Text` using this font
+* create an `h2d.Font` using this font
 
 ### SDF / MSDF
 For SDF fonts you need to load fonts slightly differently.
