@@ -30,9 +30,10 @@ The recommended editor for creating Heaps applications is Visual Studio Code:
 
 <a href="https://code.visualstudio.com/"><img src="https://user-images.githubusercontent.com/1022912/45916285-a0959f00-be63-11e8-8f54-8d93e3e4037a.png" align="left" height="30"/></a> &nbsp;&nbsp;&nbsp; <a href="https://code.visualstudio.com/">Visual Studio Code</a>
 
-If your VSCode is up to date (after v1.31), you're good to go. Otherwise, restart VSCode once installation is complete (you can click the `Reload` label that should be showing)
+If your VSCode is up to date (after v1.31), you're good to go. Otherwise, restart VSCode once installation is complete (you can click the `Reload` label that should be showing, or hit Ctrl+Shift+P and type "Reload Window", then hit Enter)
 
 ## Installing Haxe extensions on vscode
+This step will setup Haxe language support for vscode, the easier generation of comments and debuggers for some compilation targets.
 
 Click on the **Extension** panel (fourth icon on the left side bar of VSCode), search `haxe` and install **Haxe Extension Pack** that will contain everything you need for Haxe support.
 
@@ -49,7 +50,7 @@ _On OSX, you will have to follow the instructions laid out [here](https://github
 Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm). 
 
 ### Update Haxe
-Instead of Haxe 3.4 you need [Haxe 4+](https://haxe.org/download/list/)
+Make sure you are using at least [Haxe 4+](https://haxe.org/download/).
 _To confirm your current version of Haxe, type `haxe --version` in the command line._
 
 ## Install additional libraries
