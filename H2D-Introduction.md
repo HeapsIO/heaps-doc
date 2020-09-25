@@ -6,12 +6,12 @@
 An **Object** (represented by [h2d.Object](https://heaps.io/api/h2d/Object.html)) is the base class of all of 2D objects. An object has a position (x,y), a scale (scaleX,scaleY), a rotation. It can contain other objects which will inherit its transformations, creating a scene tree.
 
 ```haxe
-var myobj = new Object();
+var myobj = new h2d.Object();
 s2d.addChild(myobj);
 myobj.x = 100;
 myobj.rotation = Math.PI/3;
 
-var mysecondobj = new Object();
+var mysecondobj = new h2d.Object();
 myobj.addChild(mysecondobj);
 ```
 
@@ -28,10 +28,10 @@ class Myapp extends hxd.App
         setScene(myscene);              // set it as the current scene
         s2d;                            // is now newscene
 
-        var myobj2 = new Object();
+        var myobj2 = new h2d.Object();
         s2d.addChild(myobj2);
 
-        var myobj = new Object(s2d);    // add myobj to s2d by passing s2d as parameter
+        var myobj = new h2d.Object(s2d);// add myobj to s2d by passing s2d as parameter
 
     }
 }
@@ -57,18 +57,20 @@ var myimagetile = myimage.toTile();
 #### Tile Pivot
 By default a tile **pivot** is to the upper left corner of the part of the texture it represents. The pivot can be moved by modifying the (dx,dy) values of the Tile. For instance by setting the pivot to (-tile.width,-tile.height), it will now be at the bottom right of the Tile. Changing the pivot affects the way bitmaps are displayed and the way local transformations (such as rotations) are performed.
 
-We can easily make the Bitmap rotate around its center by changing the tile pivot, by adding the following lines:
 
-```haxe
-    bmp.tile.dx = -50;
-    bmp.tile.dy = -50;
-```
 
 ### Bitmap
 A **Bitmap** (represented by [h2d.Bitmap](https://heaps.io/api/h2d/Bitmap.html)) is a 2D object that allows you to display a unique Tile at the sprite position.
 ```haxe
 var mybitmap = new h2d.Bitmap(myimagetile);
 s2d.addChild(mybitmap);
+```
+
+We can easily make the Bitmap rotate around its center by changing the tile pivot, by adding the following lines:
+
+```haxe
+    bmp.tile.dx = -50;
+    bmp.tile.dy = -50;
 ```
 
 ### Pixels

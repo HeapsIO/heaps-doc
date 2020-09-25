@@ -5,6 +5,7 @@ In order to get up and running Heaps you'll need to install Haxe (the language),
 ## Installing Haxe
 
 Heaps works on Haxe 3.4.2+, though it is recommanded to install Haxe 4+ to enjoy new language features and support the Hashlink compiler target.
+
 <a href="https://haxe.org/download"><img src="https://cloud.githubusercontent.com/assets/576184/3142589/5e2c41a0-e9c9-11e3-9608-75ec07df40e7.png" align="left" height="30"/></a> &nbsp;&nbsp;&nbsp; <a href="https://haxe.org/download/">Haxe 4.1.4+</a>
 
 <a href="https://haxe.org/download/list/"><img src="https://cloud.githubusercontent.com/assets/576184/3142589/5e2c41a0-e9c9-11e3-9608-75ec07df40e7.png" align="left" height="30"/></a> &nbsp;&nbsp;&nbsp; <a href="https://haxe.org/download/list/">View all versions</a>
@@ -45,6 +46,7 @@ While Haxe and Heaps can out of the box compile to an expanding list of targets,
 
 ### Install Hashlink
 Download and install the [HashLink](https://github.com/HaxeFoundation/hashlink/releases) Virtual Machine
+
 _On OSX, you will have to follow the instructions laid out [here](https://github.com/HaxeFoundation/hashlink#building-on-linuxosx) to get set up with Hashlink, as the process is a little different._
 
 Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm). 
