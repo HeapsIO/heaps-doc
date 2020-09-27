@@ -1,63 +1,101 @@
+# Hello Hashlink
+
 [HashLink](https://hashlink.haxe.org/) is a virtual machine for Haxe. It can be used to build native desktop applications as well mobile platforms (Android / iOS) and consoles.
 
-This tutorial requires you to have completed already the [[Installation]], including the HashLink specific parts.
+Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation) both Heaps and Visual Studio Code, let's create a new Heaps application.
 
-Please also read [[Hello World]] as we follow the same steps but with some changes.
+## Differences with the [[Hello World]] tutorial
+* `compile.hxml` needs a different compilation target, `hl`, and other libraries to manage rendering
+* There's no need for an `index.html` file
+* The launch.json file is different to handle hashlink
 
-## Setup compilation options
 
-Create a new folder `helloHL` and a `compile.hxml` file similar to what is done in [[Hello World]] example.
-
-But instead of `-js hello.js`, instead use `-hl hello.hl`, your HXML file should then look like this:
-
+## Concepts
+* Heaps uses a `compile.hxml` file to tell it what to compile, how and where to compile it, and which libraries to include.
+* The entry point of a Haxe program is a class containing a static function called `main`.
+* A simple heaps directory structure will look like this:
 ```
--lib heaps
--lib hlsdl
--hl hello.hl
--main Main
+.
+├── .vscode/
+│   └── launch.json
+├── out/
+├── res/
+├── src/
+│   └── Main.hx
+└── compile.hxml
 ```
 
-_(Note: unlike JavaScript, you can debug in HL without compiling with `-debug`)_
+## Create your project
+
+* Create a new directory named `helloHeaps`
+* Create a new file called `compile.hxml`
+* Add the following lines to your newly created file
+```
+-cp src 			# Tells haxe where to search for your code files
+-lib heaps			# Tells haxe to import the heaps library
+-lib hlsdl			# Tells haxe to import the hlsdl rendering library
+-hl out/hello.hl	# Tells haxe to compile to hashlink bytecode in the out directory
+-main Main			# Tells haxe that Main.hx is your entry point
+-debug				# Tells haxe to run in debug mode
+```
+
+The `-debug` is not necessary to debug, unlink the javascript target, but can still be useful when used with [conditional compilation](https://haxe.org/manual/lf-condition-compilation.html).
 
 The `-lib hlsdl` tells Heaps to compile with SDL/OpenGL support. If you are on Windows you can use `-lib hldx` instead.
 
-## Compile Output
+## Open with VSCode
 
-Follow instructions on [[Hello World]] regarding compilation, and use the same `Main.hx` source file.
-If everything works fine you should get a `hello.hl` file compiled and ready to run.
+At this point, you can open the `helloHeaps` folder with VSCode by launching VSCode and navigating the main menu `File > Open Folder`
 
-![image](https://user-images.githubusercontent.com/1022912/45916898-81037400-be6d-11e8-8d57-0e13778c4064.png)
+## Create Hello World example
 
-## Run and Debug
+Create a new `Main.hx` in a `src` folder in your project directory and put the following content
 
-Select in menu `Debug > Add Configuration`. This should give you the choice to Debug with `HashLink`. If not, make sure to install `HashLink Debugger` extension.
+```haxe
+class Main extends hxd.App {
+	override function init() {
+		var tf = new h2d.Text(hxd.res.DefaultFont.get(), s2d);
+		tf.text = "Hello Hashlink !";
+	}
+	static function main() {
+		new Main();
+	}
+}
+```
 
-If you click on `HashLink` label, it will open you a `.vscode/launch.json`. Change its content to the following:
+This example creates a Heaps Text component, adds it to the 2D scene `s2d` and set its text.
 
+## Compile and run Output
+To be able to compile and debug your application directly from vscode, you need to create a launch task.
+
+If it does not already exist, create a `.vscode` directory in your project folder and create a new file called `launch.json`.
+
+Add the following code to the file:
 ```json
 {
 	"version": "0.2.0",
 	"configurations": [
-		{
-			"name": "HashLink",
-			"request": "launch",
-			"type": "hl",
-			"hxml": "compile.hxml",
-			"cwd": "${workspaceRoot}",
-			"preLaunchTask": {
-				"type" : "haxe",
-				"args" : "active configuration"
-			}
-		}
+        {
+            "name": "HashLink",
+            "request": "launch",
+            "type": "hl",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": {
+                "type": "haxe",
+                "args": "active configuration"
+            }
+        }
 	]
 }
 ```
 
-Note in particular that you need to set the correct `hxml` file that contains your compilation parameters.
-
-Now `Run` using `F5` and it should open a native window showing `Hello World`:
+Now, by hitting `F5`, the project will compile and run.
 
 ![image](https://user-images.githubusercontent.com/1022912/45916979-06d3ef00-be6f-11e8-9d5c-bc24023a7a66.png)
+
+To compile without running, hit `Ctrl-Shift-B` and select `haxe : active configuration`
+
+If everything works well, you should now have both `hello.hl` file created in your `out` folder.
 
 You can customize the default window size by adding the following to your `compile.hxml`:
 
@@ -65,7 +103,9 @@ You can customize the default window size by adding the following to your `compi
 -D windowSize=1366x768
 ```
 
-Interactive debugging should also be working if you setup a breakpoint as in Hello World sample:
+## Debugging
+
+You can put breakpoints into your Heaps application by clicking in the margin to left to the line number in your source code. You can then start again the problem and see it break at the desired position.
 
 ![image](https://user-images.githubusercontent.com/1022912/45917022-5b776a00-be6f-11e8-9319-77d4e36ea3c2.png)
 
@@ -83,5 +123,3 @@ Compiling on mobile and console thus requires some knowledge with each platform 
  * for iOS, look at [this thread](https://github.com/HaxeFoundation/hashlink/issues/144)
  * for Android, look at [this thread](https://github.com/HaxeFoundation/hashlink/issues/109)
  * for Consoles (Nintendo Switch, Sony PS4, Microsoft XBoxOne), please contact us at nicolas `@` haxe.org if you are a registered developer for one or several of these
-
-
