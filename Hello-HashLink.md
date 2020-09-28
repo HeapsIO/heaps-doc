@@ -33,7 +33,7 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 -cp src 			# Tells haxe where to search for your code files
 -lib heaps			# Tells haxe to import the heaps library
 -lib hlsdl			# Tells haxe to import the hlsdl rendering library
--hl hello.hl	# Tells haxe to compile to hashlink bytecode in the main directory
+-hl hello.hl	# Tells haxe to compile to hashlink bytecode in the project directory
 -main Main			# Tells haxe that Main.hx is your entry point
 -debug				# Tells haxe to run in debug mode
 ```
@@ -94,7 +94,7 @@ Now, by hitting `F5`, the project will compile and run.
 
 To compile without running, hit `Ctrl-Shift-B` and select `haxe : active configuration`
 
-If everything works well, you should now have a `hello.hl` file created in your main folder.
+If everything works well, you should now have a `hello.hl` file created in your project folder.
 
 You can customize the default window size by adding the following to your `compile.hxml`:
 
