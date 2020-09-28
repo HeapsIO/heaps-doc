@@ -10,7 +10,6 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 .
 ├── .vscode/
 │   └── launch.json
-├── out/
 ├── res/
 ├── src/
 │   └── Main.hx
@@ -25,7 +24,7 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 ```
 -cp src 			# Tells haxe where to search for your code files
 -lib heaps			# Tells haxe to import the heaps library
--js out/hello.js	# Tells haxe to compile to javascript in the out directory
+-js hello.js		# Tells haxe to compile to javascript in the main directory
 -main Main			# Tells haxe that Main.hx is your entry point
 -debug				# Tells haxe to run in debug mode
 ```
@@ -70,7 +69,7 @@ Add the following code to the file:
 			"type": "chrome",
 			"request": "launch",
 			"name": "Launch Chrome against localhost",
-			"url": "file://${workspaceFolder}/out/index.html",
+			"url": "file://${workspaceFolder}/index.html",
 			"webRoot": "${workspaceFolder}",
 			"preLaunchTask": {
 				"type" : "haxe",
@@ -81,7 +80,7 @@ Add the following code to the file:
 }
 ```
 
-Now, in your `out` directory, create a file `index.html` and add the following code to it:
+Now, in your main directory, create a file `index.html` and add the following code to it:
 
 ```html
 <!DOCTYPE>
@@ -108,7 +107,7 @@ Now, by hitting `F5`, the project will compile and run.
 
 To compile without running, hit `Ctrl-Shift-B` and select `haxe : active configuration`
 
-If everything works well, you should now have both `hello.js` and `hello.js.map` files created in your `out` folder:
+If everything works well, you should now have both `hello.js` and `hello.js.map` files created in your project folder:
 
 ![image](https://user-images.githubusercontent.com/1022912/45916520-e6ecfd00-be67-11e8-925c-a762c7950045.png)
 
