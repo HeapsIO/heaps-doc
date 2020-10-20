@@ -22,12 +22,18 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 * Create a new file called `compile.hxml`
 * Add the following lines to your newly created file
 ```
--cp src 			# Tells haxe where to search for your code files
--lib heaps			# Tells haxe to import the heaps library
--js hello.js		# Tells haxe to compile to javascript in the project directory
--main Main			# Tells haxe that Main.hx is your entry point
--debug				# Tells haxe to run in debug mode
+-cp src
+-lib heaps
+-js hello.js
+-main Main
+-debug
 ```
+
+* `-cp src` Tells haxe where to search for your code files
+* `-lib heaps` Tells haxe to import the heaps library
+* `-js hello.js` Tells haxe to compile to javascript in the project directory
+* `-main Main` Tells haxe that Main.hx is your entry point
+* `-debug Tells` haxe to run in debug mode
 
 This will tell the compiler that we are using the library Heaps, that we will compile to JavaScript `hello.js` output, and that our main class should be `Main.hx` file.
 
