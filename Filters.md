@@ -47,8 +47,9 @@ class MyFilterShader extends h3d.shader.ScreenShader {
 Usage:
 
 ```haxe
-var customFilter = new h2d.filter.Shader(new MyFilterShader());
-customFilter.red = 0.1; // use 0-1 range
+var myShader = new MyFilterShader();
+myShader.red = 1; // use 0-1 range
+var customFilter = new h2d.filter.Shader(myShader);
 mySprite.filter = customFilter;
 ```
 
