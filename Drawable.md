@@ -16,6 +16,6 @@ Each Drawable (including [`h2d.Bitmap`](https://github.com/ncannasse/heaps/blob/
     * `Erase` : the sprite color is substracted to the background color
    
 * `filter` : when a sprite is scaled (upscaled or downscaled), by default Heaps will use the nearest pixel in the Tile to display it. This will create a nice pixelated effect for some games, but might not looks good on your game. You can try to set the filter value to true, which will enable bilinear filtering on the sprite, making it looks less sharp and more smooth/blurry.
-* `shaders` : each `Drawable` can have shaders added to modify their display. Shaders are introduced [here](documentation/h2d/shaders.html).
+* `shaders` : each `Drawable` can have shaders added to modify their display. Shaders are introduced [here](documentation/h2d-shaders.html).
 
 `Drawable` instances have other properties which can be discovered by visiting the [`h2d.Drawable`](https://github.com/ncannasse/heaps/blob/master/h2d/Drawable.hx) API section.
