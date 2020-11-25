@@ -38,7 +38,7 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 -debug				# Tells haxe to run in debug mode
 ```
 
-The `-debug` is not necessary to debug, unlink the javascript target, but can still be useful when used with [conditional compilation](https://haxe.org/manual/lf-condition-compilation.html).
+The `-debug` is not necessary to debug, unlike with the javascript target, but can still be useful when used with [conditional compilation](https://haxe.org/manual/lf-condition-compilation.html).
 
 The `-lib hlsdl` tells Heaps to compile with SDL/OpenGL support. If you are on Windows you can use `-lib hldx` instead.
 
