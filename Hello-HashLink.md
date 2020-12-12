@@ -30,13 +30,23 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 * Create a new file called `compile.hxml`
 * Add the following lines to your newly created file
 ```
--cp src 			# Tells haxe where to search for your code files
--lib heaps			# Tells haxe to import the heaps library
--lib hlsdl			# Tells haxe to import the hlsdl rendering library
--hl hello.hl	# Tells haxe to compile to hashlink bytecode in the project directory
--main Main			# Tells haxe that Main.hx is your entry point
--debug				# Tells haxe to run in debug mode
+-cp src
+-lib heaps
+-lib hlsdl
+-hl hello.hl
+-main Main
+-debug
 ```
+
+| Line            | Purpose                                                             |
+|-----------------| --------------------------------------------------------------------|
+|``-cp src      ``| Tells haxe where to search for your code files                      |
+|``-lib heaps   ``| Tells haxe to import the heaps library                              |
+|``-lib hlsdl   ``| Tells haxe to import the hlsdl rendering library                    |
+|``-hl hello.hl ``| Tells haxe to compile to hashlink bytecode in the project directory |
+|``-main Main   ``| Tells haxe that Main.hx is your entry point                         |
+|``-debug       ``| Tells haxe to run in debug mode                                     |
+
 
 The `-debug` is not necessary to debug, unlike with the javascript target, but can still be useful when used with [conditional compilation](https://haxe.org/manual/lf-condition-compilation.html).
 
