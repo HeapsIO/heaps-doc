@@ -57,9 +57,14 @@ _To confirm your current version of Haxe, type `haxe --version` in the command l
 
 ## Install additional libraries
 Using `haxelib install` in the command line, install the following items:
-   * Install Haxelib [hldx](https://lib.haxe.org/p/hldx) for DirectX support
-   * Install Haxelib [hlopenal](https://lib.haxe.org/p/hlopenal) for OpenAL support
-   * Install Haxelib [hlsdl](https://lib.haxe.org/p/hlsdl) for SDL/GL support
+   * [hlopenal](https://lib.haxe.org/p/hlopenal) for OpenAL support
+   * [hldx](https://lib.haxe.org/p/hldx) for DirectX support
+   * [hlsdl](https://lib.haxe.org/p/hlsdl) for SDL/GL support
+```
+haxelib install hlopenal
+haxelib install hsdl
+haxelib install hldx
+```
 
 ## Verify the installation
 Once everything is setup, you should be able to run `hl` command from your terminal:
