@@ -98,7 +98,7 @@ You can inspect your components by enabling the domkit inspector. This is done u
 style.allowInspect = true;
 ```
 
-You can then using middle mouse button click anytime to enable/disable domkit inspector. Move your mouse over any component to see its name, id, classes and properties. You can use the mouse wheel to browse the component hierarchy.
+You can then using middle mouse button click anytime to enable/disable domkit inspector. Move your mouse over any component to see its name, id, classes and properties. You can use the mouse wheel to browse the component hierarchy. Maintaining `Ctrl` while clicking will also display the hierarchy in a separate tree-view.
 
 ![image](https://haxe.org/img/blog/2020-04-06-shirogames-stack/domkit.png)
 
