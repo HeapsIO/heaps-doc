@@ -62,7 +62,7 @@ Using `haxelib install` in the command line, install the following items:
 
 ```
 haxelib install hlopenal
-haxelib install hsdl
+haxelib install hlsdl
 haxelib install hldx
 ```
 
