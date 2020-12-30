@@ -48,6 +48,13 @@ hxd.Res.loader.load("path/to/myResource.png")
 
 This will return a [hxd.res.Any](https://heaps.io/api/hxd/res/Any.html) which has various methods to transform it to other resources.
 
+### Resources with duplicate names and `Res` completion
+
+Because `Res` does not list the file extensions, there is a possibility for name conflicts between multiple resources, in this case both resources are listed with their extensions by using underscore instead of a dot.  
+For example, `base.png` and `base.json` would be listed as a `base_png` and `base_json` resources in the completion.
+
+However some resource type have a so-called paired extensions, which can be found in the [hxd.res.Config](https://github.com/HeapsIO/heaps/blob/master/hxd/res/Config.hx) under `pairedExtensions` variable. When such file exists, if a file with same name exists and is listed as paired extension - it will be omitted from completion. Good example of that is `font.fnt` and `font.png`, which would only be listed as the `font` in `Res` and point at the `font.fnt`.
+
 ### Runtime resource loading
 
 You can also perform you own runtime loading of resources, by using for example `hxd.net.BinaryLoader`.
