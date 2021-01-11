@@ -45,6 +45,7 @@ There are several type of variables in HXSL:
 - `@global` are defined for multiple shaders
 - `@const` are constants that will produce a different shader output if changed
 - `@var` are _varying_ variables that are written in vertex shader and read in pixel shader (optional, hxsl can infer this)
+- `@borrow(path.to.other.Shader)` are foreign uniform references that were declared in another shader which are usually not accessible outside of it (note that borrowed shader has to be added to the shader list, otherwise runtime shader compilation error will occur).
 - normal untagged variables are "pipeline variables" which can be either shader local vars, varying our output variables depending on the pipeline analysis (see below)
 
 ## Shader pipeline
