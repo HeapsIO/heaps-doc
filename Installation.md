@@ -8,6 +8,8 @@ Heaps works on Haxe 3.4.2+, though it is recommanded to install Haxe 4+ to enjoy
 
 <img src="https://cloud.githubusercontent.com/assets/576184/3142589/5e2c41a0-e9c9-11e3-9608-75ec07df40e7.png" height="30"/>&nbsp;&nbsp;&nbsp;<a href="https://haxe.org/download/">Download Haxe 4+</a>
 
+**Please note that at this moment the latest Haxe version that works with Heaps is [Haxe 4.1.5](https://haxe.org/download/version/4.1.5/).**
+
 ## Installing Heaps using haxelib
 _[haxelib](https://lib.haxe.org/) is the library manager utility of haxe. It is used to download and install published versions of popular code libraries._
 
@@ -21,7 +23,7 @@ You can also install directly from github to get the latest, bleeding-edge versi
 ```
 haxelib git heaps https://github.com/HeapsIO/heaps.git
 ```
-
+**Please note that at this moment it is highly recommended to use the git version of Heaps.**
 
 ## Installing Visual Studio Code
 
