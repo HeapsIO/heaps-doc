@@ -106,8 +106,8 @@ Use following settings:
 
 [Hiero](https://libgdx.badlogicgames.com/tools.html) can be utilized to generate fonts with extra filters as well as SDF fonts. 
 
-* Refer to this instruction to generate SDF fonts: [Distance Field Fonts](/libgdx/libgdx/wiki/Distance-field-fonts)
-* Refer to this page for general instruction on Hiero usage: [Hiero](/libgdx/libgdx/wiki/Hiero)
+* Refer to this instruction to generate SDF fonts: [Distance Field Fonts](https://github.com/libgdx/libgdx/wiki/Distance-field-fonts)
+* Refer to this page for general instruction on Hiero usage: [Hiero](https://github.com/libgdx/libgdx/wiki/Hiero)
 
 ### Using fontgen tool
 
