@@ -33,7 +33,7 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 * `-lib heaps` Tells haxe to import the heaps library
 * `-js hello.js` Tells haxe to compile to javascript in the project directory
 * `-main Main` Tells haxe that Main.hx is your entry point
-* `-debug Tells` haxe to run in debug mode
+* `-debug` Tells haxe to run in debug mode
 
 This will tell the compiler that we are using the library Heaps, that we will compile to JavaScript `hello.js` output, and that our main class should be `Main.hx` file.
 
