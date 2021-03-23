@@ -69,5 +69,8 @@ hxd.Window.getInstance().addResizeEvent(onResize);
 ```
 Don't forget to remove the event using removeEventTarget when disposing your objects.
 
-
 All events callbacks in Heaps receive a [`hxd.Event`](api/hxd/Event.html) instance, which contains info about the event.
+
+## Touch screen
+
+[hxd.System.getValue(IsTouch)](api/hxd/System.html#getValue) can be used to detect whether a device has a touch screen or not (currently only detected on mobile devices). This value could be used for example to implement a long press with a timer on touch screen platforms only.
