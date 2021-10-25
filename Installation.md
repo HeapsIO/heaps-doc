@@ -15,7 +15,7 @@ In your command line interface of choice, run:
 ```
 haxelib install heaps
 ```
-_Note that in some cases you might need to log out and log back into your computer for haxlib to be recognized as a command._
+_Note that in some cases you might need to run the windows command `refreshenv` or log out and log back into your computer for haxlib to be recognized as a command._
 
 You can also install directly from github to get the latest, bleeding-edge version of Heaps.
 ```
