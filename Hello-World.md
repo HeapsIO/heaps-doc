@@ -96,7 +96,7 @@ Now, in your project directory, create a file `index.html` and add the following
 	<title>Hello Heaps</title>
 	<style>
 		body { margin:0;padding:0;background-color:black; }
-		canvas#webgl { width:100%;height:100%; } 
+		canvas#webgl { width:100%;height:100%; }
 	</style>
 </head>
 <body>
@@ -116,6 +116,10 @@ To compile without running, hit `Ctrl-Shift-B` and select `haxe : active configu
 If everything works well, you should now have both `hello.js` and `hello.js.map` files created in your project folder:
 
 ![image](https://user-images.githubusercontent.com/1022912/45916520-e6ecfd00-be67-11e8-925c-a762c7950045.png)
+
+### With command line
+
+If you're not using VS Code, you can compile your project by running `haxe compile.hxml` from the command line. Then simply open the `index.html` file in your favorite browser.
 
 ## Debugging
 

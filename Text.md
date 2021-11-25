@@ -12,9 +12,9 @@ tf.textAlign = Center;
 
 // add to any parent, in this case we append to root
 s2d.addChild(tf);
-``` 
+```
 
-For each font family you need a different font file, but you can tint them with code, using `textColor`. 
+For each font family you need a different font file, but you can tint them with code, using `textColor`.
 
 ### HtmlText usage
 Along with regular Text, there is also an [h2d.HtmlText](https://heaps.io/api/h2d/HtmlText.html) class that allows to use simple html markdown for rich text.
@@ -31,7 +31,7 @@ Along with regular Text, there is also an [h2d.HtmlText](https://heaps.io/api/h2
 * `<i>`: Alias to `<font face="italic">`
 * `<br/>`: Creates a line-break.
 * `<img>`: Inserts an image.
-  * `src="myimage.png"`: Name of the image to load. See remarks about image loading beloew.
+  * `src="myimage.png"`: Name of the image to load. See remarks about image loading below.
 
 #### Font and image loading
 HtmlText does not use Resource Manager to load fonts or images. Loading is performed by setting the callback methods:
@@ -46,49 +46,49 @@ htmlText.loadImage = function( url : String ) : h2d.Tile { return null; }
 htmlText.loadFont = function( name : String ) : h2d.Font { return null; }
 htmlText.formatText = function ( text : String ) : String { return text; }
 ```
-It's up to user how to implement resource loading. Please note, that there is no tile/font caching on HtmlText side.  
+It's up to user how to implement resource loading. Please note, that there is no tile/font caching on HtmlText side.
 Lastly, `formatText` allows to modify and/or validate text contents when it's changed.
 
 ## Font creation
 
-If you want to use custom fonts, other than the Default one, you need to create a `.fnt` file and put it into your `res` directory.  
-Heaps automatically converts all supported `.fnt` files to its own `.bfnt` format to speed up font loading.  
+If you want to use custom fonts, other than the Default one, you need to create a `.fnt` file and put it into your `res` directory.
+Heaps automatically converts all supported `.fnt` files to its own `.bfnt` format to speed up font loading.
 Alternatively it is possible to use Signed Distance Field to generate scalable fonts. See Hiero section for details.
 
 ### Supported formats
 
-* All 3 BMFont formats: XML, Text and Binary.  
+* All 3 BMFont formats: XML, Text and Binary.
   _Note: Multiple images per font are not supported._
 * [FontBuilder](https://github.com/andryblack/fontbuilder): Divo (discouraged to use, as it is less advanced than BMFont)
 
 ### Convert font to bitmap font using BMfont tool
-  
+
 > Download BMFont here: <http://www.angelcode.com/products/bmfont/>
 
 In the BMFont-tool, use these settings:
 
 * _File_ → _Font settings_
  * Choose font
- * Choose size 
+ * Choose size
  * Render from TrueType outline _(if you want smooth fonts)_
 * _File_ → _Export settings_
   * Bit depth: 32
   * Preset: white text with alpha (black or outline w/ alpha will do as well, but black isn't tintable)
   * Font descriptor: Any
   * Texture: Png
-* _File_ → _Save bitmap font as.._ 
-  * Put in your Heaps project under `./res/fonts/myFontName.fnt` 
+* _File_ → _Save bitmap font as.._
+  * Put in your Heaps project under `./res/fonts/myFontName.fnt`
 * _Note:_ Multi-texture fnt files are not supported, ensure that there is only one font texture per fnt file.
 
 ### Convert font to bitmap font using Littera
 
-Due to browsers no longer supporting Flash, Littera can be ran only by older browser versions [here](http://www.kvazars.com/littera/) 
-or trough standalone flash player by running [swf file](http://www.kvazars.com/littera/littera.swf) directly.  
+Due to browsers no longer supporting Flash, Littera can be ran only by older browser versions [here](http://www.kvazars.com/littera/)
+or trough standalone flash player by running [swf file](http://www.kvazars.com/littera/littera.swf) directly.
 Use following settings:
 
 * Settings in the left column
   * Update a font from your computer with _Select Font_ button
-  * Choose size 
+  * Choose size
   * Set the values:
     * Select what glyphs do you want to export.
     * Fill: to get a non-gradient color, remove one of the markers dragging it down from the rectangle.
@@ -99,19 +99,19 @@ Use following settings:
   * Format: Either `XML (.fnt)` or `Text (.fnt)`
   * Default values are fine for Heaps
   * Press _Export_ start the downloading process.
-  * Unzip the file and put it's content in your Heaps project under `./res/fonts/` 
+  * Unzip the file and put it's content in your Heaps project under `./res/fonts/`
 * If you renamed the files, don't forget to update reference to font texture in `pages` section of `.fnt` file.
 
 ### Using libgdx Hiero
 
-[Hiero](https://libgdx.badlogicgames.com/tools.html) can be utilized to generate fonts with extra filters as well as SDF fonts. 
+[Hiero](https://libgdx.badlogicgames.com/tools.html) can be used to generate fonts with extra filters as well as SDF fonts.
 
 * Refer to this instruction to generate SDF fonts: [Distance Field Fonts](https://github.com/libgdx/libgdx/wiki/Distance-field-fonts)
 * Refer to this page for general instruction on Hiero usage: [Hiero](https://github.com/libgdx/libgdx/wiki/Hiero)
 
 ### Using fontgen tool
 
-[Fontgen](https://github.com/Yanrishatum/fontgen/) is a command-line utility to generate fonts including SDF and MSDF formats. It was written specifically for Heaps and ShiroGames.  
+[Fontgen](https://github.com/Yanrishatum/fontgen/) is a command-line utility to generate fonts including SDF and MSDF formats. It was written specifically for Heaps and ShiroGames.
 Utility is strictly command-line with config files, please refer to readme file.
 
 ### Be creative with bitmapfonts
@@ -123,6 +123,7 @@ Want gradients? Its not simple to add them with image-editing software if cells 
 ## Using the Font
 
 Once the font is ready, you can use it for your Text:
+
 * initialize the [Resource manager](https://github.com/HeapsIO/heaps/wiki/Resource-Management)
 * have a `.fnt` and the corresponding `.png` file in your `res` folder
   * For Divo, `.png` file should have exactly the same name as `.fnt`
@@ -131,11 +132,12 @@ Once the font is ready, you can use it for your Text:
 * create an `h2d.Text` using this font
 
 ### SDF / MSDF
+
 For SDF fonts you need to load fonts slightly differently.
 
 * Instead of `toFont()` use `toSdfFont(size, channel, alphaCutoff, smoothing)`
   * `size` will represent desired font size.
   * `channel` tells which texture channel SDF shader should take the information from.
   * `alphaCutoff` will set the border of a glyph, with `0.5` being default value.
-  * `smoothing` controls the amount of antialiasing applied to glyph borders. 
+  * `smoothing` controls the amount of antialiasing applied to glyph borders.
 * Set `Text.smoothing` to `true`, otherwise SDF won't render properly.

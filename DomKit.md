@@ -1,23 +1,23 @@
 DomKit is a library that can be used together with Heaps to create complex UI and integrate custom 2D components into it.
 
-You should get install it first using:
+You should install it first using:
 
 `haxelib git domkit https://github.com/HeapsIO/domkit.git`
 
-You can then add it to your project libraries with `-lib domkit` (together with `-lib heaps`)
+You can then add it to your project libraries with `-lib domkit` (together with `-lib heaps`).
 
-You can see compile and run the corresponding [Heaps Sample](https://github.com/HeapsIO/heaps/blob/master/samples/Domkit.hx)
+You can see, compile and run the corresponding [Heaps Sample](https://github.com/HeapsIO/heaps/blob/master/samples/Domkit.hx).
 
 # Using Heaps Components
 
-In order to use Domkit to create a heaps components, you simply need to implements `h2d.domkit.Object` and define your document in the `SRC` static as the following sample shows:
+In order to use Domkit to create a heaps component, you simply need to implement `h2d.domkit.Object` and define your document in the `SRC` static variable, as the following sample shows:
 
 ```haxe
 class SampleView extends h2d.Flow implements h2d.domkit.Object {
 
-    static var SRC = 
-        <sample-view layout="vertical"> 
-            Hello World! 
+    static var SRC =
+        <sample-view layout="vertical">
+            Hello World!
             <bitmap src={tile} public id="mybmp"/>
         </sample-view>
 
@@ -42,11 +42,11 @@ You can then apply CSS at runtime to your document by using the following code:
 ```haxe
 var style = new h2d.domkit.Style();
 // resource referencing res/style.css (see Heaps Resources documentation)
-style.load(hxd.Res.style); 
+style.load(hxd.Res.style);
 style.addObject(view);
 ```
 
-Here's an example CSS that can apply to previous view:
+Here's an example CSS that can be applied to the previous view:
 
 ```css
 .box {
@@ -58,6 +58,7 @@ Here's an example CSS that can apply to previous view:
 ## Runtime CSS reload
 
 In order to get runtime CSS reload you need to:
+
 * use a `hxd.Res.initLocal()` so you use a local filesystem to load resources. This is only available to some platforms such as HashLink
 * enable resources live update with `hxd.Res.LIVE_UPDATE = true;`
 
@@ -71,24 +72,24 @@ You can add an init macro that will process at compile time your CSS and will re
 domkit.Macros.checkCSS("res/style.css");
 ```
 
-Or my adding to your Haxe compilation parameters :
+Or by adding to your Haxe compilation parameters:
 
-``` 
+```
 --macro domkit.Macros.checkCSS('res/style.css')
 ```
 
-Please note that since each CSS property can be used by different components in different ways, and since you can't always tell by CSS rules on which component type the property will be applied, we only check that the property is valid and the CSS accepted for one of the components that defines it.
+Please note that since each CSS property can be used by different components in different ways, and since you can't always tell by CSS rules on which component type the property will be applied, we only check that the property is valid and the CSS accepted for one of the components that define it.
 
 # Accessing the DOM
 
-When compiled with `-lib domkit`, each `h2d.Object` will have an extra `dom : domkit.Properties` field that can be used for changing the state of the object wrt CSS :
+When compiled with `-lib domkit`, each `h2d.Object` will have an extra `dom : domkit.Properties` field that can be used for changing the state of the object wrt CSS:
 
 ```haxe
 mybmp.dom.addClass("myclass");
 mybmp.dom.hover = true;
 ```
 
-More code can be found in the Heaps Domkit sample.
+More code can be found in the [Heaps Domkit examples](https://github.com/HeapsIO/heaps/blob/master/samples/Domkit.hx).
 
 # Domkit Inspector
 
@@ -98,16 +99,17 @@ You can inspect your components by enabling the domkit inspector. This is done u
 style.allowInspect = true;
 ```
 
-You can then using middle mouse button click anytime to enable/disable domkit inspector. Move your mouse over any component to see its name, id, classes and properties. You can use the mouse wheel to browse the component hierarchy. Maintaining `Ctrl` while clicking will also display the hierarchy in a separate tree-view.
+You can then use the middle mouse button click anytime to enable/disable domkit inspector. Move your mouse over any component to see its name, id, classes and properties. You can use the mouse wheel to browse the component hierarchy. Maintaining `Ctrl` while clicking will also display the hierarchy in a separate tree-view.
 
 ![image](https://haxe.org/img/blog/2020-04-06-shirogames-stack/domkit.png)
 
 # Defining custom Components
 
 In order to define custom components, you need to:
-* implements `h2d.domkit.Object` (if not already inherited from your superclass)
+
+* implement `h2d.domkit.Object` (if not already inherited from your superclass)
 * add `@:p` for each property you wish to expose to domkit markup/CSS
-* you can add `@:uiComp("name")` metadata in order to customize the component name
+* optionally add `@:uiComp("name")` metadata in order to customize the component name
 
 Here's a small example:
 ```haxe
@@ -127,7 +129,7 @@ class MyComp extends h2d.Flow implements h2d.domkit.Object {
     function set_style(s) {
         this.style = s;
         // ....
-        return s;    
+        return s;
     }
 
 }
@@ -141,11 +143,11 @@ It is now possible to use your component from any document `SRC` by doing the fo
 
 ## Components with SRC
 
-It is possible to have a component that also have a SRC. In that case, you need to reference the component name in your SRC root node name so its properties can be applied correctly.
+It is possible to have a component that also has an SRC. In that case, you need to reference the component name in your SRC root node name so its properties can be applied correctly.
 
 ## Components resolution
 
-Components are resolved by name by adding `Comp` to the capitalized component name. For instance `<something/>` will try to load `SomethingComp` class from local context.
+Components are resolved by name by adding `Comp` to the capitalized component name. For instance `<something/>` will try to load `SomethingComp` class from the local context.
 
 If you wish to customize this name resolution, you can use an init macro such as:
 
@@ -158,18 +160,18 @@ class Init {
 }
 ```
 
-In the path, the `$` character is the capitalized component name. 
+In the path, the `$` character is the capitalized component name.
 By default `"$Comp"` is a registered path in Heaps.
 
 ## Custom CSS parsing
 
-Some properties requires custom parsing. For instance color codes, padding boxes, etc.
-You can specify which parser method to use by changing `@:p` metadata in the following way:
+Some properties require custom parsing, like color codes, padding boxes, etc.
+You can specify which parser method to use by changing the `@:p` metadata in the following way:
 
 ```haxe
 // will use parseTile CSS parser method
 @:p(tile) public var tile : h2d.Tile;
-``` 
+```
 
 You can use any identifier that is allowed in the current CSS parser. The default Heaps parser can be found in `h2d/domkit/BaseComponents.hx`
 
@@ -197,8 +199,9 @@ class MyComp extends h2d.Flow implements h2d.domkit.Object {
 }
 ```
 
-And it means you can now use values this way in attributes or CSS:
-```
+With this you can now use custom values in attributes or CSS:
+
+```jsx
 <my values="1,2,3"/>
 ```
 
@@ -209,17 +212,17 @@ Domkit markup allows the following syntaxes.
 ```jsx
 <node attr="value"/>
 ```
-A component with a CSS attribute value. Please note that the value has to be valid CSS and is parsed then interpreted based on the components custom parsing rules in order to be translated to the actual runtime value for the corresponding node property.
+A component with a CSS attribute value. Please note that the value has to be valid CSS and is parsed then interpreted based on the component's custom parsing rules in order to be translated to the actual runtime value for the corresponding node property.
 
 ```jsx
 <node attr={expr}/>
 ```
-Set the attribute based on an Haxe code expression. Unlike previous syntax, here the expression must directly evaluates to the property runtime value, without going through CSS interpretation.
+Set the attribute based on a Haxe code expression. Unlike the previous syntax, here the expression must directly evaluate to the property runtime value, without going through CSS interpretation.
 
 ```jsx
 <node attr/>
 ```
-A shortcut for `attr="true"`. Allows to easily set boolean attributes
+A shortcut for `attr="true"`. Allows to easily set boolean attributes.
 
 ```jsx
 <node id="identifier"/>
@@ -239,7 +242,7 @@ Creates an Array of components on the current class and push the component value
 ```jsx
 <node(value1,value2,value3)/>
 ```
-Allows to pass constructor arguments to your custom component. ATM only Haxe values are allowed to be passed, DomKit does not allow passing CSS values to constructor arguments.
+Allows to pass constructor arguments to your custom component. At the moment only Haxe values are allowed to be passed, DomKit does not allow passing CSS values to constructor arguments.
 
 ```jsx
 <flow>
@@ -263,14 +266,14 @@ When just a Haxe variable identifier is injected into the document content, we a
 // commented <a/></a>
 </some>
 ```
-A single line comment within body
+A single line comment within body.
 
 ```jsx
 <some>
 <a> /* commented <a/></a> */ </a>
 </some>
 ```
-A multiline / delimited comment within body
+A multiline / delimited comment within body.
 
 ```jsx
 @something
@@ -280,40 +283,40 @@ A multiline / delimited comment within body
 @custom.path(value1,value2,value3)
 ```
 These are markup macros that can be processed in a custom manner by setting `domkit.Macros.processMacro` in an init macro. It allows you to process identifier path and arguments (Haxe expressions) to return some markup syntax that will be then processed.
- 
+
 # Heaps CSS reference
 
 This is the complete documentation for allowed CSS attributes for native Heaps components.
 
 ## object
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Object.html)
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Object.html).
 
 ```
 x : 0.5
 ```
-x position
+x position.
 
 ```
 y : 0.5
 ```
-y position
+y position.
 
 ```
 alpha : 0.5
 ```
-opacity
+opacity.
 
 ```
 rotation : 45
 ```
-rotation (unlike Heaps, value is expressed in degrees, not radians)
+rotation (unlike Heaps, value is expressed in degrees, not radians).
 
 
 ```
 visible : true
 ```
-toggle visibility
+toggle visibility.
 
 ```
 scale : 2.5
@@ -321,18 +324,18 @@ scale : 0.5 0.8
 scale-x : 0.5
 scale-y : 2
 ```
-Uniform or X/Y scaling
+Uniform or X/Y scaling.
 
 ```
 blend : none
 blend : alpha (default)
 blend : add
 ```
-Blendmode
+Blendmode.
 
 ### Flow properties
 
-These properties are only valid when the object parent is a `<flow/>` (see [corresponding heaps documentation](https://heaps.io/api/h2d/FlowProperties.html))
+These properties are only valid when the parent object is a `<flow/>` (see [corresponding heaps documentation](https://heaps.io/api/h2d/FlowProperties.html)).
 
 ```
 margin : 5
@@ -343,7 +346,7 @@ margin-bottom : 5
 margin-right : 0
 margin : 10 20 5 0
 ```
-Margins around the object (these are FlowProperties.padding values)
+Margins around the object (these are FlowProperties.padding values).
 
 ```
 align : left
@@ -352,13 +355,13 @@ align : bottom right
 halign : right
 valign : bottom
 ```
-Allows to override alignment for a single object in the flow
+Allows to override alignment for a single object in the flow.
 
 ```
 position : absolute
 position : auto
 ```
-Tells if the object position is automatically set by the flow or manually managed
+Tells if the object position is automatically set by the flow or manually managed.
 
 ```
 offset : 10 20
@@ -375,85 +378,85 @@ Gives minimal width/height to the object wrt flow calculus.
 
 ## drawable
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Drawable.html)
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Drawable.html).
 
 ```
 color : #ff0000
 color : #f00
 ```
-Color tint 
+Color tint.
 
 ```
 smooth : true
 smooth : auto
 ```
-Toggles bilinear filtering or keep auto mode
+Toggles bilinear filtering or keep auto mode.
 
 ```
 tile-wrap : true
 ```
-Enables tile wrapping
+Enables tile wrapping.
 
 ## bitmap
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Bitmap.html)
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Bitmap.html).
 
 ```
 src : url("my/tile.png")
 src : #f00 20 20
 ```
-Load the tile or creates one with the specific color and size
+Loads the tile or creates one with the specific color and size.
 
 ## text
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Text.html)
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Text.html).
 
 ```
 text : "some text"
 ```
-Text content to display
+Text content to display.
 
 ```
 font : url("path/to/bitmapfont.fnt")
 ```
-Set font to be used for display
+Set font to be used for display.
 
 ```
 letter-spacing : 2
 ```
-Space between letters
+Space between letters.
 
 ```
 line-spacing : 4
 ```
-Space between lines
+Space between lines.
 
 ```
 max-width : none
 max-width : 300
 ```
-Maximum width for auto text wrapping
+Maximum width for auto text wrapping.
 
 ```
 text-align : left
 text-align : right
 text-align : middle
 ```
-Alignment of the text (usually not used within a flow, instead use the `align` property)
+Alignment of the text (usually not used within a flow, instead use the `align` property).
 
 ```
 text-shadow : 1.5 2 #f00 0.5
 ```
-Set a drop shadow for the text (dx,dy,color,alpha)
+Set a drop shadow for the text (dx,dy,color,alpha).
 
 ```
 text-color : #f00
 ```
-Changes text color
+Changes text color.
 
 ## flow
 
-See [corresponding heaps documentation](https://heaps.io/api/h2d/Flow.html)
+See [corresponding heaps documentation](https://heaps.io/api/h2d/Flow.html).
 
 ```
 width : auto
@@ -461,7 +464,7 @@ width : 500
 min-width : 450
 max-height : none
 ```
-Set min/max width/height constraints
+Set min/max width/height constraints.
 
 ```
 background : url("my/resource")
@@ -469,7 +472,7 @@ background : url("my/resource") 5 8
 background : #f00
 background : transparent
 ```
-Flow background with optional borderWidth/Height
+Flow background with optional borderWidth/Height.
 
 ```
 background : tile("my/resource",5)
@@ -477,24 +480,24 @@ background-tile-pos: 3
 background : tile("my/resource",5,8)
 background-tile-pos: 3 7
 ```
-Flow background with split tile (vertical and optional horizontal frames) and separate attribute for setting the sub tile
+Flow background with split tile (vertical and optional horizontal frames) and separate attribute for setting the sub tile.
 
 ```
 debug : true
 ```
-Display debug lines
+Display debug lines.
 
 ```
 layout : vertical
 layout : horizontal
 layout : stack
 ```
-Sets the flow in either layout display mode
+Sets the flow in either layout display mode.
 
 ```
-multline : true
+multiline : true
 ```
-Activates multiline
+Activates multiline.
 
 ```
 padding : 5
@@ -505,13 +508,13 @@ padding-bottom : 5
 padding-right : 0
 padding : 10 20 5 0
 ```
-Padding values around contained elements
+Padding values around contained elements.
 
 ```
 hspacing : 10
 vspacing : 5
 ```
-Horizontal and vertical spacing between contained elements
+Horizontal and vertical spacing between contained elements.
 
 ```
 content-align : left
@@ -519,4 +522,4 @@ content-align : right top
 content-valign : middle
 content-halign : right
 ```
-Changes horizontal/vertical default alignment for contained elements (flow horizontalAlign/verticalAlign)
+Changes horizontal/vertical default alignment for contained elements (flow horizontalAlign/verticalAlign).

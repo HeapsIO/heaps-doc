@@ -1,4 +1,4 @@
-# Introduction 
+# Introduction
 
 ## Concepts
 
@@ -26,7 +26,7 @@ class Myapp extends hxd.App
         s2d;                            // the current scene
         var myscene = new h2d.Scene();  // create a new scene
         setScene(myscene);              // set it as the current scene
-        s2d;                            // is now newscene
+        s2d;                            // is now myscene
 
         var myobj2 = new h2d.Object();
         s2d.addChild(myobj2);
@@ -51,7 +51,6 @@ A **Tile** (represented by [h2d.Tile](https://heaps.io/api/h2d/Tile.html)) is a 
 
 ```haxe
 var mycolortile = h2d.Tile.fromColor(0xFF00FF, 100, 100, 1);
-var myimagetile = myimage.toTile();
 ```
 
 #### Tile Pivot

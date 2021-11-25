@@ -2,7 +2,7 @@
 
 ## HXSL stands for "Haxe Shader Language"
 
-It's a shader language that follows entirely the OpenGL shader language ([GLSL](https://en.wikipedia.org/wiki/OpenGL_Shading_Language)) specification, but which uses Haxe syntax, allowing you to write directly your shader in your Haxe source code.
+It's a shader language that follows entirely the OpenGL shader language ([GLSL](https://en.wikipedia.org/wiki/OpenGL_Shading_Language)) specification, but which uses Haxe syntax, allowing you to write your shaders directly in your Haxe source code.
 
 Vertex shaders are used for transforming and projecting each geometry point into 2D space and set up "variables" that will be interpolated on a per-pixel basis. This can be used by the pixel shader.
 
@@ -38,7 +38,7 @@ This shader defines:
 
 ## Variable kind
 
-There are several type of variables in HXSL:
+There are several types of variables in HXSL:
 
 - `@input` are vertex attributes input values
 - `@param` are per-shader-instance shader parameters / uniforms
@@ -52,7 +52,7 @@ There are several type of variables in HXSL:
 
 Unlike other shader models (GLSL, HLSL, etc.), HXSL allows several shaders to be **linked ** together at runtime, allowing you to split your shader into several distinct effects that can be enabled/disabled easily, without having to maintain a single "Uber Shader" with all the possible combinations.
 
-For instance, this is an shader that will affect all normals based on the previous shader:
+For instance, this is a shader that will affect all normals based on the previous shader:
 
 ```haxe
 class MyEffect extends hxsl.Shader {
@@ -65,18 +65,18 @@ class MyEffect extends hxsl.Shader {
 }
 ```
 
-The effect can be added to each material **list of shaders**. 
+The effect can be added to each material **list of shaders**.
 
-HXSL will then compile this list into a single shader instance, based on a desired list of **outputs**. 
+HXSL will then compile this list into a single shader instance, based on a desired list of **outputs**.
 
-For instance, we can select either the `output.color` or `output.normal` declared in `MyShader` to either write the normal value or the color value (or we could select both if we want to write to several textures at once, like in [MRT](https://en.wikipedia.org/wiki/Multiple_Render_Targets))
+For instance, we can select either the `output.color` or `output.normal` declared in `MyShader` to either write the normal value or the color value (or we could select both if we want to write to several textures at once, like in [MRT](https://en.wikipedia.org/wiki/Multiple_Render_Targets)).
 
 After we know the list of the shaders and the desired output, HXSL will be linking the shaders together, ensuring that all variables read have been previously written (for instance `MyEffect` requires a `transformedNormal` variable that has been written by another shader in the pipeline).
 
 Once linking is finished, HXSL will be optimizing out all the unused parts, such as:
 
 * branches implying `@const` variables are optimized out when they are unreachable
-* unused variables, unused textures, operations not performing any side effect that affects one of the outputs
+* unused variables, unused textures, operations not performing any side effects that affect one of the outputs
 
 The final resulting shader will then be compiled to the target platform native shader language (HXSL currently supports GLSL for OpenGL, HLSL for DirectX 11+, AGAL for AdobeAir, and PSSL for Sony PS4).
 
@@ -84,7 +84,7 @@ The final resulting shader will then be compiled to the target platform native s
 
 There are several shader examples available in the [h3d.shader](api/h3d/shader) package.
 
-These shaders mostly uses definitions present in either:
+These shaders mostly use definitions present in either:
 
 * [Base2d](api/h3d/shader/Base2d.html) for all 2D display
 * [BaseMesh](api/h3d/shader/BaseMesh.html) for all 3D display
