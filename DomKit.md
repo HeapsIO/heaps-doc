@@ -1,16 +1,16 @@
 DomKit is a library that can be used together with Heaps to create complex UI and integrate custom 2D components into it.
 
-You should get install it first using:
+You should install it first using:
 
 `haxelib git domkit https://github.com/HeapsIO/domkit.git`
 
 You can then add it to your project libraries with `-lib domkit` (together with `-lib heaps`)
 
-You can see compile and run the corresponding [Heaps Sample](https://github.com/HeapsIO/heaps/blob/master/samples/Domkit.hx)
+You can see, compile and run the corresponding [Heaps Sample](https://github.com/HeapsIO/heaps/blob/master/samples/Domkit.hx)
 
 # Using Heaps Components
 
-In order to use Domkit to create a heaps components, you simply need to implements `h2d.domkit.Object` and define your document in the `SRC` static as the following sample shows:
+In order to use DomKit to create a Heaps components, you simply need to implements `h2d.domkit.Object` and define your document in the `SRC` static as the following sample shows:
 
 ```haxe
 class SampleView extends h2d.Flow implements h2d.domkit.Object {
@@ -33,7 +33,7 @@ var view = new SampleView(h2d.Tile.fromColor(0xFF,32,32),s2d);
 view.mybmp.alpha = 0.8;
 ```
 
-You can read more about Domkit Markup Syntax in the reference below.
+You can read more about DomKit Markup Syntax in the reference below.
 
 # Applying CSS
 
@@ -46,7 +46,7 @@ style.load(hxd.Res.style);
 style.addObject(view);
 ```
 
-Here's an example CSS that can apply to previous view:
+Here's an example CSS that can be applied to previous view:
 
 ```css
 .box {
@@ -58,7 +58,7 @@ Here's an example CSS that can apply to previous view:
 ## Runtime CSS reload
 
 In order to get runtime CSS reload you need to:
-* use a `hxd.Res.initLocal()` so you use a local filesystem to load resources. This is only available to some platforms such as HashLink
+* use a `hxd.Res.initLocal()` so you use a local filesystem to load resources. This is only available on some platforms such as HashLink
 * enable resources live update with `hxd.Res.LIVE_UPDATE = true;`
 
 Then every time you modify your CSS file, the style will be reapplied to all your currently displayed components. Errors will be displayed in case of invalid CSS property or wrongly formatted value.
@@ -71,7 +71,7 @@ You can add an init macro that will process at compile time your CSS and will re
 domkit.Macros.checkCSS("res/style.css");
 ```
 
-Or my adding to your Haxe compilation parameters :
+Or by adding to your Haxe compilation parameters:
 
 ``` 
 --macro domkit.Macros.checkCSS('res/style.css')
@@ -81,24 +81,24 @@ Please note that since each CSS property can be used by different components in 
 
 # Accessing the DOM
 
-When compiled with `-lib domkit`, each `h2d.Object` will have an extra `dom : domkit.Properties` field that can be used for changing the state of the object wrt CSS :
+When compiled with `-lib domkit`, each `h2d.Object` will have an extra `dom : domkit.Properties` field that can be used for changing the state of the object wrt CSS:
 
 ```haxe
 mybmp.dom.addClass("myclass");
 mybmp.dom.hover = true;
 ```
 
-More code can be found in the Heaps Domkit sample.
+More code can be found in the Heaps DomKit sample.
 
-# Domkit Inspector
+# DomKit Inspector
 
-You can inspect your components by enabling the domkit inspector. This is done using
+You can inspect your components by enabling the DomKit inspector. This is done using:
 
 ```haxe
 style.allowInspect = true;
 ```
 
-You can then using middle mouse button click anytime to enable/disable domkit inspector. Move your mouse over any component to see its name, id, classes and properties. You can use the mouse wheel to browse the component hierarchy. Maintaining `Ctrl` while clicking will also display the hierarchy in a separate tree-view.
+You can then use middle mouse button click anytime to enable/disable DomKit inspector. Move your mouse over any component to see its name, id, classes and properties. You can use the mouse wheel to browse the component hierarchy. Maintaining `Ctrl` while clicking will also display the hierarchy in a separate tree-view.
 
 ![image](https://haxe.org/img/blog/2020-04-06-shirogames-stack/domkit.png)
 
@@ -106,7 +106,7 @@ You can then using middle mouse button click anytime to enable/disable domkit in
 
 In order to define custom components, you need to:
 * implements `h2d.domkit.Object` (if not already inherited from your superclass)
-* add `@:p` for each property you wish to expose to domkit markup/CSS
+* add `@:p` for each property you wish to expose to DomKit markup/CSS
 * you can add `@:uiComp("name")` metadata in order to customize the component name
 
 Here's a small example:
@@ -159,11 +159,11 @@ class Init {
 ```
 
 In the path, the `$` character is the capitalized component name. 
-By default `"$Comp"` is a registered path in Heaps.
+By default, `"$Comp"` is a registered path in Heaps.
 
 ## Custom CSS parsing
 
-Some properties requires custom parsing. For instance color codes, padding boxes, etc.
+Some properties require custom parsing. For instance color codes, padding boxes, etc.
 You can specify which parser method to use by changing `@:p` metadata in the following way:
 
 ```haxe
@@ -202,9 +202,9 @@ And it means you can now use values this way in attributes or CSS:
 <my values="1,2,3"/>
 ```
 
-# Domkit Markup Reference
+# DomKit Markup Reference
 
-Domkit markup allows the following syntaxes.
+DomKit markup allows the following syntaxes.
 
 ```jsx
 <node attr="value"/>
@@ -214,7 +214,7 @@ A component with a CSS attribute value. Please note that the value has to be val
 ```jsx
 <node attr={expr}/>
 ```
-Set the attribute based on an Haxe code expression. Unlike previous syntax, here the expression must directly evaluates to the property runtime value, without going through CSS interpretation.
+Set the attribute based on an Haxe code expression. Unlike previous syntax, here the expression must directly evaluate to the property runtime value, without going through CSS interpretation.
 
 ```jsx
 <node attr/>
@@ -224,7 +224,7 @@ A shortcut for `attr="true"`. Allows to easily set boolean attributes
 ```jsx
 <node id="identifier"/>
 ```
-Creates a field on the current class and set it to the component value upon initialization. By default the field is private.
+Creates a field on the current class and set it to the component value upon initialization. By default, the field is private.
 
 ```jsx
 <node public id="identifier"/>
