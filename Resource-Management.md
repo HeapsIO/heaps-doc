@@ -24,17 +24,12 @@ Please note that this is strictly typed: hxd.Res will look into the `res` direct
 
 ## Resources loader
 
-The `hxd.Res` provides your strictly typed shortcuts to access your resources, but it does not take care of the resource loading. For this, you need to initialize a resource loader before accessing your first resource, for instance:
+The `hxd.Res` provides your strictly typed shortcuts to access your resources, but it does not take care of the resource loading. For this, you need to initialize a resource loader before accessing your first resource. To do so, we do the following:
 
 ```haxe
-hxd.Res.initEmbed();
+hxd.res.Loader.currentInstance=new hxd.res.Loader(hxd.fs.EmbedFileSystem.create());
 ```
 
-This will be the same as writing:
-
-```haxe
-hxd.Res.loader = new hxd.res.Loader(hxd.fs.EmbedFileSystem.create());
-```
 
 A loader will cache the resources instances after they have been fetched from the underlying file system. There are several ways to store your resources.
 
@@ -43,7 +38,7 @@ A loader will cache the resources instances after they have been fetched from th
 You can resolve a resource from it path in the resource file system by using the following command:
 
 ```haxe
-hxd.Res.loader.load("path/to/myResource.png")
+hxd.res.Loader.currentInstance.load("path/to/myResource.png")
 ```
 
 This will return a [hxd.res.Any](https://heaps.io/api/hxd/res/Any.html) which has various methods to transform it to other resources.
