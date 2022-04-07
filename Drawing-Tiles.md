@@ -65,14 +65,14 @@ class Main extends hxd.App {
 				var tid = layer.data[x + y * mw];
 				if (tid != 0) { // skip transparent tiles
 					// add a tile to the TileGroup
-					group.add(x * tw, y * mapData.tilewidth, tiles[tid - 1]);
+					group.add(x * tw, y * th, tiles[tid - 1]);
 				}
 			}
 		}
 		
 		// Create raining bunnies with SpriteBatch
 		var bunnies = hxd.Res.bunnies.toTile();
-		var batch = new h2d.SpriteBatch(s2d);
+		var batch = new h2d.SpriteBatch(bunnies, s2d);
 		batch.hasRotationScale = true;
 		batch.hasUpdate = true;
 		// Note: Does not count as a bunnymark.
@@ -84,7 +84,7 @@ class Main extends hxd.App {
 	}
 }
 
-class Bunny extends h2d.SpriteBatch.SimpleElement {
+class Bunny extends h2d.SpriteBatch.BasicElement {
 	
 	public function new(t:h2d.Tile) {
 		super(t);
