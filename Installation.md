@@ -4,7 +4,7 @@ In order to get up and running Heaps you'll need to install Haxe (the language),
 
 ## Installing Haxe
 
-Heaps works on Haxe 3.4.2+, though it is recommanded to install Haxe 4+ to enjoy new language features and support the HashLink compiler target.
+Heaps works on Haxe 3.4.2+, though it is recommended to install Haxe 4+ to enjoy new language features and support the HashLink compiler target.
 
 <img src="https://cloud.githubusercontent.com/assets/576184/3142589/5e2c41a0-e9c9-11e3-9608-75ec07df40e7.png" height="30"/>&nbsp;&nbsp;&nbsp;<a href="https://haxe.org/download/">Download Haxe 4+</a>
 
