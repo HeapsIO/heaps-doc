@@ -119,10 +119,6 @@ If everything works well, you should now have both `hello.js` and `hello.js.map`
 
 ## Debugging
 
-In order to Run with Chrome, you need **Chrome Debugger** VSCode extension. Open again the Extension manager and search for Chrome to install it:
-
-![image](https://user-images.githubusercontent.com/1022912/45916600-0fc1c200-be69-11e8-8c4e-19cb5212d85a.png)
-
-You can put breakpoints into your Heaps application by clicking in the margin to left to the line number in your source code. You can then start again the problem and see it break at the desired position.
+You can put breakpoints into your Heaps application by clicking in the margin to left to the line number in your source code. You can then start again and see it break at the desired position.
 
 ![image](https://user-images.githubusercontent.com/1022912/45916676-6bd91600-be6a-11e8-99a1-b15567ee4ec7.png)
