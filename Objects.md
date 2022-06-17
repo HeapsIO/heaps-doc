@@ -22,7 +22,7 @@ trace( c.getAbsPos().getPosition() );  // the absolute x-position of `c` will be
 
 Note that `h2d.Object` is also documented in detail in the [API](https://heaps.io/api/h2d/Object.html)!
 
-The following code should make it more clear why these trees of stacked objects are useful. As you will see, when moving the "clock" and the "NPC" all their *children* move with them. Also note that by using `haxe.Timer` the sample relies on simple [Haxe API](https://api.haxe.org/) to provide another way besides the `update` method to make changes each frame.
+The following code should make it more clear why these trees of stacked objects are useful. As you will see, when moving the "clock" and the "NPC" all their *children* move with them.
 
 ```haxe
 class Main extends hxd.App {
@@ -102,8 +102,8 @@ class Main extends hxd.App {
         // defining a timer to change the NPC's movement vector
         var t = new haxe.Timer(5*1000); // change moving direction every 5 seconds
         t.run = ()->{
-            npc_moveX = Math.round( (-2+Math.random()*4) * 100) / 100;
-            npc_moveY = Math.round( (-2+Math.random()*4) * 100) / 100;
+            npc_moveX = Math.round( ((-1+(Math.random()*2))) * 100) / 100;
+            npc_moveY = Math.round( ((-1+(Math.random()*2))) * 100) / 100;
             npc_moveVectorLabel.text = 'move vector (x: ${npc_moveX}, y: ${npc_moveY})';
         };
     }
@@ -122,3 +122,5 @@ class Main extends hxd.App {
     }
 }
 ```
+
+Side note: Here by using `haxe.Timer` we rely on simple [Haxe API](https://api.haxe.org/) to provide another way besides the `update` method to make changes each frame.
