@@ -10,9 +10,10 @@ class Main extends hxd.App {
     public function new() {super();}
 }
 ```
+Of course all you get to see here is a black screen or window with no content. Thus to create content an object instance must be added that inherits from `h2d.Object`.
 
-#### Creating content
-Of course all you get to see here is a black screen or window with no content. Thus to create content an object instance must be added that inherits from `h2d.Object`. There are many classes to choose from that all inherit from `h2d.Object` (see the [API](https://heaps.io/api/h2d/Object.html)). Therefore in the next sample we revisit the code of the ["Hello World" sample](Hello World) and add a bitmap. Two objects now make up the content here: `h2d.Text` and `h2d.Bitmap` (and as said, both are `h2d.Object`s).
+## Adding content
+There are many classes to choose from that all inherit from `h2d.Object` (see the [API](https://heaps.io/api/h2d/Object.html)). Therefore in the next sample we revisit the code of the ["Hello World" sample](Hello World) and add a bitmap. Two objects now make up the content here: `h2d.Text` and `h2d.Bitmap` (and as said, both are `h2d.Object`s).
 
 ```haxe
     class Main extends hxd.App {
@@ -44,5 +45,7 @@ Of course all you get to see here is a black screen or window with no content. T
 With overriding `hxd.App`'s `update` method Heaps allows us to define what should happen each frame.
 The underlying `h2d.Object` provides us with the basics to change the bitmaps position and rotation.
 
-(`h2d.Tile` will be discussed later in another section.)
+The next section will discuss `h2d.Object` a bit closer.
+
+`h2d.Tile` which the bitmap required will be discussed later in another section.
 
