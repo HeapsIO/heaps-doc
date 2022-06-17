@@ -3,7 +3,8 @@
 ## Concepts
 
 ### Object
-An **Object** (represented by [h2d.Object](https://heaps.io/api/h2d/Object.html)) is the base class of all of 2D objects. An object has a position (x,y), a scale (scaleX,scaleY), a rotation. It can contain other objects which will inherit its transformations, creating a scene tree.
+An **Object** (represented by [h2d.Object](https://heaps.io/api/h2d/Object.html)) is the base class of all 2D objects, so any thing that you can *see* on the screen. Therefore `h2d.Object` provides variables like a position (x,y), a scale (scaleX,scaleY), a rotation and methods to change them.
+`h2d.Object`s can be any visual objects in the world of the game like for instance the player, enemies, buildings, but furthermore also buttons (`h2d.Interactive`) or a `h2d.Flow` that arranges UI elements and many more.
 
 ```haxe
 var myobj = new h2d.Object();
