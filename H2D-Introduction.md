@@ -23,6 +23,8 @@ c.x = 10;                              // relative to parent `b`
 trace( c.getAbsPos().getPosition() );  // the absolute x-position of `c` will be 110, because it "travels" along with its parent `b`
 ```
 
+`h2d.Object` is documented in detail in the [API](https://heaps.io/api/h2d/Object.html).
+
 ### Scene
 The **Scene** (represented by [h2d.Scene](https://heaps.io/api/h2d/Scene.html)) is a special object which is at the root of the scene tree. In [hxd.App](https://heaps.io/api/hxd/App.html) it is accessible by using the `s2d` variable. You will need to add your objects to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys.
 ```haxe
