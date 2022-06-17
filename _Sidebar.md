@@ -5,6 +5,7 @@
   * [[Hello HashLink]]
 * [[H2D]]
   * [[H2D Introduction]]
+  * [[Graphical surfaces]]
   * [[Animation]]
   * [[Text]]
   * [[Drawable]]
