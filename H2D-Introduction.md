@@ -11,13 +11,16 @@ Objects can be added to a scene (here `h2d.Scene`) directly or be added to anoth
 The child objects will inherit the transformations of the parent object they have been added to. This means whenever the parent transforms (changing the position, rotating, making it transparent or invisible etc.) these transformations *also* apply to all the children that have been added to this parent object.
 
 ```haxe
-var myobj = new h2d.Object();
-s2d.addChild(myobj);
-myobj.x = 100;
-myobj.rotation = Math.PI/3;
+var a = new h2d.Object();              // object not added yet
+s2d.addChild(a);                       // now adding `a` to `s2d` (the currently active 2D scene)
 
-var mysecondobj = new h2d.Object();
-myobj.addChild(mysecondobj);
+var b = new h2d.Object( s2d );         // `b` is added directly via constructor to `s2d`
+b.x = 100;
+
+var c = new h2d.Object( b );           // `c` is added to `b` which has been added to a scene (`s2d`)
+c.x = 10;                              // relative to parent `b`
+
+trace( c.getAbsPos().getPosition() );  // the absolute x-position of `c` will be 110, because it "travels" along with its parent `b`
 ```
 
 ### Scene
