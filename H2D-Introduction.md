@@ -11,6 +11,7 @@ class Main extends hxd.App {
 }
 ```
 
+#### Creating content
 Of course all you get to see here is a black screen or window with no content. Thus to create content an object instance must be added that inherits from `h2d.Object`. There are many classes to choose from that all inherit from `h2d.Object` (see the [API](https://heaps.io/api/h2d/Object.html)). Therefore in the next sample we revisit the code of the ["Hello World" sample](Hello World) and add a bitmap. Two objects now make up the content here: `h2d.Text` and `h2d.Bitmap` (and as said, both are `h2d.Object`s).
 
 ```haxe
