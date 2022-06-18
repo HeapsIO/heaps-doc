@@ -28,6 +28,99 @@ public function new(){super();}
 }
 ```
 
+You can deal with scenes mostly any way you like (like with most things in Heaps!) and just make changes to the `s2d` variable directly. However to give a better understanding what scenes are see the following sample application. When running you will see a very basic intro scene, a main menu and the actual game scene Level01. Using each a class for each scene may look a bit bloated, but could give a starting point how you *can* structure your scenes as single files in your project.
+
+```haxe
+class ABC extends hxd.App {
+    public static var app : ABC;                // just will represent this app as an individual object at runtime (so as an instance of this class)
+    static function main() { app = new ABC(); } // pass this reference!
+    public var myUpdateFunction : Dynamic;      // this will allow us to define the update function from other classes (see Level01)
+    public function new() {super();}
+    override function init() {
+        setScene( new Intro() );
+    }
+    override function update(dt:Float) {
+        if(myUpdateFunction!=null)
+            myUpdateFunction();
+    }
+}
+
+class Intro extends h2d.Scene {
+    public function new() {
+        super();
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), this ); t.text = "Intro scene";
+        trace(t.text);
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), this );
+        t.setPosition( 50, 50 );
+        t.text = "This game was created by YOU!\nCreated with the Heaps game engine.\nhttps://heaps.io";
+        t.scale( 3 );
+        var t = new haxe.Timer( 3 * 1000 );
+        t.run = () -> {
+            ABC.app.setScene( new MainMenu() );
+            t.stop();
+        };
+    }
+}
+
+class MainMenu extends h2d.Scene {
+    public function new() {
+        super();
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), this ); t.text = "Main menu scene";
+        trace(t.text);
+        var f = new h2d.Flow( this ); f.padding = 8; f.layout = h2d.Flow.FlowLayout.Vertical;
+        f.setPosition( 100, 200 );
+        var button_play = new h2d.Interactive( 300, 50, f ); button_play.backgroundColor = 0xFF00FF80;
+        var button_quit = new h2d.Interactive( 300, 40, f ); button_quit.backgroundColor = 0xFFFF4040;
+        //button_quit.y += 60;
+        button_play.onClick = (e)->{
+            ABC.app.setScene( new Level01() );
+        };
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), button_play ); t.text = "Play"; t.setPosition(8,8);
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), button_quit ); t.text = "Quit"; t.setPosition(8,8);
+    }
+}
+
+class Level01 extends h2d.Scene {
+    public function new() {
+        super();
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), this ); t.text = "Level01 scene";
+        trace(t.text);
+        var player = new h2d.Graphics( this ); player.setPosition( 200, 200 );
+        drawSmileyFace( player );
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), player ); t.text = "Player"; t.setPosition(-50,50);
+        ABC.app.myUpdateFunction = () -> { player.x += 0.1; };
+    }
+    function drawSmileyFace( g:h2d.Graphics ) {
+        // face
+        g.beginFill( 0xFFFF00 );
+        g.drawCircle( 0, 0, 40 );
+        g.endFill();
+        // first eye
+        g.beginFill( 0x0 );
+        g.drawCircle( -20, 0, 7 );
+        g.endFill();
+        // second eye
+        g.beginFill( 0x0 );
+        g.drawCircle( 20, 0, 7 );
+        g.endFill();
+        // a happy mouth
+        g.beginFill( 0x0 );
+        g.drawPie( 0, 10, 15, 0*Math.PI, 1*Math.PI );
+        g.endFill();
+        // and some eye sparkle
+        g.beginFill( 0xFFFFFF );
+        g.drawCircle( -20, -5, 3 );
+        g.endFill();
+        g.beginFill( 0xFFFFFF );
+        g.drawCircle( 20, -5, 3 );
+        g.endFill();
+    }
+}
+```
+
+...
+
+---
 ## Scenes and camera
 
 Scenes and camera is explained here.
