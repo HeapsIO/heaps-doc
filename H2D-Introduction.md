@@ -43,9 +43,10 @@ There are many classes to choose from that all inherit from `h2d.Object` (see th
 ```
 
 With overriding `hxd.App`'s `update` method Heaps allows us to define what should happen each frame.
-The underlying `h2d.Object` provides us with the basics to change the bitmaps position and rotation.
+The underlying `h2d.Object` (from which `h2d.Bitmap` inherits) provides it with the basics to change the bitmap's position and rotation.
 
 The next section will discuss `h2d.Object` a bit closer.
 
 `h2d.Tile` which the bitmap required will be discussed later in another section.
+
 
