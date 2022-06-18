@@ -1,5 +1,6 @@
 # Object
 Like shown previously in the introduction to give our Heaps application visual (2D) content we need classes that are build upon `h2d.Object`.
+
 An **Object** (represented by [h2d.Object](https://heaps.io/api/h2d/Object.html)) is the base class of all 2D objects, so any thing that you can *see* on the screen. Therefore `h2d.Object` provides variables like a position (x,y), a scale (scaleX,scaleY), a rotation and methods to change them.
 `h2d.Object`s can be any visual objects in the world of the game like for instance *the player, enemies, buildings*, but furthermore also buttons (`h2d.Interactive`) or a `h2d.Flow` that arranges UI elements and many more.
 
