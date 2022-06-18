@@ -23,7 +23,7 @@ class Myapp extends hxd.App
 
     }
 
-public static function main(){ new Main(); }
+public static function main(){ new Myapp(); }
 public function new(){super();}
 }
 ```
