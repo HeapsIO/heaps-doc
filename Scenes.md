@@ -22,6 +22,9 @@ class Myapp extends hxd.App
         var myobj = new h2d.Object(s2d);// add myobj to s2d by passing s2d as parameter
 
     }
+
+public static function main(){ new Main(); }
+public function new(){super();}
 }
 ```
 
