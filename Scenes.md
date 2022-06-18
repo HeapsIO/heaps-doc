@@ -35,7 +35,7 @@ You can deal with scenes mostly any way you like (like with most things in Heaps
 ```haxe
 class ABC extends hxd.App {
     public static var app : ABC;                // just will represent this app as an individual object at runtime (so as an instance of this class)
-    static function main() { app = new ABC(); } // pass this reference!
+    static function main() { app = new ABC(); } // "save" the reference for access from outside later
     public var myUpdateFunction : Dynamic;      // this will allow us to define the update function from other classes (see Level01)
     public function new() {super();}
     override function init() {
@@ -53,9 +53,13 @@ class Intro extends h2d.Scene {
         var t = new h2d.Text( hxd.res.DefaultFont.get(), this ); t.text = "Intro scene";
         trace(t.text);
         var t = new h2d.Text( hxd.res.DefaultFont.get(), this );
-        t.setPosition( 50, 50 );
-        t.text = "This game was created by YOU!\nCreated with the Heaps game engine.\nhttps://heaps.io";
-        t.scale( 3 );
+        t.setPosition( 50,  50 );
+        t.text = "Game by _____";
+        t.scale( 3 ); t.textColor = 0x00FFFF;
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), this );
+        t.setPosition( 50, 150 );
+        t.text = "Created with the Heaps game engine.\nSee more on\nhttps://heaps.io";
+        t.scale( 2 ); t.textColor = 0x606060;
         var t = new haxe.Timer( 3 * 1000 );
         t.run = () -> {
             ABC.app.setScene( new MainMenu() );
@@ -69,14 +73,21 @@ class MainMenu extends h2d.Scene {
         super();
         var t = new h2d.Text( hxd.res.DefaultFont.get(), this ); t.text = "Main menu scene";
         trace(t.text);
-        var f = new h2d.Flow( this ); f.padding = 8; f.layout = h2d.Flow.FlowLayout.Vertical;
-        f.setPosition( 100, 200 );
+        // base flow for all elements
+        var f = new h2d.Flow( this ); f.verticalSpacing = 8; f.layout = h2d.Flow.FlowLayout.Vertical;
+        f.setPosition( 100, 100 );
+        // main title
+        var mainmenu_title_flow = new h2d.Flow( f );
+        var mainmenu_title = new h2d.Text( hxd.res.DefaultFont.get(), mainmenu_title_flow );
+        mainmenu_title.text = "Main menu"; mainmenu_title.scale(3); mainmenu_title_flow.padding = 32;
+        // buttons
         var button_play = new h2d.Interactive( 300, 50, f ); button_play.backgroundColor = 0xFF00FF80;
         var button_quit = new h2d.Interactive( 300, 40, f ); button_quit.backgroundColor = 0xFFFF4040;
         //button_quit.y += 60;
         button_play.onClick = (e)->{
             ABC.app.setScene( new Level01() );
         };
+        button_quit.onClick = (e)->{ hxd.System.exit(); };
         var t = new h2d.Text( hxd.res.DefaultFont.get(), button_play ); t.text = "Play"; t.setPosition(8,8);
         var t = new h2d.Text( hxd.res.DefaultFont.get(), button_quit ); t.text = "Quit"; t.setPosition(8,8);
     }
@@ -120,9 +131,12 @@ class Level01 extends h2d.Scene {
 }
 ```
 
-...
+![demo_on_using_scenes](https://user-images.githubusercontent.com/88530062/174429682-6debdb8e-d35c-4f3e-87d0-d3d72fe7e2b4.png)
+
 
 ---
+
+
 ## Scenes and camera
 
 Scenes and camera is explained here.
