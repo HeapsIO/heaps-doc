@@ -69,16 +69,14 @@ class Main extends hxd.App {
         face.drawCircle( 0, 0, 85 );
         face.endFill();
 
-        trace('(${clock.x}, ${clock.y})');
-        trace('(${face.x}, ${face.y})');
-
         var tile = h2d.Tile.fromColor( 0x0, 75, 12 ); tile.dy = -6;
         var handHours   = new h2d.Bitmap( tile, clock ); handHours.rotation = 1.5*Math.PI;
         var tile = h2d.Tile.fromColor( 0x0, 80,  8 ); tile.dy = -4;
         var handMinutes = new h2d.Bitmap( tile, clock );
+        // defining a timer to make the clock's hands tick
         var t = new haxe.Timer(1000);
         t.run = ()->{
-            handHours.rotate( Math.PI/3600 );
+            handHours.rotate( Math.PI/300 ); // actually would be 3600 for real hours
             handMinutes.rotate(  Math.PI/60 );
         };
 
@@ -147,4 +145,4 @@ class Main extends hxd.App {
 }
 ```
 
-Side note: Here by using `haxe.Timer` we rely on simple [Haxe API](https://api.haxe.org/) to provide another way besides the `update` method to make changes each frame.
+Side note: Here by using `haxe.Timer` we rely on simple [Haxe API](https://api.haxe.org/) to provide another way besides the `update` method to make changes.
