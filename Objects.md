@@ -46,7 +46,7 @@ trace( c.getAbsPos().getPosition() );  // the absolute x-position of `c` will be
 
 Note that `h2d.Object` is also documented in detail in the [API](https://heaps.io/api/h2d/Object.html)!
 
-The following code should make it more clear why these trees of stacked objects are useful. As you will see, when moving the "clock" and the "NPC" all their *children* move with them.
+The following code should make it more clear why these trees of stacked objects are useful. As you will see, when moving the "clock" and the "NPC" (actually a smiley) all their *children* move with them.
 
 ```haxe
 class Main extends hxd.App {
@@ -144,5 +144,7 @@ class Main extends hxd.App {
     }
 }
 ```
+This is about what you should see when running the sample:
+![objects_sample_when_running](https://user-images.githubusercontent.com/88530062/174419588-1ca660b6-0cb5-4c92-ab15-f715ef88cfc5.png)
 
-Side note: Here by using `haxe.Timer` we rely on simple [Haxe API](https://api.haxe.org/) to provide another way besides the `update` method to make changes.
+Side note: Here by using `haxe.Timer` we rely on simple [Haxe API](https://api.haxe.org/) to provide another way besides the `update` method to make changes
