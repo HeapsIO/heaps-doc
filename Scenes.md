@@ -1,7 +1,7 @@
 # Scenes
 In the precedent sections we already used `s2d` which represents the active current scene rendered by the `hxd.App`.
 
-A **Scene** (represented by [h2d.Scene](https://heaps.io/api/h2d/Scene.html)) represents any scene the user can visit in the Heaps app. Scenes may be an intro showing the developers logo on start-up, the main menu of the game, maybe a cutscene and finally the level or world where the actual game takes place and the player walks around.
+A **Scene** (represented by [h2d.Scene](https://heaps.io/api/h2d/Scene.html)) represents any scene the user can visit in the Heaps app. Scenes may be *an intro showing the developers logo on start-up*, the *main menu of the game*, maybe a *cutscene* and finally *the level or world* where the actual game takes place and the player walks around.
 
 `h2d.Scene` (represented by [h2d.Scene](https://heaps.io/api/h2d/Scene.html)) is a special object (it is actually a `h2d.Object`, too!) which is at the root of the scene tree. In [hxd.App](https://heaps.io/api/hxd/App.html) it is accessible by using the `s2d` variable (as we have seen previously). You will need to add your objects to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys.
 
