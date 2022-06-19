@@ -3,6 +3,7 @@
   * [[Installation]]
   * [[Hello World]]
   * [[Hello HashLink]]
+  * [[First outlook]]
 * [[H2D]]
   * [[H2D Introduction]]
   * [[Objects]]
