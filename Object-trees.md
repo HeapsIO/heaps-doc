@@ -1,0 +1,110 @@
+```haxe
+class Main extends hxd.App {
+    // object references
+    var clock : h2d.Graphics;
+    var npc : h2d.Graphics;
+    // more control variables
+    var clock_deltaScale = -0.01;
+    var npc_moveX : Float = 0;
+    var npc_moveY : Float = 0;
+    var npc_deltaAlpha : Float = -0.01;
+    var transitionsActive : Bool = false;
+    //var npc_trans
+    static function main() {new Main();}
+    public function new() {super();}
+    override function init() {
+        
+        clock = new h2d.Graphics( s2d );
+        clock.beginFill( 0x505050 );
+        clock.drawCircle( 0, 0, 90 );
+        clock.endFill();
+        clock.setPosition( 100, 100 );
+
+        var face = new h2d.Graphics( clock );
+        face.beginFill( 0xFFFFFF );
+        face.drawCircle( 0, 0, 85 );
+        face.endFill();
+
+        var tile = h2d.Tile.fromColor( 0x0, 75, 12 ); tile.dy = -6;
+        var handHours   = new h2d.Bitmap( tile, clock ); handHours.rotation = 1.5*Math.PI;
+        var tile = h2d.Tile.fromColor( 0x0, 80,  8 ); tile.dy = -4;
+        var handMinutes = new h2d.Bitmap( tile, clock );
+        var t = new haxe.Timer(1000); // simple Haxe timer for calling a function to move the hands
+        t.run = ()->{
+            handHours.rotate( Math.PI/3600 );
+            handMinutes.rotate(  Math.PI/60 );
+        };
+        // ball on hand for minutes will move with the hand/indicator
+        var g = new h2d.Graphics( handMinutes ); // because it's its child
+        g.setPosition( 60, 0 ); g.beginFill( 0x0 ); g.drawCircle( 0, 0, 8 );
+
+        npc = new h2d.Graphics( s2d );
+        npc.setPosition( 300, 300 );
+
+        // NPC's face
+        npc.beginFill( 0xFFFF00 ); npc.drawCircle( 0, 0, 40 );
+        // first eye
+        npc.beginFill( 0x0 ); npc.drawCircle( -20, 0, 7 );
+        // second eye
+        npc.beginFill( 0x0 ); npc.drawCircle( 20, 0, 7 );
+        // a happy mouth
+        npc.beginFill( 0x0 ); npc.drawPie( 0, 10, 15, 0*Math.PI, 1*Math.PI );
+        // and some eye sparkle
+        npc.beginFill( 0xFFFFFF ); npc.drawCircle( -20, -5, 3 );
+        npc.beginFill( 0xFFFFFF ); npc.drawCircle( 20, -5, 3 );
+
+        var healthbar = new h2d.Graphics( npc );
+        healthbar.setPosition(-50,-70);
+        healthbar.beginFill( 0xFF0000 ); healthbar.drawRect( 0, 0, 100, 20 );
+        healthbar.beginFill( 0x00FF00 ); healthbar.drawRect( 0, 0,  70, 20 );
+
+        var healthbar_label = new h2d.Text( hxd.res.DefaultFont.get(), healthbar );
+        healthbar_label.text = "NPC\n70 lifepoints left";
+        healthbar_label.setPosition( 0, -32 );
+
+        var npc_moveVectorLabel =  new h2d.Text( hxd.res.DefaultFont.get(), npc );
+        npc_moveVectorLabel.setPosition(-50,50);
+        // defining a timer to change the NPC's movement vector
+        var t = new haxe.Timer(3*1000); // change moving direction every 5 seconds
+        t.run = ()->{
+            npc_moveX = Math.round( ((-1+(Math.random()*2))) * 100) / 100;
+            npc_moveY = Math.round( ((-1+(Math.random()*2))) * 100) / 100;
+            npc_moveVectorLabel.text = 'move vector (x: ${npc_moveX}, y: ${npc_moveY})';
+        };
+
+        // button to control additional transitions (clock size & NPC alpha)
+        var button = new h2d.Interactive( 200, 48, s2d ); button.backgroundColor = 0xFF0000FF;
+        button.setPosition( 0, s2d.height - 48 );
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), button ); t.text = "Click to activate\nall transitions";
+        button.onClick = (e) -> {
+            transitionsActive = !transitionsActive;
+            t.text = 'changes on clock scale\n& NPC\'s alpha: ${ ( transitionsActive ? "active" : "inactive" ) }';
+        };
+    }
+    override function update(dt:Float) {
+        super.update(dt);
+        // clock movement
+        clock.x += 0.2;
+        if( clock.x>400 )
+            clock.x = 100;
+        // npc movement
+        npc.x += npc_moveX;
+        npc.y += npc_moveY;
+        // npc never leaves scene
+        if( npc.x < 0 || npc.y < 0 || npc.x > s2d.width || npc.y > s2d.height )
+            npc.setPosition( 300, 300 );
+        // additional transitions: clock size & NPC alpha
+        if( transitionsActive ){
+            // npc changes transparency
+            if( npc.alpha < 0.1 || npc.alpha > 1 )
+                npc_deltaAlpha = -npc_deltaAlpha;
+            npc.alpha += npc_deltaAlpha;
+            // clock changes size
+            if( clock.scaleX < 0.8 || clock.scaleX > 1 )
+                clock_deltaScale = -clock_deltaScale;
+            clock.scaleX += clock_deltaScale;
+            clock.scaleY += clock_deltaScale;
+        }
+    }
+}
+```
