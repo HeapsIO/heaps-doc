@@ -6,6 +6,7 @@
 * [[H2D]]
   * [[H2D Introduction]]
   * [[Objects]]
+  * [[Object trees]]
   * [[Scenes]]
   * [[Graphical surfaces]]
   * [[Animation]]
