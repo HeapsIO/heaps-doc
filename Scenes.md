@@ -32,6 +32,9 @@ public function new(){super();}
 You can deal with scenes mostly any way you like (like with most things in Heaps!) and just make changes to the `s2d` variable directly. However to give a better understanding what scenes are see the following sample application. When running you will see a very basic intro scene, a main menu and the actual game scene Level01. Using each a class for each scene may look a bit bloated, but could give a starting point how you *can* structure your scenes as single files in your project.
 
 ### Demo how they can be used
+
+![demo_on_using_scenes](https://user-images.githubusercontent.com/88530062/174429682-6debdb8e-d35c-4f3e-87d0-d3d72fe7e2b4.png)
+
 ```haxe
 class ABC extends hxd.App {
     public static var app : ABC;                // just will represent this app as an individual object at runtime (so as an instance of this class)
@@ -124,9 +127,6 @@ class Level01 extends h2d.Scene {
     }
 }
 ```
-
-![demo_on_using_scenes](https://user-images.githubusercontent.com/88530062/174429682-6debdb8e-d35c-4f3e-87d0-d3d72fe7e2b4.png)
-
 
 ---
 
