@@ -2,9 +2,13 @@
 
 When using any `h2d.Scene` (`s2d` when inside `hxd.App`) you have all features of the `h2d.Layers` class already available. This is because `h2d.Scene` `extends h2d.Layers`.
 
-**Layers** give more control over what is rendered first. Basically you have two features here. You can place `h2d.Object`s at specific layers by `s2d.addChildAt( myobj, MY_LAYER )`. `0` will be the layer the most in the background, while each higher layer is rendered over/above the precedent layer. Usually you predefine your layer indices in some way for instance by `final MY_LAYER_NAME : Int = 23;` (see in the sample below) so you know what each integer (`Int` value) stands for.
+**Layers** give more control over what is rendered first. Basically you have two features here. The first is you can place `h2d.Object`s at specific layers by `s2d.addChildAt( myobj, MY_LAYER )`. `0` will be the layer the most in the background, while each higher layer is rendered over/above the precedent layer. Usually you predefine your layer indices in some way for instance by `final MY_LAYER_NAME : Int = 23;` (see in the sample below) so you know what each integer (`Int` value) stands for.
 
-The second feature is that the layer class also allows to control objects individually by `.over()` and `.under()`. Finally you can benefit of the `ysort()` method to order a layer. In the sample below this will prevent housings to overlap in a weird way.
+The second feature is that the layer class also allows to control objects individually by `.over()` and `.under()`. Finally you can benefit from the `ysort()` method to order a layer. In the sample below this will prevent housings to overlap in a weird way.
+
+## Sample
+
+![layers_houses_clouds](https://user-images.githubusercontent.com/88530062/174480849-d776e6d4-18c3-4221-98ac-aeec4457ef3a.png)
 
 ```haxe
 
@@ -87,3 +91,5 @@ class LayersDemo extends hxd.App {
     }
 }
 ```
+
+Note that all we have to use is `s2d.addChildAt( myobj, MY_LAYER )` instead of just `s2d.addChild( myobj )` and finally we use `s2d.ysort( LAYER_FOR_BUILDINGS )` to arrange all houses.
