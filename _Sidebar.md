@@ -9,6 +9,7 @@
   * [[Objects]]
   * [[Object trees]]
   * [[Scenes]]
+  * [[Layers]]
   * [[Graphical surfaces]]
   * [[Animation]]
   * [[Text]]
