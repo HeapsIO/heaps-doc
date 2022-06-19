@@ -107,26 +107,20 @@ class Level01 extends h2d.Scene {
         // face
         g.beginFill( 0xFFFF00 );
         g.drawCircle( 0, 0, 40 );
-        g.endFill();
         // first eye
         g.beginFill( 0x0 );
         g.drawCircle( -20, 0, 7 );
-        g.endFill();
         // second eye
         g.beginFill( 0x0 );
         g.drawCircle( 20, 0, 7 );
-        g.endFill();
         // a happy mouth
         g.beginFill( 0x0 );
         g.drawPie( 0, 10, 15, 0*Math.PI, 1*Math.PI );
-        g.endFill();
         // and some eye sparkle
         g.beginFill( 0xFFFFFF );
         g.drawCircle( -20, -5, 3 );
-        g.endFill();
         g.beginFill( 0xFFFFFF );
         g.drawCircle( 20, -5, 3 );
-        g.endFill();
     }
 }
 ```
