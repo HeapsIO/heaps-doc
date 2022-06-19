@@ -10,6 +10,8 @@ The second feature is that the layer class also allows to control objects indivi
 
 ![layers_houses_clouds](https://user-images.githubusercontent.com/88530062/174480849-d776e6d4-18c3-4221-98ac-aeec4457ef3a.png)
 
+Note that the clouds are on top of all other objects. The green soil stains (meadows) are the most beneath (because they use layer `0`). The houses regard their y-Position: When another house has a lower `y` value it is rendered behind its competitor (and not awkwardly in front)!
+
 ```haxe
 
 class LayersDemo extends hxd.App {
