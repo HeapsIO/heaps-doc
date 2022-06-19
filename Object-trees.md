@@ -2,6 +2,10 @@
 Objects can be added to a scene (here `h2d.Scene`) directly or be added to another `h2d.Object` creating an *object tree*.
 The child objects will inherit the transformations of the parent object they have been added to. This means whenever the parent transforms (changing the position, rotating, making it transparent or invisible etc.) these transformations *also* apply to all the children that have been added to this parent object.
 
+## Sample
+
+![objects_sample_when_running](https://user-images.githubusercontent.com/88530062/174419588-1ca660b6-0cb5-4c92-ab15-f715ef88cfc5.png)
+
 ```haxe
 class Main extends hxd.App {
     // object references
@@ -115,8 +119,5 @@ class Main extends hxd.App {
 
 Have a look at the last block of code after `if( transitionsActive ){ `...
 Note that we only changed the `clock`s scale and `npc`'s `alpha` and all their children – though very own objects – changed with them!
-
-This is about what you should see when running the sample:
-![objects_sample_when_running](https://user-images.githubusercontent.com/88530062/174419588-1ca660b6-0cb5-4c92-ab15-f715ef88cfc5.png)
 
 Side note: Here by using `haxe.Timer` we rely on simple [Haxe API](https://api.haxe.org/) to provide another way besides the `update` method to make changes
