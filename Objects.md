@@ -4,6 +4,9 @@ Like shown previously in the introduction to give our Heaps application visual (
 An **Object** (represented by [h2d.Object](https://heaps.io/api/h2d/Object.html)) is the base class of all 2D objects, so any thing that you can *see* on the screen. Therefore `h2d.Object` provides variables like a position (x,y), a scale (scaleX,scaleY), a rotation and methods to change them.
 `h2d.Object`s can be any visual objects in the world of the game like for instance *the player, enemies, buildings*, but furthermore also buttons (`h2d.Interactive`) or a `h2d.Flow` that arranges UI elements and many more.
 
+![allKindsOfObjects_demo](https://user-images.githubusercontent.com/88530062/174468670-4ea6ddd8-39b7-4491-8a70-fbb49f240594.png)
+A collection of different objects that all inherit from `h2d.Object`. (See code below to run the sample)
+
 These are all `h2d` package classes (and sub-classes) that extend `h2d.Object` and can be used to create 2D content:
 - Console
 - Drawable
@@ -26,6 +29,7 @@ These are all `h2d` package classes (and sub-classes) that extend `h2d.Object` a
 - ObjectFollower
 - Loader
 
+An outlook towards different kinds of `h2d.Object`s:
 ```haxe
 class AllKindsOfObjects extends hxd.App {
     static function main() {new AllKindsOfObjects();}
