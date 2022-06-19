@@ -26,7 +26,9 @@ These are all `h2d` package classes (and sub-classes) that extend `h2d.Object` a
 - ObjectFollower
 - Loader
 
-An outlook towards different kinds of `h2d.Object`s:
+A collection of different objects that all inherit from `h2d.Object`:
+![allKindsOfObjects_demo](https://user-images.githubusercontent.com/88530062/174468670-4ea6ddd8-39b7-4491-8a70-fbb49f240594.png)
+
 ```haxe
 class AllKindsOfObjects extends hxd.App {
     static function main() {new AllKindsOfObjects();}
@@ -98,9 +100,6 @@ class AllKindsOfObjects extends hxd.App {
     }
 }
 ```
-
-![allKindsOfObjects_demo](https://user-images.githubusercontent.com/88530062/174468670-4ea6ddd8-39b7-4491-8a70-fbb49f240594.png)
-(A collection of different objects that all inherit from `h2d.Object`.)
 
 ---
 ## Object trees
