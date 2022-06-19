@@ -47,6 +47,6 @@ The underlying `h2d.Object` (from which `h2d.Bitmap` inherits) provides the bitm
 
 ![h2d_introduction_helloworld2](https://user-images.githubusercontent.com/88530062/174428357-45f857ed-30bf-450d-99b6-72051f5b0b83.png)
 
-The [next section]([[Objects]]) will discuss `h2d.Object` a bit closer.
+The [next section](Objects) will discuss `h2d.Object` a bit closer.
 
 `h2d.Tile` which the bitmap required will be discussed later in another section.
