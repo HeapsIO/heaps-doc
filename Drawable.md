@@ -13,7 +13,7 @@ Each Drawable (including [`h2d.Bitmap`](https://github.com/ncannasse/heaps/blob/
     * `Add` : the drawable color will be added to the background, useful for creating explosions effects or particles for instance.
     * `SoftAdd` : similar to Add but will prevent over saturation
     * `Multiply` : the sprite color is multiplied by the background color
-    * `Erase` : the sprite color is substracted to the background color
+    * `Erase` : the sprite color is subtracted to the background color
    
 * `filter` : when a sprite is scaled (upscaled or downscaled), by default Heaps will use the nearest pixel in the Tile to display it. This will create a nice pixelated effect for some games, but might not looks good on your game. You can try to set the filter value to true, which will enable bilinear filtering on the sprite, making it looks less sharp and more smooth/blurry.
 * `shaders` : each `Drawable` can have shaders added to modify their display. Shaders are introduced [here](https://github.com/HeapsIO/heaps/wiki/H2D-Shaders).
