@@ -44,3 +44,5 @@
   * [[DomKit]]
 * [[Full Game Samples]]
 * [[Sample games for learning]]
+  * [[Copy & paste game samples]]
+  * [[Sample games with resources]]
