@@ -4,7 +4,8 @@ The child objects will inherit the transformations of the parent object they hav
 
 ## Sample 1
 
-![object_trees_1](https://user-images.githubusercontent.com/88530062/174784269-bd8106d7-cb33-4665-b70c-b9db7c61dae3.png)
+![object_trees_1](https://user-images.githubusercontent.com/88530062/174791432-018842d2-2eab-4e44-8d2b-0cded089610a.png)
+
 
 ```haxe
 class ObjectTrees extends hxd.App { // ObjectTrees
