@@ -2,6 +2,6 @@
 
 This section is about samples that actually show how to finally use the Heaps API to make games.
 
-[[Copy&paste games]]
+[[Copy & paste game samples]]
 
-[[Samples games with resources]]
+[[Sample games with resources]]
