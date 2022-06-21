@@ -117,3 +117,12 @@ class BreakoutGame extends hxd.App { //BreakoutGame
     }
 }
 ```
+
+## hxml-file sample (here for HashLink)
+```
+-lib heaps
+-lib hlsdl
+-main BreakoutGame
+-hl breakout.hl
+-D windowSize=800x600
+```
