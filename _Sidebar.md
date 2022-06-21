@@ -45,4 +45,5 @@
 * [[Full Game Samples]]
 * [[Sample games for learning]]
   * [[Copy & paste game samples]]
+    * [[Breakout]]
   * [[Sample games with resources]]
