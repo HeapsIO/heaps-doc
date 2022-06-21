@@ -1,10 +1,65 @@
 # Object trees
 Objects can be added to a scene (here `h2d.Scene`) directly or be added to another `h2d.Object` creating an *object tree*.
-The child objects will inherit the transformations of the parent object they have been added to. This means whenever the parent transforms (changing the position, rotating, making it transparent or invisible etc.) these transformations *also* apply to all the children that have been added to this parent object.
+The child objects will inherit the transformations of the parent object they have been added to. This means whenever the parent transforms (changing the **position**, **rotation**, **alpha**=transparency or turning it **invisible** etc.) these transformations *also* apply to all the children that have been added to this parent object.
 
-## Sample
+## Sample 1
+
+![object_trees_1](https://user-images.githubusercontent.com/88530062/174784269-bd8106d7-cb33-4665-b70c-b9db7c61dae3.png)
+
+```haxe
+class ObjectTrees extends hxd.App { // ObjectTrees
+    var parent_obj  : h2d.Object;
+    var a_child_obj : h2d.Object;
+    static function main() {new ObjectTrees();}
+    override function init() {
+
+        // parent object placed on `s2d`
+        var tile = h2d.Tile.fromColor( 0x0000FF, 120, 120 );
+        var b = new h2d.Bitmap( tile, s2d );
+        b.setPosition( s2d.width/2, s2d.height/2 );
+
+        parent_obj = b; // save reference
+
+        // 1. child (label for parent)
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), b );
+        t.text = "parent object";
+
+        // 2. child ("sub-bitmap")
+        var tile = h2d.Tile.fromColor( 0x00FF00, 45, 45 );
+        var bb = new h2d.Bitmap( tile, b );
+        bb.setPosition( 30, 50 ); // will be relative to parent!
+
+        // save second reference
+        a_child_obj = bb;
+
+        // 3. child (label for "sub-bitmap")
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), bb );
+        t.text = "\"sub-bitmap\"";
+
+        // control buttons
+        var flow = new h2d.Flow( s2d ); flow.layout = h2d.Flow.FlowLayout.Vertical;
+        var add_button = (infotext:String) -> {
+            var ia = new h2d.Interactive( 250, 32, flow );
+            var t = new h2d.Text( hxd.res.DefaultFont.get(), ia );
+            t.text = infotext;
+            return ia;
+        };
+        var bt = add_button( "rotate parent object (click here)" );
+        bt.onClick = (e)->{ parent_obj.rotate( 0.2 ); };
+        var bt = add_button( "rotate child object (click here)" );
+        bt.onClick = (e)->{ a_child_obj.rotate( 0.2 ); };
+        var bt = add_button( "random alpha for child object (click here)" );
+        bt.onClick = (e)->{ a_child_obj.alpha = 0.1 + hxd.Math.random( 0.9 ); };
+    }
+}
+```
+
+---
+## Sample 2
 
 ![objects_sample_when_running](https://user-images.githubusercontent.com/88530062/174419588-1ca660b6-0cb5-4c92-ab15-f715ef88cfc5.png)
+
+This is another sample for demsonstration. However it requires more lines of code...
 
 ```haxe
 class Main extends hxd.App {
@@ -19,7 +74,6 @@ class Main extends hxd.App {
     var transitionsActive : Bool = false;
     //var npc_trans
     static function main() {new Main();}
-    public function new() {super();}
     override function init() {
         
         clock = new h2d.Graphics( s2d );
