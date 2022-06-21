@@ -14,7 +14,7 @@ class Main extends hxd.App {
 Of course all you get to see here is a black screen or window with no content. Thus to create content an instance of a class (an object) must be added that inherits from `h2d.Object` (to make 2D content).
 
 ## Adding content
-There are many classes to choose from that all inherit from `h2d.Object` (see the [API](https://heaps.io/api/h2d/Object.html)). Therefore in the next sample we revisit the code of the ["Hello World" sample](Hello World) and add a bitmap. Two objects now make up the content here: `h2d.Text` and `h2d.Bitmap` (and as said, both are `h2d.Object`s). The bitmap requires a tile (`h2d.Tile`) as graphical resource (which will be explained in a later section). Here we can generate the needed tile from code using `fromColor(...)`.
+There are many classes to choose from that all inherit from `h2d.Object` (see the [API](https://heaps.io/api/h2d/Object.html)). Therefore in the next sample we revisit the code of the [[Hello World]] sample and add a bitmap. Two objects now make up the content here: `h2d.Text` and `h2d.Bitmap` (and as said, both are `h2d.Object`s). The bitmap requires a tile (`h2d.Tile`) as graphical resource (which will be explained in a later section). Here we can generate the needed tile from code using `fromColor(...)`.
 
 ```haxe
     class Main extends hxd.App {
