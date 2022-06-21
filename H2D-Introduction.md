@@ -1,6 +1,8 @@
 # Introduction 
 
-The smallest code for a Heaps application is the following:
+The code samples in the first pages in the H2D section are coded without any external resources allowing to just copy and paste the code and compiling it directly on your machine.
+
+Let's recap now. The smallest code for a Heaps application is the following:
 
 ```haxe
 class Main extends hxd.App {
@@ -9,10 +11,10 @@ class Main extends hxd.App {
     }
 }
 ```
-Of course all you get to see here is a black screen or window with no content. Thus to create content an instance of a class (an object) must be added that inherits from `h2d.Object`.
+Of course all you get to see here is a black screen or window with no content. Thus to create content an instance of a class (an object) must be added that inherits from `h2d.Object` (to make 2D content).
 
 ## Adding content
-There are many classes to choose from that all inherit from `h2d.Object` (see the [API](https://heaps.io/api/h2d/Object.html)). Therefore in the next sample we revisit the code of the ["Hello World" sample](Hello World) and add a bitmap. Two objects now make up the content here: `h2d.Text` and `h2d.Bitmap` (and as said, both are `h2d.Object`s).
+There are many classes to choose from that all inherit from `h2d.Object` (see the [API](https://heaps.io/api/h2d/Object.html)). Therefore in the next sample we revisit the code of the ["Hello World" sample](Hello World) and add a bitmap. Two objects now make up the content here: `h2d.Text` and `h2d.Bitmap` (and as said, both are `h2d.Object`s). The bitmap requires a tile (`h2d.Tile`) as graphical resource (which will be explained in a later section). Here we can generate the needed tile from code using `fromColor(...)`.
 
 ```haxe
     class Main extends hxd.App {
@@ -41,11 +43,11 @@ There are many classes to choose from that all inherit from `h2d.Object` (see th
     }
 ```
 
-With overriding `hxd.App`'s `update` method Heaps allows us to define what should happen each frame.
+With overriding `hxd.App`'s `update` method Heaps allows us to define what should happen each frame. (`dt` stands for the number of milliseconds that have passed since the last time the `update` method has been called.)
 The underlying `h2d.Object` (from which `h2d.Bitmap` inherits) provides the bitmap with features to change its position and rotation.
 
 ![h2d_introduction_helloworld2](https://user-images.githubusercontent.com/88530062/174428357-45f857ed-30bf-450d-99b6-72051f5b0b83.png)
 
 The [next section](Objects) will discuss `h2d.Object` a bit closer.
 
-`h2d.Tile` which the bitmap required will be discussed later in another section.
+And as said `h2d.Tile` which the bitmap required will be discussed in a later section: [[Graphical surfaces]].
