@@ -19,3 +19,79 @@ Each Drawable (including [`h2d.Bitmap`](https://github.com/ncannasse/heaps/blob/
 * `shaders` : each `Drawable` can have shaders added to modify their display. Shaders are introduced [here](https://github.com/HeapsIO/heaps/wiki/H2D-Shaders).
 
 `Drawable` instances have other properties which can be discovered by visiting the [`h2d.Drawable`](https://github.com/ncannasse/heaps/blob/master/h2d/Drawable.hx) API section.
+
+## Sample
+
+A collection of different objects that all inherit from `h2d.Drawable`:
+
+### Screenshot
+
+![allKindsOfObjects_demo](https://user-images.githubusercontent.com/88530062/174468670-4ea6ddd8-39b7-4491-8a70-fbb49f240594.png)
+
+### Code
+
+```haxe
+class SomeDrawables extends hxd.App {
+    static function main() {new SomeDrawables();}
+    override function init() {
+
+        // a h2d.Text (like from the Hello World! sample)
+        var text = new h2d.Text( hxd.res.DefaultFont.get(), s2d );
+        text.text = "A simple h2d.Text";
+        text.textColor = 0xFBC707;
+
+        // a h2d.Bitmap (from coded tile, no resource used)
+        var bitmap = new h2d.Bitmap( h2d.Tile.fromColor( 0xFF0000, 32, 32 ), s2d );
+
+        // a h2d.Graphics
+        var graphics = new h2d.Graphics( s2d );
+        graphics.lineStyle( 2, 0xFFFFFF );
+        graphics.beginFill( 0x33cc33 );
+        graphics.drawCircle( 0, 0, 16 );
+        graphics.beginFill( 0xff6666 );
+        graphics.drawRect( 4, 4, 12, 12 );
+
+        // an h2d.Anim object
+        var k = 32;
+        var tfa = []; // tiles for animation "tfa"
+        tfa.push( h2d.Tile.fromColor( 0xFF0000, k, k ) );
+        tfa.push( h2d.Tile.fromColor( 0xFFFF00, k, k ) );
+        tfa.push( h2d.Tile.fromColor( 0x00FFFF, k, k ) );
+        tfa.push( h2d.Tile.fromColor( 0x0000FF, k, k ) );
+        tfa.push( h2d.Tile.fromColor( 0xFF00FF, k, k ) );
+        var anim = new h2d.Anim( tfa, 2, s2d );
+
+        // a h2d.Interactive (button-like) object
+        var interactive = new h2d.Interactive( 100, 50, s2d );
+        var col_default = 0xFF3366ff;
+        var col_over    = 0xFF809fff;
+        var col_push    = 0xFF33cc33;
+        interactive.backgroundColor = col_default;
+        interactive.onOver  = (e)->{ interactive.backgroundColor = col_over; };
+        interactive.onOut   = (e)->{ interactive.backgroundColor = col_default; };
+        interactive.onPush  = (e)->{ interactive.backgroundColor = col_push; };
+        interactive.onClick = (e)->{ trace("Clicking button."); };
+
+        // info texts
+        explanationLabel( text,        "h2d.Text:" );
+        explanationLabel( bitmap,      "h2d.Bitmap:" );
+        explanationLabel( graphics,    "h2d.Graphics:" );
+        explanationLabel( anim,        "h2d.Anim:" );
+        explanationLabel( interactive, "h2d.Interactive:\n(click me)" );
+
+        // scatter positions
+        text       .setPosition( 200, 100 );
+        bitmap     .setPosition( 200, 200 );
+        graphics   .setPosition( 200, 300 );
+        anim       .setPosition( 200, 400 );
+        interactive.setPosition( 200, 500 );
+    }
+    
+    function explanationLabel( obj:h2d.Object, explanation:String ) : h2d.Text {
+        var t = new h2d.Text( hxd.res.DefaultFont.get(), obj );
+        t.text = explanation;
+        t.setPosition( -150, 0 );
+        return t;
+    }
+}
+```
