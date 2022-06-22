@@ -48,4 +48,5 @@
   * [[Copy & paste game samples]]
     * [[Breakout]]
     * [[Platform game]]
+    * [[Rogue]]
   * [[Sample games with resources]]
