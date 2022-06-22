@@ -123,3 +123,13 @@ class PlatformGame extends hxd.App {
     }
 } 
 ```
+
+## A basic hxml-file proposal (for HashLink)
+
+```
+-lib heaps
+-lib hlsdl
+-main PlatformGame
+-hl platform_game.hl
+-D windowSize=1280x720
+```
