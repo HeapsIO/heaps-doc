@@ -43,7 +43,7 @@
 * [[Tools]]
   * [[Castle DB]]
   * [[DomKit]]
-* [[Full Game Samples]]
+* [[Jam games]]
 * [[Sample games for learning]]
   * [[Copy & paste game samples]]
     * [[Breakout]]
