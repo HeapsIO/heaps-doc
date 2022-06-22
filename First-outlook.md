@@ -13,6 +13,7 @@ Things you should try out:
   - [[Sample games for learning]]
 - Learn from step-by-step tutorials
   - [Deepnight tutorials](https://deepnight.net/tutorials/) by Deepnight/Sébastien Bénard
+  - [BiteSize video playlist on YouTube](https://www.youtube.com/playlist?list=PLT0YBWiI9UjE-yTXsQF8vy0t2qF5JT0-u) by Willie The Stupid Programmer
 - Learn from **complete games** that where created for game jams and are open-source:
   - [[Jam games]]
 - [Browse **Haxe libraries**](https://lib.haxe.org/) and benefit of the full potential of the Haxe language
