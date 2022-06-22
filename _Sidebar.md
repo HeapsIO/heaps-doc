@@ -47,4 +47,5 @@
 * [[Sample games for learning]]
   * [[Copy & paste game samples]]
     * [[Breakout]]
+    * [[Platform game]]
   * [[Sample games with resources]]
