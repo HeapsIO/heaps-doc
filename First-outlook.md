@@ -10,8 +10,8 @@ Things you should try out:
   - [Smallest-Heaps-Examples](https://github.com/Beeblerox/Simplest-Heaps-Examples) by Beeblerox
 - Learn from **simple games** made for beginners/learning
   - [[Sample games for learning]]
-- Learn from **complete games** that are open-source:
-  - [[Full game samples]]
+- Learn from **complete games** that where created for game jams and are open-source:
+  - [[Jam games]]
 - [Browse **Haxe libraries**](https://lib.haxe.org/) and benefit of the full potential of the Haxe language
 - ask questions, discuss and get in touch with the **community**!
   - https://community.heaps.io/
