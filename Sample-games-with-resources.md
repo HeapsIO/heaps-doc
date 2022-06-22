@@ -6,5 +6,5 @@ https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_rp
 
 ## A "spaceship vs. asteroids" game
 
-https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_astro
-https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_astro_performanceboost
+- https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_astro
+- https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_astro_performanceboost
