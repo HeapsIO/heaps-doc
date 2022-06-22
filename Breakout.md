@@ -2,9 +2,11 @@
 
 This is a very basic template for a breakout clone. The principle is inspired by the [Atari Breakout video game from 1976](https://en.wikipedia.org/wiki/Breakout_(video_game)).
 
+## Screenshot
 
 ![breakout_clone](https://user-images.githubusercontent.com/88530062/174796074-f35166f2-61fd-489d-ba97-2ca9689d75ea.png)
 
+## Code
 
 ```haxe
 
@@ -119,6 +121,7 @@ class BreakoutGame extends hxd.App { //BreakoutGame
 ```
 
 ## hxml-file sample (here for HashLink)
+
 ```
 -lib heaps
 -lib hlsdl
