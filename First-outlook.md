@@ -8,8 +8,11 @@ Things you should try out:
 - We have many code samples and explanations on our **documentation/wiki pages** here. Have a look at all the sections. (Also compare to the [wiki pages on github](https://github.com/HeapsIO/heaps/wiki)...)
 - You can also learn from external public repositories from other **members of the community**
   - [Smallest-Heaps-Examples](https://github.com/Beeblerox/Simplest-Heaps-Examples) by Beeblerox
+  - [haxe-heaps-examples](https://github.com/joereynolds/haxe-heaps-examples) by Joe Reynolds
 - Learn from **simple games** made for beginners/learning
   - [[Sample games for learning]]
+- Learn from step-by-step tutorials
+  - [Deepnight tutorials](https://deepnight.net/tutorials/) by Deepnight/Sébastien Bénard
 - Learn from **complete games** that where created for game jams and are open-source:
   - [[Jam games]]
 - [Browse **Haxe libraries**](https://lib.haxe.org/) and benefit of the full potential of the Haxe language
