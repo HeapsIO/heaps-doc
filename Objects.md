@@ -36,7 +36,7 @@ These are all `h2d` package classes (and sub-classes) that extend `h2d.Object` a
 
 ---
 ## Creating and adding Objects
-Objects can be added to a scene directly (a `h2d.Scene`, for instance `s2d` when inside `hxd.App`) or be added to another `h2d.Object` creating an *object tree*. Object trees are regarded in the next section about [[Object trees]].
+Objects can be added to a [scene](Scenes) directly (a `h2d.Scene`, for instance `s2d` when inside `hxd.App`) or be added to another `h2d.Object` creating an *object tree*. Object trees are regarded in the next section about [[Object trees]].
 
 
 ```haxe
