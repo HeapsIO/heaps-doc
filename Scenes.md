@@ -24,7 +24,6 @@ class Myapp extends hxd.App
     }
 
 public static function main(){ new Myapp(); }
-public function new(){super();}
 }
 ```
 
