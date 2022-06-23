@@ -16,6 +16,7 @@
     * [[Text]]
     * [[Graphics]]
     * [[Animation]]
+    * [[H2D Interactive]]
   * [[Graphical surfaces]]
   * [[Drawing Tiles]]
   * [[Optimizing Bitmap Usage]]
