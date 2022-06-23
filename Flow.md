@@ -12,7 +12,7 @@ The [`h2d.Flow` class](https://heaps.io/api/h2d/Flow.html) allows to properly *a
 ![flows_fastdemo](https://user-images.githubusercontent.com/88530062/175258407-4ce8b93a-618c-4137-90c6-acc27d4b31d0.png)
 
 
-As you can see every child is placed without overlapping each other when using the flow layout `Horizontal` here (`h2d.Flow.FlowLayout.Horizontal`).
+As you can see every child is placed without overlapping each other. The default layout is `Horizontal` (`h2d.Flow.FlowLayout.Horizontal`), thus the elements are placed next to each other and that horizontally.
 
 #### Code 1
 
