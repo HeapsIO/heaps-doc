@@ -58,7 +58,7 @@ class FlowsDemo extends hxd.App {
 
 ### Demo 2
 
-The second sample code will give the `h2d.Interactive` the ability to change the properties of the Flow.
+The second sample code will give the `h2d.Interactive` the ability to change the properties of the Flow. Each time you **press the button "click me!"** the Flow content changes and a `trace()` prints the currently active Flow setting to the console.
 
 #### Screenshot 2
 
