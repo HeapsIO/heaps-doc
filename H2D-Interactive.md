@@ -2,7 +2,7 @@
 
 ## Sample for a moving Interactive
 
-```
+```haxe
 class H2DInteractiveDemo extends hxd.App
 {
     static function main(){ new H2DInteractiveDemo(); }
