@@ -48,7 +48,7 @@
   * [[LDtk]]
 * [[Jam games]]
 * [[Sample games for learning]]
-  * [[Copy & paste game samples]]
+  * [[Copy & paste game templates]]
     * [[Breakout]]
     * [[Platform game]]
     * [[Rogue]]
