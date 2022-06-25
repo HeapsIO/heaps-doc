@@ -19,7 +19,7 @@ Please note that this is strictly typed: hxd.Res will look into the `res` direct
  * `ttf`: [hxd.res.Font](https://heaps.io/api/hxd/res/Font.html)
  * `tmx`: [hxd.res.TiledMap](https://heaps.io/api/hxd/res/TiledMap.html)
  * `atlas`: [hxd.res.Atlas](https://heaps.io/api/hxd/res/Atlas.html)
- * other: [hxd.res.Resource](https://heaps.io/api/hxd/res/Resource.html) (still allows you to ready binary data)
+ * other: [hxd.res.Resource](https://heaps.io/api/hxd/res/Resource.html) (still allows you to read binary data)
 
 
 ## Resources loader
