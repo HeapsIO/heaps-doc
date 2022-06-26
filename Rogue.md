@@ -126,14 +126,6 @@ class Roguelike extends hxd.App {
 
 ## Further hints
 
-- You can also close the gaps in the walls (the gaps between the letters). You can scale up each `h2d.Text` object by a higher factor (`3` for instance). However to completely close all gaps you may have to split up `fieldSize` into two values (like `fieldW` and `fieldH`), depending on the letter size of the Font you are using.
-
-- When going on with this idea it'll probably make sense to save all objects and their position in a fixed data structure. This could be a job for a [`haxe.ds.Vector`](api.haxe.org/haxe/ds/Vector) for instance, which is also explained in the [Haxe manual](https://haxe.org/manual/std-vector.html). The code could look something like this:
-```haxe
-import haxe.ds.Vector;
-...
-
-var allFields : Vector< Vector< h2d.Object > >;
-```
-
 - The user could even create their own levels in a simple text file editor. You could then get the string by `sys.io.File.getContent( path/to/file.txt )` and use the string as a `levelString` input.
+
+- You can also close the gaps in the walls (the gaps between the letters). You can scale up each `h2d.Text` object by a higher factor (`3` for instance). However to completely close all gaps you may have to split up `fieldSize` into two values (like `fieldW` and `fieldH`), depending on the letter size of the Font you are using.
