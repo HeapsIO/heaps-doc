@@ -4,8 +4,12 @@ The child objects will inherit the transformations of the parent object they hav
 
 ## Sample 1
 
+### Preview
+
 ![object_trees_1](https://user-images.githubusercontent.com/88530062/174791432-018842d2-2eab-4e44-8d2b-0cded089610a.png)
 
+
+### Code
 
 ```haxe
 class ObjectTrees extends hxd.App { // ObjectTrees
@@ -58,9 +62,13 @@ class ObjectTrees extends hxd.App { // ObjectTrees
 ---
 ## Sample 2
 
+The second sample here is a demonstration of how object trees are useful when finally having many objects "treed" together. Referencing single objects within the tree allows controlling all sub-branches of the tree, also making programming easy and powerful.
+
+### Preview
+
 ![objects_sample_when_running](https://user-images.githubusercontent.com/88530062/174419588-1ca660b6-0cb5-4c92-ab15-f715ef88cfc5.png)
 
-This is another sample for demsonstration. However it requires more lines of code...
+### Code
 
 ```haxe
 class Main extends hxd.App {
