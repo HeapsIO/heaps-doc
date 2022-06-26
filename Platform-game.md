@@ -91,18 +91,18 @@ class PlatformGame extends hxd.App {
         }
         // move left & right
         if( hxd.Key.isDown( hxd.Key.LEFT ) || hxd.Key.isDown( hxd.Key.A ) ){
-            player.x -= 8;
+            player.x -= 2;
             for( o in platforms )
-                o.x += 8;
+                o.x += 2;
             for( o in trampolines )
-                o.x += 8;
+                o.x += 2;
         }
         if( hxd.Key.isDown( hxd.Key.RIGHT ) || hxd.Key.isDown( hxd.Key.D ) ){
-            player.x += 8;
+            player.x += 2;
             for( o in platforms )
-                o.x -= 8;
+                o.x -= 2;
             for( o in trampolines )
-                o.x -= 8;
+                o.x -= 2;
         }
         // trampoline effects
         for( t in trampolines )
