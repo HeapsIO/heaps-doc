@@ -1,10 +1,14 @@
 # Sample games with resources
 
-## A mouse-controlled "RPG"
+## Basic templates
 
-https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_rpg
+These provide only a basic template to develop a kind of game or genre.
 
-## A "spaceship vs. asteroids" game
+- [A mouse-controlled "RPG"](https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_rpg)
 
-- https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_astro
-- https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_astro_performanceboost
+## Simple games
+
+These are simple games that have something like a basic win and lose condition or an ending to the game.
+
+- [A "spaceship vs. asteroids" game](https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_astro)
+  - [boosted version](https://github.com/marcelEuchnerMartinez/heapsquickstarters/tree/main/h2d_tut_astro_performanceboost)
