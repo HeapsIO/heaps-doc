@@ -46,6 +46,7 @@
   * [[Castle DB]]
   * [[DomKit]]
   * [[LDtk]]
+  * [[External libraries]]
 * [[Jam games]]
   * [[Jammers]]
 * [[Sample games for learning]]
