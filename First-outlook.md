@@ -51,6 +51,7 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 - Becoming proficient in **Haxe** will provide you with completely new ***abilities and powers*** in your code, therefore it is hugely recommended to have a glance at what Haxe has to offer as a language. These are just some examples (for more [visit Haxe.org](https://haxe.org/)):
   - the [Haxe manual](https://haxe.org/manual/)
   - the [Haxe API](api.haxe.org/)
+  - the [Haxe wiki](https://github.com/HaxeFoundation/haxe/wiki) (<- quite hidden!)
   - the [Haxe code cookbook](https://code.haxe.org/)
   - the [Haxe community](http://community.haxe.org/) (also visit haxe.org and see "Connect" options)
 
