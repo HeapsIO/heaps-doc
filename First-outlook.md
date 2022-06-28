@@ -16,7 +16,7 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 
 - We have many code samples and explanations on our **documentation/wiki pages** here. Have a look at all the sections. (Also compare to the [wiki pages on github](https://github.com/HeapsIO/heaps/wiki)...)
 
-## Samples from other users
+### Samples from other users
 
 - You can also learn from external public repositories from other **members of the community**
   - [Smallest-Heaps-Examples](https://github.com/Beeblerox/Simplest-Heaps-Examples) by Beeblerox
@@ -44,7 +44,7 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
   - https://community.heaps.io/
   - join our **discord** channel: https://community.heaps.io/t/discord-official-channel/72
 
-### Discover Haxe
+## Discover Haxe
 
 - [Browse **Haxe libraries**](https://lib.haxe.org/) and benefit of the full potential of available Haxe libraries
 - Becoming proficient in **Haxe** will provide you with completely new ***abilities and powers*** in your code, therefore it is hugely recommended to have a glance at what Haxe has to offer as a language. These are just some examples (for more [visit Haxe.org](https://haxe.org/)):
