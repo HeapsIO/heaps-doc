@@ -47,6 +47,7 @@
   * [[DomKit]]
   * [[LDtk]]
 * [[Jam games]]
+  [[Jammers]]
 * [[Sample games for learning]]
   * [[Copy & paste game templates]]
     * [[Breakout]]
