@@ -43,6 +43,7 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 - Ask questions, discuss and get in touch with the **community**!
   - https://community.heaps.io/
   - join our **discord** channel: https://community.heaps.io/t/discord-official-channel/72
+    - we also have Haxe game jams in the "JAM TIME" channel!
 
 ## Discover Haxe
 
