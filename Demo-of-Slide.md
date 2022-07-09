@@ -50,3 +50,13 @@ class SlideLibDemo extends hxd.App {
 ```
 
 Note that in the end we pass our update method's `dt` parameter on to Slide, thus the latter knows how many time has passed and can adapt it's tweens accordingly.
+
+## hxml-file sample when using HashLink
+
+```
+-lib heaps
+-lib hlsdl
+-lib slide
+-main SlideLibDemo
+-hl slide_demo.hl
+```
