@@ -47,6 +47,7 @@
   * [[DomKit]]
   * [[LDtk]]
   * [[External libraries]]
+    * [[Demo of Slide]]
 * [[Jam games]]
   * [[Jammers]]
 * [[Sample games for learning]]
