@@ -44,7 +44,9 @@ class SlideLibDemo extends hxd.App {
     }
 
     override function update(dt:Float) {
-        Slide.step(dt);
+        Slide.step(dt); // tell Slide how many seconds have elapsed
     }
 }
 ```
+
+Note that in the end we pass our update method's `dt` parameter on to Slide, thus the latter knows how many time has passed and can adapt it's tweens accordingly.
