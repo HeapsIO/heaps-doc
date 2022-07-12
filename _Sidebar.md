@@ -23,6 +23,7 @@
   * [[Filters]]
   * [[H2D Shaders]]
   * [[Flow]]
+  * [[Simple sprites]]
 * [[H3D]]
   * [[H3D Events and Interactivity]]
   * [[FBX Models]]
