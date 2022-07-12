@@ -3,10 +3,13 @@
 ## Image resources
 
 ![mysprite](https://user-images.githubusercontent.com/88530062/178524612-dc720d4b-409b-4bfa-89cf-40673eb1ff9a.png)
+`mysprite.png`
 
 ![mysprite_strip](https://user-images.githubusercontent.com/88530062/178524639-f0be34e1-d9bf-43a1-b4bc-7ac79ea92c12.png)
+`mysprite_strip.png`
 
 ![mysprite_sheet](https://user-images.githubusercontent.com/88530062/178524666-87790e44-05d7-4e74-9ae0-0095a44c289d.png)
+`mysprite_sheet.png`
 
 ## Code
 
@@ -81,6 +84,9 @@ class SimpleSprites extends hxd.App {
 ```
 
 ## hxml-file "compile.hxml"
+
+This could be the hxml-file for HashLink:
+
 ```
 -lib heaps
 -lib hlsdl
