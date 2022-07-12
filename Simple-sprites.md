@@ -5,7 +5,7 @@ To create a sprite we load a `h2d.Tile` into the RAM. From there we can fetch th
 In order to use resources in our `hxd.App` the method `hxd.Res.initLocal();` (or a method alike) must be called once on start-up.
 
 After that a sprite can be created with:
-```
+```haxe
 
 new h2d.Bitmap( hxd.Res.mysprite.toTile(), s2d );
 
