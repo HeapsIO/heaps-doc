@@ -1,5 +1,9 @@
 # Creating simple sprites
 
+To create a sprite we load a `h2d.Tile` into the RAM. From there we can fetch the tile to instantiate a `h2d.Bitmap` which can finally be *placed* inside our scene.
+
+In order to use resources in our `hxd.App` the method `hxd.Res.initLocal();` (or a method alike) must be called once on start-up.
+
 ## Image resources
 
 ![mysprite](https://user-images.githubusercontent.com/88530062/178524612-dc720d4b-409b-4bfa-89cf-40673eb1ff9a.png)
