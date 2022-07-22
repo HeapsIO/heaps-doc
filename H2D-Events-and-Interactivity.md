@@ -35,7 +35,7 @@ Don't forget to remove the event using removeEventTarget when disposing your obj
 
 ## Keyboard events
 
-Keyboard events can be observerd using the global event, check if the `event.kind` is `EKeyDown` or `EKeyUp`.
+Keyboard events can be observed using the global event, check if the `event.kind` is `EKeyDown` or `EKeyUp`.
 
 ```haxe
 function onEvent(event : hxd.Event) {
