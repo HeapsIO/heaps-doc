@@ -46,6 +46,7 @@
 * [[Tools]]
   * [[Castle DB]]
   * [[DomKit]]
+  * [[Hide]]
   * [[LDtk]]
   * [[External libraries]]
     * [[Demo of Slide]]
