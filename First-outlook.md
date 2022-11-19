@@ -6,6 +6,10 @@ What's next after installation and the *Hello World!* samples?
 
 Things you should try out.
 
+### common pitfalls + FAQ
+
+-> [Unofficial Heaps FAQ](https://gist.github.com/Yanrishatum/ae3725a9e2b45e0766c065e573ed1f24#an-unofficial-heaps-faq)
+
 ### Github samples
 
 Besides the [samples you can run online on the Heaps site](https://heaps.io/samples/) you should try the many [**samples from the github repository**](https://github.com/HeapsIO/heaps/#samples). There are many samples that haven't yet been added to the site of Heaps. The samples are already in your Haxe's Heaps folder on your local machine: `HaxeToolkit\haxe\lib\heaps\git\samples`. When compiling the `all.hxml` file all samples should get compiled (which currently takes about 227 MB of disk space).
