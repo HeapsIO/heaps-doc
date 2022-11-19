@@ -1,5 +1,9 @@
 # Sample games with resources
 
+These games should include
+- the bare minimum to make up for a basic game
+- and include **game assets/resources** (e.g. sprites, sounds, music)
+
 ## Basic templates
 
 These provide only a basic template to develop a kind of game or genre.
