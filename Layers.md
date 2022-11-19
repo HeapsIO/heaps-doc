@@ -2,9 +2,13 @@
 
 When using any `h2d.Scene` (`s2d` when inside `hxd.App`) you have all features of the `h2d.Layers` class already available. This is because `h2d.Scene` `extends h2d.Layers`.
 
-**Layers** give more control over what is rendered first. Basically you have two features here. The first is you can place `h2d.Object`s at specific layers by `s2d.addChildAt( myobj, MY_LAYER )`. `0` will be the layer the most in the background, while each higher layer is rendered over/above the precedent layer. Usually you predefine your layer indices in some way for instance by `final MY_LAYER_NAME : Int = 23;` (see in the sample below) so you know what each integer (`Int` value) stands for.
+**Layers** give more control over what is *rendered* first. You can control what is in front and what is in the back. In the demo below clouds are supposed to be **in front and not in the back behind a house or meadow!**.
 
-The second feature is that the layer class also allows to control objects individually by `.over()` and `.under()`. Finally you can benefit from the `ysort()` method to order a layer. In the sample below this will prevent housings to overlap in a weird way.
+Basically you have two features here:
+
+1. The first is you can place `h2d.Object`s at specific layers by `s2d.addChildAt( myobj, MY_LAYER )`. `0` will be the layer the most in the background, while each higher layer is rendered over/above the precedent layer. Usually you predefine your layer indices in some way for instance by `final MY_LAYER_NAME : Int = 23;` (see in the sample below) so you know what each integer (`Int` value) stands for.
+
+2. The second feature is that the layer class also allows to control objects individually by `.over()` and `.under()`. Finally you can benefit from the `ysort()` method to order a layer. *In the sample below this will prevent housings to overlap in a weird way. A house farther away from our viewpoint should be rendered behind houses that are closer!*
 
 ## Sample
 
