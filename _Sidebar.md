@@ -38,6 +38,7 @@
   * [[Resource Management]]
   * [[Resource Baking]]
   * [[Sound]]
+* [[Flags]]
 * [[Shaders]]
   * [[HXSL]]
 * [[Target platforms]]
