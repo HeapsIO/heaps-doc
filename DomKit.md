@@ -59,7 +59,7 @@ flow.box {
 
 In order to get runtime CSS reload you need to:
 * use a `hxd.Res.initLocal()` so you use a local filesystem to load resources. This is only available on some platforms such as HashLink
-* enable resources live update with `hxd.Res.LIVE_UPDATE = true;`
+* enable live update of resources: `hxd.res.Resource.LIVE_UPDATE = true;` (enabled by default on `-D debug` builds)
 
 Then every time you modify your CSS file, the style will be reapplied to all your currently displayed components. Errors will be displayed in case of invalid CSS property or wrongly formatted value.
 
