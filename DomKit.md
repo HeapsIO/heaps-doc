@@ -249,11 +249,6 @@ ${ for( t in tiles ) <bitmap src={t} id="btns[]"/> }
 When using `${..}` syntax, you can inject any Haxe code into the markup language, allowing you to add if/for/method calls/etc.
 
 ```jsx
-Some Text
-```
-This is the equivalent of `<text text={"Some Text"}/>`, so you can apply CSS to the `text` components created this way.
-
-```jsx
 <node>$component</node>
 ```
 When just a Haxe variable identifier is injected into the document content, we assume it contains another component value to be inserted there.
