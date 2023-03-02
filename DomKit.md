@@ -16,7 +16,7 @@ In order to use DomKit to create a Heaps components, you simply need to implemen
 class SampleView extends h2d.Flow implements h2d.domkit.Object {
 
     static var SRC = 
-        <sample-view layout="vertical"> 
+        <sample-view class="box" layout="vertical">
             <text text={"Hello World!"}/>
             <bitmap src={tile} public id="mybmp"/>
         </sample-view>
