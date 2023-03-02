@@ -16,8 +16,8 @@ In order to use DomKit to create a Heaps components, you simply need to implemen
 class SampleView extends h2d.Flow implements h2d.domkit.Object {
 
     static var SRC = 
-        <sample-view layout="vertical"> 
-            Hello World! 
+        <sample-view class="box" layout="vertical">
+            <text text={"Hello World!"}/>
             <bitmap src={tile} public id="mybmp"/>
         </sample-view>
 
@@ -49,7 +49,7 @@ style.addObject(view);
 Here's an example CSS that can be applied to previous view:
 
 ```css
-.box {
+flow.box {
     padding : 20;
     background : #400;
 }
@@ -59,7 +59,7 @@ Here's an example CSS that can be applied to previous view:
 
 In order to get runtime CSS reload you need to:
 * use a `hxd.Res.initLocal()` so you use a local filesystem to load resources. This is only available on some platforms such as HashLink
-* enable resources live update with `hxd.Res.LIVE_UPDATE = true;`
+* enable live update of resources: `hxd.res.Resource.LIVE_UPDATE = true;` (enabled by default on `-D debug` builds)
 
 Then every time you modify your CSS file, the style will be reapplied to all your currently displayed components. Errors will be displayed in case of invalid CSS property or wrongly formatted value.
 
@@ -73,7 +73,7 @@ domkit.Macros.checkCSS("res/style.css");
 
 Or by adding to your Haxe compilation parameters:
 
-``` 
+```hxml
 --macro domkit.Macros.checkCSS('res/style.css')
 ```
 
@@ -247,11 +247,6 @@ ${ for( t in tiles ) <bitmap src={t} id="btns[]"/> }
 </flow>
 ```
 When using `${..}` syntax, you can inject any Haxe code into the markup language, allowing you to add if/for/method calls/etc.
-
-```jsx
-Some Text
-```
-This is the equivalent of `<text text={"Some Text"}/>`, so you can apply CSS to the `text` components created this way.
 
 ```jsx
 <node>$component</node>
