@@ -73,7 +73,7 @@ domkit.Macros.checkCSS("res/style.css");
 
 Or by adding to your Haxe compilation parameters:
 
-``` 
+```hxml
 --macro domkit.Macros.checkCSS('res/style.css')
 ```
 
