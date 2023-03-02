@@ -49,7 +49,7 @@ style.addObject(view);
 Here's an example CSS that can be applied to previous view:
 
 ```css
-.box {
+flow.box {
     padding : 20;
     background : #400;
 }
