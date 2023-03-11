@@ -67,17 +67,19 @@ Alternatively it is possible to use Signed Distance Field to generate scalable f
 
 In the BMFont-tool, use these settings:
 
-* _File_ → _Font settings_
- * Choose font
- * Choose size 
- * Render from TrueType outline _(if you want smooth fonts)_
-* _File_ → _Export settings_
+* _Options_ → _Font settings_
+  * Add font file _(if you want custom font)_
+  * Font _(select your added font or any other)_
+  * Size _(select size in px)_
+  * Render from TrueType outline _(if you want smooth fonts)_
+* Select chars that you need
+* _Options_ → _Export settings_
   * Bit depth: 32
-  * Preset: white text with alpha (black or outline w/ alpha will do as well, but black isn't tintable)
-  * Font descriptor: Any
+  * Presets: white text with alpha (black or outline w/ alpha will do as well, but black isn't tintable)
+  * Font descriptor: Any 
   * Texture: Png
-* _File_ → _Save bitmap font as.._ 
-  * Put in your Heaps project under `./res/fonts/myFontName.fnt` 
+* _Options_ → _Save bitmap font as.. (select name wisely, it's problematic to change)_
+  * Put in your Heaps project under `./res/fonts/myFontName.fnt`
 * _Note:_ Multi-texture fnt files are not supported, ensure that there is only one font texture per fnt file.
 
 ### Convert font to bitmap font using Littera
