@@ -4,8 +4,9 @@ https://www.haxeui.org/api/getting-started/backends/composite-backends/haxeui-he
 
 ---
 
-Alternatively you can also run the demo with the following code:
+Alternatively you can also run the demo from the link above with the following code:
 
+```haxe
 package ;
 
 import haxe.ui.core.Screen;
@@ -26,6 +27,5 @@ class Main2 extends hxd.App {
         Screen.instance.addComponent( new MainView() );
     }
 
-}```haxe
-
+}
 ```
