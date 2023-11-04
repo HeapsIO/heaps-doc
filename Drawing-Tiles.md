@@ -1,26 +1,29 @@
-# Drawing tiles
+# Drawing Tiles
 
-Tiles can be drawn with multiple approaches, some of which going to be covered by following example.
+Tiles can be drawn with multiple approaches, some of which will be discussed below.
 
 ## h2d.Bitmap
-`Bitmap` is a simple container to draw one `Tile`. It's the most basic type, but should be used with caution, as each `Bitmap` causes a draw call.
+
+`Bitmap` is a simple container to draw one `Tile`. It's the most basic type, but it should be used with caution, as each Bitmap creates a draw call.
 
 ## h2d.TileGroup
-`TileGroup` allows to batch-draw Tiles beloning to same `Texture` with ability to apply individual tint, transform and alpha to each tile. This class can be used to draw static tiles, but not very well suited for dynamic movement, since it should be cleared and refilled with data each time something should be altered.
 
-### TileGroup hacking
-With `@:privateAccess tileGroup.content` it's possible to access underlying `TileLayerContent` instance and do more fine-tuned geometry operations other than simple rectangles.
+`TileGroup` allows you to batch-draw Tiles that share the same `Texture`. You can adjust the tint, position, and transparency of each tile. This class can be used to draw static tiles, but it's not well suited for dynamic movement because it must be cleared and refilled when changes are made.
+
+> **Pro Tip:**
+> With `@:privateAccess tileGroup.content`, you can access the underlying `TileLayerContent` instance, and perform advanced geometry operations beyond simple rectangles.
 
 ## h2d.SpriteBatch
-`SpriteBatch` allows to batch-render Tiles belonging to same `Texture`, but contrary to `TileGroup`, it updates batch data each frame and allows to control each `SpriteElement` individually. Note that by default SpriteBatch does not utilize scale and rotation of SpriteElements and it should be enabled with `hasRotationScale` flag. Same applies to `update` method of SpriteElement - it will be called only when `hasUpdate` flag is set.
 
-### BasicElement and updates
-`h2d.SpriteBatch.BasicElement` is a good example of how `update` method can be utilized. This class provides simple simulation of gravity, friction and velocity.
+`SpriteBatch` allows you to batch-render Tiles that share the same `Texture`. Unlike `TileGroup`, it updates data every frame and lets you control each `SpriteElement` individually. Note that, by default, SpriteBatch does not handle the scale or rotation of SpriteElements; it must be enabled with the `hasRotationScale` flag. The same applies to the `update()` method of SpriteElement — it will only be called when the `hasUpdate` flag is set.
+
+`h2d.SpriteBatch.BasicElement` demonstrates how to use the `update()` method. This class also provides a basic simulation of gravity, friction, and velocity.
 
 ## Sample
-This example draws tile layers from a [Tiled](http://www.mapeditor.org/) export file (json) using `TileGroup` batching, `Bitmap` for backdrop image and `SpriteBatch` for batch-rendering of moving sprites. 
 
-The example uses a _backdrop.png_, _bunnies.png_, _tiles.json_ and _tiles.png_ files, that should be put in the resources (`/res`) folder. Those files are not included in samples directory.
+This example demonstrates how to draw tile layers from a [Tiled](https://www.mapeditor.org/) export file in JSON format. It uses `TileGroup` for static terrain, `Bitmap` for a backdrop image, and `SpriteBatch` for rendering moving sprites. 
+
+To recreate this example, place the following files — _backdrop.png_, _bunnies.png_, _tiles.png_, and _tiles.json_ — in the resources (`/res`) folder. These files are not included in the samples directory.
 
 ```haxe
 class Main extends hxd.App {
