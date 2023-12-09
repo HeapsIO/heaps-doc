@@ -1,6 +1,6 @@
 # Hello Hashlink
 
-[HashLink](https://hashlink.haxe.org/) is a virtual machine for Haxe. It can be used to build native desktop applications as well mobile platforms (Android / iOS) and consoles.
+[HashLink](https://hashlink.haxe.org/) is a virtual machine for Haxe. It can be used to build native desktop applications as well as mobile platforms (Android / iOS) and consoles.
 
 Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation) both Heaps and Visual Studio Code, let's create a new Heaps application.
 
