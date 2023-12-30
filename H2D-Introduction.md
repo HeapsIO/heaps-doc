@@ -41,6 +41,13 @@ class Myapp extends hxd.App
 An **Image** (represented by [hxd.res](https://heaps.io/api/hxd/res/Image.html)) is an image resource loaded from the filesystem. It has methods to convert itself into a tile or texture (see below).
 
 ```haxe
+// We must initialize Res before being able to use it:
+#if js
+Res.initEmbed(); // for the web.
+#else
+Res.initLocal(); // for executables.
+#end
+
 var myimage = hxd.Res.img.myImage;
 // will load myImage.png/jpg/jpeg/gif from <your project folder>/res/img/
 var mytile = myimage.toTile();
