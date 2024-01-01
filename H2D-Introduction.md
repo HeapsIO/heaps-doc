@@ -38,7 +38,7 @@ class Myapp extends hxd.App
 ```
 
 ### Image
-An **Image** (represented by [hxd.res](https://heaps.io/api/hxd/res/Image.html)) is an image resource loaded from the filesystem. It has methods to convert itself into a tile or texture (see below).
+An **Image** (represented by [hxd.res](https://heaps.io/api/hxd/res/Image.html)) is an image resource loaded from the filesystem. It has methods to convert itself into a tile or texture (see below). Please make sure to [initialize](https://heaps.io/documentation/resource-management.html) your resources first.
 
 ```haxe
 var myimage = hxd.Res.img.myImage;
