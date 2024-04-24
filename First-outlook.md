@@ -26,6 +26,7 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 - You can also learn from external public repositories from other **members of the community**
   - [Smallest-Heaps-Examples](https://github.com/Beeblerox/Simplest-Heaps-Examples) by Beeblerox
   - [haxe-heaps-examples](https://github.com/joereynolds/haxe-heaps-examples) by Joe Reynolds
+  - [Pewzerk-src](https://github.com/SabeDoesThings/Pewserk-src) by SabeDoesThings
 
 ### 🎈 Template games for learning
 
