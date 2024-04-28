@@ -38,6 +38,7 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 - Learn from step-by-step **tutorials**
   - [Deepnight tutorials](https://deepnight.net/tutorials/) by Deepnight/Sébastien Bénard
   - [BiteSize video playlist on YouTube](https://www.youtube.com/playlist?list=PLT0YBWiI9UjE-yTXsQF8vy0t2qF5JT0-u) by Willie The Stupid Programmer
+  - [Space Shooter tutorial series](https://www.youtube.com/playlist?list=PLk2m2qtrQyibU9mMb68-sDzEljRb-L6lP) by SabeDoesThings
 
 ### 🏰 Complete games (open source)
 
