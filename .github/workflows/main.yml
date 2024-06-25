@@ -1,0 +1,38 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  sync-docs:
+    name: Synchronize with Wiki
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure
+        run: |
+          git config user.name "ncannasse"
+          git config user.email "ncannasse@gmail.com"
+
+          git remote add upstream https://github.com/HeapsIO/heaps.wiki.git
+
+          # set push urls
+          git remote set-url --push origin https://${{ secrets.API_KEY }}@github.com/HeapsIO/heaps-doc.git
+          git remote set-url --push upstream https://${{ secrets.API_KEY }}@github.com/HeapsIO/heaps.wiki.git
+
+      - name: Fetch
+        run: |
+          git fetch origin
+          git fetch upstream
+
+      - name: Merge
+        run: |
+          git merge upstream/master --no-edit
+
+      - name: Push
+        if: github.repository_owner == 'HeapsIO' && github.ref == 'refs/heads/master'
+        run: |
+          git push origin HEAD:master
+          git push upstream HEAD:master
