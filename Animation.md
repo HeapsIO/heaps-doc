@@ -44,3 +44,8 @@ anim.onAnimEnd = function() {
 
 `Anim` instances have other properties which can be discovered by reviewing the [`h2d.Anim`](https://github.com/ncannasse/heaps/blob/master/h2d/Anim.hx) class.
 
+## Using image resources
+
+What you'll probably need for your game is actually using your image resources and sprites.
+- This is a small external github sample: https://github.com/Beeblerox/Simplest-Heaps-Examples/tree/master/04_heaps_anim
+It uses an image to create a sprite strip/sheet from it.

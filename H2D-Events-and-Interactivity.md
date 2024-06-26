@@ -1,6 +1,6 @@
 # Events and interaction
 
-Making objects interactive is done creating a [`h2d.Interactive`](api/h2d/Interactive.html) instance. You provide it an interaction area and attach it to a sprite.
+Making objects interactive (with the mouse) is done creating a [`h2d.Interactive`](api/h2d/Interactive.html) instance. You provide it an interaction area and attach it to a sprite. This can be used to implement **buttons for the UI** but also for any other object that responds on being clicked or hovered (for instance *an old wooden chest* opened by mouse or *an enemy* the player hits by clicking on it).
 
 ```haxe
 var interaction = new h2d.Interactive(300, 100, mySprite);
@@ -48,7 +48,7 @@ function onEvent(event : hxd.Event) {
 hxd.Window.getInstance().addEventTarget(onEvent);
 ```
 
-You can use the static functions `hxd.Key.isPressed`, `hxd.Key.isDown` and `hxd.Key.isReleased`.
+You can also use the static functions `hxd.Key.isPressed`, `hxd.Key.isDown` and `hxd.Key.isReleased`.
 
 ```haxe
 if (Key.isPressed(Key.SPACE)) {
