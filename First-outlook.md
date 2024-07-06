@@ -26,7 +26,6 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 - You can also learn from external public repositories from other **members of the community**
   - [Smallest-Heaps-Examples](https://github.com/Beeblerox/Simplest-Heaps-Examples) by Beeblerox
   - [haxe-heaps-examples](https://github.com/joereynolds/haxe-heaps-examples) by Joe Reynolds
-  - [Pewzerk-src](https://github.com/SabeDoesThings/Pewserk-src) by SabeDoesThings
 
 ### 🎈 Template games for learning
 
@@ -38,7 +37,6 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 - Learn from step-by-step **tutorials**
   - [Deepnight tutorials](https://deepnight.net/tutorials/) by Deepnight/Sébastien Bénard
   - [BiteSize video playlist on YouTube](https://www.youtube.com/playlist?list=PLT0YBWiI9UjE-yTXsQF8vy0t2qF5JT0-u) by Willie The Stupid Programmer
-  - [Space Shooter tutorial series](https://www.youtube.com/playlist?list=PLk2m2qtrQyibU9mMb68-sDzEljRb-L6lP) by SabeDoesThings
 
 ### 🏰 Complete games (open source)
 
