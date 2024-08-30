@@ -3,6 +3,7 @@ name: Synchronize Wiki
 on:
   push:
     branches: [master]
+  pull_request:
   schedule:
     # daily, 01:00 UTC
     - cron: "0 1 * * *"
@@ -29,5 +30,6 @@ jobs:
         run: |
           git merge upstream/master --no-edit
       - name: Push
+        if: github.ref == 'refs/heads/master'
         run: |
           git push
