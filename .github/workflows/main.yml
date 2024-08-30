@@ -3,6 +3,9 @@ name: Synchronize Wiki
 on:
   push:
     branches: [master]
+  schedule:
+    # daily, 01:00 UTC
+    - cron: "0 1 * * *"
 
 jobs:
   synchronize:
