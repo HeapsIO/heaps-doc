@@ -6,7 +6,7 @@ What's next after installation and the *Hello World!* samples?
 
 Things you should try out.
 
-### ⚠️ common pitfalls + FAQ
+### ⚠️ Common pitfalls + FAQ
 
 -> [Unofficial Heaps FAQ](https://gist.github.com/Yanrishatum/ae3725a9e2b45e0766c065e573ed1f24#an-unofficial-heaps-faq)
 
