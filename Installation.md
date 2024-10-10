@@ -49,6 +49,12 @@ _On OSX, you will have to follow the instructions laid out [here](https://github
 
 Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm). 
 
+#### ArchLinux
+For ArchLinux user HashLink can be installed from the [AUR](https://aur.archlinux.org/packages/hashlink). You also need to install the package from haxelib: 
+```
+haxelib install hashlink
+```
+
 ### Update Haxe
 Make sure you are using at least [Haxe 4+](https://haxe.org/download/).  
 _To confirm your current version of Haxe, type `haxe --version` in the command line._
