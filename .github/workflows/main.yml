@@ -29,6 +29,11 @@ jobs:
       - name: Merge
         run: |
           git merge upstream/master --no-edit
+      - name: Validate changes
+        run: |
+          # exit with error if any dot files have been changed
+          # this is to avoid security issues with public modifications to github workflow files
+          git diff ${{ github.sha }} --exit-code -- .*
       - name: Push
         if: github.ref == 'refs/heads/master'
         run: |
