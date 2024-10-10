@@ -1,0 +1,40 @@
+name: Synchronize Wiki
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  schedule:
+    # daily, 01:00 UTC
+    - cron: "0 1 * * *"
+  workflow_call:
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set git credentials
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Fetch
+        run: |
+          git remote add upstream ${{ github.server_url }}/${{ github.repository_owner }}/heaps.wiki
+          git fetch upstream master
+      - name: Merge
+        run: |
+          git merge upstream/master --no-edit
+      - name: Validate changes
+        run: |
+          # exit with error if any dot files have been changed
+          # this is to avoid security issues with public modifications to github workflow files
+          git diff ${{ github.sha }} --exit-code -- .*
+      - name: Push
+        if: github.ref == 'refs/heads/master'
+        run: |
+          git push
