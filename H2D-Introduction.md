@@ -1,101 +1,32 @@
-# Introduction 
+# Introduction
 
-## Concepts
+The code samples in the first pages in the H2D section are coded without any external resources allowing to **just copy and paste** the code and compiling it directly on your machine.
 
-### Object
-An **Object** (represented by [h2d.Object](https://heaps.io/api/h2d/Object.html)) is the base class of all of 2D objects. An object has a position (x,y), a scale (scaleX,scaleY), a rotation. It can contain other objects which will inherit its transformations, creating a scene tree.
+Let's recap now. The smallest code for a Heaps application is the following:
 
 ```haxe
-var myobj = new h2d.Object();
-s2d.addChild(myobj);
-myobj.x = 100;
-myobj.rotation = Math.PI/3;
-
-var mysecondobj = new h2d.Object();
-myobj.addChild(mysecondobj);
-```
-
-### Scene
-The **Scene** (represented by [h2d.Scene](https://heaps.io/api/h2d/Scene.html)) is a special object which is at the root of the scene tree. In [hxd.App](https://heaps.io/api/hxd/App.html) it is accessible by using the `s2d` variable. You will need to add your objects to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys.
-```haxe
-class Myapp extends hxd.App
-{
-    override private function init():Void
-    {
-        super.init();
-        s2d;                            // the current scene
-        var myscene = new h2d.Scene();  // create a new scene
-        setScene(myscene);              // set it as the current scene
-        s2d;                            // is now newscene
-
-        var myobj2 = new h2d.Object();
-        s2d.addChild(myobj2);
-
-        var myobj = new h2d.Object(s2d);// add myobj to s2d by passing s2d as parameter
-
+class Main extends hxd.App {
+    static function main() {
+        new Main();
     }
 }
 ```
+Of course all you get to see here is a black screen or window with no content. Thus to create content an instance of a class (an object) must be added that inherits from `h2d.Object` (to make 2D content).
 
-### Image
-An **Image** (represented by [hxd.res](https://heaps.io/api/hxd/res/Image.html)) is an image resource loaded from the filesystem. It has methods to convert itself into a tile or texture (see below). Please make sure to [initialize](https://heaps.io/documentation/resource-management.html) your resources first.
+## Adding content
+There are many classes to choose from that all inherit from `h2d.Object` (see the [API](https://heaps.io/api/h2d/Object.html)). Therefore in the next sample we revisit the code of the [[Hello World]] sample and add a bitmap. Two objects now make up the content here: `h2d.Text` and `h2d.Bitmap` (and as said, both are `h2d.Object`s). The bitmap requires a tile (`h2d.Tile`) as graphical resource (which will be explained in a later section). Here we can generate the needed tile from code using `fromColor(...)`.
 
-```haxe
-var myimage = hxd.Res.img.myImage;
-// will load myImage.png/jpg/jpeg/gif from <your project folder>/res/img/
-var mytile = myimage.toTile();
-```
+By the way this is a first straight dive into the Heaps engine! All features used here will be explained in detail in the following sections!
 
-### Tile
-A **Tile** (represented by [h2d.Tile](https://heaps.io/api/h2d/Tile.html)) is a sub part of a Texture. For instance a 256x256 Texture might contain several graphics, such as the different frames of an animated sprite. A Tile will be a part of this texture, it has a (x,y) position and a (width,height) size in pixels. It can also have a pivot position (dx,dy).
-
-```haxe
-var mycolortile = h2d.Tile.fromColor(0xFF00FF, 100, 100, 1);
-var myimagetile = myimage.toTile();
-```
-
-#### Tile Pivot
-By default a tile **pivot** is to the upper left corner of the part of the texture it represents. The pivot can be moved by modifying the (dx,dy) values of the Tile. For instance by setting the pivot to (-tile.width,-tile.height), it will now be at the bottom right of the Tile. Changing the pivot affects the way bitmaps are displayed and the way local transformations (such as rotations) are performed.
-
-
-
-### Bitmap
-A **Bitmap** (represented by [h2d.Bitmap](https://heaps.io/api/h2d/Bitmap.html)) is a 2D object that allows you to display a unique Tile at the sprite position.
-```haxe
-var mybitmap = new h2d.Bitmap(myimagetile);
-s2d.addChild(mybitmap);
-```
-
-We can easily make the Bitmap rotate around its center by changing the tile pivot, by adding the following lines:
-
-```haxe
-    bmp.tile.dx = -50;
-    bmp.tile.dy = -50;
-```
-
-### Pixels
-**Pixels** (represented by [hxd.Pixels](https://heaps.io/api/hxd/Pixels.html)) are a picture stored in local memory which you can modify and access its individual pixels. In Heaps, before being displayed, pixels needs to be turned into a Texture.
-```haxe
-var mypixels = myimage.getPixels();
-var mytile = h2d.Tile.fromPixels(mypixels);
-var mypixels = hxd.Pixels.alloc(100, 100, hxd.PixelFormat.ARGB);
-```
-
-###  Texture
-A **Texture** (represented by [h3d.mat.Texture](https://heaps.io/api/h3d/mat/Texture.html)) whose per-pixel data is located in GPU memory. You can no longer access its pixels or modify it in an efficient way. But it can be used to display 3D models or 2D pictures.
-```haxe
-var mytex = myimage.toTexture();
-```
-
-
-## Example
-
-Now that the basic concepts have been introduced, let's write a small Heaps application:
+### Code
 
 ```haxe
     class Main extends hxd.App {
         var bmp : h2d.Bitmap;
         override function init() {
+            var tf = new h2d.Text(hxd.res.DefaultFont.get(), s2d);
+            tf.text = "Hello World !";
+
             // allocate a Texture with red color and creates a 100x100 Tile from it
             var tile = h2d.Tile.fromColor(0xFF0000, 100, 100);
             // create a Bitmap object, which will display the tile
@@ -115,3 +46,14 @@ Now that the basic concepts have been introduced, let's write a small Heaps appl
         }
     }
 ```
+
+With overriding `hxd.App`'s `update` method Heaps allows us to define what should happen each frame. (`dt` stands for the number of milliseconds that have passed since the last time the `update` method has been called.)
+The underlying `h2d.Object` (from which `h2d.Bitmap` inherits) provides the bitmap with features to change its position and rotation.
+
+### Screenshot
+
+![h2d_introduction_helloworld2](https://user-images.githubusercontent.com/88530062/174428357-45f857ed-30bf-450d-99b6-72051f5b0b83.png)
+
+The [next section](Objects) will discuss `h2d.Object` a bit closer.
+
+And as said `h2d.Tile` which the bitmap required will be discussed in a later section: [[Graphical surfaces]].
