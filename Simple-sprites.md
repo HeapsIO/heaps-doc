@@ -106,7 +106,6 @@ This could be the hxml-file for HashLink:
 -lib heaps
 -lib hlsdl
 -cp src
--p res
 -main SimpleSprites
 -hl simple_sprites_demo.hl
 
