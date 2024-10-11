@@ -43,4 +43,3 @@ For more samples of Heaps usage, people published source code for their jam game
 
 * [Deepnight](https://github.com/deepnight/) github for samples of games based off GameBase template.
 * [Cherry-jam](https://github.com/Yanrishatum/cherry-jam/) repository with several jam entries including 3D games.
-* find a list under [[Jammers]] for more participants

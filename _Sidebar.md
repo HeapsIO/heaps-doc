@@ -53,7 +53,6 @@
     * [[Demo of Slide]]
     * [[HaxeUI]]
 * [[Jam games]]
-  * [[Jammers]]
 * [[Sample games for learning]]
   * [[Copy & paste game templates]]
     * [[Breakout]]
