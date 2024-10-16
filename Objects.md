@@ -10,34 +10,8 @@ Like shown previously in the introduction to give our Heaps application visual (
 - A sub-class that *does* rendering however is `h2d.Drawable`. These objects are the base for any actually visible objects in the world of the game like for instance *the player, enemies, buildings, the landscape*, but furthermore also buttons (`h2d.Interactive`) or a `h2d.Text`.
 (See more on [[Drawable]])
 
----
-These are all `h2d` package classes (and sub-classes) that extend `h2d.Object` and can be used to create 2D content:
-- Console
-- [Drawable](Drawable)
-  - Anim, Bitmap, Particles, SpriteBatch
-  - Graphics
-    - Benchmark
-  - Interactive
-    - Slider
-  - [Text](Text)
-    - HtmlText, TextInput
-  - TileGroup
-    - ScaleGrid
-  - Video
-- [Flow](Flow)
-  - CheckBox, Dropdown
-- Mask
-  - KeyFrames
-- [Layers](Layers)
-  - CdbLevel, Scene, ZGroup
-- ObjectFollower
-- Loader
-
-
----
 ## Creating and adding Objects
 Objects can be added to a [scene](Scenes) directly (a `h2d.Scene`, for instance `s2d` when inside `hxd.App`) or be added to another `h2d.Object` creating an *object tree*. Object trees are regarded in the next section about [[Object trees]].
-
 
 ```haxe
 var a = new h2d.Object();              // object not added yet

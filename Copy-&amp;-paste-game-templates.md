@@ -1,1 +1,0 @@
-Should link to [Copy-&-paste-game-templates](https://github.com/HeapsIO/heaps/wiki/Copy-&-paste-game-templates)
