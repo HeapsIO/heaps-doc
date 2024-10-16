@@ -20,7 +20,7 @@ As you can see every child is placed without overlapping each other. The default
 class FlowsDemo extends hxd.App {
     static function main() {new FlowsDemo();}
     override function init() {
-        
+
         // the mere container
         var flow = new h2d.Flow( s2d );
         flow.setPosition( 50, 50 );
@@ -71,7 +71,7 @@ The second sample code will give the `h2d.Interactive` the ability to change the
 class FlowsDemo2 extends hxd.App {
     static function main() {new FlowsDemo2();}
     override function init() {
-        
+
         // our Flow object
         var flow = new h2d.Flow( s2d );
         flow.setPosition( 50, 50 );
@@ -117,7 +117,7 @@ class FlowsDemo2 extends hxd.App {
             flow.horizontalSpacing = s;
             var s = Math.floor( hxd.Math.random(48) );
             flow.verticalSpacing   = s;
-            
+
             trace("Flow's propterties have been changed");
             trace( "\nlayout = "+flow.layout, "\nhorizontalAlign = "+flow.horizontalAlign, "\nverticalAlign = "+ flow.verticalAlign, "\nhorizontalSpacing = "+flow.horizontalSpacing, "\nverticalSpacing = "+flow.verticalSpacing );
 

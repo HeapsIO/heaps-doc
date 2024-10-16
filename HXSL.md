@@ -65,9 +65,9 @@ class MyEffect extends hxsl.Shader {
 }
 ```
 
-The effect can be added to each material **list of shaders**. 
+The effect can be added to each material **list of shaders**.
 
-HXSL will then compile this list into a single shader instance, based on a desired list of **outputs**. 
+HXSL will then compile this list into a single shader instance, based on a desired list of **outputs**.
 
 For instance, we can select either the `output.color` or `output.normal` declared in `MyShader` to either write the normal value or the color value (or we could select both if we want to write to several textures at once, like in [MRT](https://en.wikipedia.org/wiki/Multiple_Render_Targets))
 

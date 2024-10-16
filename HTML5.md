@@ -1,10 +1,10 @@
-# HTML5 
+# HTML5
 
 Heaps is able to compile to JavaScript and therefore it can run in the web browser.
 
 See the following example on how to prepare your Heaps project for HTML5.
 
-## Compile for Javascript: 
+## Compile for Javascript:
 
  * You will also have to create an index.html that includes your .js haxe output.
  * Also put a `<canvas id="webgl"></canvas>` in body of the HTML-file.

@@ -36,7 +36,6 @@ A strategy game (using mouse UI) with some platformer involved
 
 ![image](https://user-images.githubusercontent.com/1022912/47560681-32884000-d919-11e8-9d6e-47011896927a.png)
 
----
 ## Game Jam games
 
 For more samples of Heaps usage, people published source code for their jam games:

@@ -42,12 +42,12 @@ override function init() {
 
 	// The object we're going to display in our scene
 	var prim = h3d.prim.Cube.defaultUnitCube();
-	var mat = h3d.mat.Material.create(renderTarget);	
+	var mat = h3d.mat.Material.create(renderTarget);
 	obj1 = new h3d.scene.Mesh(prim, mat, s3d);
 
 	// The object we're going to capture in our Render Target
 	obj2 = cache.loadModel(hxd.Res.mdl.test2);
-	
+
 	s3dTarget.addChild(obj2);
 }
 
@@ -57,12 +57,12 @@ override function render(e:h3d.Engine) {
 
 	engine.clear(0, 1);
 	s3dTarget.render(e);
-	
+
 	engine.popTarget();
 
 	// Now render our scene
 	s3d.render(e);
 
-	s2d.render(e);   
+	s2d.render(e);
 }
 ```

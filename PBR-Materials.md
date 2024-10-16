@@ -7,23 +7,23 @@ Heaps has support for PBR (Physically Based Rendering) Materials. PBR Materials 
 Let's dive into how to set up PBR Materials in heaps. Before we create our Heaps 3D scene we need to tell the engine that we want to use PBR Materials.
 
 ```haxe
-//The following will automatically create a PBR Material renderer. 
-//It will also create the correct environment and 
+//The following will automatically create a PBR Material renderer.
+//It will also create the correct environment and
 //lighting system that must be used for PBR materials.
 h3d.mat.MaterialSetup.current = new h3d.mat.PbrMaterialSetup();
 ```
 
-Now we can start setting up our scene to work with PBR Materials. The first step is to create an environment map. PBR Materials don't explicitly need an 
+Now we can start setting up our scene to work with PBR Materials. The first step is to create an environment map. PBR Materials don't explicitly need an
 environment map to function but creating one for this example will best showcase the realism of the materials.  The Heaps [PBR Example](samples/pbr.html) has a good environment map to use.
 
 ```haxe
 //Create a sphere that will be used for our Sky Sphere and the mesh of our PBR materials
 var sp = new h3d.prim.Sphere(1, 128, 128);
-//Make sure to add UVs and 
+//Make sure to add UVs and
 sp.addNormals();
 sp.addUVs();
 
-//Create a background mesh 
+//Create a background mesh
 var bg = new h3d.scene.Mesh(sp, s3d);
 bg.scale(10);
 //Make sure it is always rendered
@@ -31,7 +31,7 @@ bg.material.mainPass.culling = Front;
 bg.material.mainPass.setPassName("overlay");
 
 //Create an environment map texture
-var envMap = new h3d.mat.Texture(512, 512, [Cube]);		
+var envMap = new h3d.mat.Texture(512, 512, [Cube]);
 envMap.name = "envMap";
 inline function set(face:Int, res:hxd.res.Image) {
     var pix = res.getPixels();
@@ -53,7 +53,7 @@ env.compute();
 renderer = cast(s3d.renderer, h3d.scene.pbr.Renderer);
 renderer.env = env;
 
-//Finally create a shader and apply it to the background mesh so we can actually render our environment on screen.   
+//Finally create a shader and apply it to the background mesh so we can actually render our environment on screen.
 var cubeShader = bg.material.mainPass.addShader(new h3d.shader.pbr.CubeLod(env.env));
 ```
 
@@ -63,7 +63,7 @@ At this point your scene should just have a Sky Sphere with nothing else in it b
 //Create a point light - note that it's from the PBR package.
 var light = new h3d.scene.pbr.PointLight(s3d);
 light.setPosition(30, 10, 40);
-light.range = 100; 
+light.range = 100;
 //Changing the power of the light will affect the look for your PBR materials.
 light.power = 2;
 ```
@@ -111,7 +111,7 @@ If you want to change the look of your materials you can also play with the expo
 ```haxe
 renderer = cast(s3d.renderer, h3d.scene.pbr.Renderer);
 //Brighten up our PBR materials - this should not affect the environment
-renderer.exposure = 1.5; 
+renderer.exposure = 1.5;
 ```
 
 

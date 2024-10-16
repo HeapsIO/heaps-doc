@@ -2,8 +2,6 @@ Heaps can benefit from HaxeUI for Heaps.
 
 https://www.haxeui.org/api/getting-started/backends/composite-backends/haxeui-heaps.html
 
----
-
 Alternatively you can also run the demo from the link above with the following code:
 
 ```haxe
@@ -23,7 +21,7 @@ class Main2 extends hxd.App {
             root:           s2d,
             manualUpdate:   false
         } );
-        
+
         Screen.instance.addComponent( new MainView() );
     }
 

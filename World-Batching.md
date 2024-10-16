@@ -24,10 +24,10 @@ var rock = world.loadModel(hxd.Res.rock);
 //Add 5000 objeects to our scene - randomly choosing between a rock and a tree
 for( i in 0...5000 )
 			world.add(  Std.random(2) == 0 ? tree : rock,
-                        Math.random() * worldSize, 
-                        Math.random() * worldSize, 
-                        0, 
-                        1.2 + hxd.Math.srand(0.4), 
+                        Math.random() * worldSize,
+                        Math.random() * worldSize,
+                        0,
+                        1.2 + hxd.Math.srand(0.4),
                         hxd.Math.srand(Math.PI)
                     );
 

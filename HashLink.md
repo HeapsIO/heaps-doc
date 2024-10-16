@@ -14,7 +14,7 @@ For SDL
 -lib hlsdl
 ```
 
-## Compile for HashLink: 
+## Compile for HashLink:
 
 To compile for HashLink use the following example.
 
@@ -34,5 +34,3 @@ To compile for HashLink use the following example.
 # output
 -hl bin/game.hl
 ```
- 
----

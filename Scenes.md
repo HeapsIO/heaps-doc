@@ -128,9 +128,6 @@ class Level01 extends h2d.Scene {
 }
 ```
 
----
-
-
 ## Scenes and camera
 
 Scenes and camera is explained here.

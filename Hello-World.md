@@ -96,7 +96,7 @@ Now, in your project directory, create a file `index.html` and add the following
 	<title>Hello Heaps</title>
 	<style>
 		body { margin:0;padding:0;background-color:black; }
-		canvas#webgl { width:100%;height:100%; } 
+		canvas#webgl { width:100%;height:100%; }
 	</style>
 </head>
 <body>

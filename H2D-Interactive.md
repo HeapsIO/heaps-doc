@@ -13,17 +13,17 @@ class H2DInteractiveDemo extends hxd.App
 
     var b:h2d.Bitmap;
 
-    override function init() 
+    override function init()
     {
         b = new h2d.Bitmap( h2d.Tile.fromColor(0xff0000, 60, 60), s2d);
         b.x = 100;
         b.y = 100;
-        
+
         b.tile = b.tile.center();
         b.rotation = Math.PI / 4;
-        
+
         var i = new h2d.Interactive(b.tile.width, b.tile.height, b);
-        
+
         i.x = -0.5 * b.tile.width;
         i.y = -0.5 * b.tile.height;
 

@@ -15,7 +15,7 @@ In order to use DomKit to create a Heaps components, you simply need to implemen
 ```haxe
 class SampleView extends h2d.Flow implements h2d.domkit.Object {
 
-    static var SRC = 
+    static var SRC =
         <sample-view class="box" layout="vertical">
             <text text={"Hello World!"}/>
             <bitmap src={tile} public id="mybmp"/>
@@ -42,7 +42,7 @@ You can then apply CSS at runtime to your document by using the following code:
 ```haxe
 var style = new h2d.domkit.Style();
 // resource referencing res/style.css (see Heaps Resources documentation)
-style.load(hxd.Res.style); 
+style.load(hxd.Res.style);
 style.addObject(view);
 ```
 
@@ -127,7 +127,7 @@ class MyComp extends h2d.Flow implements h2d.domkit.Object {
     function set_style(s) {
         this.style = s;
         // ....
-        return s;    
+        return s;
     }
 
 }
@@ -158,7 +158,7 @@ class Init {
 }
 ```
 
-In the path, the `$` character is the capitalized component name. 
+In the path, the `$` character is the capitalized component name.
 By default, `"$Comp"` is a registered path in Heaps.
 
 ## Custom CSS parsing
@@ -169,7 +169,7 @@ You can specify which parser method to use by changing `@:p` metadata in the fol
 ```haxe
 // will use parseTile CSS parser method
 @:p(tile) public var tile : h2d.Tile;
-``` 
+```
 
 You can use any identifier that is allowed in the current CSS parser. The default Heaps parser can be found in `h2d/domkit/BaseComponents.hx`
 
@@ -275,7 +275,7 @@ A multiline / delimited comment within body
 @custom.path(value1,value2,value3)
 ```
 These are markup macros that can be processed in a custom manner by setting `domkit.Macros.processMacro` in an init macro. It allows you to process identifier path and arguments (Haxe expressions) to return some markup syntax that will be then processed.
- 
+
 # Heaps CSS reference
 
 This is the complete documentation for allowed CSS attributes for native Heaps components.
@@ -376,7 +376,7 @@ See [corresponding heaps documentation](https://heaps.io/api/h2d/Drawable.html)
 color : #ff0000
 color : #f00
 ```
-Color tint 
+Color tint
 
 ```
 smooth : true

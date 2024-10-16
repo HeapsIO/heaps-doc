@@ -1,7 +1,7 @@
 # Filters
 
 Filters apply to the display tree, so can be used to create screen effects.
-You can assign a filter to a `h2d.Sprite`. 
+You can assign a filter to a `h2d.Sprite`.
 
 ```haxe
 mySprite.filter = new Glow();
@@ -9,7 +9,7 @@ mySprite.filter = new Glow();
 
 ## Build-in filters
 
-Heaps provides several filters like Ambient, Bloom, Blur, ColorMatrix, Displacement, DropShadow, Glob, Mask. 
+Heaps provides several filters like Ambient, Bloom, Blur, ColorMatrix, Displacement, DropShadow, Glob, Mask.
 They can be found in the [h2d.filter](https://heaps.io/api/h2d/filter/index.html) package.
 
 ## Creating custom screen shader filters
@@ -36,7 +36,7 @@ class MyFilterShader extends h3d.shader.ScreenShader {
 	static var SRC = {
 		@param var texture : Sampler2D;
 		@param var red : Float;
-		
+
 		function fragment() {
 			pixelColor = texture.get(input.uv);
 			pixelColor.r = red; // change red channel

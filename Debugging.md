@@ -10,13 +10,13 @@ Compiling with the -debug flag will create a source map (.map) alongside the .js
 
 ```
 #Specifying debug will generate source maps
--debug 
+-debug
 
 #Source maps can also be generated explicitly.
 -D source-map
 ```
 
-Once your Chrome Debugger extension is installed you need to enable it in the debug panel of Visual Studio Code.  From the drop down menu choose 'Add Configuration' then select 'Chrome' from the following menu, then 'Chrome Launch'.  This will generate a launch.json file.  
+Once your Chrome Debugger extension is installed you need to enable it in the debug panel of Visual Studio Code.  From the drop down menu choose 'Add Configuration' then select 'Chrome' from the following menu, then 'Chrome Launch'.  This will generate a launch.json file.
 
 ![Chrome Debugger Panel](img/debugging/debugconfig.jpg)
 
@@ -46,11 +46,11 @@ If you set a breakpoint in your code when it launches you should see something l
 
 # Flash
 
-You can debug your SWF files as well via the Flash Debugger extension for Visual Studio Code. 
+You can debug your SWF files as well via the Flash Debugger extension for Visual Studio Code.
 
 ![Flash Debugger Extension](img/debugging/fdb.jpg)
 
-Your SWF needs to be compiled correctly for the debugger to work.  Make sure that '-d fdb' is added to your HXML file.  Please refer to the [Flash Debugger page](https://github.com/vshaxe/flash-debugger) on how to configure it correctly. 
+Your SWF needs to be compiled correctly for the debugger to work.  Make sure that '-d fdb' is added to your HXML file.  Please refer to the [Flash Debugger page](https://github.com/vshaxe/flash-debugger) on how to configure it correctly.
 
 ```
 #Your SWF compile needs to include the following for the debugger to work

@@ -82,7 +82,7 @@ class MyCustomConvert extends hxd.fs.Convert {
     override function convert() {
         // make a simple copy
         var bytes = sys.io.File.getBytes(srcPath);
-        sys.io.File.saveBytes(dstPath, bytes); 
+        sys.io.File.saveBytes(dstPath, bytes);
     }
     // register the convert so it can be found
     static var _ = hxd.fs.Convert.register(new MyCustomConvert());

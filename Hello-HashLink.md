@@ -117,7 +117,7 @@ The `hello.hl` file contains bytecode that can be run with the HashLink virtual 
 
 However, it is also possible to compile the HashLink code using a native compiler. This allows to compile for consoles and mobile.
 
-This is done by changing `compile.hxml` to use `-hl out/main.c` instead of `-hl hello.hl`. 
+This is done by changing `compile.hxml` to use `-hl out/main.c` instead of `-hl hello.hl`.
 
 This will create a directory `out` containing a lot of generated C code that needs to be built using a native compiler and linked to the same HashLink runtime that the HashLink virtual machine is using.
 

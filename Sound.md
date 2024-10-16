@@ -5,7 +5,7 @@ Heaps provides sound management. Heaps supports 3 different formats (WAV, MP3, O
 ```haxe
 if(hxd.res.Sound.supportedFormat(Mp3)){
     //Mp3 is available
-} 
+}
 if(hxd.res.Sound.supportedFormat(OggVorbis)){
     //Ogg format is available
 }
@@ -26,7 +26,7 @@ var musicResource:Sound = null;
 //If we support mp3 we have our sound
 if(hxd.res.Sound.supportedFormat(Mp3)){
     musicResource = hxd.Res.my_music;
-}  
+}
 
 if(musicResource != null){
     //Play the music and loop it
@@ -36,7 +36,7 @@ if(musicResource != null){
 
 ## Channel, ChannelGroup and SoundGroup
 
-Each Channel instance belong to one SoundGroup and one ChannelGroup that allow to mass-control certain parameters of Channels.  
+Each Channel instance belong to one SoundGroup and one ChannelGroup that allow to mass-control certain parameters of Channels.
 ### Channel
 Channel instance represents actively playing sound. It's possible to control following parameters on each Channel:
 * `priority`: Priority of the Channel instance (when limiting maximum audible channels, lowest priority Channels get muted when limit is reached)

@@ -25,7 +25,7 @@ class PlatformGame extends hxd.App {
         var ground = new h2d.Graphics( s2d );
         ground.beginFill( 0x808080 );
         ground.drawRect( 0, groundLevel, s2d.width, s2d.height );
-        
+
         // creating the player
         player = new h2d.Object(s2d); // a mere container (this position we'll use as player's feet position)
         // player's body = bitmap (so we can use a real image file later here)
@@ -85,7 +85,7 @@ class PlatformGame extends hxd.App {
 
         // can jump when on ground
         if( hxd.Key.isPressed( hxd.Key.UP ) || hxd.Key.isPressed( hxd.Key.W ) || hxd.Key.isPressed( hxd.Key.SPACE ) )
-        //if( player_vspeed == 0 && player.y == groundLevel ){ 
+        //if( player_vspeed == 0 && player.y == groundLevel ){
         if( player.y == groundLevel || isOnPlatform ){
             player_vspeed = -8;
         }
@@ -118,10 +118,10 @@ class PlatformGame extends hxd.App {
             player.x=0+x_offset_to_keep;
         if( player.x>s2d.width-x_offset_to_keep )
             player.x=s2d.width-x_offset_to_keep;
-        
+
         //trace(player.x, player.y, player_vspeed);
     }
-} 
+}
 ```
 
 ## A basic hxml-file proposal (for HashLink)

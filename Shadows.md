@@ -54,7 +54,7 @@ new h3d.scene.CameraController(s3d).loadFromCamera();
 # Blurring Shadows
 
 To create a more realistic effect you can blur your shadows.  You do so by accessing the shadow pass from the renderer and setting the amount of passes on the blur object.
- 
+
 You can see an example here:
 
 ```haxe

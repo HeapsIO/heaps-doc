@@ -21,7 +21,7 @@ Tiles can be drawn with multiple approaches, some of which will be discussed bel
 
 ## Sample
 
-This example demonstrates how to draw tile layers from a [Tiled](https://www.mapeditor.org/) export file in JSON format. It uses `TileGroup` for static terrain, `Bitmap` for a backdrop image, and `SpriteBatch` for rendering moving sprites. 
+This example demonstrates how to draw tile layers from a [Tiled](https://www.mapeditor.org/) export file in JSON format. It uses `TileGroup` for static terrain, `Bitmap` for a backdrop image, and `SpriteBatch` for rendering moving sprites.
 
 To recreate this example, place the following files — _backdrop.png_, _bunnies.png_, _tiles.png_, and _tiles.json_ — in the resources (`/res`) folder. These files are not included in the samples directory.
 
@@ -32,39 +32,39 @@ class Main extends hxd.App {
 		hxd.Res.initEmbed();
 		new Main();
 	}
-	
+
 	override private function init() {
 		super.init();
-		
+
 		// Add backdrop Bitmap
 		var bitmap = new h2d.Bitmap(hxd.Res.backdrop.toTile(), s2d);
-		
+
 		// parse Tiled json file
 		var mapData:TiledMapData = haxe.Json.parse(hxd.Res.tiles_json.entry.getText());
-		
+
 		// get tile image (tiles.png) from resources
 		var tileImage  = hxd.Res.tiles_png.toTile();
-		
+
 		// create a TileGroup for fast tile rendering, attach to 2d scene
 		var group = new h2d.TileGroup(tileImage, s2d);
-		
+
 		var tw = mapData.tilewidth;
 		var th = mapData.tileheight;
 		var mw = mapData.width;
 		var mh = mapData.height;
-		
+
 		// make sub tiles from tile
 		var tiles = [
 			 for(y in 0 ... Std.int(tileImage.height / th))
 			 for(x in 0 ... Std.int(tileImage.width / tw))
 			 tileImage.sub(x * tw, y * th, tw, th)
 		];
-		
+
 		// iterate on all layers
 		for(layer in mapData.layers) {
 			// iterate on x and y
 			for(y in 0 ... mh) for (x in 0 ... mw) {
-				// get the tile id at the current position 
+				// get the tile id at the current position
 				var tid = layer.data[x + y * mw];
 				if (tid != 0) { // skip transparent tiles
 					// add a tile to the TileGroup
@@ -72,7 +72,7 @@ class Main extends hxd.App {
 				}
 			}
 		}
-		
+
 		// Create raining bunnies with SpriteBatch
 		var bunnies = hxd.Res.bunnies.toTile();
 		var batch = new h2d.SpriteBatch(bunnies, s2d);
@@ -88,27 +88,27 @@ class Main extends hxd.App {
 }
 
 class Bunny extends h2d.SpriteBatch.BasicElement {
-	
+
 	public function new(t:h2d.Tile) {
 		super(t);
 		gravity = 100;
 	}
-	
+
 	public function reset() {
 		y = -t.height;
 		x = Math.random() * (batch.getScene().width - t.width);
 		scale = 1 + (Math.random() - 0.5) * .1;
 		vx = Math.random() * 60;
 	}
-	
+
 	override function update(dt:Float) {
 		super.update(dt);
 		if (y > batch.getScene().height) reset();
 		return true;
 	}
-	
+
 }
 
-// simple type definition for Tile map 
+// simple type definition for Tile map
 typedef TiledMapData = { layers:Array<{ data:Array<Int>}>, tilewidth:Int, tileheight:Int, width:Int, height:Int };
 ```

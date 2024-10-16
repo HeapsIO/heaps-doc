@@ -12,9 +12,9 @@ tf.textAlign = Center;
 
 // add to any parent, in this case we append to root
 s2d.addChild(tf);
-``` 
+```
 
-For each font family you need a different font file, but you can tint them with code, using `textColor`. 
+For each font family you need a different font file, but you can tint them with code, using `textColor`.
 
 ### HtmlText usage
 Along with regular Text, there is also an [h2d.HtmlText](https://heaps.io/api/h2d/HtmlText.html) class that allows to use simple html markdown for rich text.
@@ -46,23 +46,23 @@ htmlText.loadImage = function( url : String ) : h2d.Tile { return null; }
 htmlText.loadFont = function( name : String ) : h2d.Font { return null; }
 htmlText.formatText = function ( text : String ) : String { return text; }
 ```
-It's up to user how to implement resource loading. Please note, that there is no tile/font caching on HtmlText side.  
+It's up to user how to implement resource loading. Please note, that there is no tile/font caching on HtmlText side.
 Lastly, `formatText` allows to modify and/or validate text contents when it's changed.
 
 ## Font creation
 
-If you want to use custom fonts, other than the Default one, you need to create a `.fnt` file and put it into your `res` directory.  
-Heaps automatically converts all supported `.fnt` files to its own `.bfnt` format to speed up font loading.  
+If you want to use custom fonts, other than the Default one, you need to create a `.fnt` file and put it into your `res` directory.
+Heaps automatically converts all supported `.fnt` files to its own `.bfnt` format to speed up font loading.
 Alternatively it is possible to use Signed Distance Field to generate scalable fonts. See Hiero section for details.
 
 ### Supported formats
 
-* All 3 BMFont formats: XML, Text and Binary.  
+* All 3 BMFont formats: XML, Text and Binary.
   _Note: Multiple images per font are not supported._
 * [FontBuilder](https://github.com/andryblack/fontbuilder): Divo (discouraged to use, as it is less advanced than BMFont)
 
 ### Convert font to bitmap font using BMfont tool
-  
+
 > Download BMFont here: <http://www.angelcode.com/products/bmfont/>
 
 In the BMFont-tool, use these settings:
@@ -76,7 +76,7 @@ In the BMFont-tool, use these settings:
 * _Options_ → _Export settings_
   * Bit depth: 32
   * Presets: white text with alpha (black or outline w/ alpha will do as well, but black isn't tintable)
-  * Font descriptor: Any 
+  * Font descriptor: Any
   * Texture: Png
 * _Options_ → _Save bitmap font as.. (select name wisely, it's problematic to change)_
   * Put in your Heaps project under `./res/fonts/myFontName.fnt`
@@ -84,13 +84,13 @@ In the BMFont-tool, use these settings:
 
 ### Convert font to bitmap font using Littera
 
-Due to browsers no longer supporting Flash, Littera can be ran only by older browser versions [here](http://www.kvazars.com/littera/) 
-or trough standalone flash player by running [swf file](http://www.kvazars.com/littera/littera.swf) directly.  
+Due to browsers no longer supporting Flash, Littera can be ran only by older browser versions [here](http://www.kvazars.com/littera/)
+or trough standalone flash player by running [swf file](http://www.kvazars.com/littera/littera.swf) directly.
 Use following settings:
 
 * Settings in the left column
   * Update a font from your computer with _Select Font_ button
-  * Choose size 
+  * Choose size
   * Set the values:
     * Select what glyphs do you want to export.
     * Fill: to get a non-gradient color, remove one of the markers dragging it down from the rectangle.
@@ -101,19 +101,19 @@ Use following settings:
   * Format: Either `XML (.fnt)` or `Text (.fnt)`
   * Default values are fine for Heaps
   * Press _Export_ start the downloading process.
-  * Unzip the file and put it's content in your Heaps project under `./res/fonts/` 
+  * Unzip the file and put it's content in your Heaps project under `./res/fonts/`
 * If you renamed the files, don't forget to update reference to font texture in `pages` section of `.fnt` file.
 
 ### Using libgdx Hiero
 
-[Hiero](https://libgdx.com/wiki/tools/hiero) can be utilized to generate fonts with extra filters as well as SDF fonts. 
+[Hiero](https://libgdx.com/wiki/tools/hiero) can be utilized to generate fonts with extra filters as well as SDF fonts.
 
 * Refer to this instruction to generate SDF fonts: [Distance Field Fonts](https://github.com/libgdx/libgdx/wiki/Distance-field-fonts)
 * Refer to this page for general instruction on Hiero usage: [Hiero](https://github.com/libgdx/libgdx/wiki/Hiero)
 
 ### Using fontgen tool
 
-[Fontgen](https://github.com/Yanrishatum/fontgen/) is a command-line utility to generate fonts including SDF and MSDF formats. It was written specifically for Heaps and ShiroGames.  
+[Fontgen](https://github.com/Yanrishatum/fontgen/) is a command-line utility to generate fonts including SDF and MSDF formats. It was written specifically for Heaps and ShiroGames.
 Utility is strictly command-line with config files, please refer to readme file.
 
 ### Be creative with bitmapfonts
@@ -139,5 +139,5 @@ For SDF fonts you need to load fonts slightly differently.
   * `size` will represent desired font size.
   * `channel` tells which texture channel SDF shader should take the information from.
   * `alphaCutoff` will set the border of a glyph, with `0.5` being default value.
-  * `smoothing` controls the amount of antialiasing applied to glyph borders. 
+  * `smoothing` controls the amount of antialiasing applied to glyph borders.
 * Set `Text.smoothing` to `true`, otherwise SDF won't render properly.

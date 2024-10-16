@@ -21,7 +21,7 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 - We have many code samples and explanations on our **documentation/wiki pages** here. Have a look at all the sections. (Also compare to the [wiki pages on github](https://github.com/HeapsIO/heaps/wiki)...)
 - A [manual created by Mezo](https://facilitatedistaken.github.io/HeapsTutorial/)
 
-### 👩‍💻👨‍💻 Samples from other users 
+### 👩‍💻👨‍💻 Samples from other users
 
 - You can also learn from external public repositories from other **members of the community**
   - [Smallest-Heaps-Examples](https://github.com/Beeblerox/Simplest-Heaps-Examples) by Beeblerox

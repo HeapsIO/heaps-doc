@@ -59,7 +59,6 @@ class ObjectTrees extends hxd.App { // ObjectTrees
 }
 ```
 
----
 ## Sample 2
 
 The second sample here is a demonstration of how object trees are useful when finally having many objects "treed" together. Referencing single objects within the tree allows controlling all sub-branches of the tree, also making programming easy and powerful.
@@ -84,7 +83,7 @@ class Main extends hxd.App {
     //var npc_trans
     static function main() {new Main();}
     override function init() {
-        
+
         clock = new h2d.Graphics( s2d );
         clock.beginFill( 0x505050 );
         clock.drawCircle( 0, 0, 90 );

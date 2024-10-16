@@ -48,7 +48,7 @@ class Roguelike extends hxd.App {
                 if( char!=" ")
                     characterToGameObject( char, x, y );
             x++;
-            
+
         }
 
         // setting camera

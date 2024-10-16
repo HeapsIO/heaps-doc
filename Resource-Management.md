@@ -50,7 +50,7 @@ This will return a [hxd.res.Any](https://heaps.io/api/hxd/res/Any.html) which ha
 
 ### Resources with duplicate names and `Res` completion
 
-Because `Res` does not list the file extensions, there is a possibility for name conflicts between multiple resources, in this case both resources are listed with their extensions by using underscore instead of a dot.  
+Because `Res` does not list the file extensions, there is a possibility for name conflicts between multiple resources, in this case both resources are listed with their extensions by using underscore instead of a dot.
 For example, `base.png` and `base.json` would be listed as a `base_png` and `base_json` resources in the completion.
 
 However some resource type have a so-called paired extensions, which can be found in the [hxd.res.Config](https://github.com/HeapsIO/heaps/blob/master/hxd/res/Config.hx) under `pairedExtensions` variable. When such file exists, if a file with same name exists and is listed as paired extension - it will be omitted from completion. Good example of that is `font.fnt` and `font.png`, which would only be listed as the `font` in `Res` and point at the `font.fnt`.
@@ -62,13 +62,13 @@ Once you have the bytes for your resource, you can use `hxd.res.Any.fromBytes` t
 
 ## File Systems
 
-Resources files are accessed through a virtual file system which implements the [FileSystem](https://heaps.io/api/hxd/fs/FileSystem.html) interface. 
+Resources files are accessed through a virtual file system which implements the [FileSystem](https://heaps.io/api/hxd/fs/FileSystem.html) interface.
 
 Heaps already provides several file systems, such as:
 
  * [EmbedFileSystem](https://heaps.io/api/hxd/fs/EmbedFileSystem.html) will gives access to the resources which are embedded with your code (using haxe `-resource` compilation flag). On platforms such as JavaScript, this allows you to have both your code and assets stored in a single file.
  * [LocalFileSystem](https://heaps.io/api/hxd/fs/LocalFileSystem.html) which gives access to a local file system directory where your resources are stored. This require hard drive access so it is not available in the browser for example.
- * [hxd.fmt.pak.FileSystem](https://heaps.io/api/hxd/fmt/pak/FileSystem.html) will read a `.pak` file which contains all resources packaged into a single binary. The PAK file can be loaded at runtime and several PAK files can be used, the latest loaded being able to override the resources declared in previously loaded PAK files.  
+ * [hxd.fmt.pak.FileSystem](https://heaps.io/api/hxd/fmt/pak/FileSystem.html) will read a `.pak` file which contains all resources packaged into a single binary. The PAK file can be loaded at runtime and several PAK files can be used, the latest loaded being able to override the resources declared in previously loaded PAK files.
 
 You can initialize the resource loader and filesystem by yourself, or use one of the following shortcuts:
 
@@ -101,7 +101,7 @@ This will be called before `init()`, and while loading `update()` and `onResize`
 
 ## Live update
 
-Heaps supports a live update system which can be enabled by compiling application with `-debug` flag or manually setting `hxd.res.Resource.LIVE_UPDATE` to `true`. Additionally, this is supported only when using `LocalFileSystem` (see above).  
+Heaps supports a live update system which can be enabled by compiling application with `-debug` flag or manually setting `hxd.res.Resource.LIVE_UPDATE` to `true`. Additionally, this is supported only when using `LocalFileSystem` (see above).
 Currently there are only two resource types that have built-in live update: `Image` and `Sound`.
 
 It is possible to attach custom callbacks for resource updates, which can be done via `hxd.res.Resource.watch` method, see sample code snippet:

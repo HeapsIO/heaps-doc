@@ -47,14 +47,14 @@ Download and install the [HashLink](https://github.com/HaxeFoundation/hashlink/r
 
 _On OSX, you will have to follow the instructions laid out [here](https://github.com/HaxeFoundation/hashlink#building-on-linuxosx) to get set up with Hashlink, as the process is a little different._
 
-Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm). 
+Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm).
 
 ### Update Haxe
-Make sure you are using at least [Haxe 4+](https://haxe.org/download/).  
+Make sure you are using at least [Haxe 4+](https://haxe.org/download/).
 _To confirm your current version of Haxe, type `haxe --version` in the command line._
 
 ## Install additional libraries
-Using `haxelib install` in the command line, install the following items:  
+Using `haxelib install` in the command line, install the following items:
 
   * [`hlopenal`](https://lib.haxe.org/p/hlopenal) for OpenAL support
   * [`hldx`](https://lib.haxe.org/p/hldx) for DirectX support

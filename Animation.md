@@ -40,7 +40,7 @@ The following properties and methods can be accessed on [h2d.Anim](https://githu
 anim.onAnimEnd = function() {
 	trace("animation ended!");
 }
-```	
+```
 
 `Anim` instances have other properties which can be discovered by reviewing the [`h2d.Anim`](https://github.com/ncannasse/heaps/blob/master/h2d/Anim.hx) class.
 

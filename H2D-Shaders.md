@@ -23,12 +23,12 @@ You also need to add `@:import h3d.shader.Base2d;`, which exposes helpful parame
 class SineDeformShader extends hxsl.Shader {
 	static var SRC = {
 		@:import h3d.shader.Base2d;
-		
+
 		@param var texture : Sampler2D;
 		@param var speed : Float;
 		@param var frequency : Float;
 		@param var amplitude : Float;
-		
+
 		function fragment() {
 			calculatedUV.y += sin(calculatedUV.y * frequency + time * speed) * amplitude; // wave deform
 			pixelColor = texture.get(calculatedUV);
@@ -37,9 +37,9 @@ class SineDeformShader extends hxsl.Shader {
 }
 ```
 
-#### Base 2D values 
+#### Base 2D values
 
-For 2D shaders, the following parameters are available in the custom shader. 
+For 2D shaders, the following parameters are available in the custom shader.
 When in doubt, you can look these up in `h3d.shader.Base2d` (which you have to import).
 
 ```haxe
