@@ -1,5 +1,5 @@
 # Object
-Like shown previously in the introduction to give our Heaps application visual (2D) content we need classes that are build upon `h2d.Object`.
+Like shown previously in the introduction to give our Heaps application visual (2D) content we need classes that are built upon `h2d.Object`.
 
 - An **Object** (represented by [h2d.Object](https://heaps.io/api/h2d/Object.html)) is the base class of all 2D objects, so any thing that you can *add* to the screen (so to a `h2d.Scene` to be more precise, which mainly is `s2d` when inside `hxd.App`).
 

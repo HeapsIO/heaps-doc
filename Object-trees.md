@@ -12,10 +12,14 @@ The child objects will inherit the transformations of the parent object they hav
 ### Code
 
 ```haxe
-class ObjectTrees extends hxd.App { // ObjectTrees
+class Main extends hxd.App { // ObjectTrees
     var parent_obj  : h2d.Object;
     var a_child_obj : h2d.Object;
-    static function main() {new ObjectTrees();}
+
+    static function main() {
+        new Main();
+    }
+
     override function init() {
 
         // parent object placed on `s2d`
@@ -81,7 +85,11 @@ class Main extends hxd.App {
     var npc_deltaAlpha : Float = -0.01;
     var transitionsActive : Bool = false;
     //var npc_trans
-    static function main() {new Main();}
+
+    static function main() {
+        new Main();
+    }
+
     override function init() {
 
         clock = new h2d.Graphics( s2d );
@@ -151,6 +159,7 @@ class Main extends hxd.App {
             t.text = 'changes on clock scale\n& NPC\'s alpha: ${ ( transitionsActive ? "active" : "inactive" ) }';
         };
     }
+
     override function update(dt:Float) {
         super.update(dt);
         // clock movement

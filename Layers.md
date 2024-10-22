@@ -6,7 +6,7 @@ When using any `h2d.Scene` (`s2d` when inside `hxd.App`) you have all features o
 
 Basically you have two features here:
 
-1. The first is you can place `h2d.Object`s at specific layers by `s2d.addChildAt( myobj, MY_LAYER )`. `0` will be the layer the most in the background, while each higher layer is rendered over/above the precedent layer. Usually you predefine your layer indices in some way for instance by `final MY_LAYER_NAME : Int = 23;` (see in the sample below) so you know what each integer (`Int` value) stands for.
+1. The first is you can place `h2d.Object`s at specific layers by `s2d.add( myobj, MY_LAYER )`. `0` will be the layer the most in the background, while each higher layer is rendered over/above the precedent layer. Usually you predefine your layer indices in some way for instance by `final MY_LAYER_NAME : Int = 23;` (see in the sample below) so you know what each integer (`Int` value) stands for.
 
 2. The second feature is that the layer class also allows to control objects individually by `.over()` and `.under()`. Finally you can benefit from the `ysort()` method to order a layer. *In the sample below this will prevent housings to overlap in a weird way. A house farther away from our viewpoint should be rendered behind houses that are closer!*
 
@@ -18,13 +18,16 @@ Note that the clouds are on top of all other objects. The green soil stains (mea
 
 ```haxe
 
-class LayersDemo extends hxd.App {
+class Main extends hxd.App {
     var clouds : Array<h2d.Object> = [];
     var LAYER_FOR_SOIL : Int = 0;
     var LAYER_FOR_BUILDINGS : Int = 1;
     var LAYER_FOR_SKY : Int = 2;
-    static function main() {new LayersDemo();}
-    function new() {super();}
+
+    static function main() {
+        new Main();
+    }
+
     override function init() {
         engine.backgroundColor = 0xFF33cc33; // game's background color is now green
         for( i in 0...40 )
@@ -56,7 +59,7 @@ class LayersDemo extends hxd.App {
         g.addVertex( -20,   0, 1, 0, 0, 1 );
         g.endFill();
         set_to_random_postion( g );
-        s2d.addChildAt( g, LAYER_FOR_BUILDINGS );
+        s2d.add( g, LAYER_FOR_BUILDINGS );
         return g; // allows to receive the reference to the created object...
     }
     function add_cloud() {
@@ -75,14 +78,14 @@ class LayersDemo extends hxd.App {
         add_row_of_bubbles( 24,  0 ); // lower level of bubbles
         set_to_random_postion( g );
         clouds.push( g );
-        s2d.addChildAt( g, LAYER_FOR_SKY );
+        s2d.add( g, LAYER_FOR_SKY );
     }
     function add_soil_stain() {
         var g = new h2d.Graphics();
         g.beginFill( 0x84e184 ); // lighter green
         g.drawEllipse( 0, 0, 32 + hxd.Math.random(64), 8 + hxd.Math.random(8) );
         set_to_random_postion( g );
-        s2d.addChildAt( g, LAYER_FOR_SOIL );
+        s2d.add( g, LAYER_FOR_SOIL );
     }
     function set_to_random_postion( obj:h2d.Object ) {
         obj.setPosition( hxd.Math.random( s2d.width ), hxd.Math.random( s2d.height ) );
@@ -98,4 +101,4 @@ class LayersDemo extends hxd.App {
 }
 ```
 
-Note that all we have to use is `s2d.addChildAt( myobj, MY_LAYER )` instead of just `s2d.addChild( myobj )` and finally we use `s2d.ysort( LAYER_FOR_BUILDINGS )` to arrange all houses.
+Note that all we have to use is `s2d.add( myobj, MY_LAYER )` instead of just `s2d.addChild( myobj )` and finally we use `s2d.ysort( LAYER_FOR_BUILDINGS )` to arrange all houses.

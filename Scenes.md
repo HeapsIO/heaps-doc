@@ -1,15 +1,13 @@
 # Scenes
-In the precedent sections we already used `s2d` which represents the active current scene rendered by the `hxd.App`.
+In the previous sections we already used `s2d` which represents the active current scene rendered by the `hxd.App`.
 
 A **Scene** (represented by [h2d.Scene](https://heaps.io/api/h2d/Scene.html)) represents any scene the user can visit in the Heaps app. Scenes may be *an intro showing the developers logo on start-up*, the *main menu of the game*, maybe a *cutscene* and finally *the level or world* where the actual game takes place and the player walks around.
 
 `h2d.Scene` (represented by [h2d.Scene](https://heaps.io/api/h2d/Scene.html)) is a special object (it is actually a `h2d.Object`, too!) which is at the root of the scene tree. In [hxd.App](https://heaps.io/api/hxd/App.html) it is accessible by using the `s2d` variable (as we have seen previously). You will need to add your objects to the scene before they can be displayed. The Scene also handles events such as clicks, touch, and keyboard keys.
 
 ```haxe
-class Myapp extends hxd.App
-{
-    override private function init():Void
-    {
+class Main extends hxd.App {
+    override private function init():Void {
         super.init();
         s2d;                            // the current scene
         var myscene = new h2d.Scene();  // create a new scene
@@ -23,7 +21,9 @@ class Myapp extends hxd.App
 
     }
 
-public static function main(){ new Myapp(); }
+    public static function main() {
+        new Main();
+    }
 }
 ```
 
@@ -36,14 +36,18 @@ You can deal with scenes mostly any way you like (like with most things in Heaps
 ![demo_on_using_scenes](https://user-images.githubusercontent.com/88530062/174429682-6debdb8e-d35c-4f3e-87d0-d3d72fe7e2b4.png)
 
 ```haxe
-class ABC extends hxd.App {
-    public static var app : ABC;                // just will represent this app as an individual object at runtime (so as an instance of this class)
-    static function main() { app = new ABC(); } // "save" the reference for access from outside later
+class Main extends hxd.App {
+    public static var app : Main;                // just will represent this app as an individual object at runtime (so as an instance of this class)
     public var myUpdateFunction : Dynamic;      // this will allow us to define the update function from other classes (see Level01)
-    public function new() {super();}
+
+    static function main() {
+        app = new Main();
+    } // "save" the reference for access from outside later
+
     override function init() {
         setScene( new Intro() );
     }
+
     override function update(dt:Float) {
         if(myUpdateFunction!=null)
             myUpdateFunction();
@@ -65,7 +69,7 @@ class Intro extends h2d.Scene {
         t.scale( 2 ); t.textColor = 0x606060;
         var t = new haxe.Timer( 3 * 1000 );
         t.run = () -> {
-            ABC.app.setScene( new MainMenu() );
+            Main.app.setScene( new MainMenu() );
             t.stop();
         };
     }
@@ -88,7 +92,7 @@ class MainMenu extends h2d.Scene {
         var button_quit = new h2d.Interactive( 300, 40, f ); button_quit.backgroundColor = 0xFFFF4040;
         //button_quit.y += 60;
         button_play.onClick = (e)->{
-            ABC.app.setScene( new Level01() );
+            Main.app.setScene( new Level01() );
         };
         button_quit.onClick = (e)->{ hxd.System.exit(); };
         var t = new h2d.Text( hxd.res.DefaultFont.get(), button_play ); t.text = "Play"; t.setPosition(8,8);
@@ -104,7 +108,7 @@ class Level01 extends h2d.Scene {
         var player = new h2d.Graphics( this ); player.setPosition( 200, 200 );
         drawSmileyFace( player );
         var t = new h2d.Text( hxd.res.DefaultFont.get(), player ); t.text = "Player"; t.setPosition(-50,50);
-        ABC.app.myUpdateFunction = () -> { player.x += 0.1; };
+        Main.app.myUpdateFunction = () -> { player.x += 0.1; };
     }
     function drawSmileyFace( g:h2d.Graphics ) {
         // face
@@ -127,15 +131,3 @@ class Level01 extends h2d.Scene {
     }
 }
 ```
-
-## Scenes and camera
-
-Scenes and camera is explained here.
-
-### Sizing
-
-Scenes sizing is explained here.
-
-### Zoom
-
-Camera zoom is explained here.
