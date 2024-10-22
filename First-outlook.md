@@ -22,18 +22,18 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 
 ### 👩‍💻👨‍💻 Samples from other users
 
-- You can also learn from external public repositories from other **members of the community**
+You can also learn from external public repositories from other **members of the community**
   - [Smallest-Heaps-Examples](https://github.com/Beeblerox/Simplest-Heaps-Examples) by Beeblerox
   - [haxe-heaps-examples](https://github.com/joereynolds/haxe-heaps-examples) by Joe Reynolds
 
 ### 🎈 Template games for learning
 
-- Learn from **simple games** made for beginners/learning
+Learn from **simple games** made for beginners/learning
   - [[Sample games for learning]]
 
 ### 🐾 Step-by-step Tutorials
 
-- Learn from step-by-step **tutorials**
+Learn from step-by-step **tutorials**
   - [Deepnight tutorials](https://deepnight.net/tutorials/) by Deepnight/Sébastien Bénard
   - [BiteSize video playlist on YouTube](https://www.youtube.com/playlist?list=PLT0YBWiI9UjE-yTXsQF8vy0t2qF5JT0-u) by Willie The Stupid Programmer
 
@@ -50,12 +50,11 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 
 ## 📒 Discover Haxe
 
-- [Browse **Haxe libraries**](https://lib.haxe.org/) and benefit of the full potential of available Haxe libraries
-  - [understanding haxelib](https://lib.haxe.org/documentation/using-haxelib/)
-- Becoming proficient in **Haxe** will provide you with completely new ***abilities and powers*** in your code. So learning more about what Haxe has to offer as a language gives you new options to solve things. These are just some examples (for more [visit Haxe.org](https://haxe.org/)):
-  - the [Haxe manual](https://haxe.org/manual/)
-  - the [Haxe API](api.haxe.org/)
-  - the [Haxe wiki](https://github.com/HaxeFoundation/haxe/wiki) ( <- quite hidden!)
-  - the [Haxe code cookbook](https://code.haxe.org/)
-  - the [Haxe community](http://community.haxe.org/) (also visit haxe.org and see "Connect" options)
+Heaps is powered by Haxe. Learn more about Haxe here:
+  - The [Haxe website](https://haxe.org/):
+  - The [Haxe manual](https://haxe.org/manual/)
+  - The [Haxe API](api.haxe.org/)
+  - The [Haxe wiki](https://github.com/HaxeFoundation/haxe/wiki)
+  - The [Haxe code cookbook](https://code.haxe.org/)
+  - The [Haxe community](http://community.haxe.org/)
 
