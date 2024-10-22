@@ -8,18 +8,17 @@ Things you should try out.
 
 ### ⚠️ Common pitfalls + FAQ
 
--> [Unofficial Heaps FAQ](https://gist.github.com/Yanrishatum/ae3725a9e2b45e0766c065e573ed1f24#an-unofficial-heaps-faq)
+[Unofficial Heaps FAQ](https://gist.github.com/Yanrishatum/ae3725a9e2b45e0766c065e573ed1f24#an-unofficial-heaps-faq)
 
 ### ⭐️ Github samples
 
-Besides the [samples you can run online on the Heaps site](https://heaps.io/samples/) you should try the many [**samples from the github repository**](https://github.com/HeapsIO/heaps/#samples). There are many samples that haven't yet been added to the site of Heaps. The samples are already in your Haxe's Heaps folder on your local machine: `HaxeToolkit\haxe\lib\heaps\git\samples`. When compiling the `all.hxml` file all samples should get compiled (which currently takes about 227 MB of disk space).
+Besides the [samples you can run online on the Heaps site](https://heaps.io/samples/) you should try the many [**samples from the github repository**](https://github.com/HeapsIO/heaps/#samples).
+
+There are many samples that haven't yet been added to the site of Heaps. The samples are already in your Haxe's Heaps folder on your local machine: `HaxeToolkit\haxe\lib\heaps\git\samples`. 
+
+When compiling the `all.hxml` file all samples should get compiled (which currently takes about 227 MB of disk space).
 
 Sidenote (Windows): When using HashLink you can run them very quickly when [adding HashLink to your right mouse menues](https://github.com/HaxeFoundation/hashlink/wiki/Further-Tips#working-on-windows).
-
-### 📚 Wiki / Docs
-
-- We have many code samples and explanations on our **documentation/wiki pages** here. Have a look at all the sections. (Also compare to the [wiki pages on github](https://github.com/HeapsIO/heaps/wiki)...)
-- A [manual created by Mezo](https://facilitatedistaken.github.io/HeapsTutorial/)
 
 ### 👩‍💻👨‍💻 Samples from other users
 
@@ -46,9 +45,8 @@ Sidenote (Windows): When using HashLink you can run them very quickly when [addi
 ### 🌐 Community
 
 - Ask questions, discuss and get in touch with the **community**!
-  - https://community.heaps.io/
-  - join our **discord** channel: https://community.heaps.io/t/discord-official-channel/72
-    - we also have Haxe game jams in the "JAM TIME" channel!
+  - Discord (*#heaps* channel): https://discord.gg/sWCGm33
+  - Discourse: https://community.heaps.io/
 
 ## 📒 Discover Haxe
 
