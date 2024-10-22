@@ -53,8 +53,8 @@ Learn from step-by-step **tutorials**
 Heaps is powered by Haxe. Learn more about Haxe here:
   - The [Haxe website](https://haxe.org/):
   - The [Haxe manual](https://haxe.org/manual/)
-  - The [Haxe API](api.haxe.org/)
+  - The [Haxe API](https://api.haxe.org/)
   - The [Haxe wiki](https://github.com/HaxeFoundation/haxe/wiki)
   - The [Haxe code cookbook](https://code.haxe.org/)
-  - The [Haxe community](http://community.haxe.org/)
+  - The [Haxe community](https://community.haxe.org/)
 
