@@ -42,4 +42,4 @@ anim.onAnimEnd = function() {
 }
 ```
 
-`Anim` instances have other properties which can be discovered by reviewing the [`h2d.Anim`](https://github.com/HeapsIO/heaps/blob/master/h2d/Anim.hx) class.
+`Anim` instances have other properties which can be discovered by reviewing the [`h2d.Anim`](https://heaps.io/api/h2d/Anim.html) class.
