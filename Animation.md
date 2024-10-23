@@ -30,7 +30,7 @@ You can learn more about Heaps resource management and using [`hxd.Res`](https:/
 
 ## Properties and methods
 
-The following properties and methods can be accessed on [h2d.Anim](https://github.com/ncannasse/heaps/blob/master/h2d/Anim.hx):
+The following properties and methods can be accessed on [h2d.Anim](https://heaps.io/api/h2d/Anim.html):
 
 * `speed` : changes the playback speed of the animation, in frames per seconds.
 * `loop` : tells if the animation will loop after it reaches the last frame.
@@ -42,10 +42,4 @@ anim.onAnimEnd = function() {
 }
 ```
 
-`Anim` instances have other properties which can be discovered by reviewing the [`h2d.Anim`](https://github.com/ncannasse/heaps/blob/master/h2d/Anim.hx) class.
-
-## Using image resources
-
-What you'll probably need for your game is actually using your image resources and sprites.
-- This is a small external github sample: https://github.com/Beeblerox/Simplest-Heaps-Examples/tree/master/04_heaps_anim
-It uses an image to create a sprite strip/sheet from it.
+`Anim` instances have other properties which can be discovered by reviewing the [`h2d.Anim`](https://github.com/HeapsIO/heaps/blob/master/h2d/Anim.hx) class.
