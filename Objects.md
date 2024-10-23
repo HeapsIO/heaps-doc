@@ -11,7 +11,7 @@ Like shown previously in the introduction to give our Heaps application visual (
 (See more on [[Drawable]])
 
 ## Creating and adding Objects
-Objects can be added to a [scene](Scenes) directly (a `h2d.Scene`, for instance `s2d` when inside `hxd.App`) or be added to another `h2d.Object` creating an *object tree*. Object trees are regarded in the next section about [[Object trees]].
+Objects can be added to a [scene](https://heaps.io/documentation/scenes.html) directly (a `h2d.Scene`, for instance `s2d` when inside `hxd.App`) or be added to another `h2d.Object` creating an *object tree*. Object trees are regarded in the next section about [[Object trees]].
 
 ```haxe
 var a = new h2d.Object();              // object not added yet
