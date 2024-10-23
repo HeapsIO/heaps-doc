@@ -17,7 +17,8 @@ haxelib install heaps
 ```
 _Note that in some cases you might need to log out and log back into your computer for haxelib to be recognized as a command._
 
-You can also install directly from github to get the latest, bleeding-edge version of Heaps (at the moment this is the recommended option).
+You can also install directly from github to get the latest, bleeding-edge version of Heaps (at the moment this is the **recommended** option).
+
 ```
 haxelib git heaps https://github.com/HeapsIO/heaps.git
 ```
@@ -66,7 +67,13 @@ haxelib install hlsdl
 haxelib install hldx
 ```
 
+You can also install these libraries directly from github to get the latest versions (**recommended**):
+```
+haxelib git hlopenal https://github.com/HaxeFoundation/hashlink master libs/openal
+haxelib git hlsdl https://github.com/HaxeFoundation/hashlink master libs/sdl
+haxelib git hldx https://github.com/HaxeFoundation/hashlink master libs/directx
+```
 ## Verify the installation
-Once everything is setup, you should be able to run `hl` command from your terminal:
+Once everything is setup, you should be able to run `hl` command from your terminal (note: the version will likely be different):
 
 ![image](https://user-images.githubusercontent.com/1022912/45916745-4ef11280-be6b-11e8-8d9a-9405508ff014.png)
