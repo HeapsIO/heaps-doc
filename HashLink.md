@@ -20,6 +20,8 @@ OpenAL (for sound)
 -lib hlopenal
 ```
 
+More available libraries: https://github.com/HaxeFoundation/hashlink/tree/master/libs
+
 
 ## Compile for HashLink:
 
