@@ -1,5 +1,5 @@
 # Object
-Like shown previously in the introduction to give our Heaps application visual (2D) content we need classes that are build upon `h2d.Object`.
+Like shown previously in the introduction to give our Heaps application visual (2D) content we need classes that are built upon `h2d.Object`.
 
 - An **Object** (represented by [h2d.Object](https://heaps.io/api/h2d/Object.html)) is the base class of all 2D objects, so any thing that you can *add* to the screen (so to a `h2d.Scene` to be more precise, which mainly is `s2d` when inside `hxd.App`).
 
@@ -11,7 +11,7 @@ Like shown previously in the introduction to give our Heaps application visual (
 (See more on [[Drawable]])
 
 ## Creating and adding Objects
-Objects can be added to a [scene](Scenes) directly (a `h2d.Scene`, for instance `s2d` when inside `hxd.App`) or be added to another `h2d.Object` creating an *object tree*. Object trees are regarded in the next section about [[Object trees]].
+Objects can be added to a [scene](https://heaps.io/documentation/scenes.html) directly (a `h2d.Scene`, for instance `s2d` when inside `hxd.App`) or be added to another `h2d.Object` creating an *object tree*. Object trees are regarded in the next section about [[Object trees]].
 
 ```haxe
 var a = new h2d.Object();              // object not added yet
