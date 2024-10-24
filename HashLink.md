@@ -2,17 +2,24 @@
 
 [HashLink](https://hashlink.haxe.org/) is a virtual machine for the Haxe programming language.  By targeting HashLink you are also able to generate Native C code for your project.
 
-HashLink is able to support both SDL and DirectX. In order to specify which one you'd like to use, you simple need to include the appropriate library when compiling your project.
-
-For DirectX
-```hxml
--lib hldx
-```
+HashLink is able to support both [SDL](https://lib.haxe.org/p/hlsdl) and [DirectX](https://lib.haxe.org/p/hldx). At least one and only one is required.
+[OpenAL](https://lib.haxe.org/p/hlopenal) provides using sound.
 
 For SDL
 ```hxml
 -lib hlsdl
 ```
+
+For DirectX (Windows)
+```hxml
+-lib hldx
+```
+
+OpenAL (for sound)
+```hxml
+-lib hlopenal
+```
+
 
 ## Compile for HashLink:
 
@@ -28,8 +35,9 @@ To compile for HashLink use the following example.
 
 # libraries
 -lib heaps
--lib hldx
-#-lib hlsdl
+-lib hlsdl
+#-lib hldx
+-lib hlopenal
 
 # output
 -hl bin/game.hl
