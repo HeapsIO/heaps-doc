@@ -18,8 +18,6 @@ There are many samples that haven't yet been added to the site of Heaps. The sam
 
 When compiling the `all.hxml` file all samples should get compiled (which currently takes about 227 MB of disk space).
 
-Sidenote (Windows): When using HashLink you can run them very quickly when [adding HashLink to your right mouse menues](https://github.com/HaxeFoundation/hashlink/wiki/Further-Tips#working-on-windows).
-
 ### 👩‍💻👨‍💻 Samples from other users
 
 You can also learn from external public repositories from other **members of the community**

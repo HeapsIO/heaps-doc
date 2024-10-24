@@ -1,6 +1,6 @@
 # Events and interaction
 
-Making objects interactive (with the mouse) is done creating a [`h2d.Interactive`](api/h2d/Interactive.html) instance. You provide it an interaction area and attach it to a sprite. This can be used to implement **buttons for the UI** but also for any other object that responds on being clicked or hovered (for instance *an old wooden chest* opened by mouse or *an enemy* the player hits by clicking on it).
+Making objects interactive (with the mouse) is done by creating a [`h2d.Interactive`](https://heaps.io/api/h2d/Interactive.html) instance. You provide it with an interaction area and attach it to a sprite. This can be used to implement buttons for the UI, but also for any other object that responds to being clicked or hovered over (for instance, an old wooden chest opened by mouse or an enemy the player hits by clicking on it).
 
 ```haxe
 var interaction = new h2d.Interactive(300, 100, mySprite);
@@ -23,7 +23,7 @@ interaction.onClick = function(event : hxd.Event) {
 
 ## Global events
 
-You can listen to global events (keyboard, touch, mouse, window) by adding event listener to the [`hxd.Window`](api/hxd/Window.html) instance.
+You can listen to global events (keyboard, touch, mouse, window) by adding an event listener to the [`hxd.Window`](https://heaps.io/api/hxd/Window.html) instance.
 
 ```haxe
 function onEvent(event : hxd.Event) {
@@ -31,11 +31,11 @@ function onEvent(event : hxd.Event) {
 }
 hxd.Window.getInstance().addEventTarget(onEvent);
 ```
-Don't forget to remove the event using removeEventTarget when disposing your objects.
+Don't forget to remove the event using `removeEventTarget` when disposing of your objects.
 
 ## Keyboard events
 
-Keyboard events can be observed using the global event, check if the `event.kind` is `EKeyDown` or `EKeyUp`.
+Keyboard events can be captured using the global event. Check if the `event.kind` is `EKeyDown` or `EKeyUp`.
 
 ```haxe
 function onEvent(event : hxd.Event) {
@@ -58,7 +58,7 @@ if (Key.isPressed(Key.SPACE)) {
 
 ## Resize events
 
-You can listen to resize events by adding `addResizeEvent` listener to the [`hxd.Window`](api/hxd/Window.html) instance.
+You can listen to resize events by adding `addResizeEvent` listener to the [`hxd.Window`](https://heaps.io/api/hxd/Window.html) instance.
 
 ```haxe
 function onResize() {
@@ -67,10 +67,10 @@ function onResize() {
 }
 hxd.Window.getInstance().addResizeEvent(onResize);
 ```
-Don't forget to remove the event using removeEventTarget when disposing your objects.
+Don't forget to remove the event using `removeEventTarget` when disposing your objects.
 
-All events callbacks in Heaps receive a [`hxd.Event`](api/hxd/Event.html) instance, which contains info about the event.
+All events callbacks in Heaps receive a [`hxd.Event`](https://heaps.io/api/hxd/Event.html) instance, which contains info about the event.
 
 ## Touch screen
 
-[hxd.System.getValue(IsTouch)](api/hxd/System.html#getValue) can be used to detect whether a device has a touch screen or not (currently only detected on mobile devices). This value could be used for example to implement a long press with a timer on touch screen platforms only.
+[hxd.System.getValue(IsTouch)](https://heaps.io/api/hxd/System.html#getValue) can be used to detect whether a device has a touch screen or not (currently only detected on mobile devices). This value could be used for example to implement a long press with a timer on touch screen platforms only.
