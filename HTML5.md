@@ -2,6 +2,8 @@
 
 Heaps is able to compile to JavaScript and therefore it can run in the web browser.
 
+A step by step guide can be found in [[Hello-World]].
+
 See the following example on how to prepare your Heaps project for HTML5.
 
 ## Compile for Javascript:
