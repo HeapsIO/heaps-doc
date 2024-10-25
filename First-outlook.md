@@ -47,7 +47,7 @@ Ask questions, discuss and get in touch with the **community**!
 
 - Discord (*#heaps* channel): https://discord.gg/sWCGm33
 - Discourse: https://community.heaps.io/
-- More [[Articles] on Haxe/Heaps game development
+- More [[Articles]] on Haxe/Heaps game development
 
 ## 📒 Discover Haxe
 
