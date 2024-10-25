@@ -56,13 +56,3 @@ Heaps is powered by Haxe. Learn more about Haxe here:
   - The [Haxe code cookbook](https://code.haxe.org/)
   - The [Haxe community](https://community.haxe.org/)
 
-## More on game engine development
-
-- see the "Game dev" section on the right under https://deepnight.net/tutorials/, this currently involves:
-  - [Entity and coordinate system](https://deepnight.net/tutorial/a-simple-platformer-engine-part-1-basics/)
-  - [collision checking](https://deepnight.net/tutorial/a-simple-platformer-engine-part-2-collisions/)
-  - [Bresenham algorithm](https://deepnight.net/tutorial/bresenham-magic-raycasting-line-of-sight-pathfinding/)
-
-- *Game programming patterns* by Bob Nystrom ( ⚠️ code snippets in C++)
-  - https://gameprogrammingpatterns.com/ (also includes an open free online version of the book)
-
