@@ -125,3 +125,22 @@ Compiling on mobile and console thus requires some knowledge with each platform 
  * for iOS, look at [this thread](https://github.com/HaxeFoundation/hashlink/issues/144)
  * for Android, look at [this thread](https://github.com/HaxeFoundation/hashlink/issues/109)
  * for Consoles (Nintendo Switch, Sony PS4, Microsoft XBoxOne), please contact us at nicolas `@` haxe.org if you are a registered developer for one or several of these
+
+
+## Hot Reload
+
+Hot reload allows to program new features into a game ***while*** it is running.
+
+Use the following flag to allow that Hot Reload is being used.
+```
+-D hot-reload
+```
+
+Now run your HashLink program with
+`hl --hot-reload mygame.hl`
+
+Now everytime you re-compile, the running game also gets updated.
+
+Note that this has its limits and this feature is still under development and being tested. Currently no new fields can be implemented. However it works well for modifying the behaviour of an already existing method (class function), for instance the `update` method and all other functions called inside it.
+
+(See details here: https://github.com/HaxeFoundation/hashlink/wiki/Hot-Reload)
