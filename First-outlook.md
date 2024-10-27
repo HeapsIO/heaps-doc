@@ -29,7 +29,7 @@ You can also learn from external public repositories from other **members of the
 
 Learn from **simple games** made for beginners/learning
 
-- [[Template-games]]
+- [[Template games]]
 
 ### 🐾 Step-by-step Tutorials
 
