@@ -12,4 +12,4 @@ These are ideas for open source dependencies you can use with Heaps (these are j
 - [raycast](https://lib.haxe.org/p/raycast/)
 - [gasm-heaps](https://lib.haxe.org/p/gasm-heaps/)
 
-Also check out https://lib.haxe.org/search/?v=heaps to find current links.
+Also check out [https://lib.haxe.org/search/?v=heaps](https://lib.haxe.org/search/?v=heaps) to find current links.

@@ -1,6 +1,6 @@
 # Breakout
 
-This is a very basic template for a breakout clone. The principle is inspired by the [Atari Breakout video game from 1976](https://en.wikipedia.org/wiki/Breakout_(video_game)).
+This is a very basic template for a breakout clone. The principle is inspired by the [Atari Breakout video game from 1976](<https://en.wikipedia.org/wiki/Breakout_(video_game)>).
 
 ## Screenshot
 

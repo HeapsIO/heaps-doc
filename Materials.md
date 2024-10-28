@@ -37,7 +37,7 @@ Our cube is looking a lot better.
 
 ## Textures
 
-To really customize our materials though we want to use [textures](https://en.wikipedia.org/wiki/Texture_mapping). To keep it simple, texture allow us to apply custom images to our geometry. Textures are [resources](/documentation/Hxd/Resource-Management.md) that need to be loaded into your Heaps application. Once your textures are loaded they need to be added to materials and then applied to geometry.
+To really customize our materials though we want to use [textures](https://en.wikipedia.org/wiki/Texture_mapping). To keep it simple, texture allow us to apply custom images to our geometry. Textures are [resources](https://heaps.io/documentation/resource-management.html) that need to be loaded into your Heaps application. Once your textures are loaded they need to be added to materials and then applied to geometry.
 
 Using the geometry from our previous example lets take a look at how to use textures.
 
@@ -94,10 +94,10 @@ Our Haxe Cube with BlendMode.Add applied
 ![Cube with texture](img/h3d/mat_blend.jpg)
 
 ### See Also
-[Lights](/documentation/h3d/Lights.html)
+[Lights](https://heaps.io/documentation/lights.html)
 
-[Shadows](/documentation/h3d/shadows.html)
+[Shadows](https://heaps.io/documentation/shadows.html)
 
-[PBR Materials](/documentation/h3d/PBRMaterials.html)
+[PBR Materials](https://heaps.io/documentation/pbr-materials.html)
 
 [Material (API)](/api/h3d/mat/Material.html)
