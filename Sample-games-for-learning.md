@@ -1,4 +1,4 @@
-# Template games
+# Sample games for learning
 
 Sample games that demonstrate how to use Heaps to make very basic games of different genres.
 
