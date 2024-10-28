@@ -108,8 +108,8 @@ Use following settings:
 
 [Hiero](https://libgdx.com/wiki/tools/hiero) can be utilized to generate fonts with extra filters as well as SDF fonts.
 
-* Refer to this instruction to generate SDF fonts: [Distance Field Fonts](https://github.com/libgdx/libgdx/wiki/Distance-field-fonts)
-* Refer to this page for general instruction on Hiero usage: [Hiero](https://github.com/libgdx/libgdx/wiki/Hiero)
+* Refer to this instruction to generate SDF fonts: [Distance Field Fonts](https://libgdx.com/wiki/graphics/2d/fonts/distance-field-fonts)
+* Refer to this page for general instruction on Hiero usage: [Hiero](https://libgdx.com/wiki/tools/hiero)
 
 ### Using fontgen tool
 
