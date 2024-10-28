@@ -50,7 +50,7 @@
   * [[External libraries]]
     * [[Demo of Slide]]
     * [[HaxeUI]]
-* [[Template games]]
+* [[Sample games for learning]]
     * [[Breakout]]
     * [[Platform game]]
     * [[Rogue]]
