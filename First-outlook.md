@@ -25,11 +25,11 @@ You can also learn from external public repositories from other **members of the
 - [Smallest-Heaps-Examples](https://github.com/Beeblerox/Simplest-Heaps-Examples) by Beeblerox
 - [haxe-heaps-examples](https://github.com/joereynolds/haxe-heaps-examples) by Joe Reynolds
 
-### 🎈 Template games for learning
+### 🎈 Sample games for learning
 
 Learn from **simple games** made for beginners/learning
 
-- [[Template games]]
+- [[Sample games for learning]]
 
 ### 🐾 Step-by-step Tutorials
 
