@@ -1,4 +1,4 @@
-In order to convert automatically some [Resources](Resource-Management) present in the `res` directory into a more appropriate runtime format, Heaps file system supports resource baking.
+In order to convert automatically some [Resources](https://heaps.io/documentation/resource-management.html) present in the `res` directory into a more appropriate runtime format, Heaps file system supports resource baking.
 
 This can be controlled by adding `props.json` configuration files in your `res` directory.
 

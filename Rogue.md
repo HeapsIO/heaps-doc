@@ -1,6 +1,6 @@
 # Rogue
 
-This is a simple template to make a game inspired by [Rogue from 1980](https://en.wikipedia.org/wiki/Rogue_(video_game)), thus to make a [*roguelike*](https://en.wikipedia.org/wiki/Roguelike).
+This is a simple template to make a game inspired by [Rogue from 1980](<https://en.wikipedia.org/wiki/Rogue_(video_game)>), thus to make a [_roguelike_](https://en.wikipedia.org/wiki/Roguelike).
 
 ## Screenshot
 
@@ -117,6 +117,7 @@ class Roguelike extends hxd.App {
 ```
 
 ## hxml-file sample when using HashLink
+
 ```
 -lib heaps
 -lib hlsdl

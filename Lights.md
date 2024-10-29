@@ -59,4 +59,4 @@ s3d.lightSystem.ambientLight.set(0, 0, 0);
 ```
 
 ### See Also
-[Shadows](/documentation/h3d/shadows.html).
+[Shadows](https://heaps.io/documentation/shadows.html).

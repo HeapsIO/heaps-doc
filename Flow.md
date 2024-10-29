@@ -1,6 +1,6 @@
 # Flow
 
-The [`h2d.Flow` class](https://heaps.io/api/h2d/Flow.html) allows to properly *arrange* [child objects](Object-trees) (`h2d.Object`).
+The [`h2d.Flow` class](https://heaps.io/api/h2d/Flow.html) allows to properly *arrange* [child objects](https://heaps.io/documentation/object-trees.html) (`h2d.Object`).
 
 ## A first glance at Flows
 
