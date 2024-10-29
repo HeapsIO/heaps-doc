@@ -2,7 +2,16 @@
 
 The [`h2d.Flow` class](https://heaps.io/api/h2d/Flow.html) allows to properly *arrange* [child objects](https://heaps.io/documentation/object-trees.html) (`h2d.Object`).
 
-## A first glance at Flows
+The most detailed sample can be found [in our repository](https://github.com/HeapsIO/heaps/blob/master/samples/Flows.hx) (which you'll also find on your local machine: `HaxeToolkit\haxe\lib\heaps\git\samples\Flows.hx`)
+
+![3 flows with text inline inside 3 flows column](https://github.com/user-attachments/assets/e3dd5e0b-f0c8-48bb-8c01-328058e57f63)
+
+Flows can also rearrange text:
+
+![flow + text resize](https://github.com/user-attachments/assets/ad2cbffb-9ca7-4a98-9454-ccf6f9396160)
+
+
+## More code samples
 
 ### Demo 1
 
@@ -131,9 +140,6 @@ class FlowsDemo2 extends hxd.App {
 }
 ```
 
-## More samples
+### Demo 3
 
-There are other samples you can look at and learn from:
-
-- Another interactive [example to understand the use of Flows](https://github.com/Beeblerox/Simplest-Heaps-Examples/tree/master/20_heaps_flow)
-- The most detailed sample at this moment can be found [in our repository](https://github.com/HeapsIO/heaps/blob/master/samples/Flows.hx) (which you'll also find on your local machine: `HaxeToolkit\haxe\lib\heaps\git\samples\Flows.hx`)
+Another interactive [example to understand the use of Flows](https://github.com/Beeblerox/Simplest-Heaps-Examples/tree/master/20_heaps_flow)
