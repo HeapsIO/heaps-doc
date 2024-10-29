@@ -100,4 +100,4 @@ Our Haxe Cube with BlendMode.Add applied
 
 [PBR Materials](https://heaps.io/documentation/pbr-materials.html)
 
-[Material (API)](/api/h3d/mat/Material.html)
+[Material (API)](https://heaps.io/api/h3d/mat/Material.html)

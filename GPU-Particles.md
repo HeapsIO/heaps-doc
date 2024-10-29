@@ -23,7 +23,7 @@ particles.addGroup(particleGroup);
 
 ## Customizing Particles
 
-GPU Particles have a lot of properties that can be modified to give your particles different behavior.  See the [API](api/h3d/parts/GpuPartGroup.html) docs for a full list.
+GPU Particles have a lot of properties that can be modified to give your particles different behavior.  See the [API](https://heaps.io/api/h3d/parts/GpuPartGroup.html) docs for a full list.
 
 ```haxe
 //The shape at which the particles will be emitted each ar of type GPUEmitMode

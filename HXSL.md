@@ -82,10 +82,10 @@ The final resulting shader will then be compiled to the target platform native s
 
 # Shader examples
 
-There are several shader examples available in the [h3d.shader](api/h3d/shader) package.
+There are several shader examples available in the [h3d.shader](https://heaps.io/api/h3d/shader) package.
 
 These shaders mostly uses definitions present in either:
 
-* [Base2d](api/h3d/shader/Base2d.html) for all 2D display
-* [BaseMesh](api/h3d/shader/BaseMesh.html) for all 3D display
-* [ScreenShader](api/h3d/shader/ScreenShader.html) for fullscreen effect / post-process
+* [Base2d](https://heaps.io/api/h3d/shader/Base2d.html) for all 2D display
+* [BaseMesh](https://heaps.io/api/h3d/shader/BaseMesh.html) for all 3D display
+* [ScreenShader](https://heaps.io/api/h3d/shader/ScreenShader.html) for fullscreen effect / post-process

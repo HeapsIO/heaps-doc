@@ -26,4 +26,4 @@ interaction.onClick = function(event) {
 }
 ```
 
-All events callbacks receive a [`hxd.Event`](api/hxd/Event.html) instance, which contains info about the event.
+All events callbacks receive a [`hxd.Event`](https://heaps.io/api/hxd/Event.html) instance, which contains info about the event.
