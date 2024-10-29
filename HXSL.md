@@ -89,3 +89,7 @@ These shaders mostly uses definitions present in either:
 * [Base2d](https://heaps.io/api/h3d/shader/Base2d.html) for all 2D display
 * [BaseMesh](https://heaps.io/api/h3d/shader/BaseMesh.html) for all 3D display
 * [ScreenShader](https://heaps.io/api/h3d/shader/ScreenShader.html) for fullscreen effect / post-process
+
+# Additional resources
+
+* [HXSL cheat sheet](https://gist.github.com/Yanrishatum/6eb2f6de05fc951599d5afccfab8d0a9) by Yanrishatum
