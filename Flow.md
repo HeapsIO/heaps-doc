@@ -2,13 +2,14 @@
 
 The [`h2d.Flow` class](https://heaps.io/api/h2d/Flow.html) allows to properly *arrange* [child objects](https://heaps.io/documentation/object-trees.html) (`h2d.Object`).
 
-The most detailed sample can be found [in our repository](https://github.com/HeapsIO/heaps/blob/master/samples/Flows.hx) (which you'll also find on your local machine: `HaxeToolkit\haxe\lib\heaps\git\samples\Flows.hx`)
+(The most detailed sample can be found [in our repository](https://github.com/HeapsIO/heaps/blob/master/samples/Flows.hx), which you'll also find on your local machine: `HaxeToolkit\haxe\lib\heaps\git\samples\Flows.hx`)
 
 ![3 flows with text inline inside 3 flows column](https://github.com/user-attachments/assets/e3dd5e0b-f0c8-48bb-8c01-328058e57f63)
 
 Flows can also rearrange text:
 
-![flow + text resize](https://github.com/user-attachments/assets/ad2cbffb-9ca7-4a98-9454-ccf6f9396160)
+![flow + text resize](https://github.com/user-attachments/assets/23093524-35b9-4d38-9132-071bc6e5c5ed)
+
 
 
 ## More code samples
