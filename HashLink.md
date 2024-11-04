@@ -2,17 +2,28 @@
 
 [HashLink](https://hashlink.haxe.org/) is a virtual machine for the Haxe programming language.  By targeting HashLink you are also able to generate Native C code for your project.
 
-Heaps is able to support both SDL and DirectX. In order to specify which you'd like to use, you simple need to include the appropriate library when compiling your project.
+A step by step guide can be found in [[Hello-HashLink]].
 
-For DirectX
-```hxml
--lib hldx
-```
+HashLink is able to support both [SDL](https://lib.haxe.org/p/hlsdl) and [DirectX](https://lib.haxe.org/p/hldx). At least one and only one is required.
+[OpenAL](https://lib.haxe.org/p/hlopenal) provides using sound.
 
 For SDL
 ```hxml
 -lib hlsdl
 ```
+
+For DirectX (Windows)
+```hxml
+-lib hldx
+```
+
+OpenAL (for sound)
+```hxml
+-lib hlopenal
+```
+
+More available libraries can be found [here](https://lib.haxe.org/search/?v=hashlink).
+
 
 ## Compile for HashLink:
 
@@ -28,9 +39,28 @@ To compile for HashLink use the following example.
 
 # libraries
 -lib heaps
--lib hldx
-#-lib hlsdl
+-lib hlsdl
+#-lib hldx
 
 # output
 -hl bin/game.hl
 ```
+
+
+## Hot Reload
+
+Hot reload allows to program new features into a game ***while*** it is running.
+
+Use the following flag to allow that Hot Reload is being used.
+```
+-D hot-reload
+```
+
+Now run your HashLink program with
+`hl --hot-reload mygame.hl`
+
+Now everytime you re-compile, the running game also gets updated.
+
+Note that this has its limits and this feature is still under development and being tested. Currently no new fields can be implemented. However it works well for modifying the behaviour of an already existing method (class function), for instance the `update` method and all other functions called inside it.
+
+(See details here: https://github.com/HaxeFoundation/hashlink/wiki/Hot-Reload)
