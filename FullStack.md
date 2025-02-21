@@ -11,6 +11,7 @@ Since I often get asked about how we are making games, I thought it would be nic
 **Haxe/Heaps Community**
 
 In case you have any question or want to discuss parts of what I'm presenting here, you can get in touch with the Haxe/Heaps Community:
+
 - Using [Discord](https://discord.gg/sWCGm33) **#heaps** channel
 - With the [Haxe Forum](https://community.haxe.org/) for Haxe language questions
 - With the [Heaps Forum](https://community.heaps.io/) for Heaps specific questions
@@ -65,6 +66,7 @@ For all games code and tools development we are using [Haxe](https://haxe.org) p
 Of course as the main designer of Haxe language I'm a bit biased, but it's important to know that every developer at Shiro really enjoy developing with Haxe on a daily basis, and it's a critical tool for our daily productivity. Also, we have recruited developers with various programming backgrounds (C++, C#, Javascript, Python, Java, etc.) and they all have been able to quickly adapt to Haxe and write efficient code.
 
 Haxe is a cross platform programming language, which can output code for many different targets. We are using mostly two targets at Shiro:
+
 - the Hashlink target for our games
 - the JavaScript target for our tools _(more on that as part of the tools section below)_
 
@@ -81,6 +83,7 @@ You can learn more about Haxe on it's [website](https://haxe.org)
 ![image](https://heaps.io/img/h3d/pbr_1.jpg)
 
 [Heaps.io](https://heaps.io) is the game engine that powers our games at Shiro. It covers the following:
+
 - 2D rendering
 - 3D rendering
 - Sound handling
@@ -88,12 +91,14 @@ You can learn more about Haxe on it's [website](https://haxe.org)
 - Resource management
 
 It's been built to separate the low level platform implementation features from the mid level graphics logics/data. This architecture allows us to integrate new renderers or platforms by just porting a few classes given that the native libraries are been made available in HashLink. Heaps.io supports the following plaforms/renderer:
+
 - HashLink with DirectX11
 - HashLink with OpenGL/SDL2
 - HashLink/C with NVN (Nintendo Switch SDK native graphics api)
 - HashLink/C with GNM (PS4 SDK native graphics api)
 - HashLink/C for XBoxOne SDK
 - Javascript with WebGL2
+
 *HashLink/C here means that we can only use the Hashlink C output, not the JIT VM
 
 Heaps.io has been designed to be very lightweight and highly customizable. It provides a 2D/3D scene graph and each Object in the scene can be extended to enrich the behavior. The renderer and lighting system can also be entirely replaced, allowing to write a very game-specific rendering pipeline.
@@ -115,6 +120,7 @@ You can learn more about Heaps.io using dedicated website, or browsing its [Docu
 HIDE is an HTML5 application running Heaps.io engine in WebGL2 mode, so you can very quickly develop user interface using Haxe and HTML/CSS.
 
 At the moment HIDE supports:
+
 - Resources tree explorer
 - 2D texture viewer
 - 3D FBX model viewer and material editor
@@ -205,6 +211,7 @@ MPMan is built on top of HxBit for the network part, and contains additional uti
 It's the only closed source library as part of the framework, as it contains some confidential information regarding our multiplayer infrastructure.
 
 It covers the following:
+
 - player authentication across platforms
 - multiplayer lobby system, rankings, game server instances query
 - platform multiplayer invitations

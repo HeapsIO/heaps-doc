@@ -7,6 +7,7 @@ Hide supports a prefab system that allows to define custom components and extend
 # Prefab Definition
 
 A Prefab is an object that contains data that can be authored in Hide. Some prefabs also come with either a 2D or 3D display. Prefabs are used for a wide range of things, such as:
+
 - editing 2D and 3D scenes
 - shaders setup and preview
 - 2D and 3D timeline fxs and particles
@@ -14,6 +15,7 @@ A Prefab is an object that contains data that can be authored in Hide. Some pref
 - your own custom prefabs
 
 Unlike some other IDEs, prefabs are not meant to be gameplay objects. They are purely data and usually will not contain any gameplay code. They are meant to be setups that are loaded and manipulated by the game to create gameplay. This design allow the **separation of concerns** by splitting the difficult problem of creating a game into two parts:
+
 - prefabs are responsible for editing and storing the game data. The focus is on ease of editing and clean data storage.
 - your game code is responsible for consuming the prefabs to run the game
 
