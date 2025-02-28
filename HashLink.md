@@ -15,9 +15,9 @@ For SDL
 -lib hlsdl
 ```
 
-## For HashLink/JIT:
+## Compile for HashLink/JIT:
 
-To compile for HashLink use the following example.
+To compile for hl/jit, use the following example.
 
 ```hxml
 # class paths
@@ -45,7 +45,7 @@ hl bin/game.hl
 
 ## Compile for HashLink/C:
 
-Alternatively, you can compile in hl/c, and compile with a C compiler.
+Alternatively, you can compile for hl/c, and then compile C files with a C compiler.
 
 ```hxml
 # class paths (same as hl/jit)
@@ -77,7 +77,7 @@ For template, see also [Hashlink#706](https://github.com/HaxeFoundation/hashlink
 
 ### Visual Studio
 
-If you're using Visual Studio, add the following line in your hxml file, and compile using `bin/game.sln`:
+If you're using Visual Studio, add the following line in your hxml file:
 
 ```hxml
 # use a Visual Studio template
@@ -85,3 +85,21 @@ If you're using Visual Studio, add the following line in your hxml file, and com
 -D hlgen.makefilepath=bin
 #-D hlgen.makefile.jumbo=false
 ```
+
+You'll need to set an environment variable `HASHLINK` point to your hashlink installation folder.
+
+You can then compile using `bin/game.sln`, or with this sample makefile:
+
+```makefile
+PLATFORM=x64
+MS_BUILD?="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe"
+#MS_BUILD?="C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe"
+CONFIG?=Release
+
+all:
+	$(MS_BUILD) game.sln -t:game -nologo -verbosity:minimal -property:Configuration=$(CONFIG) -property:Platform=$(PLATFORM)
+```
+
+## Distribution
+
+See [Hashlink Wiki Distribution & Packaging](https://github.com/HaxeFoundation/hashlink/wiki/Distribution-&--Packaging).
