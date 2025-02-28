@@ -5,12 +5,14 @@
 Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation) both Heaps and Visual Studio Code, let's create a new Heaps application.
 
 ## Differences with the [[Hello World]] tutorial
+
 * `compile.hxml` needs a different compilation target, `hl`, and other libraries to manage rendering
 * There's no need for an `index.html` file
 * The launch.json file is different to handle hashlink
 
 
 ## Concepts
+
 * Heaps uses a `compile.hxml` file to tell it what to compile, how and where to compile it, and which libraries to include.
 * The entry point of a Haxe program is a class containing a static function called `main`.
 * A simple heaps directory structure will look like this:
@@ -29,6 +31,7 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 * Create a new directory named `helloHeaps`
 * Create a new file called `compile.hxml`
 * Add the following lines to your newly created file
+
 ```
 -cp src
 -lib heaps
@@ -38,12 +41,12 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 -main Main
 ```
 
- - ``-cp src`` Tells haxe where to search for your code files
- - ``-lib heaps`` Tells haxe to import the heaps library
- - ``-lib format`` Tells haxe to import the format library containing Hashlink API for native image conversion (it is recommanded to install the lib with `haxelib git format https://github.com/HaxeFoundation/format`)
- - ``-lib hlsdl`` Tells haxe to import the hlsdl rendering library
- - ``-hl hello.hl`` Tells haxe to compile to hashlink bytecode in the project directory
- - ``-main Main`` Tells haxe that Main.hx is your entry point
+- ``-cp src`` Tells haxe where to search for your code files
+- ``-lib heaps`` Tells haxe to import the heaps library
+- ``-lib format`` Tells haxe to import the format library containing Hashlink API for native image conversion (it is recommanded to install the lib with `haxelib git format https://github.com/HaxeFoundation/format`)
+- ``-lib hlsdl`` Tells haxe to import the hlsdl rendering library
+- ``-hl hello.hl`` Tells haxe to compile to hashlink bytecode in the project directory
+- ``-main Main`` Tells haxe that Main.hx is your entry point
 
 The `-lib hlsdl` tells Heaps to compile with SDL/OpenGL support. If you are on Windows you can also use `-lib hldx` or `-lib hldx -D dx12`.
 
@@ -75,6 +78,7 @@ To be able to compile and debug your application directly from vscode, you need 
 If it does not already exist, create a `.vscode` directory in your project folder and create a new file called `launch.json`.
 
 Add the following code to the file:
+
 ```json
 {
 	"version": "0.2.0",
@@ -124,6 +128,7 @@ This is done by changing `compile.hxml` to use `-hl out/main.c` instead of `-hl 
 This will create a directory `out` containing a lot of generated C code that needs to be built using a native compiler and linked to the same HashLink runtime that the HashLink virtual machine is using.
 
 Compiling on mobile and console thus requires some knowledge with each platform compilers and build systems:
- * for iOS, look at [this thread](https://github.com/HaxeFoundation/hashlink/issues/144)
- * for Android, look at [this thread](https://github.com/HaxeFoundation/hashlink/issues/109)
- * for Consoles (Nintendo Switch, Sony PS4, Microsoft XBoxOne), please contact us at nicolas `@` haxe.org if you are a registered developer for one or several of these
+
+* for iOS, look at [this thread](https://github.com/HaxeFoundation/hashlink/issues/144)
+* for Android, look at [this thread](https://github.com/HaxeFoundation/hashlink/issues/109)
+* for Consoles (Nintendo Switch, Sony PS4, Microsoft XBoxOne), please contact us at nicolas `@` haxe.org if you are a registered developer for one or several of these

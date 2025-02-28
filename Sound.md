@@ -37,8 +37,11 @@ if(musicResource != null){
 ## Channel, ChannelGroup and SoundGroup
 
 Each Channel instance belong to one SoundGroup and one ChannelGroup that allow to mass-control certain parameters of Channels.
+
 ### Channel
+
 Channel instance represents actively playing sound. It's possible to control following parameters on each Channel:
+
 * `priority`: Priority of the Channel instance (when limiting maximum audible channels, lowest priority Channels get muted when limit is reached)
 * `mute`: Mutes channels. Note that playback still continues when channel is muted.
 * `volume`: Control volume of the Channel.
@@ -87,8 +90,10 @@ sound.removeEffect(pitch);
 ### Platform-specific limitations
 
 #### HTML5
+
 * Pitch: Due to how WebAudio works, changing pitch gradually can lead to audio cuts. This cannot be avoided due to pitch being applied only once in 128 samples and impossibility to obtain accurate current sample of audio buffer.
 * Spatialization: Velocity is not supported.
 
 #### OpenAL (Hashlink)
+
 * Spatialization: Only mono sounds are supported. (Use SoundGroup.mono to force mono playback)

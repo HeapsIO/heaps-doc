@@ -12,14 +12,14 @@ var tile = hxd.Res.myDirectory.myBitmap.toTile();
 
 Please note that this is strictly typed: hxd.Res will look into the `res` directory of your project (or the directory specified by `-D resourcesPath=...` haxe compilation parameter). It will then list all directories and files, and depending on the file extension, it will provide you access to the following resources:
 
- * `png,jpg,jpeg,gif`: [hxd.res.Image](https://heaps.io/api/hxd/res/Image.html)
- * `wav,mp3,ogg` : [hxd.res.Sound](https://heaps.io/api/hxd/res/Sound.html)
- * `fbx,hmd`: [hxd.res.Model](https://heaps.io/api/hxd/res/Model.html)
- * `fnt` (+png): [hxd.res.BitmapFont](https://heaps.io/api/hxd/res/BitmapFont.html)
- * `ttf`: [hxd.res.Font](https://heaps.io/api/hxd/res/Font.html)
- * `tmx`: [hxd.res.TiledMap](https://heaps.io/api/hxd/res/TiledMap.html)
- * `atlas`: [hxd.res.Atlas](https://heaps.io/api/hxd/res/Atlas.html)
- * other: [hxd.res.Resource](https://heaps.io/api/hxd/res/Resource.html) (still allows you to read binary data)
+* `png,jpg,jpeg,gif`: [hxd.res.Image](https://heaps.io/api/hxd/res/Image.html)
+* `wav,mp3,ogg` : [hxd.res.Sound](https://heaps.io/api/hxd/res/Sound.html)
+* `fbx,hmd`: [hxd.res.Model](https://heaps.io/api/hxd/res/Model.html)
+* `fnt` (+png): [hxd.res.BitmapFont](https://heaps.io/api/hxd/res/BitmapFont.html)
+* `ttf`: [hxd.res.Font](https://heaps.io/api/hxd/res/Font.html)
+* `tmx`: [hxd.res.TiledMap](https://heaps.io/api/hxd/res/TiledMap.html)
+* `atlas`: [hxd.res.Atlas](https://heaps.io/api/hxd/res/Atlas.html)
+* other: [hxd.res.Resource](https://heaps.io/api/hxd/res/Resource.html) (still allows you to read binary data)
 
 
 ## Resources loader
@@ -66,15 +66,15 @@ Resources files are accessed through a virtual file system which implements the 
 
 Heaps already provides several file systems, such as:
 
- * [EmbedFileSystem](https://heaps.io/api/hxd/fs/EmbedFileSystem.html) will gives access to the resources which are embedded with your code (using haxe `-resource` compilation flag). On platforms such as JavaScript, this allows you to have both your code and assets stored in a single file.
- * [LocalFileSystem](https://heaps.io/api/hxd/fs/LocalFileSystem.html) which gives access to a local file system directory where your resources are stored. This require hard drive access so it is not available in the browser for example.
- * [hxd.fmt.pak.FileSystem](https://heaps.io/api/hxd/fmt/pak/FileSystem.html) will read a `.pak` file which contains all resources packaged into a single binary. The PAK file can be loaded at runtime and several PAK files can be used, the latest loaded being able to override the resources declared in previously loaded PAK files.
+* [EmbedFileSystem](https://heaps.io/api/hxd/fs/EmbedFileSystem.html) will gives access to the resources which are embedded with your code (using haxe `-resource` compilation flag). On platforms such as JavaScript, this allows you to have both your code and assets stored in a single file.
+* [LocalFileSystem](https://heaps.io/api/hxd/fs/LocalFileSystem.html) which gives access to a local file system directory where your resources are stored. This require hard drive access so it is not available in the browser for example.
+* [hxd.fmt.pak.FileSystem](https://heaps.io/api/hxd/fmt/pak/FileSystem.html) will read a `.pak` file which contains all resources packaged into a single binary. The PAK file can be loaded at runtime and several PAK files can be used, the latest loaded being able to override the resources declared in previously loaded PAK files.
 
 You can initialize the resource loader and filesystem by yourself, or use one of the following shortcuts:
 
- * `hxd.Res.initEmbed()` for EmbedFileSystem - this will also trigger the embedding of all files present in your resource directory into your code
- * `hxd.Res.initLocal()` for LocalFileSystem
- * `hxd.Res.initPak()` for PAK FileSystem - this will load res.pak, res1.pak, res2.pak, etc. from the local filesystem - until no file is found.
+* `hxd.Res.initEmbed()` for EmbedFileSystem - this will also trigger the embedding of all files present in your resource directory into your code
+* `hxd.Res.initLocal()` for LocalFileSystem
+* `hxd.Res.initPak()` for PAK FileSystem - this will load res.pak, res1.pak, res2.pak, etc. from the local filesystem - until no file is found.
 
 ## Building PAK
 
@@ -117,7 +117,9 @@ hxd.Res.monster_stats.watch(reloadParameters);
 // When app no longer need to watch the resource, callback can be removed by passing `null` callback.
 hxd.Res.monster_stats.watch(null);
 ```
+
 Things to be aware of:
+
 * Only one callback can be present for a resource and new one will override old one.
 * When using `watch` to resouces with built-in support - it will break the built-in live update of said resource.
 

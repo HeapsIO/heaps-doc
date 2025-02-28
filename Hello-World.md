@@ -21,6 +21,7 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 * Create a new directory named `helloHeaps`
 * Create a new file called `compile.hxml`
 * Add the following lines to your newly created file
+
 ```
 -cp src
 -lib heaps

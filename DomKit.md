@@ -58,6 +58,7 @@ flow.box {
 ## Runtime CSS reload
 
 In order to get runtime CSS reload you need to:
+
 * use a `hxd.Res.initLocal()` so you use a local filesystem to load resources. This is only available on some platforms such as HashLink
 * enable live update of resources: `hxd.res.Resource.LIVE_UPDATE = true;` (enabled by default on `-D debug` builds)
 
@@ -105,6 +106,7 @@ You can then use middle mouse button click anytime to enable/disable DomKit insp
 # Defining custom Components
 
 In order to define custom components, you need to:
+
 * implements `h2d.domkit.Object` (if not already inherited from your superclass)
 * add `@:p` for each property you wish to expose to DomKit markup/CSS
 * you can add `@:uiComp("name")` metadata in order to customize the component name

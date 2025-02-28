@@ -6,8 +6,8 @@ See the following example on how to prepare your Heaps project for HTML5.
 
 ## Compile for Javascript:
 
- * You will also have to create an index.html that includes your .js haxe output.
- * Also put a `<canvas id="webgl"></canvas>` in body of the HTML-file.
+* You will also have to create an index.html that includes your .js haxe output.
+* Also put a `<canvas id="webgl"></canvas>` in body of the HTML-file.
 
 ### Basic hxml
 

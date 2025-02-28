@@ -57,9 +57,9 @@ _To confirm your current version of Haxe, type `haxe --version` in the command l
 ## Install additional libraries
 Using `haxelib install` in the command line, install the following items:
 
-  * [`hlopenal`](https://lib.haxe.org/p/hlopenal) for OpenAL support
-  * [`hldx`](https://lib.haxe.org/p/hldx) for DirectX support
-  * [`hlsdl`](https://lib.haxe.org/p/hlsdl) for SDL/GL support
+* [`hlopenal`](https://lib.haxe.org/p/hlopenal) for OpenAL support
+* [`hldx`](https://lib.haxe.org/p/hldx) for DirectX support
+* [`hlsdl`](https://lib.haxe.org/p/hlsdl) for SDL/GL support
 
 ```
 haxelib install hlopenal
