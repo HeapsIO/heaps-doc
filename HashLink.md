@@ -62,7 +62,7 @@ Alternatively, you can compile for hl/c, and then compile C files with a C compi
 #-lib hlsdl
 
 # output
--hl bin/hlcout/game.c
+-hl bin/hlout/game.c
 ```
 
 ### GCC
@@ -71,7 +71,7 @@ If you're using GCC, you can build with:
 
 ```
 cd bin
-gcc -O3 -o mygame -std=c11 -I hlcout hlcout/game.c -lhl -lheaps.hdll -lui.hdll -lfmt.hdll [-L/path/to/required/hdll]
+gcc -O3 -o mygame -std=c11 -I hlout hlout/game.c -lhl -lheaps.hdll -lui.hdll -lfmt.hdll [-L/path/to/required/hdll]
 ```
 
 For template, see also [Hashlink#706](https://github.com/HaxeFoundation/hashlink/pull/706).
