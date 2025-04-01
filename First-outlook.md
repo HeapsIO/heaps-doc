@@ -10,7 +10,7 @@ Things you should try out.
 
 [Unofficial Heaps FAQ](https://gist.github.com/Yanrishatum/ae3725a9e2b45e0766c065e573ed1f24#an-unofficial-heaps-faq)
 
-### ⭐️ Github samples
+### ⭐️ GitHub samples
 
 Besides the [samples you can run online on the Heaps site](https://heaps.io/samples/) you should try the many [**samples from the github repository**](https://github.com/HeapsIO/heaps/#samples).
 
@@ -20,7 +20,7 @@ When compiling the `all.hxml` file all samples should get compiled (which curren
 
 ### 👩‍💻👨‍💻 Samples from other users
 
-You can also learn from external public repositories from other **members of the community**
+You can also learn from external public repositories from other **members of the community**.
 
 - [Smallest-Heaps-Examples](https://github.com/Beeblerox/Simplest-Heaps-Examples) by Beeblerox
 - [haxe-heaps-examples](https://github.com/joereynolds/haxe-heaps-examples) by Joe Reynolds
@@ -40,7 +40,7 @@ Learn from step-by-step **tutorials**
 
 ### 🏰 Complete games (open source)
 
-Learn from **complete games** that where created for game jams and are open source: [[Jam games]]
+Learn from **complete games** that were created for game jams and are open source: [[Jam games]]
 
 ### 🌐 Community
 
