@@ -4,7 +4,7 @@ In order to get up and running Heaps you'll need to install Haxe (the language),
 
 ## Installing Haxe
 
-Heaps works on Haxe 3.4.2+, though it is recommanded to install Haxe 4+ to enjoy new language features and support the HashLink compiler target.
+Heaps works on Haxe 3.4.2+, though it is recommended to install Haxe 4+ to enjoy new language features and support the HashLink compiler target.
 
 <img src="https://cloud.githubusercontent.com/assets/576184/3142589/5e2c41a0-e9c9-11e3-9608-75ec07df40e7.png" height="30"/>&nbsp;&nbsp;&nbsp;<a href="https://haxe.org/download/">Download Haxe 4+</a>
 
@@ -15,9 +15,10 @@ In your command line interface of choice, run:
 ```
 haxelib install heaps
 ```
-_Note that in some cases you might need to log out and log back into your computer for haxlib to be recognized as a command._
+_Note that in some cases you might need to log out and log back into your computer for haxelib to be recognized as a command._
 
-You can also install directly from github to get the latest, bleeding-edge version of Heaps.
+You can also install directly from github to get the latest, bleeding-edge version of Heaps (at the moment this is the **recommended** option).
+
 ```
 haxelib git heaps https://github.com/HeapsIO/heaps.git
 ```
@@ -47,26 +48,32 @@ Download and install the [HashLink](https://github.com/HaxeFoundation/hashlink/r
 
 _On OSX, you will have to follow the instructions laid out [here](https://github.com/HaxeFoundation/hashlink#building-on-linuxosx) to get set up with Hashlink, as the process is a little different._
 
-Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm). 
+Once you've downloaded the HashLink binary you'll want to add it to your system PATH [(tutorial)](https://www.computerhope.com/issues/ch000549.htm).
 
 ### Update Haxe
-Make sure you are using at least [Haxe 4+](https://haxe.org/download/).  
+Make sure you are using at least [Haxe 4+](https://haxe.org/download/).
 _To confirm your current version of Haxe, type `haxe --version` in the command line._
 
 ## Install additional libraries
-Using `haxelib install` in the command line, install the following items:  
+Using `haxelib install` in the command line, install the following items:
 
-  * [`hlopenal`](https://lib.haxe.org/p/hlopenal) for OpenAL support
-  * [`hldx`](https://lib.haxe.org/p/hldx) for DirectX support
-  * [`hlsdl`](https://lib.haxe.org/p/hlsdl) for SDL/GL support
+* [`hlopenal`](https://lib.haxe.org/p/hlopenal) for OpenAL support
+* [`hldx`](https://lib.haxe.org/p/hldx) for DirectX support
+* [`hlsdl`](https://lib.haxe.org/p/hlsdl) for SDL/GL support
 
 ```
 haxelib install hlopenal
-haxelib install hsdl
+haxelib install hlsdl
 haxelib install hldx
 ```
 
+You can also install these libraries directly from github to get the latest versions (**recommended**):
+```
+haxelib git hlopenal https://github.com/HaxeFoundation/hashlink master libs/openal
+haxelib git hlsdl https://github.com/HaxeFoundation/hashlink master libs/sdl
+haxelib git hldx https://github.com/HaxeFoundation/hashlink master libs/directx
+```
 ## Verify the installation
-Once everything is setup, you should be able to run `hl` command from your terminal:
+Once everything is setup, you should be able to run `hl` command from your terminal (note: the version will likely be different):
 
 ![image](https://user-images.githubusercontent.com/1022912/45916745-4ef11280-be6b-11e8-8d9a-9405508ff014.png)

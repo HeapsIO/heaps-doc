@@ -1,4 +1,4 @@
-In order to convert automatically some [Resources](Resource-Management) present in the `res` directory into a more appropriate runtime format, Heaps file system supports resource baking.
+In order to convert automatically some [Resources](https://heaps.io/documentation/resource-management.html) present in the `res` directory into a more appropriate runtime format, Heaps file system supports resource baking.
 
 This can be controlled by adding `props.json` configuration files in your `res` directory.
 
@@ -17,6 +17,7 @@ This will look for a `hxd.fs.Convert` registered instance that is capable of tra
 So when reading the `wav` content, you will instead get the `ogg` data. This is not a problem since heaps resources automatically detect the file type based on its data and not from its file extension.
 
 Any resource file system will perform theses conversions:
+
 - LocalFileSystem at runtime, upon accessing the desired file
 - EmbedFileSytem at compile time, before embedding all files
 - PakFileSystem at PAK building time.
@@ -70,7 +71,7 @@ On the right side of each _Rule_, there's a convert _Command_. Commands have the
 
 ## Custom Converts
 
-Although Heaps already provide (some converts)[https://github.com/HeapsIO/heaps/blob/master/hxd/fs/Convert.hx] you can of course write your own in order to perform any resource transform your project needs.
+Although Heaps already provide [some converts](https://github.com/HeapsIO/heaps/blob/master/hxd/fs/Convert.hx) you can of course write your own in order to perform any resource transform your project needs.
 
 Here's an example:
 
@@ -82,7 +83,7 @@ class MyCustomConvert extends hxd.fs.Convert {
     override function convert() {
         // make a simple copy
         var bytes = sys.io.File.getBytes(srcPath);
-        sys.io.File.saveBytes(dstPath, bytes); 
+        sys.io.File.saveBytes(dstPath, bytes);
     }
     // register the convert so it can be found
     static var _ = hxd.fs.Convert.register(new MyCustomConvert());
@@ -100,6 +101,7 @@ Then add the following to your `res/props.json` file:
 ```
 
 Depending on your file system, there are different ways to make sure the convert will be found:
+
 - if using the LocalFileSystem, simply compile it as part of your project
 - if using the PakFileSystem, compile it together with the Pak Builder script before running it
 - if using the EmbedFileSystem, you need to compile it with macros, for instance by adding `--macro MyCustomConvert.doNothing()` to your Haxe project command line parameters and adding a `public static function doNothing() {}` on `MyCustomConvert`
@@ -124,6 +126,7 @@ In order to setup multiple configurations, you can have different sections in yo
 ```
 
 In order to switch configuration, you can use the following:
+
 - for LocalFileSystem, use `hxd.Res.initLocal(configurationName)`
 - for EmbedFileSystem, use `hxd.Res.initEmbed(configurationName)`
 - for Pak File System, run pak builder with `-config <configurationName>`, this will output a `res.<config>.pak` file that you can load using `hxd.Res.initPak("res.<config>")`

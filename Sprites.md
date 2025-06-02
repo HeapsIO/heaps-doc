@@ -3,7 +3,7 @@
 > **DEPRECATION NOTE:**
 > `h2d.Sprite` is now `h2d.Object`. Sprite type is still accessible but is actually a typedef of `h2d.Object` in the API. It has been kept for compatibility reasons.
 
-The following documentation is not maintained.  
+The following documentation is not maintained.
 
 
 The following properties and methods can be accessed on any Sprite:

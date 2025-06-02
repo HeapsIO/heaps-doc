@@ -45,6 +45,7 @@ There are several type of variables in HXSL:
 - `@global` are defined for multiple shaders
 - `@const` are constants that will produce a different shader output if changed
 - `@var` are _varying_ variables that are written in vertex shader and read in pixel shader (optional, hxsl can infer this)
+- `@borrow(path.to.other.Shader)` are foreign uniform references that were declared in another shader which are usually not accessible outside of it (note that borrowed shader has to be added to the shader list, otherwise runtime shader compilation error will occur).
 - normal untagged variables are "pipeline variables" which can be either shader local vars, varying our output variables depending on the pipeline analysis (see below)
 
 ## Shader pipeline
@@ -64,9 +65,9 @@ class MyEffect extends hxsl.Shader {
 }
 ```
 
-The effect can be added to each material **list of shaders**. 
+The effect can be added to each material **list of shaders**.
 
-HXSL will then compile this list into a single shader instance, based on a desired list of **outputs**. 
+HXSL will then compile this list into a single shader instance, based on a desired list of **outputs**.
 
 For instance, we can select either the `output.color` or `output.normal` declared in `MyShader` to either write the normal value or the color value (or we could select both if we want to write to several textures at once, like in [MRT](https://en.wikipedia.org/wiki/Multiple_Render_Targets))
 
@@ -81,10 +82,14 @@ The final resulting shader will then be compiled to the target platform native s
 
 # Shader examples
 
-There are several shader examples available in the [h3d.shader](api/h3d/shader) package.
+There are several shader examples available in the [h3d.shader](https://heaps.io/api/h3d/shader) package.
 
 These shaders mostly uses definitions present in either:
 
-* [Base2d](api/h3d/shader/Base2d.html) for all 2D display
-* [BaseMesh](api/h3d/shader/BaseMesh.html) for all 3D display
-* [ScreenShader](api/h3d/shader/ScreenShader.html) for fullscreen effect / post-process
+* [Base2d](https://heaps.io/api/h3d/shader/Base2d.html) for all 2D display
+* [BaseMesh](https://heaps.io/api/h3d/shader/BaseMesh.html) for all 3D display
+* [ScreenShader](https://heaps.io/api/h3d/shader/ScreenShader.html) for fullscreen effect / post-process
+
+# Additional resources
+
+* [HXSL cheat sheet](https://gist.github.com/Yanrishatum/6eb2f6de05fc951599d5afccfab8d0a9) by Yanrishatum

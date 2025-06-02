@@ -1,23 +1,23 @@
 DomKit is a library that can be used together with Heaps to create complex UI and integrate custom 2D components into it.
 
-You should get install it first using:
+You should install it first using:
 
 `haxelib git domkit https://github.com/HeapsIO/domkit.git`
 
 You can then add it to your project libraries with `-lib domkit` (together with `-lib heaps`)
 
-You can see compile and run the corresponding [Heaps Sample](https://github.com/HeapsIO/heaps/blob/master/samples/Domkit.hx)
+You can see, compile and run the corresponding [Heaps Sample](https://github.com/HeapsIO/heaps/blob/master/samples/Domkit.hx)
 
 # Using Heaps Components
 
-In order to use Domkit to create a heaps components, you simply need to implements `h2d.domkit.Object` and define your document in the `SRC` static as the following sample shows:
+In order to use DomKit to create a Heaps components, you simply need to implements `h2d.domkit.Object` and define your document in the `SRC` static as the following sample shows:
 
 ```haxe
 class SampleView extends h2d.Flow implements h2d.domkit.Object {
 
-    static var SRC = 
-        <sample-view layout="vertical"> 
-            Hello World! 
+    static var SRC =
+        <sample-view class="box" layout="vertical">
+            <text text={"Hello World!"}/>
             <bitmap src={tile} public id="mybmp"/>
         </sample-view>
 
@@ -33,7 +33,7 @@ var view = new SampleView(h2d.Tile.fromColor(0xFF,32,32),s2d);
 view.mybmp.alpha = 0.8;
 ```
 
-You can read more about Domkit Markup Syntax in the reference below.
+You can read more about DomKit Markup Syntax in the reference below.
 
 # Applying CSS
 
@@ -42,14 +42,14 @@ You can then apply CSS at runtime to your document by using the following code:
 ```haxe
 var style = new h2d.domkit.Style();
 // resource referencing res/style.css (see Heaps Resources documentation)
-style.load(hxd.Res.style); 
+style.load(hxd.Res.style);
 style.addObject(view);
 ```
 
-Here's an example CSS that can apply to previous view:
+Here's an example CSS that can be applied to previous view:
 
 ```css
-.box {
+flow.box {
     padding : 20;
     background : #400;
 }
@@ -58,8 +58,9 @@ Here's an example CSS that can apply to previous view:
 ## Runtime CSS reload
 
 In order to get runtime CSS reload you need to:
-* use a `hxd.Res.initLocal()` so you use a local filesystem to load resources. This is only available to some platforms such as HashLink
-* enable resources live update with `hxd.Res.LIVE_UPDATE = true;`
+
+* use a `hxd.Res.initLocal()` so you use a local filesystem to load resources. This is only available on some platforms such as HashLink
+* enable live update of resources: `hxd.res.Resource.LIVE_UPDATE = true;` (enabled by default on `-D debug` builds)
 
 Then every time you modify your CSS file, the style will be reapplied to all your currently displayed components. Errors will be displayed in case of invalid CSS property or wrongly formatted value.
 
@@ -71,9 +72,9 @@ You can add an init macro that will process at compile time your CSS and will re
 domkit.Macros.checkCSS("res/style.css");
 ```
 
-Or my adding to your Haxe compilation parameters :
+Or by adding to your Haxe compilation parameters:
 
-``` 
+```hxml
 --macro domkit.Macros.checkCSS('res/style.css')
 ```
 
@@ -81,32 +82,33 @@ Please note that since each CSS property can be used by different components in 
 
 # Accessing the DOM
 
-When compiled with `-lib domkit`, each `h2d.Object` will have an extra `dom : domkit.Properties` field that can be used for changing the state of the object wrt CSS :
+When compiled with `-lib domkit`, each `h2d.Object` will have an extra `dom : domkit.Properties` field that can be used for changing the state of the object wrt CSS:
 
 ```haxe
 mybmp.dom.addClass("myclass");
 mybmp.dom.hover = true;
 ```
 
-More code can be found in the Heaps Domkit sample.
+More code can be found in the Heaps DomKit sample.
 
-# Domkit Inspector
+# DomKit Inspector
 
-You can inspect your components by enabling the domkit inspector. This is done using
+You can inspect your components by enabling the DomKit inspector. This is done using:
 
 ```haxe
 style.allowInspect = true;
 ```
 
-You can then using middle mouse button click anytime to enable/disable domkit inspector. Move your mouse over any component to see its name, id, classes and properties. You can use the mouse wheel to browse the component hierarchy.
+You can then use middle mouse button click anytime to enable/disable DomKit inspector. Move your mouse over any component to see its name, id, classes and properties. You can use the mouse wheel to browse the component hierarchy. Maintaining `Ctrl` while clicking will also display the hierarchy in a separate tree-view.
 
 ![image](https://haxe.org/img/blog/2020-04-06-shirogames-stack/domkit.png)
 
 # Defining custom Components
 
 In order to define custom components, you need to:
+
 * implements `h2d.domkit.Object` (if not already inherited from your superclass)
-* add `@:p` for each property you wish to expose to domkit markup/CSS
+* add `@:p` for each property you wish to expose to DomKit markup/CSS
 * you can add `@:uiComp("name")` metadata in order to customize the component name
 
 Here's a small example:
@@ -127,7 +129,7 @@ class MyComp extends h2d.Flow implements h2d.domkit.Object {
     function set_style(s) {
         this.style = s;
         // ....
-        return s;    
+        return s;
     }
 
 }
@@ -158,18 +160,18 @@ class Init {
 }
 ```
 
-In the path, the `$` character is the capitalized component name. 
-By default `"$Comp"` is a registered path in Heaps.
+In the path, the `$` character is the capitalized component name.
+By default, `"$Comp"` is a registered path in Heaps.
 
 ## Custom CSS parsing
 
-Some properties requires custom parsing. For instance color codes, padding boxes, etc.
+Some properties require custom parsing. For instance color codes, padding boxes, etc.
 You can specify which parser method to use by changing `@:p` metadata in the following way:
 
 ```haxe
 // will use parseTile CSS parser method
 @:p(tile) public var tile : h2d.Tile;
-``` 
+```
 
 You can use any identifier that is allowed in the current CSS parser. The default Heaps parser can be found in `h2d/domkit/BaseComponents.hx`
 
@@ -228,7 +230,7 @@ class DynamicComponent extends h2d.Flow implements h2d.domkit.Object {
 
 # Domkit Markup Reference
 
-Domkit markup allows the following syntaxes.
+DomKit markup allows the following syntaxes.
 
 ```jsx
 <node attr="value"/>
@@ -238,7 +240,7 @@ A component with a CSS attribute value. Please note that the value has to be val
 ```jsx
 <node attr={expr}/>
 ```
-Set the attribute based on an Haxe code expression. Unlike previous syntax, here the expression must directly evaluates to the property runtime value, without going through CSS interpretation.
+Set the attribute based on an Haxe code expression. Unlike previous syntax, here the expression must directly evaluate to the property runtime value, without going through CSS interpretation.
 
 ```jsx
 <node attr/>
@@ -248,7 +250,7 @@ A shortcut for `attr="true"`. Allows to easily set boolean attributes
 ```jsx
 <node id="identifier"/>
 ```
-Creates a field on the current class and set it to the component value upon initialization. By default the field is private.
+Creates a field on the current class and set it to the component value upon initialization. By default, the field is private.
 
 ```jsx
 <node public id="identifier"/>
@@ -271,11 +273,6 @@ ${ for( t in tiles ) <bitmap src={t} id="btns[]"/> }
 </flow>
 ```
 When using `${..}` syntax, you can inject any Haxe code into the markup language, allowing you to add if/for/method calls/etc.
-
-```jsx
-Some Text
-```
-This is the equivalent of `<text text={"Some Text"}/>`, so you can apply CSS to the `text` components created this way.
 
 ```jsx
 <node>$component</node>
@@ -304,7 +301,7 @@ A multiline / delimited comment within body
 @custom.path(value1,value2,value3)
 ```
 These are markup macros that can be processed in a custom manner by setting `domkit.Macros.processMacro` in an init macro. It allows you to process identifier path and arguments (Haxe expressions) to return some markup syntax that will be then processed.
- 
+
 # Heaps CSS reference
 
 This is the complete documentation for allowed CSS attributes for native Heaps components.
@@ -405,7 +402,7 @@ See [corresponding heaps documentation](https://heaps.io/api/h2d/Drawable.html)
 color : #ff0000
 color : #f00
 ```
-Color tint 
+Color tint
 
 ```
 smooth : true

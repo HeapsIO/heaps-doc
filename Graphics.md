@@ -24,11 +24,11 @@ You can also fill a graphics object with a loaded bitmap.  You use the 'beginTil
 ```haxe
 var logo = hxd.Res.hxlogo.toTile();
 
-var g = new h2d.Graphics(s2d);			
+var g = new h2d.Graphics(s2d);
 for(x in 0...4){
-    for(y in 0...4){		
-        g.beginTileFill(x*logo.width,y*logo.height,1,1,logo);		
-        g.drawRect(x*logo.width, y*logo.height, logo.width, logo.height);			
+    for(y in 0...4){
+        g.beginTileFill(x*logo.width,y*logo.height,1,1,logo);
+        g.drawRect(x*logo.width, y*logo.height, logo.width, logo.height);
     }
 }
 g.endFill();

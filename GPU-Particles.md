@@ -6,7 +6,7 @@ Setting up your GPU particles involves first creating a particle system.
 
 ```haxe
 //Create a particle system and pass it our 3d scene
-var particles = new h3d.parts.GpuParticles(s3d); 
+var particles = new h3d.parts.GpuParticles(s3d);
 ```
 
 From there you add particle groups to the system. Each group is it's own separate bundle of particles that work independently. A particle system can support multiple groups.
@@ -23,7 +23,7 @@ particles.addGroup(particleGroup);
 
 ## Customizing Particles
 
-GPU Particles have a lot of properties that can be modified to give your particles different behavior.  See the [API](api/h3d/parts/GpuPartGroup.html) docs for a full list.  
+GPU Particles have a lot of properties that can be modified to give your particles different behavior.  See the [API](https://heaps.io/api/h3d/parts/GpuPartGroup.html) docs for a full list.
 
 ```haxe
 //The shape at which the particles will be emitted each ar of type GPUEmitMode
@@ -86,7 +86,7 @@ By default the particle groups will loop. You can disable this with the followin
 particleGroup.emitLoop = false;
 ```
 
-If your particle groups are not set to looping you can listen for a completion event to know when the particle system is done emitting. Note that 
+If your particle groups are not set to looping you can listen for a completion event to know when the particle system is done emitting. Note that
 
 ```haxe
 particles.onEnd = function(){

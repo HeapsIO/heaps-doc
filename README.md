@@ -1,6 +1,6 @@
 # Heaps Documentation
 
-[![Build Status](https://travis-ci.org/HeapsIO/heaps-doc.svg?branch=master)](https://travis-ci.org/HeapsIO/heaps-doc)
+![build](https://github.com/HeapsIO/heaps-doc/actions/workflows/main.yml/badge.svg)
 
 This is a mirror of the Heaps documentation Wiki available on https://github.com/heapsio/heaps/wiki
 

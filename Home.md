@@ -1,4 +1,4 @@
-**Heaps** is a cross platform graphics engine designed for high performance games by leveraging modern GPUs that are commonly available on both desktop and mobile devices. 
+**Heaps** is a cross platform graphics engine designed for high performance games by leveraging modern GPUs that are commonly available on both desktop and mobile devices.
 
 Heaps is currently working on:
 

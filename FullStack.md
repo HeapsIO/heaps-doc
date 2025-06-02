@@ -11,6 +11,7 @@ Since I often get asked about how we are making games, I thought it would be nic
 **Haxe/Heaps Community**
 
 In case you have any question or want to discuss parts of what I'm presenting here, you can get in touch with the Haxe/Heaps Community:
+
 - Using [Discord](https://discord.gg/sWCGm33) **#heaps** channel
 - With the [Haxe Forum](https://community.haxe.org/) for Haxe language questions
 - With the [Heaps Forum](https://community.heaps.io/) for Heaps specific questions
@@ -26,7 +27,7 @@ Performance is critical to us because - while we don't do AAA kind of games - we
 **HashLink VM**
 
 The core component of this strategy is the [HashLink Virtual Machine](https://hashlink.haxe.org), which is a fast strictly typed VM for Haxe programming language. Think about it like JavaVM or Mono (used by Unity), but more oriented towards real time games.
- 
+
 The game gets compiled to a cross platform `.hl` file that can be run with HashlinkVM JIT. It can also be compiled to C directly and compiled using any native compiler, which we are using for our console ports on PlayStation, XBox and Nintendo Switch.
 
 Hashlink VM performs very well for classic Object Oriented programming, but also for functional programming style. It's good too at floating point calculus which is important for games, and has been designed so that memory overhead is only minimal for the garbage collector. For instance our 3D game Northgard requires less than 500 MB of memory to run.
@@ -65,6 +66,7 @@ For all games code and tools development we are using [Haxe](https://haxe.org) p
 Of course as the main designer of Haxe language I'm a bit biased, but it's important to know that every developer at Shiro really enjoy developing with Haxe on a daily basis, and it's a critical tool for our daily productivity. Also, we have recruited developers with various programming backgrounds (C++, C#, Javascript, Python, Java, etc.) and they all have been able to quickly adapt to Haxe and write efficient code.
 
 Haxe is a cross platform programming language, which can output code for many different targets. We are using mostly two targets at Shiro:
+
 - the Hashlink target for our games
 - the JavaScript target for our tools _(more on that as part of the tools section below)_
 
@@ -81,19 +83,22 @@ You can learn more about Haxe on it's [website](https://haxe.org)
 ![image](https://heaps.io/img/h3d/pbr_1.jpg)
 
 [Heaps.io](https://heaps.io) is the game engine that powers our games at Shiro. It covers the following:
+
 - 2D rendering
 - 3D rendering
 - Sound handling
 - Controls (keyboard, mouse, gamepad)
-- Resource management 
+- Resource management
 
 It's been built to separate the low level platform implementation features from the mid level graphics logics/data. This architecture allows us to integrate new renderers or platforms by just porting a few classes given that the native libraries are been made available in HashLink. Heaps.io supports the following plaforms/renderer:
+
 - HashLink with DirectX11
 - HashLink with OpenGL/SDL2
 - HashLink/C with NVN (Nintendo Switch SDK native graphics api)
 - HashLink/C with GNM (PS4 SDK native graphics api)
 - HashLink/C for XBoxOne SDK
 - Javascript with WebGL2
+
 *HashLink/C here means that we can only use the Hashlink C output, not the JIT VM
 
 Heaps.io has been designed to be very lightweight and highly customizable. It provides a 2D/3D scene graph and each Object in the scene can be extended to enrich the behavior. The renderer and lighting system can also be entirely replaced, allowing to write a very game-specific rendering pipeline.
@@ -115,8 +120,9 @@ You can learn more about Heaps.io using dedicated website, or browsing its [Docu
 HIDE is an HTML5 application running Heaps.io engine in WebGL2 mode, so you can very quickly develop user interface using Haxe and HTML/CSS.
 
 At the moment HIDE supports:
+
 - Resources tree explorer
-- 2D texture viewer 
+- 2D texture viewer
 - 3D FBX model viewer and material editor
 - 2D and 3D timeline-based effects editor
 - 2D and 3D particles editor
@@ -141,7 +147,7 @@ At the moment HIDE usage is sadly not much documented, this is something I want 
 
 [DomKit](https://heaps.io/documentation/domkit.html) is our framework for writing User Interface components. It's our most recent addition to the technology stack so is still evolving.
 
-It allows you to declare your UI in terms of XHTML directly in your code, which allows direct strictly typed data binding with your gameplay logic, then enables styling using CSS just like web development. 
+It allows you to declare your UI in terms of XHTML directly in your code, which allows direct strictly typed data binding with your gameplay logic, then enables styling using CSS just like web development.
 
 The semantics of the CSS partly follows HTML5 standard but the layout model is specific to Heaps.io, and is more suitable for games UI/UX.
 
@@ -149,7 +155,7 @@ You can also declare your own components and even add extra properties and code 
 
 Additionally, DomKit library itself is fully standalone so can be used for any UI framework, although Heaps.io benefits from a direct integration.
 
-You can read more about DomKit using the [documentation](https://heaps.io/documentation/domkit.html). 
+You can read more about DomKit using the [documentation](https://heaps.io/documentation/domkit.html).
 
 ![image](https://user-images.githubusercontent.com/1022912/78455515-258b8680-769f-11ea-8a3c-ae4f16fe3a72.png)
 
@@ -205,6 +211,7 @@ MPMan is built on top of HxBit for the network part, and contains additional uti
 It's the only closed source library as part of the framework, as it contains some confidential information regarding our multiplayer infrastructure.
 
 It covers the following:
+
 - player authentication across platforms
 - multiplayer lobby system, rankings, game server instances query
 - platform multiplayer invitations
@@ -218,8 +225,8 @@ That's about it (for now). I hope this gave a better understanding on how we mak
 
 I wrote and maintain much of these myself, with help from other Shiro developers and community contributions, in particular for HIDE and Heaps, thanks to them! I think it's important to have good tools to do great work, and each tool presented here has been proven useful over several projects. I'm quite satisfied with what we came up over the years so I thought it was about time to show the whole picture.
 
-I also believe in collaboration, and making things open source helps even if no contribution is made back because it forces me to deal with important questions, such as writing a minimum of documentation or making things as smooth as possible. 
+I also believe in collaboration, and making things open source helps even if no contribution is made back because it forces me to deal with important questions, such as writing a minimum of documentation or making things as smooth as possible.
 
 All of this technology stack has been used in real projects and are still used for developing ongoing yet-unannounced games at Shiro. They are quite stable with no big issues, but of course you might eventually find bugs for your particular usage. Since I deal with many different projects I might sometimes be slow to answer over Pull Requests or Issues reported, but you always have the whole sources to improves things when you need it. One of things I personally dislike the most is when there's a bug and I have no way to understand/fix it.
 
-Enjoy and don't forget that while good tools help making good games, they are not the games themselves. 
+Enjoy and don't forget that while good tools help making good games, they are not the games themselves.

@@ -23,6 +23,3 @@ Make sure to specify the Flash version to be at least 11.8 (with `-swf-version 1
 -swf bin/game.swf
 -swf-version 11.8
 ```
-
----
-
