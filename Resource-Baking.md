@@ -71,7 +71,7 @@ On the right side of each _Rule_, there's a convert _Command_. Commands have the
 
 ## Custom Converts
 
-Although Heaps already provide (some converts)[https://github.com/HeapsIO/heaps/blob/master/hxd/fs/Convert.hx] you can of course write your own in order to perform any resource transform your project needs.
+Although Heaps already provide [some converts](https://github.com/HeapsIO/heaps/blob/master/hxd/fs/Convert.hx) you can of course write your own in order to perform any resource transform your project needs.
 
 Here's an example:
 
