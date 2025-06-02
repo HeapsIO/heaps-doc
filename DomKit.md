@@ -214,7 +214,7 @@ class DynamicComponent extends h2d.Flow implements h2d.domkit.Object {
     
     public function new(?parent) {
         super(parent);
-        rebuild();
+        rebuild(); // or init();
     }
 
     function init() {
