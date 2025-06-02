@@ -204,7 +204,31 @@ And it means you can now use values this way in attributes or CSS:
 <my values="1,2,3"/>
 ```
 
-# DomKit Markup Reference
+## Rebuilding dynamic components
+
+Is it possible to specify which function initializes the component (the one calling `initComponent()`, which by default is the constructor) with `@:uiInitFunction`. This makes it possible to rebuild the component at a later point.
+
+```haxe
+@:uiInitFunction(init)
+class DynamicComponent extends h2d.Flow implements h2d.domkit.Object {
+    
+    public function new(?parent) {
+        super(parent);
+        rebuild(); // or init();
+    }
+
+    function init() {
+        initComponent();
+    }
+
+    public function rebuild() {
+        removeChildren();
+        init();
+    }
+}
+```
+
+# Domkit Markup Reference
 
 DomKit markup allows the following syntaxes.
 
