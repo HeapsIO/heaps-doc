@@ -8,7 +8,7 @@ Heaps is currently working on:
 - Consoles (Nintendo Switch, Sony PS4, XBox One - requires being a registered developer)
 - Flash Stage3D
 
-The Heaps API is comprised of several top level packages, namely:
+The Heaps API comprises several top level packages, namely:
 
 - [`h2d`](https://github.com/ncannasse/heaps/wiki/H2D) used for 2D display (for 2D games and user interfaces)
 - [`h3d`](https://github.com/ncannasse/heaps/wiki/H3D) used for rendering 3D models
