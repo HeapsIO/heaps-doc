@@ -10,9 +10,11 @@ In order to export a FBX model that can be load to HMD, please make sure to:
 
  * export to FBX 2010 (FBX version 7.x), both FBX binary and text format are supported.
  * export using `Z`-up and `-Y`-forward axis.
- * export using BakeAnimation, this will make sure your animation is exactly the same it was created.
- * note for 3ds Max and Maya: Use Game Exporter instead of standard Export.
- * note for Blender 2.8: use FBX Units Scale in "Apply Scaling" under Main tab and reduce Simplify to 0 under Animation tab when exporting to FBX. This will preserve the correct armature scaling and prevent animation jitters.
+ * export using `BakeAnimation`, this will make sure your animation is exactly the same it was created.
+ * export using `Triangulate Faces`.
+ * note for 3ds Max and Maya: Use `Game Exporter` instead of standard Export.
+ * note for Blender 2.8: use `FBX Units Scale` in "Apply Scaling" under Main tab and reduce Simplify to `0` under Animation tab when exporting to FBX. This will preserve the correct armature scaling and prevent animation jitters.
+ * note for Blender 4.2 and above: shading smooth is not well supported yet.
 
 # Restrictions
 
