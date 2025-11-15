@@ -43,7 +43,7 @@ Now that you have [installed](https://github.com/HeapsIO/heaps/wiki/Installation
 
 - ``-cp src`` Tells haxe where to search for your code files
 - ``-lib heaps`` Tells haxe to import the heaps library
-- ``-lib format`` Tells haxe to import the format library containing Hashlink API for native image conversion (it is recommanded to install the lib with `haxelib git format https://github.com/HaxeFoundation/format`)
+- ``-lib format`` Tells haxe to import the format library containing Hashlink API for native image conversion (it is recommended to install the lib with `haxelib git format https://github.com/HaxeFoundation/format`)
 - ``-lib hlsdl`` Tells haxe to import the hlsdl rendering library
 - ``-hl hello.hl`` Tells haxe to compile to hashlink bytecode in the project directory
 - ``-main Main`` Tells haxe that Main.hx is your entry point
