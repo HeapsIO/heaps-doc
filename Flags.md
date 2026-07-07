@@ -13,6 +13,10 @@ Common `-D` flags that can be used with Heaps:
 # if unset, the default path is "res"
 -D resourcesPath=res
 
+# whether or not the window/process is resizable
+# 0 is false | 1 is true
+-D windowFixed=1
+
 # other known flags (deprecated/legacy code)
 -D heaps_emit_tile_buffering
 
